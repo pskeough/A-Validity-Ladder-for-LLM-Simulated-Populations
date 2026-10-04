@@ -1,0 +1,23 @@
+{
+  "adapter": "subpop2025",
+  "name": "subpop2025",
+  "kind": "fine-tuned simulator (SubPOP) and its base model",
+  "source": "Suh, Jahanparast, Moon, Kang & Chang (2025), Language model fine-tuning on scaled survey data for predicting distributions of public opinions, ACL 2025; weights jjssuh/mistral-7b-v0.1-subpop (LoRA) on mistralai/Mistral-7B-v0.1; questions from Santurkar et al. (2023) OpinionQA",
+  "mode": "gaps",
+  "package_version": "0.1.1",
+  "inputs": [
+    {
+      "path": "C:\\Research\\PsychBench\\UpdatedRun\\paper_brm\\external\\raw\\subpop_gen\\subpop_distributions.csv",
+      "sha256": "ac72ef81345332afbfe631d561bf308c2b06409439fc56d9cd1fc4c93c55eff5",
+      "bytes": 907800
+    },
+    {
+      "path": "C:\\Research\\PsychBench\\UpdatedRun\\paper_brm\\external\\results\\opinionqa\\level2_contrasts.csv",
+      "sha256": "ce340b7b02f5bc91ed760411d73c718570649cff529b0fda9738deaf89688680",
+      "bytes": 59435
+    }
+  ],
+  "run_at": "2026-10-04 00:45:08",
+  "seconds": 3.0,
+  "notes": "Republican - Democrat: human gap 0.1780 over 97 questions; paper's Meister-based value 0.1917; Female - Male: human gap 0.0554 over 96 questions; paper's Meister-based value 0.0552; Black - White: human gap 0.0961 over 97 questions; paper's Meister-based value 0.0971; Hispanic - White: human gap 0.0867 over 97 questions; paper's Meister-based value 0.0783; Asian - White: human gap 0.0946 over 97 questions; paper's Meister-based value 0.0899; Less than high school - College graduate/some postgrad: human gap 0.0898 over 97 questions; paper's Meister-based value 0.0800; Less than $30,000 - $100,000 or more: human gap 0.0638 over 97 questions; paper's Meister-based value 0.0578; South - Northeast: human gap 0.0401 over 97 questions; paper's Meister-based value 0.0334"
+}

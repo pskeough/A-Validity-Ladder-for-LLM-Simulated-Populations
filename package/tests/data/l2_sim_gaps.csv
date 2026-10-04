@@ -1,0 +1,166 @@
+corpus,panel,race_set,contrast,scope,framing,n_pairs,n_obs,simulated,se,df,se_unstratified,df_unstratified,se_naive_66,df_naive_66,mean_unweighted
+all,four models,,Black minus White,openai/gpt-4o-mini,clinical,12,12,-0.044444,0.106152,11.0,0.106152,11,,,
+all,four models,,Black minus White,google/gemini-3-flash-preview,clinical,12,12,-0.272222,0.155907,11.0,0.155907,11,,,
+all,four models,,Black minus White,deepseek/deepseek-chat-v3,clinical,12,12,0.258333,0.165558,11.0,0.165558,11,,,
+all,four models,,Black minus White,z-ai/glm-4.7,clinical,12,12,-0.458333,0.201097,11.0,0.201097,11,,,
+all,four models,,Black minus White,pooled,clinical,48,48,-0.129167,0.080399,37.901245,0.087026,47,0.087026,47.0,-0.129167
+all,four models,,Black minus White,openai/gpt-4o-mini,narrative,12,12,0.477778,0.150886,11.0,0.150886,11,,,
+all,four models,,Black minus White,google/gemini-3-flash-preview,narrative,12,12,-0.516667,0.271345,11.0,0.271345,11,,,
+all,four models,,Black minus White,deepseek/deepseek-chat-v3,narrative,12,12,0.169444,0.133866,11.0,0.133866,11,,,
+all,four models,,Black minus White,z-ai/glm-4.7,narrative,12,12,-0.658333,0.195407,11.0,0.195407,11,,,
+all,four models,,Black minus White,pooled,narrative,48,48,-0.131944,0.097628,33.142823,0.11681,47,0.11681,47.0,-0.131944
+all,four models,,Black minus White,openai/gpt-4o-mini,combined,12,24,0.216667,0.092273,11.0,0.092273,11,,,
+all,four models,,Black minus White,google/gemini-3-flash-preview,combined,12,24,-0.394444,0.193381,11.0,0.193381,11,,,
+all,four models,,Black minus White,deepseek/deepseek-chat-v3,combined,12,24,0.213889,0.107599,11.0,0.107599,11,,,
+all,four models,,Black minus White,z-ai/glm-4.7,combined,12,24,-0.558333,0.16319,11.0,0.16319,11,,,
+all,four models,,Black minus White,pooled,combined,48,96,-0.130556,0.072508,33.633901,0.086822,47,0.072448,95.0,-0.130556
+all,four models,,Hispanic minus White,openai/gpt-4o-mini,clinical,12,12,-0.027778,0.121912,11.0,0.121912,11,,,
+all,four models,,Hispanic minus White,google/gemini-3-flash-preview,clinical,12,12,-0.041667,0.094292,11.0,0.094292,11,,,
+all,four models,,Hispanic minus White,deepseek/deepseek-chat-v3,clinical,12,12,0.147222,0.120846,11.0,0.120846,11,,,
+all,four models,,Hispanic minus White,z-ai/glm-4.7,clinical,12,12,-0.166667,0.185093,11.0,0.185093,11,,,
+all,four models,,Hispanic minus White,pooled,clinical,48,48,-0.022222,0.067369,34.385168,0.067192,47,0.067192,47.0,-0.022222
+all,four models,,Hispanic minus White,openai/gpt-4o-mini,narrative,12,12,0.308333,0.126872,11.0,0.126872,11,,,
+all,four models,,Hispanic minus White,google/gemini-3-flash-preview,narrative,12,12,0.027778,0.159642,11.0,0.159642,11,,,
+all,four models,,Hispanic minus White,deepseek/deepseek-chat-v3,narrative,12,12,0.2,0.13713,11.0,0.13713,11,,,
+all,four models,,Hispanic minus White,z-ai/glm-4.7,narrative,12,12,-0.719444,0.210237,11.0,0.210237,11,,,
+all,four models,,Hispanic minus White,pooled,narrative,48,48,-0.045833,0.080849,37.415245,0.097726,47,0.097726,47.0,-0.045833
+all,four models,,Hispanic minus White,openai/gpt-4o-mini,combined,12,24,0.140278,0.059049,11.0,0.059049,11,,,
+all,four models,,Hispanic minus White,google/gemini-3-flash-preview,combined,12,24,-0.006944,0.091872,11.0,0.091872,11,,,
+all,four models,,Hispanic minus White,deepseek/deepseek-chat-v3,combined,12,24,0.173611,0.120228,11.0,0.120228,11,,,
+all,four models,,Hispanic minus White,z-ai/glm-4.7,combined,12,24,-0.443056,0.164602,11.0,0.164602,11,,,
+all,four models,,Hispanic minus White,pooled,combined,48,96,-0.034028,0.057812,30.646873,0.066435,47,0.058998,95.0,-0.034028
+all,four models,,Asian minus White,openai/gpt-4o-mini,clinical,12,12,-0.475,0.177294,11.0,0.177294,11,,,
+all,four models,,Asian minus White,google/gemini-3-flash-preview,clinical,12,12,-1.091667,0.464717,11.0,0.464717,11,,,
+all,four models,,Asian minus White,deepseek/deepseek-chat-v3,clinical,12,12,-0.644444,0.17792,11.0,0.17792,11,,,
+all,four models,,Asian minus White,z-ai/glm-4.7,clinical,12,12,-1.511111,0.415186,11.0,0.415186,11,,,
+all,four models,,Asian minus White,pooled,clinical,48,48,-0.930556,0.167971,28.613161,0.172869,47,0.172869,47.0,-0.930556
+all,four models,,Asian minus White,openai/gpt-4o-mini,narrative,12,12,-0.330556,0.143575,11.0,0.143575,11,,,
+all,four models,,Asian minus White,google/gemini-3-flash-preview,narrative,12,12,-1.802778,0.795912,11.0,0.795912,11,,,
+all,four models,,Asian minus White,deepseek/deepseek-chat-v3,narrative,12,12,-0.772222,0.121011,11.0,0.121011,11,,,
+all,four models,,Asian minus White,z-ai/glm-4.7,narrative,12,12,-1.961111,0.452078,11.0,0.452078,11,,,
+all,four models,,Asian minus White,pooled,narrative,48,48,-1.216667,0.233601,18.899005,0.247161,47,0.247161,47.0,-1.216667
+all,four models,,Asian minus White,openai/gpt-4o-mini,combined,12,24,-0.402778,0.10799,11.0,0.10799,11,,,
+all,four models,,Asian minus White,google/gemini-3-flash-preview,combined,12,24,-1.447222,0.626944,11.0,0.626944,11,,,
+all,four models,,Asian minus White,deepseek/deepseek-chat-v3,combined,12,24,-0.708333,0.124781,11.0,0.124781,11,,,
+all,four models,,Asian minus White,z-ai/glm-4.7,combined,12,24,-1.736111,0.41712,11.0,0.41712,11,,,
+all,four models,,Asian minus White,pooled,combined,48,96,-1.073611,0.192724,20.982672,0.202367,47,0.150728,95.0,-1.073611
+all,four models,four,Women minus Men,openai/gpt-4o-mini,clinical,24,24,0.168056,0.092828,23.0,0.092828,23,,,
+all,four models,four,Women minus Men,google/gemini-3-flash-preview,clinical,24,24,0.947222,0.137816,23.0,0.137816,23,,,
+all,four models,four,Women minus Men,deepseek/deepseek-chat-v3,clinical,24,24,0.436111,0.08903,23.0,0.08903,23,,,
+all,four models,four,Women minus Men,z-ai/glm-4.7,clinical,24,24,1.673611,0.144797,23.0,0.144797,23,,,
+all,four models,four,Women minus Men,pooled,clinical,96,96,0.80625,0.059426,78.332488,0.082972,95,0.082972,95.0,0.80625
+all,four models,four,Women minus Men,openai/gpt-4o-mini,narrative,24,24,0.213889,0.102425,23.0,0.102425,23,,,
+all,four models,four,Women minus Men,google/gemini-3-flash-preview,narrative,24,24,1.023611,0.152284,23.0,0.152284,23,,,
+all,four models,four,Women minus Men,deepseek/deepseek-chat-v3,narrative,24,24,0.254167,0.068713,23.0,0.068713,23,,,
+all,four models,four,Women minus Men,z-ai/glm-4.7,narrative,24,24,1.786111,0.217547,23.0,0.217547,23,,,
+all,four models,four,Women minus Men,pooled,narrative,96,96,0.819444,0.073199,58.089873,0.097793,95,0.097793,95.0,0.819444
+all,four models,four,Women minus Men,openai/gpt-4o-mini,combined,24,48,0.190972,0.072579,23.0,0.072579,23,,,
+all,four models,four,Women minus Men,google/gemini-3-flash-preview,combined,24,48,0.985417,0.13519,23.0,0.13519,23,,,
+all,four models,four,Women minus Men,deepseek/deepseek-chat-v3,combined,24,48,0.345139,0.05724,23.0,0.05724,23,,,
+all,four models,four,Women minus Men,z-ai/glm-4.7,combined,24,48,1.729861,0.154045,23.0,0.154045,23,,,
+all,four models,four,Women minus Men,pooled,combined,96,192,0.812847,0.056208,62.817273,0.083332,95,0.063958,191.0,0.812847
+all,four models,four,Low minus High SES,openai/gpt-4o-mini,clinical,16,16,3.504167,0.165884,15.0,0.165884,15,,,
+all,four models,four,Low minus High SES,google/gemini-3-flash-preview,clinical,16,16,7.158333,0.434661,15.0,0.434661,15,,,
+all,four models,four,Low minus High SES,deepseek/deepseek-chat-v3,clinical,16,16,2.377083,0.152714,15.0,0.152714,15,,,
+all,four models,four,Low minus High SES,z-ai/glm-4.7,clinical,16,16,6.047917,0.326853,15.0,0.326853,15,,,
+all,four models,four,Low minus High SES,pooled,clinical,64,64,4.771875,0.147182,37.22434,0.280763,63,0.280763,63.0,4.771875
+all,four models,four,Low minus High SES,openai/gpt-4o-mini,narrative,16,16,2.1,0.103905,15.0,0.103905,15,,,
+all,four models,four,Low minus High SES,google/gemini-3-flash-preview,narrative,16,16,6.00625,0.586043,15.0,0.586043,15,,,
+all,four models,four,Low minus High SES,deepseek/deepseek-chat-v3,narrative,16,16,2.58125,0.147164,15.0,0.147164,15,,,
+all,four models,four,Low minus High SES,z-ai/glm-4.7,narrative,16,16,7.0125,0.392816,15.0,0.392816,15,,,
+all,four models,four,Low minus High SES,pooled,narrative,64,64,4.425,0.182038,29.62221,0.320921,63,0.320921,63.0,4.425
+all,four models,four,Low minus High SES,openai/gpt-4o-mini,combined,16,32,2.802083,0.103524,15.0,0.103524,15,,,
+all,four models,four,Low minus High SES,google/gemini-3-flash-preview,combined,16,32,6.582292,0.499834,15.0,0.499834,15,,,
+all,four models,four,Low minus High SES,deepseek/deepseek-chat-v3,combined,16,32,2.479167,0.117265,15.0,0.117265,15,,,
+all,four models,four,Low minus High SES,z-ai/glm-4.7,combined,16,32,6.530208,0.335646,15.0,0.335646,15,,,
+all,four models,four,Low minus High SES,pooled,combined,64,128,4.598437,0.155515,29.783723,0.289978,63,0.212917,127.0,4.598438
+all,four models,four,Middle minus High SES,openai/gpt-4o-mini,clinical,16,16,1.80625,0.1311,15.0,0.1311,15,,,
+all,four models,four,Middle minus High SES,google/gemini-3-flash-preview,clinical,16,16,0.622917,0.143331,15.0,0.143331,15,,,
+all,four models,four,Middle minus High SES,deepseek/deepseek-chat-v3,clinical,16,16,1.252083,0.125756,15.0,0.125756,15,,,
+all,four models,four,Middle minus High SES,z-ai/glm-4.7,clinical,16,16,1.26875,0.191497,15.0,0.191497,15,,,
+all,four models,four,Middle minus High SES,pooled,clinical,64,64,1.2375,0.07509,52.797989,0.090317,63,0.090317,63.0,1.2375
+all,four models,four,Middle minus High SES,openai/gpt-4o-mini,narrative,16,16,0.927083,0.139251,15.0,0.139251,15,,,
+all,four models,four,Middle minus High SES,google/gemini-3-flash-preview,narrative,16,16,0.9625,0.070702,15.0,0.070702,15,,,
+all,four models,four,Middle minus High SES,deepseek/deepseek-chat-v3,narrative,16,16,1.8625,0.107921,15.0,0.107921,15,,,
+all,four models,four,Middle minus High SES,z-ai/glm-4.7,narrative,16,16,1.4125,0.211605,15.0,0.211605,15,,,
+all,four models,four,Middle minus High SES,pooled,narrative,64,64,1.291146,0.071069,38.543529,0.084373,63,0.084373,63.0,1.291146
+all,four models,four,Middle minus High SES,openai/gpt-4o-mini,combined,16,32,1.366667,0.105804,15.0,0.105804,15,,,
+all,four models,four,Middle minus High SES,google/gemini-3-flash-preview,combined,16,32,0.792708,0.078351,15.0,0.078351,15,,,
+all,four models,four,Middle minus High SES,deepseek/deepseek-chat-v3,combined,16,32,1.557292,0.102164,15.0,0.102164,15,,,
+all,four models,four,Middle minus High SES,z-ai/glm-4.7,combined,16,32,1.340625,0.17696,15.0,0.17696,15,,,
+all,four models,four,Middle minus High SES,pooled,combined,64,128,1.264323,0.060769,41.807648,0.069317,63,0.0616,127.0,1.264323
+all,four models,four,Low minus Middle SES,openai/gpt-4o-mini,clinical,16,16,1.697917,0.090955,15.0,0.090955,15,,,
+all,four models,four,Low minus Middle SES,google/gemini-3-flash-preview,clinical,16,16,6.535417,0.357298,15.0,0.357298,15,,,
+all,four models,four,Low minus Middle SES,deepseek/deepseek-chat-v3,clinical,16,16,1.125,0.168888,15.0,0.168888,15,,,
+all,four models,four,Low minus Middle SES,z-ai/glm-4.7,clinical,16,16,4.779167,0.231218,15.0,0.231218,15,,,
+all,four models,four,Low minus Middle SES,pooled,clinical,64,64,3.534375,0.116705,35.549696,0.302124,63,0.302124,63.0,3.534375
+all,four models,four,Low minus Middle SES,openai/gpt-4o-mini,narrative,16,16,1.172917,0.114229,15.0,0.114229,15,,,
+all,four models,four,Low minus Middle SES,google/gemini-3-flash-preview,narrative,16,16,5.04375,0.59177,15.0,0.59177,15,,,
+all,four models,four,Low minus Middle SES,deepseek/deepseek-chat-v3,narrative,16,16,0.71875,0.084927,15.0,0.084927,15,,,
+all,four models,four,Low minus Middle SES,z-ai/glm-4.7,narrative,16,16,5.6,0.261158,15.0,0.261158,15,,,
+all,four models,four,Low minus Middle SES,pooled,narrative,64,64,3.133854,0.165578,22.636113,0.32113,63,0.32113,63.0,3.133854
+all,four models,four,Low minus Middle SES,openai/gpt-4o-mini,combined,16,32,1.435417,0.066734,15.0,0.066734,15,,,
+all,four models,four,Low minus Middle SES,google/gemini-3-flash-preview,combined,16,32,5.789583,0.47003,15.0,0.47003,15,,,
+all,four models,four,Low minus Middle SES,deepseek/deepseek-chat-v3,combined,16,32,0.921875,0.111945,15.0,0.111945,15,,,
+all,four models,four,Low minus Middle SES,z-ai/glm-4.7,combined,16,32,5.189583,0.222631,15.0,0.222631,15,,,
+all,four models,four,Low minus Middle SES,pooled,combined,64,128,3.334115,0.134042,24.097714,0.303473,63,0.220304,127.0,3.334115
+all,four models,five,Women minus Men,openai/gpt-4o-mini,clinical,30,30,0.201111,0.080587,29.0,0.080587,29,,,
+all,four models,five,Women minus Men,google/gemini-3-flash-preview,clinical,30,30,0.992222,0.129807,29.0,0.129807,29,,,
+all,four models,five,Women minus Men,deepseek/deepseek-chat-v3,clinical,30,30,0.38,0.079407,29.0,0.079407,29,,,
+all,four models,five,Women minus Men,z-ai/glm-4.7,clinical,30,30,1.793333,0.14071,29.0,0.14071,29,,,
+all,four models,five,Women minus Men,pooled,clinical,120,120,0.841667,0.055593,93.566373,0.0792,119,0.0792,119.0,0.841667
+all,four models,five,Women minus Men,openai/gpt-4o-mini,narrative,30,30,0.277778,0.089818,29.0,0.089818,29,,,
+all,four models,five,Women minus Men,google/gemini-3-flash-preview,narrative,30,30,0.985556,0.13065,29.0,0.13065,29,,,
+all,four models,five,Women minus Men,deepseek/deepseek-chat-v3,narrative,30,30,0.258889,0.058997,29.0,0.058997,29,,,
+all,four models,five,Women minus Men,z-ai/glm-4.7,narrative,30,30,1.828889,0.187609,29.0,0.187609,29,,,
+all,four models,five,Women minus Men,pooled,narrative,120,120,0.837778,0.063154,73.470358,0.085792,119,0.085792,119.0,0.837778
+all,four models,five,Women minus Men,openai/gpt-4o-mini,combined,30,60,0.239444,0.066655,29.0,0.066655,29,,,
+all,four models,five,Women minus Men,google/gemini-3-flash-preview,combined,30,60,0.988889,0.116314,29.0,0.116314,29,,,
+all,four models,five,Women minus Men,deepseek/deepseek-chat-v3,combined,30,60,0.319444,0.047733,29.0,0.047733,29,,,
+all,four models,five,Women minus Men,z-ai/glm-4.7,combined,30,60,1.811111,0.139174,29.0,0.139174,29,,,
+all,four models,five,Women minus Men,pooled,combined,120,240,0.839722,0.049762,78.063845,0.075951,119,0.058258,239.0,0.839722
+all,four models,five,Low minus High SES,openai/gpt-4o-mini,clinical,20,20,3.521667,0.137613,19.0,0.137613,19,,,
+all,four models,five,Low minus High SES,google/gemini-3-flash-preview,clinical,20,20,7.453333,0.384224,19.0,0.384224,19,,,
+all,four models,five,Low minus High SES,deepseek/deepseek-chat-v3,clinical,20,20,2.383333,0.127905,19.0,0.127905,19,,,
+all,four models,five,Low minus High SES,z-ai/glm-4.7,clinical,20,20,6.028333,0.262648,19.0,0.262648,19,,,
+all,four models,five,Low minus High SES,pooled,clinical,80,80,4.846667,0.125476,44.361478,0.256565,79,0.256565,79.0,4.846667
+all,four models,five,Low minus High SES,openai/gpt-4o-mini,narrative,20,20,2.103333,0.087422,19.0,0.087422,19,,,
+all,four models,five,Low minus High SES,google/gemini-3-flash-preview,narrative,20,20,6.675,0.558312,19.0,0.558312,19,,,
+all,four models,five,Low minus High SES,deepseek/deepseek-chat-v3,narrative,20,20,2.511667,0.1244,19.0,0.1244,19,,,
+all,four models,five,Low minus High SES,z-ai/glm-4.7,narrative,20,20,7.33,0.357549,19.0,0.357549,19,,,
+all,four models,five,Low minus High SES,pooled,narrative,80,80,4.655,0.17005,35.738362,0.313876,79,0.313876,79.0,4.655
+all,four models,five,Low minus High SES,openai/gpt-4o-mini,combined,20,40,2.8125,0.088331,19.0,0.088331,19,,,
+all,four models,five,Low minus High SES,google/gemini-3-flash-preview,combined,20,40,7.064167,0.457413,19.0,0.457413,19,,,
+all,four models,five,Low minus High SES,deepseek/deepseek-chat-v3,combined,20,40,2.4475,0.095691,19.0,0.095691,19,,,
+all,four models,five,Low minus High SES,z-ai/glm-4.7,combined,20,40,6.679167,0.283127,19.0,0.283127,19,,,
+all,four models,five,Low minus High SES,pooled,combined,80,160,4.750833,0.138372,35.417042,0.275319,79,0.202201,159.0,4.750833
+all,four models,five,Middle minus High SES,openai/gpt-4o-mini,clinical,20,20,1.776667,0.110768,19.0,0.110768,19,,,
+all,four models,five,Middle minus High SES,google/gemini-3-flash-preview,clinical,20,20,0.718333,0.152148,19.0,0.152148,19,,,
+all,four models,five,Middle minus High SES,deepseek/deepseek-chat-v3,clinical,20,20,1.168333,0.112064,19.0,0.112064,19,,,
+all,four models,five,Middle minus High SES,z-ai/glm-4.7,clinical,20,20,1.221667,0.17153,19.0,0.17153,19,,,
+all,four models,five,Middle minus High SES,pooled,clinical,80,80,1.22125,0.069552,66.570149,0.080245,79,0.080245,79.0,1.22125
+all,four models,five,Middle minus High SES,openai/gpt-4o-mini,narrative,20,20,0.911667,0.119558,19.0,0.119558,19,,,
+all,four models,five,Middle minus High SES,google/gemini-3-flash-preview,narrative,20,20,1.168333,0.121912,19.0,0.121912,19,,,
+all,four models,five,Middle minus High SES,deepseek/deepseek-chat-v3,narrative,20,20,1.808333,0.090414,19.0,0.090414,19,,,
+all,four models,five,Middle minus High SES,z-ai/glm-4.7,narrative,20,20,1.571667,0.210614,19.0,0.210614,19,,,
+all,four models,five,Middle minus High SES,pooled,narrative,80,80,1.365,0.071453,51.547075,0.08026,79,0.08026,79.0,1.365
+all,four models,five,Middle minus High SES,openai/gpt-4o-mini,combined,20,40,1.344167,0.092995,19.0,0.092995,19,,,
+all,four models,five,Middle minus High SES,google/gemini-3-flash-preview,combined,20,40,0.943333,0.114589,19.0,0.114589,19,,,
+all,four models,five,Middle minus High SES,deepseek/deepseek-chat-v3,combined,20,40,1.488333,0.088853,19.0,0.088853,19,,,
+all,four models,five,Middle minus High SES,z-ai/glm-4.7,combined,20,40,1.396667,0.167509,19.0,0.167509,19,,,
+all,four models,five,Middle minus High SES,pooled,combined,80,160,1.293125,0.060069,57.736483,0.063413,79,0.056855,159.0,1.293125
+all,four models,five,Low minus Middle SES,openai/gpt-4o-mini,clinical,20,20,1.745,0.084302,19.0,0.084302,19,,,
+all,four models,five,Low minus Middle SES,google/gemini-3-flash-preview,clinical,20,20,6.735,0.303628,19.0,0.303628,19,,,
+all,four models,five,Low minus Middle SES,deepseek/deepseek-chat-v3,clinical,20,20,1.215,0.144742,19.0,0.144742,19,,,
+all,four models,five,Low minus Middle SES,z-ai/glm-4.7,clinical,20,20,4.806667,0.188338,19.0,0.188338,19,,,
+all,four models,five,Low minus Middle SES,pooled,clinical,80,80,3.625417,0.098653,44.962708,0.271946,79,0.271946,79.0,3.625417
+all,four models,five,Low minus Middle SES,openai/gpt-4o-mini,narrative,20,20,1.191667,0.09406,19.0,0.09406,19,,,
+all,four models,five,Low minus Middle SES,google/gemini-3-flash-preview,narrative,20,20,5.506667,0.520243,19.0,0.520243,19,,,
+all,four models,five,Low minus Middle SES,deepseek/deepseek-chat-v3,narrative,20,20,0.703333,0.075157,19.0,0.075157,19,,,
+all,four models,five,Low minus Middle SES,z-ai/glm-4.7,narrative,20,20,5.758333,0.224388,19.0,0.224388,19,,,
+all,four models,five,Low minus Middle SES,pooled,narrative,80,80,3.29,0.144806,28.177574,0.300182,79,0.300182,79.0,3.29
+all,four models,five,Low minus Middle SES,openai/gpt-4o-mini,combined,20,40,1.468333,0.062066,19.0,0.062066,19,,,
+all,four models,five,Low minus Middle SES,google/gemini-3-flash-preview,combined,20,40,6.120833,0.404572,19.0,0.404572,19,,,
+all,four models,five,Low minus Middle SES,deepseek/deepseek-chat-v3,combined,20,40,0.959167,0.094432,19.0,0.094432,19,,,
+all,four models,five,Low minus Middle SES,z-ai/glm-4.7,combined,20,40,5.2825,0.184607,19.0,0.184607,19,,,
+all,four models,five,Low minus Middle SES,pooled,combined,80,160,3.457708,0.114708,30.025812,0.27914,79,0.202324,159.0,3.457708

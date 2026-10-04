@@ -408,19 +408,12 @@ def s1():
     out.append(verbatim_block([json.dumps(ex_n, indent=1, ensure_ascii=False)], None,
                               "Registry entry for the same persona, "
                               "\\texttt{generation/registries/identities\\_registry\\_narrative.json}."))
-    out.append("\\subsection*{S1.4 API Call and Retry Settings, Clinical Run}\n")
-    out.append(verbatim_block(excerpt(C, *cfg), cfg[0] + 1,
-                              f"\\texttt{{{tex(rel(clin_path))}}}, lines {L(cfg[0])}--{L(cfg[1])}."))
-    out.append(verbatim_block(excerpt(C, *api), api[0] + 1,
-                              f"\\texttt{{{tex(rel(clin_path))}}}, lines {L(api[0])}--{L(api[1])}."))
-    out.append("\\subsection*{S1.5 Retry Loop, Clinical Run}\n")
-    out.append(verbatim_block(excerpt(C, *retc), retc[0] + 1,
-                              f"\\texttt{{{tex(rel(clin_path))}}}, lines {L(retc[0])}--{L(retc[1])}."))
-    out.append("\\subsection*{S1.6 Retry Loop and Refusal Check, Narrative Run}\n")
-    out.append(verbatim_block(excerpt(N, *refn), refn[0] + 1,
-                              f"\\texttt{{{tex(rel(narr_path))}}}, lines {L(refn[0])}--{L(refn[1])}."))
-    out.append(verbatim_block(excerpt(N, *retn), retn[0] + 1,
-                              f"\\texttt{{{tex(rel(narr_path))}}}, lines {L(retn[0])}--{L(retn[1])}."))
+    # The API call, retry loops and refusal checks are code; S1.4 states them in words and names their
+    # lines in generation/main.py and generation/narrative_main.py (macros below), which ship in the
+    # repository. The listings were dropped from the supplement on 3 Oct 2026.
+    MACROS["SOneCfgClin"] = f"{L(cfg[0])}--{L(cfg[1])}"
+    MACROS["SOneRetryClin"] = f"{L(retc[0])}--{L(retc[1])}"
+    MACROS["SOneRetryNarr"] = f"{L(retn[0])}--{L(retn[1])}"
     write("S1_corpus_prompts.tex", "".join(out))
 
     # Resend prompts, in the order the scripts ran in January.
@@ -440,10 +433,12 @@ def s1():
         MACROS[f"SOneRec{sub.title()}SameSys"] = "is identical to" if rs == sys_clin else "differs from"
         # Supplement S1.8 states that only the last-mile script changed the system prompt.
         assert (rs == sys_clin) == (f != "recovery/last_mile_recovery_opt.py"), f"system prompt check: {f}"
-        out.append(verbatim_block(excerpt(R, a, b), a + 1,
-                                  f"\\texttt{{generation/{tex(f)}}}, lines {a + 1}--{b + 1}."))
-        out.append(verbatim_block(excerpt(R, c, d), c + 1,
-                                  f"\\texttt{{generation/{tex(f)}}}, lines {c + 1}--{d + 1}."))
+        # Only the one system prompt that differs from the corpus prompt is printed (3 Oct 2026); the
+        # other three scripts' prompts are the corpus strings, which the assert above checks.
+        if f == "recovery/last_mile_recovery_opt.py":
+            out.append(verbatim_block(excerpt(R, a, b), a + 1,
+                                      f"\\texttt{{generation/{tex(f)}}}, lines {a + 1}--{b + 1}, "
+                                      "the shortened system prompt."))
     write("S1_recovery_prompts.tex", "".join(out))
 
     # Control prompts.
@@ -465,27 +460,34 @@ def s1():
             return "none set (provider default)"
         return "\\texttt{" + tex(json.dumps(p)).replace("{", "\\{").replace("}", "\\}") + "}"
 
+    # Since 3 Oct 2026 the control prompts are not listed in full: Table S1 (S1_control_diff) prints
+    # every line that differs from the corpus prompt, and the full strings are in the design file and
+    # scripts/55. This fragment carries the arm descriptions and the decoding result.
     out = [header([pcd_path, dcd_path, dec_script, clin_path])]
-    out.append("\\subsection*{S1.9 Prompt Control: System Prompts of the Three Arms}\n")
+    out.append("\\subsection*{S1.6 Prompt Control}\n")
+    descs = []
     for arm in pcd["arms"]:
-        out.append(verbatim_block(arm["system_prompt"].split("\n"), None,
-                                  f"Arm \\texttt{{{tex(arm['name'])}}}: {tex(arm['description'])}. "
-                                  f"Decoding parameters: {params_text(arm['params'])}."))
-    out.append(verbatim_block(pcd["user_template"].split("\n"), None,
-                              "User template, held identical across arms."))
-    out.append("\\subsection*{S1.10 Decoding Control: Prompt and Arms}\n")
-    out.append(verbatim_block(excerpt(D, *dsys), dsys[0] + 1,
-                              f"\\texttt{{scripts/55\\_decoding\\_control\\_run.py}}, lines "
-                              f"{dsys[0] + 1}--{dsys[1] + 1}."))
-    out.append(verbatim_block(excerpt(D, *dusr), dusr[0] + 1,
-                              f"\\texttt{{scripts/55\\_decoding\\_control\\_run.py}}, lines "
-                              f"{dusr[0] + 1}--{dusr[1] + 1}."))
-    out.append(verbatim_block([D[dmax], D[dpin]], None,
-                              f"\\texttt{{scripts/55\\_decoding\\_control\\_run.py}}, lines {dmax + 1} and "
-                              f"{dpin + 1}."))
+        desc = tex(arm["description"]).replace("arm A ", "arm \\texttt{orig} ")
+        if arm["name"] == "orig":
+            # The design file calls this arm verbatim, but its PCL-5 line asks for 20 items where the
+            # corpus prompt asks for 4 (Table S1 diff); the printed description says so.
+            desc = ("the corpus system prompt except its PCL-5 line, which asks for 20 items where the "
+                    "corpus prompt asks for 4, although the design file describes the arm as verbatim")
+        descs.append(f"Arm \\texttt{{{tex(arm['name'])}}} is {desc}.")
+    assert all(not a["params"] for a in pcd["arms"]), "prompt-control arms now set decoding parameters"
+    descs.append("No arm set a decoding parameter, leaving every call at the provider default.")
+    out.append("The prompt control ran three system prompts on the same 12 personas, with the user "
+               "template held identical across arms (\\texttt{analysis/prompt\\_control\\_design.json}). "
+               + " ".join(descs)
+               + " Table~\\ref{tab:s1diff} prints every line in which each arm differs from the corpus "
+               "system prompt.\n\n")
+    out.append("\\subsection*{S1.7 Decoding Control}\n")
     arms = "; ".join(f"\\texttt{{{tex(a['name'])}}} {params_text(a['params'])}"
                      for a in dcd["arms"])
-    out.append(f"\\noindent Decoding arms in \\texttt{{analysis/decoding\\_control\\_design.json}}: {arms}.\n\n")
+    out.append(f"\\noindent The decoding control (\\texttt{{scripts/55\\_decoding\\_control\\_run.py}}, "
+               f"system prompt at lines {dsys[0] + 1}--{dsys[1] + 1}) sent the corpus prompts with one "
+               f"changed line (Table~\\ref{{tab:s1diff}}) under two decoding arms, {arms} "
+               f"(\\texttt{{analysis/decoding\\_control\\_design.json}}).\n\n")
     # Result of the decoding control, cited from the body (Results, Gate).
     link = pd.read_csv(os.path.join(BRM, "gate_decoding_link.csv"))
     t0 = link[link.source == "temp0"]
@@ -966,7 +968,9 @@ def s3_marital_income():
 
     v = read(brm("l2_verdicts.csv"))
     rows = []
-    for est in ["standardised", "marginal"]:
+    # Standardised estimand only since 3 Oct 2026 (the article's estimand); the marginal rows are in
+    # l2_verdicts.csv.
+    for est in ["standardised"]:
         first = True
         for c in ["Low minus High SES", "Middle minus High SES", "Low minus Middle SES"]:
             for sc in ["deepseek/deepseek-chat-v3", "google/gemini-3-flash-preview", "openai/gpt-4o-mini",
@@ -988,9 +992,64 @@ def s3_marital_income():
                "\\cmidrule(lr){4-5}\\cmidrule(lr){6-7}"
                "Estimand & Contrast & Model & Ratio & Verdict & Ratio & Verdict"],
               rows,
-              "Rows of \\texttt{l2\\_verdicts.csv} with analysis \\texttt{headline} and \\texttt{ref\\_income\\_alt}. "
-              "The alternative mapping was run for the marginal estimand on the income contrasts only.",
+              "Standardised estimand. Rows of \\texttt{l2\\_verdicts.csv} with analysis \\texttt{headline} and "
+              "\\texttt{ref\\_income\\_alt}, where the marginal rows are also given.",
               tabcolsep="3pt")
+
+
+def s7_worked():
+    """Macros for the worked readings in S7 (3 Oct 2026): the gate for GPT-4o-mini (clinical, PHQ-8
+    total) and the level-2 low-to-high income ratio for DeepSeek-V3, each recomputed by hand from its
+    stored inputs and checked against the stored result before the numbers are printed."""
+    g = read(brm("gate_dstudy.csv"))
+    r = g[(g.outcome == "PHQ-8 total") & (g.model == "GPT-4o-mini") & (g.framing == "clinical")].iloc[0]
+    # Frozen tolerances (0.25 and 0.125 reference SD), as in gate_k; gate_dstudy's own tol columns
+    # carry the earlier 1.0 / 0.5-point tolerances, which give the same k here (asserted).
+    b = read(brm("80a_tolerance_basis.csv"))
+    sd = float(b[(b.window == "2005-2018") & (b.population == "all adults 18+")].sd.iloc[0])
+    t_min, t_rec = 0.25 * sd, 0.125 * sd
+    k_min, k_rec = gate_k(r.s2_e, "PHQ-8 total", "min"), gate_k(r.s2_e, "PHQ-8 total", "rec")
+    assert (k_min, k_rec) == (int(r.k_se_tol2), int(r.k_se_tol1)), (k_min, k_rec)
+    # tolerances to 3 dp so that the printed division reproduces the printed k (0.98 would give 3.19)
+    MACROS.update(WkGateVar=f2(r.s2_e), WkGateSD=f2(np.sqrt(r.s2_e)), WkGateTolMin=f"{t_min:.3f}",
+                  WkGateTolRec=f"{t_rec:.3f}", WkGateKMinExact=f2(r.s2_e / t_min ** 2),
+                  WkGateKRecExact=f2(r.s2_e / t_rec ** 2), WkGateKMin=str(k_min), WkGateKRec=str(k_rec))
+    v = read(brm("l2_verdicts.csv"))
+    x = v[(v.analysis == "headline") & (v.estimand == "standardised") & (v.contrast == "Low minus High SES")
+          & (v.scope == "deepseek/deepseek-chat-v3")].iloc[0]
+    assert abs(x.simulated / x.population - x.ratio) < 1e-3 and x.verdict == "steepened"
+    MACROS.update(WkLTwoSim=f2(x.simulated), WkLTwoSimSE=f2(x.se_sim), WkLTwoPairs=str(int(x.n_pairs)),
+                  WkLTwoPop=f2(x.population), WkLTwoPopSE=f3(x.se_pop), WkLTwoRatio=f2(x.ratio),
+                  WkLTwoLo=f2(x.ci_lo), WkLTwoHi=f2(x.ci_hi), WkLTwoK=f3(x.k_rel_halfwidth).lstrip("0"),
+                  WkLTwoLevel=p1(100 * x.interval_level))
+
+
+def s3_spec_range():
+    """One table for the article's claim that the level-3 failure holds under all eight reference
+    specifications (3 Oct 2026; replaces the era, marital and income level-3 tables in the PDF)."""
+    d = read(brm("89_l3_spec_range.csv"))
+    d = d[d.framing == "combined"]
+    models = [("deepseek-chat-v3", "DeepSeek-V3"), ("gemini-3-flash-preview", "Gemini-3-Flash"),
+              ("gpt-4o-mini", "GPT-4o-mini"), ("glm-4.7", "GLM-4.7"), ("pooled", "Pooled")]
+    rows = []
+    for spec in d.spec.unique():
+        row = [tex(spec)]
+        for key, _ in models:
+            r = d[(d.spec == spec) & (d.model == key)].iloc[0]
+            mark = "$^{*}$" if r.pass_2pt == 1 else ""
+            row.append(f"{f2(r.resid)}{mark} {ci(r.ci90_lo, r.ci90_hi)}")
+        rows.append(row)
+    MACROS["SpecRangeN"] = str(d.spec.nunique())
+    longtable("S3_l3_spec_range.tex", [brm("89_l3_spec_range.csv")],
+              "Level 3: Overall Residual Under Each Reference Specification", "tab:s3spec",
+              P("3.6cm") + "lllll",
+              ["Specification & " + " & ".join(n for _, n in models)],
+              rows,
+              "Post-stratified overall residual (simulated minus reference mean PHQ-8), framings combined, "
+              "with 90\\% intervals. $^{*}$ = the overall row passes at 2 points. A model passes level 3 "
+              "only when every group row passes; the group rows under each specification are in "
+              "\\texttt{analysis/brm/80c\\_l3\\_results.csv}.",
+              size="scriptsize", tabcolsep="3pt")
 
 
 # ---------------------------------------------------------------------------------------------
@@ -1000,7 +1059,8 @@ def s4_gate():
     g = read(brm("gate_dstudy.csv"))
     rows = []
     rows2 = []
-    for oc in ["PHQ-8 total", "PHQ-8 >= 10"]:
+    # PHQ-8 total only since 3 Oct 2026; the indicator rows (total of 10 or more) are in gate_dstudy.csv.
+    for oc in ["PHQ-8 total"]:
         sub = g[g.outcome == oc]
         sub = sub.assign(mo=sub.model.map(mean_name)).sort_values(["mo", "framing"])
         first = True
@@ -1027,8 +1087,9 @@ def s4_gate():
               ["Outcome & Model & Framing & $\\sigma^2_p$ & $\\sigma^2_r$ & $\\phi(1)$ & $\\phi(30)$"],
               rows,
               "Brackets: 95\\% persona-bootstrap intervals. $\\sigma^2_p$ = variance between personas, "
-              "$\\sigma^2_r$ = variance between draws of one persona (squared PHQ-8 points for the total, "
-              "squared proportion for the indicator). $\\phi$ from the nested design.",
+              "$\\sigma^2_r$ = variance between draws of one persona, in squared PHQ-8 points. $\\phi$ from "
+              "the nested design. Rows for the indicator of a total of 10 or more are in "
+              "\\texttt{analysis/brm/gate\\_dstudy.csv}.",
               size="scriptsize", tabcolsep="3pt")
     longtable("S4_gate_k.tex", [brm("gate_dstudy.csv"), brm("80a_tolerance_basis.csv")],
               "Gate: Draws Needed per Persona With Persona-Bootstrap Intervals", "tab:s4gatek",
@@ -1039,8 +1100,7 @@ def s4_gate():
               rows2,
               "Brackets: 95\\% persona-bootstrap intervals for $k$. Min.\\ = $k$ for SE $\\le$ 0.25 "
               "reference SD (0.98 PHQ-8 points); Rec.\\ = $k$ for SE $\\le$ 0.125 reference SD (0.49 "
-              "points); reference SD 3.935 (NHANES 2005--2018). Indicator rows: SE $\\le$ 0.10 and 0.05 in "
-              "proportion. Separation columns: $k$ for persona separation $\\phi(k)$, required only for "
+              "points); reference SD 3.935 (NHANES 2005--2018). Separation columns: $k$ for persona separation $\\phi(k)$, required only for "
               "uses that compare personas.",
               tabcolsep="3pt")
 
@@ -1131,6 +1191,9 @@ def s4_l3():
 def s4_l4():
     inv = read(brm("l4_invariance.csv"))
     rows = []
+    # Since 3 Oct 2026 the supplement prints the income steps, the ones the article's verdicts turn on;
+    # the sex and race steps are in l4_invariance.csv.
+    inv = inv[inv.attribute == "income"]
     for pop in inv.population.unique():
         sub = inv[inv.population == pop]
         first = True
@@ -1142,14 +1205,15 @@ def s4_l4():
         rows.append("MID")
     rows = rows[:-1]
     longtable("S4_l4_invariance.tex", [brm("l4_invariance.csv")],
-              "Level 4 Invariance Steps: RMSEA of the Difference", "tab:s4l4inv",
+              "Level 4 Invariance Steps Across Income: RMSEA of the Difference", "tab:s4l4inv",
               P("2.4cm") + "l" + P("1.6cm") + "rrrlr" + P("2.4cm") + P("2.4cm"),
               ["Population & Attribute & Step & $G$ & $d$ & RMSEA$_D$ & 90\\% CI & $\\hat c$ & At .08 & At .05"],
               rows,
               "A step holds when the upper 90\\% limit of RMSEA$_D$ is below the margin, fails when the "
               "lower limit is above it, and is indeterminate otherwise. The margin of .08 is primary and .05 "
               "a sensitivity analysis. $\\hat c$ = permutation scaling of the expected $\\Delta F$ under exact "
-              "invariance. The polychoric metric rows are reported as fitted.", size="scriptsize", tabcolsep="3pt")
+              "invariance. The polychoric metric rows are reported as fitted. The steps across sex and race "
+              "are in \\texttt{analysis/brm/l4\\_invariance.csv}.", size="scriptsize", tabcolsep="3pt")
 
 
 def s4_multiplicity():
@@ -1447,6 +1511,65 @@ def s6():
               size="scriptsize", tabcolsep="3pt")
 
 
+def s4_sensitivity():
+    """S4.6 (3 Oct 2026): kept-region sensitivity (94), equivalence test for gaps with no population
+    gap (95, exploratory) and level 1 on the decoding control (96)."""
+    b = read(brm("94_l2_band_sensitivity.csv"))
+    assert (b.n_undet_outside_kept_stopped == 0).all()
+    bands = list(b.band.unique())
+    names = {"Worked example": "Worked example", "Bisbee": "Bisbee et al.", "Argyle": "Argyle et al.",
+             "OpinionQA": "OpinionQA"}
+    rows = []
+    for ds, label in names.items():
+        g = b[b.dataset == ds].set_index("band")
+        rows.append([f"{label} ({int(g.total.iloc[0])})"] +
+                    [f"{g.loc[x, 'kept']}/{g.loc[x, 'not kept']}/{g.loc[x, 'unresolved']}/{g.loc[x, 'not read']}"
+                     for x in bands])
+    head = "Dataset & " + " & ".join(tex(x.replace(" frozen", " (frozen)")) for x in bands)
+    longtable("S4_l2_band.tex", [brm("94_l2_band_sensitivity.csv")],
+              "Level 2: Verdict Counts Under Other Kept Regions", "tab:s4band", P("3.4cm") + "llll", [head], rows,
+              "Counts are kept / not kept / unresolved / not read, for the contrasts of Figure 3. Intervals, "
+              "Bonferroni levels and stop 1 are held fixed; stop 2 uses each region's own threshold, "
+              "$k_{\\max} = (W-1)/(W+1)$ with $W$ the ratio of the region's bounds. Every row is in "
+              "\\texttt{analysis/brm/94\\_l2\\_band\\_sensitivity\\_rows.csv}.")
+    wide = b[b.band == bands[1]].set_index("dataset")
+    assert (b[b.dataset == "Worked example"].kept == 0).all()
+    MACROS.update(BandBisWide=str(int(wide.loc["Bisbee", "kept"])), BandOqaWide=str(int(wide.loc["OpinionQA", "kept"])),
+                  BandOqaTightRead=str(int(b[(b.dataset == "OpinionQA") & (b.band == bands[3])]["not read"].iloc[0])))
+
+    e = read(brm("95_null_gap_equivalence.csv"))
+    dsn = {"Worked example": "Worked example", "Bisbee": "Bisbee et al.", "Argyle": "Argyle et al."}
+    deltas = sorted(e.delta_sd.unique())
+    rows = []
+    for ds, label in dsn.items():
+        g = e[e.dataset == ds]
+        cells = []
+        for dl in deltas:
+            v = g[g.delta_sd == dl].verdict_90.value_counts()
+            cells.append(f"{v.get('pass', 0)}/{v.get('fail', 0)}/{v.get('unresolved', 0)}")
+        rows.append([f"{label} ({len(g[g.delta_sd == deltas[0]])})"] + cells)
+    longtable("S4_null_gap.tex", [brm("95_null_gap_equivalence.csv")],
+              "Level 2, Exploratory: Equivalence of Simulated Gaps Where the Population Shows None",
+              "tab:s4null", P("3.4cm") + "lll",
+              ["Dataset & " + " & ".join(f"$\\delta = {dl:.2f}$ SD" for dl in deltas)], rows,
+              "Counts are pass / fail / unresolved for the contrasts stopped as no population gap. A contrast "
+              "passes when the 90\\% interval of the simulated gap lies inside $(-\\delta, \\delta)$ and fails "
+              "when it lies wholly outside; $\\delta$ is in reference standard deviations. Not part of the frozen "
+              "ladder. Every row is in \\texttt{analysis/brm/95\\_null\\_gap\\_equivalence.csv}.")
+    g10 = e[e.delta_sd == deltas[0]]
+    v = lambda ds, k: str(int((g10[g10.dataset == ds].verdict_90 == k).sum()))  # noqa: E731
+    assert v("Worked example", "fail") == "0"  # the S4.6 text says the worked example shows no invented gap
+    MACROS.update(NullWkFail=v("Worked example", "fail"), NullBisFail=v("Bisbee", "fail"),
+                  NullBisN=str(int((g10.dataset == "Bisbee").sum())), NullArgFail=v("Argyle", "fail"),
+                  NullArgN=str(int((g10.dataset == "Argyle").sum())))
+
+    d = read(brm("96_decoding_l1.csv"))
+    for m, g in d.groupby("model"):
+        x = g.set_index("arm").verdict
+        assert x["default"] == x["temp0"] and x["temp0"].startswith("fail"), (m, x.to_dict())
+    MACROS.update(DecLPersonas=str(int(d.n_personas.iloc[0])), DecLDraws=str(int(d.n_draws.iloc[0])))
+
+
 def write_macros():
     out = [header([brm("87_row_sources.csv")])]
     for k, v in MACROS.items():
@@ -1462,11 +1585,14 @@ def main():
     s3_december()
     s3_nhanes2021()
     s3_marital_income()
+    s3_spec_range()
+    s7_worked()
     s4_gate()
     s4_l2()
     s4_l3()
     s4_l4()
     s4_multiplicity()
+    s4_sensitivity()
     s5()
     s6()
     write_macros()

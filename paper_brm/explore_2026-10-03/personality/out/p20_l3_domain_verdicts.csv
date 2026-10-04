@@ -1,0 +1,11 @@
+model,scale,L3_0.5SD,L3_0.5SD_rows_pass,L3_0.2SD,L3_0.2SD_rows_pass
+GPT-3.5,Agreeableness,fail,1/8,fail,0/8
+GPT-3.5,Conscientiousness,unresolved,1/8,fail,0/8
+GPT-3.5,Extraversion,pass,8/8,fail,0/8
+GPT-3.5,Neuroticism,fail,2/8,fail,0/8
+GPT-3.5,Openness,pass,8/8,unresolved,3/8
+GPT-4,Agreeableness,pass,8/8,fail,1/8
+GPT-4,Conscientiousness,unresolved,5/8,fail,0/8
+GPT-4,Extraversion,pass,8/8,fail,3/8
+GPT-4,Neuroticism,fail,4/8,fail,0/8
+GPT-4,Openness,pass,8/8,fail,5/8

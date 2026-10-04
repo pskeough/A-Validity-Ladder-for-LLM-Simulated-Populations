@@ -1,0 +1,13 @@
+dataset,release,simulator,n,pass_,fail,unresolved,cannot,control,c_n,c_pass,c_fail,c_unresolved,c_cannot
+bisbee,\citet{bisbee2024synthetic},ChatGPT,3,0,3,0,0,,0.0,0.0,0.0,0.0,0.0
+argyle,\citet{argyle2023outofone},GPT-3,3,0,3,0,0,Ideal,200.0,7.0,0.0,193.0,0.0
+opinionqa,\citet{meister2025distributional},5 LLMs,26,0,13,12,1,Ideal,200.0,92.0,0.0,108.0,0.0
+huang2025,\citet{huang2025uncertainty},8 LLMs,8,0,7,1,0,Ideal,100.0,100.0,0.0,0.0,0.0
+huang2025,,,0,0,0,0,0,"Ideal, small",100.0,0.0,0.0,100.0,0.0
+subpop2025,\citet{suh2025subpop},Base,2,0,2,0,0,,0.0,0.0,0.0,0.0,0.0
+subpop2025,,SubPOP,2,0,2,0,0,,0.0,0.0,0.0,0.0,0.0
+twin2k,\citet{toubia2025twin2k},13 twins,13,0,13,0,0,Retest,1.0,1.0,0.0,0.0,0.0
+twin2k_mega_bystudy,\citet{peng2025funhouse},23 twins,413,0,285,0,128,Split half,18.0,0.0,0.0,0.0,18.0
+malmberg2026,\citet{malmberg2026conjoint},3 LLMs,3,0,2,0,1,Split half,3.0,0.0,0.0,0.0,3.0
+cummins2025,\citet{cummins2026flexibility},9 LLMs,252,0,0,0,252,Split half,200.0,0.0,10.0,0.0,190.0
+all simulators,All simulators,,725,0,330,13,382,,,,,,

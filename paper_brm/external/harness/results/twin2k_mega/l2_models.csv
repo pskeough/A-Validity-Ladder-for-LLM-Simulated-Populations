@@ -1,0 +1,25 @@
+family,contrasts,verdict,reading,certifiable,kept,not kept,unresolved,not read,stopped_no_population_gap,stopped_reference_imprecise
+GPT5,2411,fail,fail,0,0,24,0,2387,2295,92
+centaur_empty_persona,2406,fail,fail,0,0,83,0,2323,2290,33
+centaur_persona_summary,2380,fail,fail,0,0,32,0,2348,2266,82
+deepseek,2411,fail,fail,0,0,30,0,2381,2295,86
+demographics_only,2411,fail,fail,0,0,34,0,2377,2295,82
+demographics_only_temperature_zero,2411,fail,fail,0,0,35,0,2376,2295,81
+empty_persona,2411,fail,fail,0,0,87,0,2324,2295,29
+empty_persona_temperature_zero,2411,fail,fail,0,0,101,0,2310,2295,15
+full_persona_fine_tuned_temperature_0,2411,fail,fail,0,0,13,0,2398,2295,103
+full_persona_fine_tuned_temperature_7,2341,fail,fail,0,0,9,0,2332,2224,108
+full_persona_fine_tuned_temperature_7_jsonforced,2411,fail,fail,0,0,6,0,2405,2295,110
+full_persona_without_reasoning,2411,fail,fail,0,0,26,0,2385,2295,90
+gemini,2411,fail,fail,0,0,32,0,2379,2295,84
+gemini_3_pro,2411,fail,fail,0,0,22,0,2389,2295,94
+include_reasoning_temperature_zero,2411,fail,fail,0,0,22,0,2389,2295,94
+llama_empty_persona,2411,fail,fail,0,0,78,0,2333,2295,38
+llama_persona_summary,2408,fail,fail,0,0,26,0,2382,2293,89
+persona_summary,2411,fail,fail,0,0,28,0,2383,2295,88
+persona_summary_include_reasoning,2411,fail,fail,0,0,27,0,2384,2295,89
+persona_summary_include_reasoning_temperature_zero,2411,fail,fail,0,0,28,0,2383,2295,88
+persona_summary_temperature_zero,2411,fail,fail,0,0,28,0,2383,2295,88
+temperature_zero,2411,fail,fail,0,0,24,0,2387,2295,92
+with_reasoning,2411,fail,fail,0,0,21,0,2390,2295,95
+human_split_half,1598,unresolved,reference cannot certify,0,0,0,0,1598,1540,58

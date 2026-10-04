@@ -1,0 +1,117 @@
+% Supplement S8. Further external releases, step 0 and the harness. Numbers come from
+% paper_brm/external/harness/results/ (PAPER_TABLE.csv, DESIGN.csv, LENIENCY_totals.csv, each release's
+% l2_contrasts.csv and REPORT.md) and paper_brm/explore_2026-10-03/ (personality/out, mechanism_*).
+
+\section{S8. Further External Releases}
+\label{sec:s8}
+
+\subsection*{S8.1 Harness}
+
+The releases not read in Supplement S6 were read through one harness, \texttt{paper\_brm/external/harness}.
+An adapter for each release turns the released files into rows of simulated and human gaps with their standard errors, covariance, degrees of freedom and family size, and the harness reads every row with the \texttt{validity-ladder} package and writes the contrasts, the family verdicts, a manifest with the hash of every input file and a report.
+Adapters for the four releases of Supplement S6 feed the harness the gaps the article's own scripts store.
+The harness reproduces the stored verdict of every one of their 14,349 contrasts (Bisbee et al.\ 231, Argyle et al.\ 183, OpinionQA 154, Twin-2K-500 13,781), and \texttt{selftest.py} repeats that check.
+Version 0.1.1 handles a simulated gap with a standard error of exactly zero and a population gap of exactly zero, with a test for each.
+
+\subsection*{S8.2 Step 0 and Faithful Controls}
+
+A contrast is certifiable when a simulator with no sampling noise, whose gap equals the population gap, would be read kept.
+The test uses only the population gap, its standard error, its degrees of freedom and the family size, and \texttt{validity\_ladder.certifiable} computes it.
+A family whose verdict is unresolved and which holds no certifiable contrast is reported as reference cannot certify.
+The function \texttt{faithful\_simulation} draws faithful simulators at a planned size against a reference and returns the share that would pass, which sizes a study before generation.
+
+Each release with enough released human data was given a faithful control read exactly as its simulators were.
+For OpinionQA, an ideal simulator draws each group's answers afresh from the released Pew counts at the released group sizes (200 replicates); the human gaps it implies equal the stored ones for all five contrasts with released counts.
+It keeps 88.2\% of 1,000 contrast readings and leaves the rest unresolved, and its 200 families pass 92 times and are unresolved 108 times, with no failure.
+Most unresolved readings fall on Female--Male, whose human gap of 0.055 on the 0--1 answer scale is kept in 52\% of replicates.
+For Argyle et al.\ Study 3 a group-faithful resample of the same respondents passes 7 of 200 families and fails none, the rest unresolved by the small subgroups of the American National Election Studies sample.
+For \citet{huang2025uncertainty} the ideal simulator passes all 100 replicates at the human group sizes and leaves all 100 unresolved at the 100 profiles per question that the LLMs answered as.
+Split halves of the respondents serve as the control for \citet{peng2025funhouse}, \citet{malmberg2026conjoint} and \citet{cummins2026flexibility}, where step 0 finds no certifiable contrast.
+In \citet{cummins2026flexibility} the split halves fail 10 of 200 families, the rate the family-wise error level allows.
+
+\input{tables/S8_leniency}
+
+Table~\ref{tab:s8leniency} re-reads every stored contrast of the nine releases under easier rules.
+Widening the kept region lets 15 simulator families pass, 14 of them in one study of \citet{peng2025funhouse}.
+Dropping the multiplicity correction lets none pass and fails faithful controls eight times as often.
+Under every rule, the precision of the reference limits the number of passes.
+
+\subsection*{S8.3 Huang, Wu and Wang}
+
+The release of \citet{huang2025uncertainty} holds 1,476,868 unweighted Pew answers to 385 OpinionQA questions and the answers of eight LLMs prompted as 100 to 200 respondent profiles per question, each profile carrying all 12 of the respondent's attributes.
+Our reading reproduces the release's response, question and profile counts.
+Nine contrasts with an informed human gap form each family.
+Of 72 contrasts (eight models by nine contrasts), 2 are kept (the Republican--Democrat gap for Claude 3.5 Haiku and Llama 3.3 70B), 30 are not kept and 40 are unresolved, and seven of the eight models fail level 2, DeepSeek-V3 being unresolved.
+Answers drawn at random fail every contrast.
+
+\subsection*{S8.4 Peng et al.}
+
+\citet{peng2025funhouse} fielded 19 studies to the Twin-2K-500 panel and released the answers of 23 twin specifications beside the respondents' own.
+Our reading reproduces 1,026 of 1,026 meta-analysis numbers checked against the release.
+Demographic gaps were read on each study's outcomes with a person-paired bootstrap, one family per specification and study, and 18 of the 19 studies yield readable contrasts.
+Of 413 families, 285 fail and 128 have no certifiable contrast, and none passes.
+The split-half control reads none of its 1,598 contrasts, most of them stopped because the human gap cannot be told from zero.
+
+\subsection*{S8.5 Malmberg}
+
+\citet{malmberg2026conjoint} matched GPT-4o-mini, Llama 3.2 and Magistral-small to live respondents of a location-choice conjoint by their covariates.
+A group gap is the difference between two groups in the average marginal component effect of one of 8 political attribute levels, for Republican--Democrat, female--male, Black--White and young--senior respondents, with a respondent bootstrap that keeps the pairing.
+Our reading reproduces the 84 effects in the authors' bootstrap files.
+A kept verdict here needs a human gap at least 11.8 times its standard error, and with the most precise human gap at 9.8 times no simulator can be certified.
+GPT-4o-mini fails with 2 gaps not kept and Llama 3.2 with 8, most of them partisan gaps the models shrink or reverse, and Magistral is read only as reference cannot certify.
+
+\subsection*{S8.6 Cummins}
+
+\citet{cummins2026flexibility} had 85 people and 252 LLM configurations (nine models crossed with temperature or reasoning effort, prompt content and demographic detail) complete the same measures.
+Our reading reproduces 21 published numbers.
+Every human gap by politics, sex, education and age has an interval covering zero, every level-2 reading stops for that reason, and all 252 families are reported as reference cannot certify.
+Level 3 remains readable, and against a tolerance of half a human standard deviation 123 of 504 configuration and outcome cells pass and 250 fail, while split halves of the 85 people pass 210 of 400 and fail none.
+
+\subsection*{S8.7 SubPOP}
+
+\citet{suh2025subpop} fine-tuned Mistral-7B \citep{jiang2023mistral} with a low-rank adapter on Pew and General Social Survey answer distributions of 22 subpopulations.
+We ran the released adapter and its base model on the questions of the OpinionQA release used in the article, for the 14 groups of its eight contrasts, with SubPOP's own prompt and scoring.
+The prompt first asks a steering question about the group and gives the group's answer, then asks the survey question and ends in ``Answer:''.
+The next-token probabilities of each option letter, with and without a leading space, are summed and renormalized over the options with an ordinal position.
+Both arms use one loaded copy of the weights, with the adapter switched off for the base model; the shard hashes match the Hub, and the loss on a Wikipedia sentence is 0.47 per token.
+On average SubPOP puts 0.97 of its probability on the option letters and the base model 0.81.
+SubPOP trained on Pew waves 68 to 131 and the questions come from waves 26 to 92.
+SubPOP's released training data \citep{suh2025subpop}, obtained from Hugging Face under its terms and not redistributed, hold 3,229 questions, and no question read here appears among them by key (\texttt{external/scripts/subpop\_overlap.py}).
+Four are the same items as training questions fielded in another wave (ETHNCMAJ, FAMSURV1, GOVREGV1 and USMILSIZ).
+Read without those four, SubPOP points every gap in the human direction, seven of eight at 0.29 to 0.56 of the human size and the party gap at 0.84, with no gap kept (\texttt{l2\_contrasts\_no\_overlap.csv}).
+The conservative subset drops the questions from waves 82 and 92, fielded during SubPOP's training period, leaving 70.
+One question appears five times under one key in SubPOP's file with differing prompts and is dropped.
+The human side is SubPOP's processed OpinionQA file, whose gaps are within 0.01 of the article's Meister-based gaps for seven of the eight contrasts and 0.178 against 0.192 for party.
+Table~\ref{tab:s8subpop} gives every contrast.
+
+\input{tables/S8_subpop}
+
+\subsection*{S8.8 Personality Release}
+
+The release \citep{ipipaudit2026} holds 10,000 answers from each of eight LLMs to the 50 IPIP Big Five markers under one prompt at temperature 1.0, beside 500,703 human respondents to the same items from the Open Psychometrics IPIP-FFM file, cleaned by the release authors.
+With one prompt there is one persona per model, so each draw is treated as its own person and the gate and level 2 do not run.
+Level 1 and level 4 follow the article's code, with tau set per scale from the reference's country subgroups.
+Every one of the 40 model and scale cells fails level 1 by a misfit deficit, and three cells are compressed in both tails.
+R1 passes in 28 cells and R2 fails in all 40; the cell closest to the R2 limit, DeepSeek-V3.2 on Openness, has a lower 90\% limit for the loading difference of 0.107 against the limit of 0.10.
+A random 10,000 of the human respondents held out from the reference pass level 1 on all five scales (misfit ratios 0.94 to 1.12) and pass R1 and R2 on all five.
+Our reading reproduces 120 quantities of the release authors' notebook to within 5 $\times$ 10$^{-7}$.
+
+\subsection*{S8.9 HEXACO Release}
+
+\citet{mercer2025hexaco} released HEXACO-PI-R answers from 310 census-based agents under four models, and we note one result from that release, outside the ten releases of the main text, for what it shows about level 4.
+Read against a human HEXACO sample of 22,299 on facet scores, a faithful population of 310 people with four-item facets passes level 4 in only 2\% to 18\% of split-half repeats across domains, and no model passes all six domains.
+R1 is a point rule, and where the reference eigenvalue ratio sits near the threshold of 3 a faithful population fails it by chance.
+Level 4 therefore needs its own certifiability check, which the package does not implement.
+
+\subsection*{S8.10 Mechanism Analyses}
+
+For the Twin-2K-500 twins the partisan gap on the eight opinion items is decomposed by regressing the wave-4 answer on party and on the respondent's own earlier answer to the same item, in twins and in people, with a person bootstrap; \texttt{paper\_brm/explore\_2026-10-03/mechanism\_twins} holds every specification.
+For the PHQ-8 corpus the variance among the 48 persona-cell means is split into the four main effects and their remainder in each model and in NHANES, and the recalibrations are fitted on a random half of the cells and checked on the other half in 200 splits; \texttt{mechanism\_corpus} holds the outputs and the reproduction checks, all of which pass.
+These analyses were run after the rules were frozen and are exploratory.
+
+In NHANES, income accounts for .33 of the variance among the 48 persona-cell means of the PHQ-8, and in the four models it accounts for .79 to .90, leaving sex, race and marital status with little weight.
+A linear recalibration fitted on half of the cells brings every group's level within the 2-point tolerance of level 3 in each of 200 held-out splits for every model, and level 2 fails in every split.
+A linear map multiplies every gap by the same slope and leaves the ratios between attribute effects unchanged.
+On the eight opinion items the default Twin-2K-500 twins steepen the partisan gap to 2.65 points against 1.45 in people.
+With the respondent's own earlier answer held fixed, party carries 2.51 points of the twins' gap and 0.50 of the human gap, and the slope on the earlier answer is 0.10 in the twins against 0.66 in people.
+In the fine-tuned twins party carries 0.54 points of the gap, as it does among the same 1,031 respondents, and the slope on the earlier answer stays at 0.11 against 0.65.

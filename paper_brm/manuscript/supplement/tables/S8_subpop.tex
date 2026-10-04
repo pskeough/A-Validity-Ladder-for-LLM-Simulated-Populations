@@ -1,0 +1,38 @@
+% Written by paper_brm/external/harness/supp_tables.py from harness/results/subpop2025/l2_contrasts.csv.
+\begin{table}[!ht]
+\centering
+\caption{SubPOP and Its Base Model on the OpinionQA Contrasts}
+\label{tab:s8subpop}
+\footnotesize
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{@{}lrrlrrl@{}}
+\toprule
+ & & \multicolumn{2}{c}{Base model} & \multicolumn{3}{c}{SubPOP} \\
+\cmidrule(lr){3-4}\cmidrule(l){5-7}
+Contrast & Human gap & Ratio & Label & Ratio & Interval & Label \\
+\midrule
+\multicolumn{7}{@{}l}{\textit{All questions ($n$ = 97)}} \\
+Republican--Democrat & 0.178 & $-$0.02 & missing & 0.84 & [0.71, 0.97] & attenuated or kept \\
+Female--Male & 0.055 & 0.05 & reversed to attenuated & 0.42 & [0.25, 0.60] & attenuated \\
+Black--White & 0.096 & $-$0.13 & reversed or missing & 0.56 & [0.40, 0.71] & attenuated \\
+Hispanic--White & 0.087 & $-$0.25 & reversed or missing & 0.41 & [0.26, 0.56] & attenuated \\
+Asian--White & 0.095 & $-$0.28 & reversed or missing & 0.44 & [0.26, 0.64] & attenuated \\
+Less than high school--College graduate & 0.090 & 0.07 & missing & 0.39 & [0.24, 0.54] & missing or attenuated \\
+Less than \$30,000--\$100,000 or more & 0.064 & 0.03 & missing & 0.31 & [0.11, 0.51] & missing or attenuated \\
+South--Northeast & 0.040 & 0.21 & undetermined & 0.30 & [0.16, 0.44] & missing or attenuated \\
+\multicolumn{7}{@{}l}{\textit{Questions fielded before SubPOP's training waves ($n$ = 70)}} \\
+Republican--Democrat & 0.135 & $-$0.07 & reversed or missing & 0.84 & [0.63, 1.07] & reference too imprecise \\
+Female--Male & 0.056 & 0.22 & reference too imprecise & 0.39 & [0.17, 0.62] & missing or attenuated \\
+Black--White & 0.086 & $-$0.05 & reversed or missing & 0.48 & [0.26, 0.69] & attenuated \\
+Hispanic--White & 0.078 & $-$0.21 & reversed or missing & 0.36 & [0.17, 0.58] & missing or attenuated \\
+Asian--White & 0.096 & $-$0.25 & reversed or missing & 0.32 & [0.10, 0.55] & missing or attenuated \\
+Less than high school--College graduate & 0.099 & 0.08 & missing & 0.35 & [0.18, 0.52] & missing or attenuated \\
+Less than \$30,000--\$100,000 or more & 0.068 & 0.06 & missing & 0.29 & [0.05, 0.52] & missing or attenuated \\
+South--Northeast & 0.039 & 0.08 & reference too imprecise & 0.22 & [0.06, 0.40] & missing or attenuated \\
+\bottomrule
+\end{tabular}}
+\vspace{4pt}
+\begin{tabnote}
+\textit{Note.} Human gap: oriented mean gap in the ordinal answer position (0 to 1) over questions, from SubPOP's processed OpinionQA file. Ratio: simulated over human gap. Label: the level-2 label of Section 2. Intervals are Fieller intervals at the Bonferroni level for a family of 8.
+\end{tabnote}
+\end{table}

@@ -51,6 +51,12 @@ BODY_REFS = {"fig:ladder": "1", "fig:panels": "2", "fig:external": "3", "tab:ver
 # Numbers with no cell of their own, re-derived by hand from the named receipt (1 Oct 2026).
 # Keyed by (manuscript file, number as printed). Status "derived"; the reason is printed in the check.
 DERIVED = {
+    # Parts of dataset and model names on the 4 Oct 2026 external lines, not quantities.
+    ("sections/06_external.tex", "500"): "name: Twin-2K-500",
+    ("sections/06_external.tex", "5.4"): "model name: GPT-5.4",
+    ("sections/06_external.tex", "50"): "instrument: the 50-item IPIP Big Five markers",
+    ("sections/06_external.tex", "4.6"): "model name: Claude Sonnet 4.6",
+    ("sections/06_external.tex", ".2"): "model name: DeepSeek-V3.2",
     ("sections/01_introduction.tex", "28,800"): "sum of rows, corpus_v3_provenance.csv (14,400 clinical + 14,400 narrative)",
     ("sections/03_data.tex", "28,800"): "sum of rows, corpus_v3_provenance.csv",
     ("sections/08_limitations.tex", "28,800"): "sum of rows, corpus_v3_provenance.csv",
@@ -220,7 +226,10 @@ def build_writer_index():
     """Map receipt basename -> scripts that name it in an output line (to_csv, save, Emits, written)."""
     idx = defaultdict(set)
     pats = []
-    dirs = [SCRIPTS, os.path.join(BASE, "paper_brm", "external", "scripts"), os.path.join(NOTES, "panel_power")]
+    explore = os.path.join(BASE, "paper_brm", "explore_2026-10-03")
+    dirs = [SCRIPTS, os.path.join(BASE, "paper_brm", "external", "scripts"), os.path.join(NOTES, "panel_power"),
+            os.path.join(BASE, "paper_brm", "external", "harness"), os.path.join(explore, "personality"),
+            os.path.join(explore, "mechanism_corpus"), os.path.join(explore, "mechanism_twins")]
     files = [(d, fn) for d in dirs if os.path.isdir(d) for fn in sorted(os.listdir(d))]
     for d, fn in files:
         if not fn.endswith(".py") or fn == "86_receipts.py":

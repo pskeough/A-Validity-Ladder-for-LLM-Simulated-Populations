@@ -1,0 +1,27 @@
+family,contrasts,verdict,reading,certifiable,kept,not kept,unresolved,not read,stopped_no_population_gap,stopped_reference_imprecise
+anthropic_haiku | express_distribution | persona,8,unresolved,unresolved,2,0,0,8,0,0,0
+anthropic_haiku | express_distribution | few-shot,8,fail,fail,2,0,1,7,0,0,0
+anthropic_opus | express_distribution | persona,8,unresolved,reference cannot certify,0,0,0,3,5,0,5
+anthropic_opus | express_distribution | few-shot,8,unresolved,unresolved,2,0,0,8,0,0,0
+gpt-3.5-turbo-0125 | express_distribution | persona,8,unresolved,unresolved,1,0,0,8,0,0,0
+gpt-3.5-turbo-0125 | express_distribution | few-shot,8,fail,fail,2,0,4,4,0,0,0
+gpt-4 | express_distribution | persona,8,fail,fail,2,1,1,6,0,0,0
+gpt-4 | express_distribution | few-shot,8,fail,fail,2,0,3,5,0,0,0
+llama3-70b | express_distribution | persona,3,unresolved,unresolved,3,0,0,3,0,0,0
+llama3-70b | express_distribution | few-shot,3,fail,fail,3,0,1,2,0,0,0
+gpt-3.5-turbo-0125 | model_logprobs | persona,8,fail,fail,2,0,6,2,0,0,0
+gpt-3.5-turbo-0125 | model_logprobs | few-shot,8,fail,fail,2,0,3,5,0,0,0
+gpt-4 | model_logprobs | persona,8,unresolved,unresolved,2,0,0,8,0,0,0
+gpt-4 | model_logprobs | few-shot,8,unresolved,unresolved,2,0,0,8,0,0,0
+llama3-70b | model_logprobs | persona,3,fail,fail,3,0,1,2,0,0,0
+llama3-70b | model_logprobs | few-shot,3,unresolved,unresolved,3,0,0,3,0,0,0
+anthropic_haiku | sequence | persona,5,unresolved,unresolved,4,0,0,5,0,0,0
+anthropic_haiku | sequence | few-shot,5,unresolved,unresolved,4,0,0,5,0,0,0
+anthropic_opus | sequence | persona,5,fail,fail,4,0,1,4,0,0,0
+anthropic_opus | sequence | few-shot,5,unresolved,unresolved,4,0,0,5,0,0,0
+gpt-3.5-turbo-0125 | sequence | persona,5,fail,fail,4,0,4,1,0,0,0
+gpt-3.5-turbo-0125 | sequence | few-shot,5,fail,fail,4,0,4,1,0,0,0
+gpt-4 | sequence | persona,5,fail,fail,4,0,3,2,0,0,0
+gpt-4 | sequence | few-shot,5,fail,fail,4,0,1,4,0,0,0
+llama3-70b | sequence | persona,3,unresolved,unresolved,3,0,0,3,0,0,0
+llama3-70b | sequence | few-shot,3,unresolved,unresolved,3,0,0,3,0,0,0

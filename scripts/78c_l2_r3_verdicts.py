@@ -66,7 +66,7 @@ CONTRASTS = ["Black minus White", "Hispanic minus White", "Asian minus White", "
 MODELS = ["openai/gpt-4o-mini", "google/gemini-3-flash-preview", "deepseek/deepseek-chat-v3",
           "z-ai/glm-4.7"]
 SHORT = {"reversed": "r", "missing": "m", "attenuated": "a", "kept": "k", "steepened": "s",
-         "undetermined": "u", "no population gap": "N", "reference too imprecise": "X"}
+         "undetermined": "u", "reversed to attenuated": "r-a", "no population gap": "N", "reference too imprecise": "X"}
 
 
 def tcrit(a, df):
@@ -103,6 +103,9 @@ def r3(g, se_g, df_g, p, se_p, df_p, a, bounds, df_mode="satterthwaite"):
         lab = LABELS[lo]
     elif hi == lo + 1:
         lab = f"{LABELS[lo]} or {LABELS[hi]}"
+    elif hi < 3:
+        # crosses more than one boundary and stays below kept: excludes kept (LADDER_SPEC stop 2)
+        lab = "reversed to attenuated"
     else:
         lab = "undetermined"
     # interval: accepted set of c, by grid + root refinement
@@ -170,6 +173,11 @@ def code(v):
 
 
 # ---------------------------------------------------------------------------------- receipt
+def old_label(v):
+    """Script 74 printed 'undetermined' for every reading crossing more than one boundary."""
+    return "undetermined" if v == "reversed to attenuated" else v
+
+
 def engine_receipt():
     d = pd.read_csv(os.path.join(BASE, "analysis", "level2_ratio_interval.csv"))
     fails, n = 0, 0
@@ -177,12 +185,12 @@ def engine_receipt():
         out = r3(r.simulated, r.se, r.df, r.population, r.pop_se, r.df, ALPHA,
                  np.array([-0.25, 0.25, 0.75, 1.25]), df_mode="pairs")
         want = r.verdict_r3.replace("flattened", "attenuated")
-        fails += out["r3_unstopped"] != want
+        fails += old_label(out["r3_unstopped"]) != want
         n += 1
         if r.scope_type == "pooled":
             out = r3(r.simulated, r.se, r.df, r.population, r.pop_se, r.df, ALPHA / 7,
                      np.array([-0.25, 0.25, 0.75, 1.25]), df_mode="pairs")
-            fails += out["r3_unstopped"] != r.verdict_r3_bonf.replace("flattened", "attenuated")
+            fails += old_label(out["r3_unstopped"]) != r.verdict_r3_bonf.replace("flattened", "attenuated")
             n += 1
     return n, fails
 

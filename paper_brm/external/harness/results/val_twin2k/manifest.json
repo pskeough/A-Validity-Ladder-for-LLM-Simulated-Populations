@@ -1,0 +1,18 @@
+{
+  "adapter": "val_twin2k",
+  "name": "val_twin2k",
+  "kind": "digital twins and human retest (validation of the harness against scripts/93)",
+  "source": "Toubia et al. (2025), Twin-2K-500; rows from paper_brm/external/results/twin2k/level2_contrasts.csv",
+  "mode": "gaps",
+  "package_version": "0.1.1",
+  "inputs": [
+    {
+      "path": "C:\\Research\\PsychBench\\UpdatedRun\\paper_brm\\external\\results\\twin2k\\level2_contrasts.csv",
+      "sha256": "aff62288f86fb4e1ecdc8c234fb3818419cf70109bbb265d4ef3e11aa525d70a",
+      "bytes": 8121976
+    }
+  ],
+  "run_at": "2026-10-04 00:52:57",
+  "seconds": 3.5,
+  "notes": ""
+}

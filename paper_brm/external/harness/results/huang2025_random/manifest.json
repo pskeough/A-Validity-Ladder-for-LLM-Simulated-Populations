@@ -1,0 +1,23 @@
+{
+  "adapter": "huang2025_random",
+  "name": "huang2025_random",
+  "kind": "null control (random answers, authors' random.json)",
+  "source": "Huang, Wu & Wang (2025), github.com/yw3453/uq-llm-survey-simulation data.zip, clean/random.json",
+  "mode": "gaps",
+  "package_version": "0.1.1",
+  "inputs": [
+    {
+      "path": "C:\\Research\\PsychBench\\UpdatedRun\\paper_brm\\external\\raw\\huang2025\\data\\OpinionQA\\opinionqa_data.json",
+      "sha256": "1af09f184f9c05b801b9ab7d89efc3f93765a9fbb497ed57b37cf05c2c442577",
+      "bytes": 617621697
+    },
+    {
+      "path": "C:\\Research\\PsychBench\\UpdatedRun\\paper_brm\\external\\raw\\huang2025\\data\\OpinionQA\\synthetic_answers\\clean\\random.json",
+      "sha256": "5b374437c05307291852d9c8df3789dea0873438613aa840f1697707e0580e18",
+      "bytes": 794853
+    }
+  ],
+  "run_at": "2026-10-03 22:03:47",
+  "seconds": 11.0,
+  "notes": ""
+}

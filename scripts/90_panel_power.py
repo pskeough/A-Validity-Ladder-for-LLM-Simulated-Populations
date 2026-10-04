@@ -367,7 +367,7 @@ def run_rep(rep, r4_reps, r4_noninv):
                 msk = gen["framing"] == f
                 r = C.l4_eval(X[msk], gen["persona"][msk], l4ref, rng)
                 r4 = {}
-                if rep < r4_reps or t == "NONINVARIANT":
+                if (rep < r4_reps or t == "NONINVARIANT") and not os.environ.get("PP_SKIP_R4"):
                     if r["R1"]:
                         tr = time.time()
                         r4, steps = P.r4_eval(X[msk], gen["persona"][msk], pers, [SEED, rep, gi, ti, f])
@@ -441,7 +441,7 @@ def main():
     first = int(a[4]) if len(a) > 4 else 0
     k_perm = int(a[5]) if len(a) > 5 else 30
     b_r4 = int(a[6]) if len(a) > 6 else 100
-    repdir = os.path.join(OUTD, "reps")
+    repdir = os.environ.get("PP_REPDIR") or os.path.join(OUTD, "reps")
     os.makedirs(repdir, exist_ok=True)
     todo = [(r, r4_reps, r4_noninv, k_perm, b_r4, os.path.join(repdir, f"rep_{r:03d}.csv"))
             for r in range(first, first + R)]
@@ -464,7 +464,8 @@ def main():
                 log.append(tm)
                 print(f"[{k}/{len(todo)} {time.time() - t0:.0f}s] " +
                       str({kk: round(v, 1) if isinstance(v, float) else v for kk, v in tm.items()}), flush=True)
-    pd.DataFrame(log).to_csv(os.path.join(OUTD, f"90_timing_{first:03d}_{first + R - 1:03d}.csv"), index=False)
+    pd.DataFrame(log).to_csv(os.path.join(os.path.dirname(repdir) if os.environ.get("PP_REPDIR") else OUTD,
+                                          f"90_timing_{first:03d}_{first + R - 1:03d}.csv"), index=False)
     print(f"done in {time.time() - t0:.0f}s", flush=True)
 
 

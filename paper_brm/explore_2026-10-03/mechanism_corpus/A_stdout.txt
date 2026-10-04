@@ -1,0 +1,60 @@
+         model   framing  spearman  spearman_lo90  spearman_hi90  pearson  pearson_lo90  pearson_hi90  within_income_spearman  within_income_pearson  sd_ratio  ols_slope_y_on_s
+   DeepSeek-V3  clinical     0.747          0.601          0.847    0.809         0.706         0.876                   0.732                  0.748     1.234             0.655
+   DeepSeek-V3 narrative     0.749          0.592          0.849    0.715         0.604         0.805                   0.626                  0.620     1.303             0.548
+   DeepSeek-V3  combined     0.757          0.614          0.858    0.776         0.684         0.854                   0.731                  0.734     1.243             0.624
+Gemini-3-Flash  clinical     0.753          0.587          0.860    0.712         0.559         0.810                   0.784                  0.800     3.703             0.192
+Gemini-3-Flash narrative     0.755          0.585          0.863    0.759         0.620         0.849                   0.802                  0.721     3.249             0.233
+Gemini-3-Flash  combined     0.760          0.590          0.863    0.740         0.596         0.834                   0.819                  0.776     3.447             0.215
+       GLM-4.7  clinical     0.796          0.666          0.892    0.820         0.723         0.892                   0.868                  0.881     3.169             0.259
+       GLM-4.7 narrative     0.823          0.671          0.910    0.804         0.689         0.880                   0.896                  0.870     3.634             0.221
+       GLM-4.7  combined     0.820          0.671          0.904    0.815         0.708         0.891                   0.908                  0.897     3.385             0.241
+   GPT-4o-mini  clinical     0.684          0.499          0.807    0.705         0.570         0.811                   0.617                  0.659     1.617             0.436
+   GPT-4o-mini narrative     0.639          0.435          0.781    0.687         0.527         0.805                   0.439                  0.468     1.060             0.648
+   GPT-4o-mini  combined     0.683          0.520          0.810    0.716         0.592         0.820                   0.646                  0.668     1.303             0.550
+        pooled  clinical     0.781          0.630          0.882    0.787         0.671         0.872                   0.894                  0.909     2.341             0.336
+        pooled narrative     0.778          0.614          0.878    0.802         0.684         0.879                   0.887                  0.866     2.197             0.365
+        pooled  combined     0.774          0.612          0.872    0.796         0.670         0.875                   0.896                  0.897     2.264             0.352
+                                                        source              statistic  mean   p05   p95
+                                                    donor_half               spearman 0.871 0.808 0.921
+                                                    donor_half                pearson 0.896 0.846 0.930
+                                                    donor_half within_income_spearman 0.867 0.809 0.921
+                                                    donor_half  within_income_pearson 0.855 0.792 0.905
+                                                  pseudo_model               spearman 0.781 0.705 0.862
+                                                  pseudo_model                pearson 0.805 0.735 0.866
+                                                  pseudo_model within_income_spearman 0.753 0.652 0.830
+                                                  pseudo_model  within_income_pearson 0.741 0.643 0.825
+                                                   DeepSeek-V3               spearman 0.734 0.683 0.783
+                                                   DeepSeek-V3                pearson 0.757 0.719 0.792
+                                                   DeepSeek-V3 within_income_spearman 0.709 0.660 0.759
+                                                   DeepSeek-V3  within_income_pearson 0.708 0.663 0.745
+                                                Gemini-3-Flash               spearman 0.736 0.684 0.787
+                                                Gemini-3-Flash                pearson 0.721 0.686 0.755
+                                                Gemini-3-Flash within_income_spearman 0.796 0.747 0.850
+                                                Gemini-3-Flash  within_income_pearson 0.748 0.696 0.801
+                                                       GLM-4.7               spearman 0.797 0.749 0.843
+                                                       GLM-4.7                pearson 0.795 0.759 0.830
+                                                       GLM-4.7 within_income_spearman 0.879 0.842 0.918
+                                                       GLM-4.7  within_income_pearson 0.866 0.825 0.902
+                                                   GPT-4o-mini               spearman 0.663 0.609 0.720
+                                                   GPT-4o-mini                pearson 0.698 0.649 0.742
+                                                   GPT-4o-mini within_income_spearman 0.626 0.563 0.682
+                                                   GPT-4o-mini  within_income_pearson 0.642 0.580 0.696
+                                                        pooled               spearman 0.751 0.696 0.799
+                                                        pooled                pearson 0.776 0.736 0.812
+                                                        pooled within_income_spearman 0.869 0.828 0.912
+                                                        pooled  within_income_pearson 0.865 0.827 0.902
+income-only predictor (Low 2, Middle 1, High 0) vs full NHANES               spearman 0.558   NaN   NaN
+                          income-only predictor vs full NHANES                pearson 0.572   NaN   NaN
+  income-only predictor vs reference half (mean of 200 splits)               spearman 0.539   NaN   NaN
+        noise ceiling vs reference half (sqrt of split-half r)                pearson 0.946   NaN   NaN
+                                                 noise ceiling                pearson 0.972   NaN   NaN
+ reliability of full-sample NHANES cell means (Spearman-Brown)                pearson 0.945   NaN   NaN
+source                     DeepSeek-V3  GLM-4.7  GPT-4o-mini  Gemini-3-Flash  NHANES   pooled
+term                                                                                         
+all four main effects            0.950    0.961        0.958           0.920   0.837    0.965
+income                           0.791    0.808        0.900           0.846   0.328    0.857
+interaction + residual           0.050    0.039        0.042           0.080   0.163    0.035
+marital                          0.033    0.035        0.012           0.016   0.151    0.025
+race                             0.104    0.042        0.039           0.034   0.151    0.045
+sex                              0.023    0.076        0.006           0.024   0.207    0.038
+total SS of 48 cell means       63.526  470.996       69.802         488.556  41.108  210.715

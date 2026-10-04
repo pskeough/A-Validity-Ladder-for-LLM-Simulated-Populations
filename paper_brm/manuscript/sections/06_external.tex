@@ -1,69 +1,27 @@
-% Section 5. External datasets. Level-2 counts come from paper_brm/external/scripts/l2_threeway.py.
+% Section 5. External datasets. Level-2 counts come from paper_brm/external/scripts/l2_threeway.py and
+% paper_brm/external/harness. Supplement S6 reads four releases rung by rung, S8 the rest.
 
-\section{Three External Datasets}
+\section{External Datasets}
 \label{sec:external}
 
-The ladder was applied without changing any rule to three silicon-sample datasets released by other authors.
-For each dataset we report which rungs the release allows and what the verdicts tell a researcher who would use that sample.
-Table~\ref{tab:coverage} gives the rungs each release supports, and Figure~\ref{fig:external} sets the level-2 verdicts beside those of the worked example.
+The ladder was applied to ten releases by other authors, nine at level 2 and a tenth, a personality release, at levels 1 and 4. % R: ../../paper_brm/external/harness/results/PAPER_TABLE.csv
+Wherever a release allows it, a faithful control built from the released human answers is read exactly as the simulators are, and shows what a sample that matches people would receive.
+None of the 725 simulator readings across the nine level-2 releases passes. % R: ../../paper_brm/external/harness/results/PAPER_TABLE.csv
+Nearly half fail on a gap the reference measures well, and for most of the rest step 0 shows that the reference could not have certified any simulator. % R: ../../paper_brm/external/harness/results/PAPER_TABLE.csv
+Figure~\ref{fig:external} shows every level-2 gap of the worked example and of four releases read rung by rung in Supplement S6, and Table~\ref{tab:external-all} gives the level-2 verdicts of all nine.
 
-\begin{table}[!ht]
-\centering
-\caption{Rungs Each Dataset Supports, and the Verdicts}
-\label{tab:coverage}
-\small
-\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
-\setlength{\tabcolsep}{5pt}
-\begin{tabular}{@{}llllll@{}}
-\toprule
-Dataset & Gate & Level 1 & Level 2 & Level 3 & Level 4 \\
-\midrule
-Worked example & Pass & Fail & Fail, 0 of 28 kept & Fail & Fail \\ % R: ../../paper_brm/manuscript/figures/fig3_l2_dots_data.csv
-Bisbee et al. & Pass, 11 of 11 & Not run (a) & Fail, 3 of 77 kept & 7 of 11 pass & Not run (a) \\ % R: ../../paper_brm/external/results/bisbee/summary_rr1.csv; ../../paper_brm/external/results/l2_threeway_summary.csv
-Argyle et al. & Not run (b) & Not run (b) & Fail, 2 of 61 kept & Illustration (d) & Not run (a) \\ % R: ../../paper_brm/external/results/l2_threeway_summary.csv
-OpinionQA & Not run (c) & Not run (c) & Fail, 1 of 154 kept & Illustration (d) & Not run (c) \\ % R: ../../paper_brm/external/results/l2_threeway_summary.csv
-\bottomrule
-\end{tabular}
-\vspace{4pt}
-\begin{tabnote}
-\textit{Note.} Bisbee et al.\ under the full prompt, with gate and level-3 counts over the 11 thermometers; Argyle et al.\ Study 3, main run. A rung is not run when the release lacks what it needs: (a) single-item outcomes, with no multi-item scale; (b) one answer per respondent, with no repeated draws or answer vectors; (c) group answer distributions only, with no individual answers. (d) Level 3 needs a use tolerance the original authors did not state, so it appears only as an illustration in Supplement S6.
-\end{tabnote}
-\end{table}
+Two releases built their personas from real respondents' profiles.
+\citet{bisbee2024synthetic} gave ChatGPT (gpt-3.5-turbo, June 2023) the profiles of 7,530 respondents to the American National Election Studies and asked, about 30 times under each of three prompts, for a feeling thermometer toward each of 11 groups, with each respondent's own thermometers as the reference. % R: ../../paper_brm/external/results/bisbee/summary_rr1.csv; ../../paper_brm/external/results/bisbee/gate_rr1.csv
+The gate passes and level 2 fails under every prompt. % R: ../../paper_brm/external/results/bisbee/summary_rr1.csv
+Under the authors' full prompt three gaps are kept, the partisan gaps toward the two parties and the Black--White gap in feeling toward Black Americans, while the partisan gap toward five other groups is steepened and several gaps by sex and age are reversed, missing or attenuated. % R: ../../paper_brm/external/results/bisbee/summary_rr1.csv; ../../paper_brm/external/results/bisbee/level2_contrasts_rr1.csv
+The verdicts support those three gaps and the average level of most thermometers, and they rule out partisan feeling toward other groups and differences by sex and age.
+In Study 3 of \citet{argyle2023outofone}, GPT-3 answered one of 12 questions for each of 4,270 respondents from their other 11 answers. % R: ../../paper_brm/external/RESULTS.md
+The ladder keeps the partisan gaps in ideology and vote, fails the Black--White gap in vote share at about half its size, and cannot read most other gaps because the survey's subgroups are too small, narrowing the claim of algorithmic fidelity to the partisan comparisons. % R: ../../paper_brm/external/results/l2_threeway_summary.csv; l2_external_r3.csv
 
-\subsection{Bisbee et al.: ChatGPT Feeling Thermometers}
-
-\citet{bisbee2024synthetic} gave ChatGPT (gpt-3.5-turbo, June 2023) the profiles of 7,530 respondents to the 2016 and 2020 American National Election Studies and asked, about 30 times under each of three prompts, for a feeling thermometer toward each of 11 groups. % R: ../../paper_brm/external/results/bisbee/summary_rr1.csv; ../../paper_brm/external/results/bisbee/gate_rr1.csv
-Because every persona has a human twin, the same respondents' own thermometers serve as the reference, and the release supports the gate, level 2 and level 3.
-Our cleaning of the released file reproduces the authors' analysis data and their published regression to six decimals. % R: ../../paper_brm/external/results/bisbee/receipts_rr1.csv
-The gate passes for every thermometer, with at most 11 draws needed under the recommended rule, and level 2 fails under every prompt. % R: ../../paper_brm/external/results/bisbee/summary_rr1.csv
-Under the full prompt, 3 of the 77 contrasts are kept, among them the partisan gaps in feeling toward the Democratic and Republican parties (ratios 1.12 and 1.05), both large and precisely measured in the survey. % R: ../../paper_brm/external/results/l2_threeway_summary.csv; ../../paper_brm/external/results/bisbee/level2_contrasts_rr1.csv
-The Republican--Democrat gap is steepened toward five other groups, and several gaps by sex and age are reversed, missing or attenuated. % R: ../../paper_brm/external/results/bisbee/summary_rr1.csv; ../../paper_brm/external/results/bisbee/level2_contrasts_rr1.csv
-Level 3 passes at half a standard deviation for 7 of the 11 thermometers under the full prompt. % R: ../../paper_brm/external/results/bisbee/summary_rr1.csv
-For a researcher, these verdicts support using the sample for the partisan gaps toward the two parties and for the average level of most thermometers, and they rule out using it for partisan feeling toward other groups or for differences by sex and age.
-\citet{bisbee2024synthetic} already read these data with caution, and the ladder places that caution on the specific uses that fail.
-
-\subsection{Argyle et al.: GPT-3 Answering for Survey Respondents}
-
-In their Study 3, \citet{argyle2023outofone} gave GPT-3 each of 4,270 American National Election Studies respondents' answers to 11 of 12 interview questions and asked it to answer the twelfth. % R: ../../paper_brm/external/RESULTS.md
-The study tested pattern correspondence, the criterion of their algorithmic fidelity under which simulated answers reproduce the relationships among attitudes, demographics and behaviour that people show.
-Holding one answer per respondent and outcome, the release cannot support the gate or level 1, and level 2 compares groups of the same respondents.
-Of 61 contrasts in the main run, 2 are kept, the Republican--Democrat gaps in ideology and in Trump's two-party vote share (both 0.92). % R: ../../paper_brm/external/results/l2_threeway_summary.csv; l2_external_r3.csv
-Nine are not kept, among them the Black--White gap in Trump's vote share, which GPT-3 reproduces at about half its size (0.53). % R: ../../paper_brm/external/results/l2_threeway_summary.csv; l2_external_r3.csv
-Most of the remaining contrasts are not read, because the survey's subgroups are too small to measure their gaps. % R: ../../paper_brm/external/results/l2_threeway_summary.csv
-The verdicts support the partisan gaps, where the original claim is strongest, and leave the racial and other demographic gaps unsupported, narrowing the claim of algorithmic fidelity to the partisan comparisons.
-Lacking a use tolerance from the original authors, level 3 for this release appears only as an illustration in Supplement S6.
-
-\subsection{OpinionQA: What a Crude Reference Allows}
-
-\citet{meister2025distributional} steered five models toward demographic groups on 100 contested questions from the Pew American Trends Panel and released the models' answer distributions beside the Pew distributions for the same groups \citep{santurkar2023whose}.
-The human side is each group's distribution of answers to a question, built from unweighted counts, with no individual respondents.
-Without repeated draws of a persona or individual answer vectors, the gate, level 1 and level 4 cannot run.
-With the model steered on one attribute, such as being a Democrat, while the Pew groups also differ in age, income and every other attribute, the reference gives a crude gap in place of the conditional gap the steering asks about.
-Averaging each contrast over questions with differing gaps also leaves its interval wide.
-
-Of the 154 contrasts across models, elicitation methods and steering methods, 1 is kept, 33 are not kept, 115 are unresolved and 5 are not read. % R: ../../paper_brm/external/results/l2_threeway_summary.csv
-A comparison of point estimates would credit far more fidelity than the data establish, with the point ratio inside the kept region for 37 of the 149 contrasts read. % R: ../../paper_brm/external/results/l2_threeway_summary.csv; ../../paper_brm/external/results/l2_threeway_rows.csv
-The ladder keeps 1 of those 37 and reports the other 36 as unresolved, and a researcher using these releases can claim little about group gaps in either direction. % R: ../../paper_brm/external/results/l2_threeway_rows.csv
+Digital twins build a simulator of each individual respondent.
+Twin-2K-500 \citep{toubia2025twin2k} holds digital twins of 2,058 respondents under 13 specifications beside a simulator known to be faithful, the same respondents' own earlier answers. % R: ../../paper_brm/external/results/twin2k/summary.csv
+Its reference measures only the partisan gaps closely enough for a pass, and the earlier answers pass level 2 while every twin specification fails, the default twins steepening the partisan gaps although they match 71.7\% of individual answers. % R: ../../paper_brm/external/results/twin2k/level2_certifiable.csv; ../../paper_brm/external/results/twin2k/summary.csv
+\citet{peng2025funhouse} released 23 other twin specifications on the same panel, and read study by study none of their 413 readings passes, 285 failing and the rest beyond what the reference can certify. % R: ../../paper_brm/external/harness/results/PAPER_TABLE.csv
 
 \begin{figure}[!ht]
 \input{figures/fig3_l2_dots_caption}
@@ -72,10 +30,26 @@ The ladder keeps 1 of those 37 and reports the other 36 as unresolved, and a res
 \end{figure}
 \FloatBarrier
 
-\subsection{What the Three Datasets Show}
+\input{tables/tab_external_all}
 
-Applied to other authors' samples, the ladder separates the uses a release supports from the uses it does not, and it reports where the human data are too thin to decide.
-Repeated draws of each persona under a fixed prompt make the gate and level 1 possible, and individual answer vectors make level 4 possible.
-Personas built from real respondents' profiles, as in the releases of \citet{bisbee2024synthetic} and \citet{argyle2023outofone}, give a reference that matches the simulated contrast.
-A large, individually measured reference puts a kept verdict within reach for the gaps a study targets.
-Using a crude, group-level reference, level 2 detects broken gaps, and a kept verdict stays out of reach.
+Where a release gives only answer distributions or a small panel, the reference decides much of the verdict.
+\citet{meister2025distributional} released the answer distributions of five models steered toward demographic groups on OpinionQA questions \citep{santurkar2023whose}, beside Pew's distributions for the same groups.
+With no individual respondents the reference gives only crude gaps, and the ladder leaves most contrasts unresolved where a comparison of point estimates would have credited 37 of them as matching. % R: ../../paper_brm/external/results/l2_threeway_summary.csv; ../../paper_brm/external/results/l2_threeway_rows.csv
+Seven of the eight LLMs in \citet{huang2025uncertainty} fail, and a fresh sample of the human answers passes at the human group sizes and is unresolved at the size of the LLM samples. % R: ../../paper_brm/external/harness/results/PAPER_TABLE.csv
+Two of the three LLMs making conjoint choices in \citet{malmberg2026conjoint} fail, and the reference cannot certify the third. % R: ../../paper_brm/external/harness/results/PAPER_TABLE.csv
+In the multiverse of \citet{cummins2026flexibility}, 252 LLM configurations answer for at most 85 people per contrast, and step 0 reports that reference as unable to certify any of them. % R: ../../paper_brm/external/harness/results/DESIGN.csv; ../../paper_brm/external/harness/results/PAPER_TABLE.csv
+Whether a pass is reachable depends on the precision of the reference and the size of the sample as well as on the simulator.
+
+SubPOP \citep{suh2025subpop} is the one simulator in the set trained to reproduce subgroup answers, Mistral-7B \citep{jiang2023mistral} fine-tuned on Pew and General Social Survey subgroup distributions, which we ran beside its base model on the OpinionQA questions of \citet{meister2025distributional}.
+Its base model shows almost no group structure, and after training every gap points in the human direction, seven of eight at 0.30 to 0.56 of the human size, with no gap kept (Supplement S8). % R: ../../paper_brm/external/harness/results/DESIGN.csv; ../../paper_brm/external/harness/results/subpop2025/l2_contrasts.csv
+None of these questions appears in SubPOP's released training data, although four are items that the training data carry from another survey wave. % R: ../../paper_brm/external/harness/results/subpop2025/training_overlap.csv
+Readings without those four, or without the questions fielded during the training period, give the same pattern (Supplement S8). % R: ../../paper_brm/external/harness/results/subpop2025/l2_contrasts_no_overlap.csv; ../../paper_brm/external/harness/results/DESIGN.csv
+Training on subgroup answers corrected the direction of the gaps and left their size short of people's.
+
+The personality release \citep{ipipaudit2026} holds 10,000 answers from each of eight current LLMs to the 50 IPIP Big Five markers, beside 500,703 human respondents. % R: ../../paper_brm/explore_2026-10-03/personality/out/p23_paper_numbers.csv
+Every model fails level 1 on every scale with too few unusual answer patterns, and every model's item loadings differ from people's (R2), while 10,000 held-out people pass both. % R: ../../paper_brm/explore_2026-10-03/personality/out/p23_paper_numbers.csv
+
+Two exploratory analyses, one on the PHQ-8 corpus and one on the default twins, ask why the simulated gaps go wrong (Supplement S8).
+In the corpus, income carries most of the variance among the models' persona means (.79 to .90, against .33 in NHANES), a weighting no linear recalibration removes. % R: ../../paper_brm/explore_2026-10-03/mechanism_corpus/A_main_effect_shares.csv; ../../paper_brm/explore_2026-10-03/mechanism_corpus/B_halfsplit_summary.csv
+In the default twins, party carries far more of the partisan gap than it does in people. % R: ../../paper_brm/explore_2026-10-03/mechanism_twins/B_pooled.csv
+In both, one persona attribute carries more of the simulated answer than it carries in people.

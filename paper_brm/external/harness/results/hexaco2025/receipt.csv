@@ -1,0 +1,73 @@
+item,ours,published,abs_diff,source_location
+GPT-4 | Honesty-Humility | mean,3.9454,3.9454,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir GPT-4); alpha via pingouin.cronbach_alpha
+GPT-4 | Honesty-Humility | item-mean sd,0.7431,0.7431,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir GPT-4); alpha via pingouin.cronbach_alpha
+GPT-4 | Honesty-Humility | Cronbach alpha,0.9082,0.9082,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir GPT-4); alpha via pingouin.cronbach_alpha
+GPT-4 | Emotionality | mean,2.9788,2.9788,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir GPT-4); alpha via pingouin.cronbach_alpha
+GPT-4 | Emotionality | item-mean sd,0.8764,0.8764,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir GPT-4); alpha via pingouin.cronbach_alpha
+GPT-4 | Emotionality | Cronbach alpha,0.8936,0.8936,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir GPT-4); alpha via pingouin.cronbach_alpha
+GPT-4 | Extraversion | mean,3.4873,3.4873,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir GPT-4); alpha via pingouin.cronbach_alpha
+GPT-4 | Extraversion | item-mean sd,0.8363,0.8363,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir GPT-4); alpha via pingouin.cronbach_alpha
+GPT-4 | Extraversion | Cronbach alpha,0.9081,0.9081,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir GPT-4); alpha via pingouin.cronbach_alpha
+GPT-4 | Agreeableness | mean,3.0772,3.0772,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir GPT-4); alpha via pingouin.cronbach_alpha
+GPT-4 | Agreeableness | item-mean sd,0.8647,0.8647,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir GPT-4); alpha via pingouin.cronbach_alpha
+GPT-4 | Agreeableness | Cronbach alpha,0.9108,0.9108,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir GPT-4); alpha via pingouin.cronbach_alpha
+GPT-4 | Conscientiousness | mean,4.3119,4.3119,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir GPT-4); alpha via pingouin.cronbach_alpha
+GPT-4 | Conscientiousness | item-mean sd,0.7679,0.7679,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir GPT-4); alpha via pingouin.cronbach_alpha
+GPT-4 | Conscientiousness | Cronbach alpha,0.9336,0.9336,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir GPT-4); alpha via pingouin.cronbach_alpha
+GPT-4 | Openness | mean,3.4155,3.4155,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir GPT-4); alpha via pingouin.cronbach_alpha
+GPT-4 | Openness | item-mean sd,0.799,0.799,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir GPT-4); alpha via pingouin.cronbach_alpha
+GPT-4 | Openness | Cronbach alpha,0.8176,0.8176,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir GPT-4); alpha via pingouin.cronbach_alpha
+llama3.2 | Honesty-Humility | mean,3.6083,3.6083,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir llama3.2); alpha via pingouin.cronbach_alpha
+llama3.2 | Honesty-Humility | item-mean sd,0.842,0.842,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir llama3.2); alpha via pingouin.cronbach_alpha
+llama3.2 | Honesty-Humility | Cronbach alpha,0.0993,0.0993,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir llama3.2); alpha via pingouin.cronbach_alpha
+llama3.2 | Emotionality | mean,3.07,3.07,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir llama3.2); alpha via pingouin.cronbach_alpha
+llama3.2 | Emotionality | item-mean sd,0.9318,0.9318,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir llama3.2); alpha via pingouin.cronbach_alpha
+llama3.2 | Emotionality | Cronbach alpha,-0.1031,-0.1031,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir llama3.2); alpha via pingouin.cronbach_alpha
+llama3.2 | Extraversion | mean,3.0089,3.0089,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir llama3.2); alpha via pingouin.cronbach_alpha
+llama3.2 | Extraversion | item-mean sd,0.833,0.833,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir llama3.2); alpha via pingouin.cronbach_alpha
+llama3.2 | Extraversion | Cronbach alpha,0.0849,0.0849,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir llama3.2); alpha via pingouin.cronbach_alpha
+llama3.2 | Agreeableness | mean,3.1335,3.1335,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir llama3.2); alpha via pingouin.cronbach_alpha
+llama3.2 | Agreeableness | item-mean sd,0.8436,0.8436,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir llama3.2); alpha via pingouin.cronbach_alpha
+llama3.2 | Agreeableness | Cronbach alpha,-0.0027,-0.0027,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir llama3.2); alpha via pingouin.cronbach_alpha
+llama3.2 | Conscientiousness | mean,3.2893,3.2893,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir llama3.2); alpha via pingouin.cronbach_alpha
+llama3.2 | Conscientiousness | item-mean sd,0.948,0.948,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir llama3.2); alpha via pingouin.cronbach_alpha
+llama3.2 | Conscientiousness | Cronbach alpha,0.3224,0.3224,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir llama3.2); alpha via pingouin.cronbach_alpha
+llama3.2 | Openness | mean,3.3002,3.3002,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir llama3.2); alpha via pingouin.cronbach_alpha
+llama3.2 | Openness | item-mean sd,0.9195,0.9195,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir llama3.2); alpha via pingouin.cronbach_alpha
+llama3.2 | Openness | Cronbach alpha,0.1771,0.1771,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir llama3.2); alpha via pingouin.cronbach_alpha
+phi4 | Honesty-Humility | mean,3.9724,3.9724,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir phi4); alpha via pingouin.cronbach_alpha
+phi4 | Honesty-Humility | item-mean sd,0.7325,0.7325,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir phi4); alpha via pingouin.cronbach_alpha
+phi4 | Honesty-Humility | Cronbach alpha,0.8966,0.8966,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir phi4); alpha via pingouin.cronbach_alpha
+phi4 | Emotionality | mean,2.9663,2.9663,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir phi4); alpha via pingouin.cronbach_alpha
+phi4 | Emotionality | item-mean sd,0.8168,0.8168,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir phi4); alpha via pingouin.cronbach_alpha
+phi4 | Emotionality | Cronbach alpha,0.8563,0.8563,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir phi4); alpha via pingouin.cronbach_alpha
+phi4 | Extraversion | mean,3.6091,3.6091,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir phi4); alpha via pingouin.cronbach_alpha
+phi4 | Extraversion | item-mean sd,0.7716,0.7716,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir phi4); alpha via pingouin.cronbach_alpha
+phi4 | Extraversion | Cronbach alpha,0.834,0.834,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir phi4); alpha via pingouin.cronbach_alpha
+phi4 | Agreeableness | mean,3.4091,3.4091,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir phi4); alpha via pingouin.cronbach_alpha
+phi4 | Agreeableness | item-mean sd,0.9175,0.9175,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir phi4); alpha via pingouin.cronbach_alpha
+phi4 | Agreeableness | Cronbach alpha,0.8825,0.8825,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir phi4); alpha via pingouin.cronbach_alpha
+phi4 | Conscientiousness | mean,4.3091,4.3091,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir phi4); alpha via pingouin.cronbach_alpha
+phi4 | Conscientiousness | item-mean sd,0.753,0.753,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir phi4); alpha via pingouin.cronbach_alpha
+phi4 | Conscientiousness | Cronbach alpha,0.8829,0.8829,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir phi4); alpha via pingouin.cronbach_alpha
+phi4 | Openness | mean,3.5714,3.5714,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir phi4); alpha via pingouin.cronbach_alpha
+phi4 | Openness | item-mean sd,0.7243,0.7243,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir phi4); alpha via pingouin.cronbach_alpha
+phi4 | Openness | Cronbach alpha,0.7627,0.7627,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir phi4); alpha via pingouin.cronbach_alpha
+sonnet | Honesty-Humility | mean,4.051,4.051,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir sonnet); alpha via pingouin.cronbach_alpha
+sonnet | Honesty-Humility | item-mean sd,0.8485,0.8485,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir sonnet); alpha via pingouin.cronbach_alpha
+sonnet | Honesty-Humility | Cronbach alpha,0.9283,0.9283,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir sonnet); alpha via pingouin.cronbach_alpha
+sonnet | Emotionality | mean,3.27,3.27,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir sonnet); alpha via pingouin.cronbach_alpha
+sonnet | Emotionality | item-mean sd,0.8989,0.8989,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir sonnet); alpha via pingouin.cronbach_alpha
+sonnet | Emotionality | Cronbach alpha,0.9129,0.9129,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir sonnet); alpha via pingouin.cronbach_alpha
+sonnet | Extraversion | mean,3.4758,3.4758,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir sonnet); alpha via pingouin.cronbach_alpha
+sonnet | Extraversion | item-mean sd,0.8571,0.8571,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir sonnet); alpha via pingouin.cronbach_alpha
+sonnet | Extraversion | Cronbach alpha,0.9352,0.9352,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir sonnet); alpha via pingouin.cronbach_alpha
+sonnet | Agreeableness | mean,2.9381,2.9381,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir sonnet); alpha via pingouin.cronbach_alpha
+sonnet | Agreeableness | item-mean sd,0.8269,0.8269,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir sonnet); alpha via pingouin.cronbach_alpha
+sonnet | Agreeableness | Cronbach alpha,0.9373,0.9373,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir sonnet); alpha via pingouin.cronbach_alpha
+sonnet | Conscientiousness | mean,4.4123,4.4123,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir sonnet); alpha via pingouin.cronbach_alpha
+sonnet | Conscientiousness | item-mean sd,0.7938,0.7938,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir sonnet); alpha via pingouin.cronbach_alpha
+sonnet | Conscientiousness | Cronbach alpha,0.9356,0.9356,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir sonnet); alpha via pingouin.cronbach_alpha
+sonnet | Openness | mean,3.6921,3.6921,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir sonnet); alpha via pingouin.cronbach_alpha
+sonnet | Openness | item-mean sd,0.8023,0.8023,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir sonnet); alpha via pingouin.cronbach_alpha
+sonnet | Openness | Cronbach alpha,0.8667,0.8667,0.0,hexaco-rep-public hexaco_pi_r.ipynb cell 1 stored output (process_pir sonnet); alpha via pingouin.cronbach_alpha

@@ -1,0 +1,28 @@
+{
+  "adapter": "argyle_ideal",
+  "name": "argyle_ideal",
+  "kind": "ideal simulator (group-faithful resample of the real ANES answers)",
+  "source": "Argyle et al. (2023) Study 3, Harvard Dataverse doi:10.7910/DVN/JPV20K, anesgpt3_task3.csv",
+  "mode": "gaps",
+  "package_version": "0.1.1",
+  "inputs": [
+    {
+      "path": "C:\\Research\\PsychBench\\UpdatedRun\\paper_brm\\external\\scripts\\argyle_ladder.py",
+      "sha256": "347037dd4afdce1f20e4761cf9c824ffd6c6c099b184c9d543da1610b7d8fe84",
+      "bytes": 10567
+    },
+    {
+      "path": "C:\\Research\\PsychBench\\UpdatedRun\\paper_brm\\external\\raw\\argyle2023\\anesgpt3_task3.csv",
+      "sha256": "b78b4b0f57af8f45e871cb4941fa4c4699b3faee6224e67c9e82fd781980c167",
+      "bytes": 300764
+    },
+    {
+      "path": "C:\\Research\\PsychBench\\UpdatedRun\\paper_brm\\external\\results\\argyle\\level2_contrasts.csv",
+      "sha256": "3839f47040d63ca3ffa1723322e80fb15d6c8aa838958759541e28e9d75f6133",
+      "bytes": 74292
+    }
+  ],
+  "run_at": "2026-10-03 21:44:47",
+  "seconds": 7.6,
+  "notes": "group-faithful ideal simulator; analytic paired SEs; family 61"
+}

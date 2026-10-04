@@ -1,0 +1,9 @@
+arm,rule,fail,pass,unresolved,families
+faithful control,frozen,10,200,612,822
+faithful control,no multiplicity,82,227,513,822
+faithful control,wide band 0.5-1.5,6,307,509,822
+faithful control,"wide band, no multiplicity",59,373,390,822
+models,frozen,330,0,395,725
+models,no multiplicity,584,0,141,725
+models,wide band 0.5-1.5,273,15,437,725
+models,"wide band, no multiplicity",516,0,209,725

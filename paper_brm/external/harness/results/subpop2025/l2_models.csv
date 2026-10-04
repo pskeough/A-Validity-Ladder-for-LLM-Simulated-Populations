@@ -1,0 +1,5 @@
+family,contrasts,verdict,reading,certifiable,kept,not kept,unresolved,not read,stopped_no_population_gap,stopped_reference_imprecise
+base : all,8,fail,fail,4,0,7,1,0,0,0
+base : conservative,8,fail,fail,1,0,6,0,2,0,2
+subpop : all,8,fail,fail,4,0,7,1,0,0,0
+subpop : conservative,8,fail,fail,1,0,7,0,1,0,1

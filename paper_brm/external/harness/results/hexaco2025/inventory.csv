@@ -1,0 +1,59 @@
+section,key,value,note
+agents,population,PopCensus (pop_census.json),"310 census-style biographies, England and Wales occupation codes"
+agents,n_agents,310,
+agents,attributes recorded,"Full Name, Age, Occupation, OC (occupation code), Hobbies/Interests, Personality Facts","no sex/gender field, no education, no region; sex could only be guessed from first names (not used)"
+agents,age mean/sd/min/max,39.12 / 9.51 / 18 / 60,
+agents,distinct occupations,272,
+agents,PopProfessional (pop_professional.json),present,used by the paper only for the lexical (adjective) survey; no HEXACO-PI-R-100 answers exist for it
+model,GPT-4: rows x items,310 x 100,one text answer per agent and item
+model,GPT-4: distinct agent ids,310,"no agent appears twice, so no repeated draws of one persona"
+model,GPT-4: agents in pop_census.json order-matched,302,of 310 after fix_name()
+model,GPT-4: unparsed answers (any item),0,answers whose leading label is not one of the five Likert labels (e.g. [content-filtered])
+model,GPT-4: unparsed by item (1-based),{},
+model,GPT-4: agents with an unparsed answer in items 1-96,0,
+model,GPT-4: answers with text beyond the label,31000,length > 22 characters
+model,llama3.2: rows x items,310 x 100,one text answer per agent and item
+model,llama3.2: distinct agent ids,310,"no agent appears twice, so no repeated draws of one persona"
+model,llama3.2: agents in pop_census.json order-matched,302,of 310 after fix_name()
+model,llama3.2: unparsed answers (any item),85,answers whose leading label is not one of the five Likert labels (e.g. [content-filtered])
+model,llama3.2: unparsed by item (1-based),"{""99"": 85}",
+model,llama3.2: agents with an unparsed answer in items 1-96,0,
+model,llama3.2: answers with text beyond the label,30887,length > 22 characters
+model,phi4: rows x items,310 x 100,one text answer per agent and item
+model,phi4: distinct agent ids,310,"no agent appears twice, so no repeated draws of one persona"
+model,phi4: agents in pop_census.json order-matched,302,of 310 after fix_name()
+model,phi4: unparsed answers (any item),0,answers whose leading label is not one of the five Likert labels (e.g. [content-filtered])
+model,phi4: unparsed by item (1-based),{},
+model,phi4: agents with an unparsed answer in items 1-96,0,
+model,phi4: answers with text beyond the label,31000,length > 22 characters
+model,sonnet: rows x items,310 x 100,one text answer per agent and item
+model,sonnet: distinct agent ids,310,"no agent appears twice, so no repeated draws of one persona"
+model,sonnet: agents in pop_census.json order-matched,302,of 310 after fix_name()
+model,sonnet: unparsed answers (any item),0,answers whose leading label is not one of the five Likert labels (e.g. [content-filtered])
+model,sonnet: unparsed by item (1-based),{},
+model,sonnet: agents with an unparsed answer in items 1-96,0,
+model,sonnet: answers with text beyond the label,31000,length > 22 characters
+runs,repeated runs of one agent under one prompt,none,"each model file holds one answer per agent and item; popc_responses_1..6 are six 50-agent row batches of the lexical adjective survey (data_prep.ipynb concatenates them: pd.concat(parts)), not six runs"
+runs,gate / level 1 / R3,not applicable,need repeated draws of one persona
+runs,R4,not applicable,"agents carry Age and Occupation; the Open Psychometrics reference records neither (only country, elapse)"
+coding,answer scale,Strongly disagree=1 ... Strongly agree=5 (text labels leading each answer),
+coding,item order,columns 0-99 = HEXACO-PI-R-100 items 1-100 (support/hexaco_pi_r.py questions list),
+coding,"repo scoring dict == hexaco.org ScoringKeys_100 (96 items, keys and reverse flags)",True,
+coding,questions in repo list,100,
+coding,facet structure,"from hexaco.org ScoringKeys_100.pdf: 24 facets x 4 items + Altruism 97, 98, 99R, 100R (excluded from domains)",
+coding,domain score,mean of the domain's 16 keyed items (4 facets x 4),repo and hexaco.org rule; Altruism excluded
+human,file,HEXACO.zip -> HEXACO/data.csv (tab-separated),openpsychometrics.org/_rawdata/
+human,instrument,"IPIP HEXACO-equivalent scales, 240 items (24 facets x 10)",listing text: 'Answers to the IPIP HEXACO equivalent scales'; codebook item codes e.g. HSinc1; NOT the HEXACO-PI-R
+human,rows,22786,
+human,scale,1-7 (strongly disagree ... strongly agree); codebook labels 5 as 'slightly disagree' (typo for slightly agree),
+human,other columns,"V1, V2 (validity items), country, elapse (seconds)","no age, sex, education or occupation"
+human,item columns,240,
+human,item values outside 1-7 (any),129,
+human,V1/V2 value counts,"{""V1"": {""1"": 116, ""2"": 56, ""3"": 117, ""4"": 337, ""5"": 487, ""6"": 2894, ""7"": 18779}, ""V2"": {""1"": 44, ""2"": 23, ""3"": 117, ""4"": 377, ""5"": 980, ""6"": 6368, ""7"": 14877}}",
+human,country: n distinct / GB n / US n,128 / 1149 / 15017,
+human,elapse median / p5 / p95 (s),1053 / 584 / 5169,
+human,IPIP key parsed: items matched,240,of 240 (item text on ipip.ori.org/newHEXACO_PI_key.htm matched to the codebook text)
+human,IPIP key: facets with exactly 10 items,24,of 24
+human,IPIP key: min / median match ratio,0.900 / 0.967,
+human,IPIP key: items with ratio < 0.6,,
+human,IPIP key check: items with corrected item-facet r <= .15 after keying,[],empty list = every parsed keying direction is consistent with the data

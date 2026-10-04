@@ -1,0 +1,23 @@
+{
+  "adapter": "cummins2025_splithalf",
+  "name": "cummins2025_splithalf",
+  "kind": "human split-half (ideal-simulator control)",
+  "source": "Cummins (2025) Study 1 human participants (85), randomly split 42/43, 200 seeds; see cummins2025",
+  "mode": "gaps",
+  "package_version": "0.1.1",
+  "inputs": [
+    {
+      "path": "C:\\Research\\PsychBench\\UpdatedRun\\paper_brm\\external\\raw\\cummins2025\\full_data.csv",
+      "sha256": "438f9f6661a415852f7a533879cecc7421ba468522d477dede49485a08526284",
+      "bytes": 2968077
+    },
+    {
+      "path": "C:\\Research\\PsychBench\\UpdatedRun\\paper_brm\\external\\raw\\cummins2025\\ground_truth_data.csv",
+      "sha256": "5432b007fb7dd294f03f70a567ec022e58000e46cb7baac663c35c362c8b2d75",
+      "bytes": 9023
+    }
+  ],
+  "run_at": "2026-10-03 21:51:16",
+  "seconds": 16.4,
+  "notes": "200 splits 42/43, B=2000 within each half, contrasts not read for an empty side: 0"
+}

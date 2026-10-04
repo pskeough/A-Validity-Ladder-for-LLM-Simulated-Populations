@@ -1,39 +1,53 @@
-% Section 6. Discussion and conclusion.
+% Section 6. Discussion and conclusion. Built from Patrick's spoken answers (4 Oct 2026); conceptual, results stay in Sections 3-5.
 
 \section{Discussion}
 \label{sec:discussion}
 
-In both the worked example and the three external datasets, each sample failed at least one check tied to a use researchers make of such samples.
-In the worked example none of these failures could be seen in a single answer.
-Our recommendation for researchers running persona studies is to begin before the generation step, first by establishing whether human data exist to ground the sample, and second by deciding which claims about the population the study intends to make.
-Holding the model's ability to stand in for those people in critical doubt, in good faith, the researcher then checks each claim against the rung designed to test it.
-Group gaps, population levels, single cases and scale scores are separate extrapolations, and each one needs its own check.
+Researchers who use LLM-simulated populations need to validate each claim they draw from them with the same rigor they would apply to a new human measure, and the ladder supplies a structure for doing so.
+A persona sample can be used to report group gaps, population levels, single cases or scale scores, and each of these uses is a separate extrapolation from the model's answers.
+The failures found in the worked example sat at these separate uses and could not be seen in any single answer or in a correlation of group means.
+In practice each claim is checked against the rung built to test it, with the model's ability to stand in for people held in critical doubt until that check is passed.
 
-Using the ladder depends on meeting its requirements.
-Every level above the gate compares the simulated sample against human data, and without a reference on the same instrument the ladder cannot be applied.
-Each rung additionally carries its own requirements, set out in Figure~\ref{fig:ladder}; where a study's data cannot meet them, that rung is not run and the claims it would support are not made.
-Because the reference determines which personas can be compared, how many draws each needs and which gaps can be measured precisely enough to certify, it has to be in hand before generation.
-Additionally, the researcher fixes how each persona attribute maps to a reference variable before generation and reports that mapping with the verdicts, because in the worked example matching income on the label's dollar amount rather than the poverty-ratio band changed the verdict on one contrast. % R: l2_verdicts.csv
-Personas built on real respondents' profiles, as \citet{bisbee2024synthetic} and \citet{argyle2023outofone} did, offer the cleanest reference by giving every simulated answer a human twin.
+The ladder asks for its human reference before anything is generated.
+Every rung above the gate reads the simulated sample against human answers to the same instrument, and a study without that reference cannot use it.
+Because the reference sets which personas can be compared, how many draws each persona needs and which gaps can be certified, step 0 reads the reference on its own and returns the gaps on which a pass is reachable for any simulator.
+With that list in hand a researcher either enlarges the reference or narrows the claims the study will make.
+The mapping of each persona attribute to a reference variable is fixed at the same point and reported beside the verdicts, as the dollar amount on the income label and the poverty-ratio band gave different verdicts on the low-to-high income contrast for two models in the worked example. % R: l2_verdicts.csv
+Personas drawn from real respondents' profiles, the design \citet{bisbee2024synthetic} and \citet{argyle2023outofone} used, give every simulated answer a human counterpart and the cleanest reference available.
 
-Our controls and the three external datasets address whether the ladder itself can be trusted.
-Pseudo-models built from real respondents rarely fail, while failures planted into those same respondents are caught at the rung each one targets.
-Applied to other authors' releases without changing a rule, the ladder ran on instruments, models and designs it was not built around.
-In those releases it supports the partisan gaps reported by \citet{bisbee2024synthetic} and \citet{argyle2023outofone}, while most gaps by sex, age and race either fail or cannot be read.
-We do not dispute those studies' findings, though the results point toward a narrower interpretation of their claims of fidelity, centred on the partisan comparisons.
+Across the external releases, current models often fell short as simulated populations.
+None of the samples read at level 2 passed it, and in many releases the human reference itself limited which gaps could be tested.
+\citet{bisbee2024synthetic} and \citet{argyle2023outofone} reported algorithmic fidelity, and the ladder supports the partisan gaps in their samples while most gaps by sex, age and race fail or go unread.
+The verdicts give a narrower reading of their claims of fidelity and leave their findings in place.
+Twin-2K-500 separates two properties that are easily treated as one, since digital twins that matched many individual answers still distorted the partisan gaps while the respondents' own earlier answers passed. % R: ../../paper_brm/external/results/twin2k/summary.csv
+We read the comparison as evidence that a twin's accuracy on individual answers does not carry over to the gaps between groups.
 
-In practice the ladder strengthens the context around each claim drawn from a persona sample and weeds out readings the data do not support.
-The right value for a gap or a level still has to come from the human data.
+Training on subgroup survey answers moved a model in the right direction.
+The base model of SubPOP showed almost no group structure, and after fine-tuning every gap pointed the way the human gap points, short of the human size and without a pass.
+We read the result as promising and as pointing toward the interventions these models need before they can be relied on, while current training remains insufficient for a study to skip the checks.
+We do not read it as a ceiling on what training can do, and a fine-tuned simulator goes through the same rungs as any other.
+\citet{hullman2026validating} and \citet{wang2026substitutability} pursue the same tie to human data in concurrent work, calibrating simulated effects against auxiliary human samples and asking how far digital twins can substitute for human measurement of a given estimand.
 
-Regarding the ladder's own limitations, its thresholds were fixed before the external analyses and act as defaults, to be replaced by a tolerance a user can justify for their own use.
-Certifying a pass also takes more draws, more personas per group and a more precise reference than detecting a failure, and an unresolved verdict can reflect the design as well as the simulator.
-Under the design of the worked example, with 30 draws per persona and a national survey as reference, level 2 serves mainly to detect distorted gaps.
-Finally, the frozen ladder does not read contrasts with no population gap, leaving untested any gap a model invents where people show none; an equivalence test on the simulated gap in raw units would cover this case.
+The controls give the grounds for trusting the verdicts.
+Samples built from real respondents rarely fail, failures planted into those respondents are caught at the rung each targets, and faithful controls in the external releases pass wherever the reference can certify a gap.
+Relaxing the rules does not rescue the models, as wider kept regions and an uncorrected test leave almost every simulator reading failed or unresolved (Supplements S4.7 and S8).
+
+The thresholds given with each rung are defaults.
+Tolerance is set by the user, who reads the verdicts against the level of risk the application carries and chooses a kept region accordingly.
+A pilot or exploratory study can set a looser tolerance than a study whose results will inform decisions about people, and we make no claim about the tolerance any study must hold.
+The ladder is built to be adapted to a study's needs and applied where its requirements are met.
+
+Several limits remain.
+Under designs like the worked example's, with a few dozen draws per persona and a national survey as reference, many group gaps go unresolved or unread, and an unresolved verdict can reflect the design as much as the simulator.
+The worked example also gives each demographic cell a single persona with no stated age, one wording per attribute and the items in one order, and its verdicts hold for that design.
+Level 4 has no certifiability step, and a faithful sample can fail it by chance where the reference lies near a threshold (Supplement S8).
+As specified, the ladder does not read contrasts with no population gap, leaving untested any gap a model invents where people show none, a case the exploratory equivalence test in Supplement S4 begins to address.
+Finally, every rung depends on a human reference on the same instrument, and where none exists the ladder cannot certify a simulated population for any use.
 
 \subsection*{Conclusion}
 
-The validity ladder replaces a single judgement of whether a simulated sample resembles people with a separate check for each use of the sample, each carrying a pass rule, a human reference and the claim it supports.
-Across 28,800 PHQ-8 assessments from four models, the ladder read every model's persona means and failed every model on each use above them. % R: corpus_v3_provenance.csv; l1_personfit_main.csv
-Applied to three published silicon samples, it narrowed what each release can be used to claim and identified claims some releases cannot test at all.
-For a researcher, the result is a list of the claims a sample supports, each tied to the check behind it.
+The validity ladder replaces a single judgment of whether a simulated sample resembles people with a separate check for each use of the sample, each carrying a pass rule, a human reference and the claim it supports.
+Judging a simulated sample by how plausible its answers look is not enough, and every model in the worked example would have passed that judgment.
+A claim about a simulated population becomes specific to one use and checkable against people, and the human reference becomes the constraint a study plans and budgets for before it generates anything.
+As fine-tuning and grounding improve, a common set of checks gives a way to measure how far simulated populations have come.
 We release the code for every rung and the receipt for every number, allowing grounded or fine-tuned simulators to be checked against the same baseline.

@@ -1,0 +1,18 @@
+{
+  "adapter": "huang2025_ideal_k",
+  "name": "huang2025_ideal_k",
+  "kind": "ideal simulator (fresh resample of the real OpinionQA respondents, group sizes of the 100-profile design)",
+  "source": "Huang, Wu & Wang (2025), github.com/yw3453/uq-llm-survey-simulation data.zip, opinionqa_data.json",
+  "mode": "gaps",
+  "package_version": "0.1.1",
+  "inputs": [
+    {
+      "path": "C:\\Research\\PsychBench\\UpdatedRun\\paper_brm\\external\\raw\\huang2025\\data\\OpinionQA\\opinionqa_data.json",
+      "sha256": "1af09f184f9c05b801b9ab7d89efc3f93765a9fbb497ed57b37cf05c2c442577",
+      "bytes": 617621697
+    }
+  ],
+  "run_at": "2026-10-03 22:03:36",
+  "seconds": 28.9,
+  "notes": "ideal simulator at the 100-profile design; 100 replicate families; family_size 9"
+}

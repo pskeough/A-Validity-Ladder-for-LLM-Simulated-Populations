@@ -1,0 +1,12 @@
+adapter,level,verdict,n
+cummins2025,2 family,unresolved,252
+cummins2025_splithalf,2 family,unresolved,190
+cummins2025_splithalf,2 family,fail,10
+cummins2025,2 contrast label,not read,2016
+cummins2025_splithalf,2 contrast label,not read,1590
+cummins2025_splithalf,2 contrast label,not kept,10
+cummins2025,3 row,fail,250
+cummins2025,3 row,unresolved,131
+cummins2025,3 row,pass,123
+cummins2025_splithalf,3 row,pass,210
+cummins2025_splithalf,3 row,unresolved,190

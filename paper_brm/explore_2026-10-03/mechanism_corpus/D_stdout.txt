@@ -1,0 +1,151 @@
+                                                                      check    got   want   ok
+       NHANES Low minus High, sum of item gaps vs l2_reference standardised 1.2974 1.2974 True
+      NHANES Women minus Men, sum of item gaps vs l2_reference standardised 0.8411 0.8411 True
+   DeepSeek-V3 Low minus High SES, sum of item gaps vs 78b persona-pair gap 2.4792 2.4792 True
+      DeepSeek-V3 Women minus Men, sum of item gaps vs 78b persona-pair gap 0.3451 0.3451 True
+              DeepSeek-V3 overall PS residual, sum of item residuals vs 80c 4.5817 4.5817 True
+Gemini-3-Flash Low minus High SES, sum of item gaps vs 78b persona-pair gap 6.5823 6.5823 True
+   Gemini-3-Flash Women minus Men, sum of item gaps vs 78b persona-pair gap 0.9854 0.9854 True
+           Gemini-3-Flash overall PS residual, sum of item residuals vs 80c 2.5892 2.5892 True
+       GLM-4.7 Low minus High SES, sum of item gaps vs 78b persona-pair gap 6.5302 6.5302 True
+          GLM-4.7 Women minus Men, sum of item gaps vs 78b persona-pair gap 1.7299 1.7299 True
+                  GLM-4.7 overall PS residual, sum of item residuals vs 80c 2.1208 2.1208 True
+   GPT-4o-mini Low minus High SES, sum of item gaps vs 78b persona-pair gap 2.8021 2.8021 True
+      GPT-4o-mini Women minus Men, sum of item gaps vs 78b persona-pair gap 0.1910 0.1910 True
+              GPT-4o-mini overall PS residual, sum of item residuals vs 80c 4.6798 4.6798 True
+
+D1 item minus NHANES at matched total (both framings)
+model          DeepSeek-V3  GLM-4.7  GPT-4o-mini  Gemini-3-Flash  pooled
+item                                                                    
+1 interest           0.175    0.013        0.286           0.281   0.189
+2 mood               0.512    0.264        0.329           0.162   0.317
+3 sleep             -0.442    0.097       -0.428          -0.345  -0.279
+4 fatigue           -1.108   -0.221       -0.914          -0.322  -0.641
+5 appetite          -0.159   -0.422       -0.018          -0.465  -0.266
+6 worthless          0.373    0.147        0.256           0.580   0.339
+7 concentr           0.313    0.231        0.181           0.248   0.243
+8 psychomotor        0.335   -0.110        0.308          -0.138   0.099
+share of squares
+model          DeepSeek-V3  GLM-4.7  GPT-4o-mini  Gemini-3-Flash  pooled
+item                                                                    
+1 interest           0.015    0.000        0.058           0.082   0.041
+2 mood               0.125    0.178        0.077           0.027   0.114
+3 sleep              0.093    0.024        0.130           0.124   0.089
+4 fatigue            0.587    0.124        0.596           0.108   0.468
+5 appetite           0.012    0.453        0.000           0.225   0.080
+6 worthless          0.067    0.055        0.047           0.350   0.131
+7 concentr           0.047    0.135        0.023           0.064   0.067
+8 psychomotor        0.054    0.031        0.068           0.020   0.011
+load moved per draw (points)
+model
+DeepSeek-V3       1.709
+GLM-4.7           0.752
+GPT-4o-mini       1.360
+Gemini-3-Flash    1.270
+pooled            1.187
+
+D2 share of overall residual
+model          DeepSeek-V3  GLM-4.7  GPT-4o-mini  Gemini-3-Flash  pooled
+item                                                                    
+1 interest           0.170    0.097        0.210           0.303   0.197
+2 mood               0.244    0.203        0.189           0.087   0.190
+3 sleep              0.074    0.264        0.095           0.129   0.120
+4 fatigue           -0.030    0.184        0.007           0.146   0.047
+5 appetite           0.099   -0.004        0.137          -0.031   0.072
+6 worthless          0.155    0.039        0.141           0.257   0.152
+7 concentr           0.158    0.221        0.120           0.116   0.147
+8 psychomotor        0.130   -0.004        0.101          -0.006   0.075
+model
+DeepSeek-V3       4.582
+GLM-4.7           2.121
+GPT-4o-mini       4.680
+Gemini-3-Flash    2.589
+pooled            3.493
+
+D3 Low minus High SES: gap per item
+source         DeepSeek-V3  GLM-4.7  GPT-4o-mini  Gemini-3-Flash  NHANES
+item                                                                    
+1 interest           0.392    1.067        0.247           0.653   0.184
+2 mood               0.475    1.060        0.456           1.211   0.207
+3 sleep              0.315    0.988        0.312           0.786   0.161
+4 fatigue           -0.098    0.919        0.220           0.735   0.182
+5 appetite           0.438    0.694        0.350           0.838   0.153
+6 worthless          0.489    0.677        0.403           0.747   0.151
+7 concentr           0.271    0.777        0.336           1.192   0.124
+8 psychomotor        0.199    0.349        0.477           0.420   0.135
+source         DeepSeek-V3  GLM-4.7  GPT-4o-mini  Gemini-3-Flash  NHANES
+item                                                                    
+1 interest           0.158    0.163        0.088           0.099   0.142
+2 mood               0.192    0.162        0.163           0.184   0.160
+3 sleep              0.127    0.151        0.112           0.119   0.124
+4 fatigue           -0.039    0.141        0.078           0.112   0.140
+5 appetite           0.176    0.106        0.125           0.127   0.118
+6 worthless          0.197    0.104        0.144           0.113   0.116
+7 concentr           0.109    0.119        0.120           0.181   0.096
+8 psychomotor        0.080    0.053        0.170           0.064   0.104
+
+D3 Women minus Men: gap per item
+source         DeepSeek-V3  GLM-4.7  GPT-4o-mini  Gemini-3-Flash  NHANES
+item                                                                    
+1 interest           0.042    0.265       -0.020           0.110   0.083
+2 mood               0.026    0.379        0.067           0.073   0.102
+3 sleep              0.078    0.265       -0.012           0.099   0.139
+4 fatigue            0.034    0.233       -0.032           0.095   0.226
+5 appetite           0.025    0.124        0.053           0.045   0.158
+6 worthless          0.034    0.184        0.102           0.283   0.066
+7 concentr           0.113    0.197        0.013           0.194   0.056
+8 psychomotor       -0.008    0.083        0.020           0.086   0.012
+source         DeepSeek-V3  GLM-4.7  GPT-4o-mini  Gemini-3-Flash  NHANES
+item                                                                    
+1 interest           0.121    0.153       -0.105           0.112   0.098
+2 mood               0.076    0.219        0.349           0.074   0.121
+3 sleep              0.227    0.153       -0.062           0.101   0.165
+4 fatigue            0.099    0.134       -0.167           0.097   0.268
+5 appetite           0.072    0.072        0.276           0.046   0.188
+6 worthless          0.099    0.106        0.535           0.287   0.079
+7 concentr           0.328    0.114        0.069           0.197   0.067
+8 psychomotor       -0.022    0.048        0.105           0.087   0.014
+
+D3 Middle minus High SES: gap per item
+source         DeepSeek-V3  GLM-4.7  GPT-4o-mini  Gemini-3-Flash  NHANES
+item                                                                    
+1 interest           0.098    0.273        0.057           0.045   0.092
+2 mood               0.649    0.308        0.346           0.355   0.088
+3 sleep              0.042    0.217        0.062          -0.080   0.097
+4 fatigue           -0.270    0.224        0.054           0.077   0.081
+5 appetite           0.296    0.053        0.244           0.017   0.083
+6 worthless          0.373    0.080        0.199           0.242   0.073
+7 concentr           0.325    0.151        0.156           0.129   0.044
+8 psychomotor        0.045    0.034        0.248           0.008   0.050
+source         DeepSeek-V3  GLM-4.7  GPT-4o-mini  Gemini-3-Flash  NHANES
+item                                                                    
+1 interest           0.063    0.204        0.042           0.057   0.151
+2 mood               0.417    0.230        0.253           0.448   0.145
+3 sleep              0.027    0.162        0.046          -0.101   0.160
+4 fatigue           -0.173    0.167        0.040           0.097   0.133
+5 appetite           0.190    0.040        0.178           0.021   0.136
+6 worthless          0.239    0.060        0.146           0.305   0.120
+7 concentr           0.209    0.113        0.114           0.163   0.072
+8 psychomotor        0.029    0.026        0.181           0.011   0.083
+
+D3 Black minus White: gap per item
+source         DeepSeek-V3  GLM-4.7  GPT-4o-mini  Gemini-3-Flash  NHANES
+item                                                                    
+1 interest          -0.025   -0.101       -0.035          -0.072   0.013
+2 mood               0.068   -0.189        0.024           0.028  -0.033
+3 sleep              0.018   -0.010        0.029          -0.106  -0.113
+4 fatigue            0.013   -0.051        0.046          -0.037  -0.103
+5 appetite           0.006   -0.043        0.014          -0.099   0.035
+6 worthless          0.090   -0.096       -0.015          -0.024  -0.039
+7 concentr           0.038   -0.021        0.115          -0.028  -0.030
+8 psychomotor        0.007   -0.047        0.039          -0.057  -0.015
+source         DeepSeek-V3  GLM-4.7  GPT-4o-mini  Gemini-3-Flash  NHANES
+item                                                                    
+1 interest          -0.117    0.182       -0.160           0.183  -0.046
+2 mood               0.318    0.338        0.109          -0.070   0.116
+3 sleep              0.084    0.017        0.135           0.268   0.398
+4 fatigue            0.058    0.092        0.212           0.095   0.362
+5 appetite           0.026    0.077        0.064           0.250  -0.124
+6 worthless          0.422    0.172       -0.071           0.060   0.137
+7 concentr           0.175    0.037        0.532           0.070   0.106
+8 psychomotor        0.032    0.085        0.179           0.144   0.051

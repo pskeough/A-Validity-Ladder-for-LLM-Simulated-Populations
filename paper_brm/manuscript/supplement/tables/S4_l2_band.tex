@@ -1,0 +1,28 @@
+% Written by scripts/87_supplement_tables.py. Do not edit by hand.
+% Receipts: analysis/brm/94_l2_band_sensitivity.csv
+\begingroup
+\singlespacing
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{longtable}{>{\raggedright\arraybackslash}p{3.4cm}llll}
+\caption{Level 2: Verdict Counts Under Other Kept Regions}\label{tab:s4band}\\
+\toprule
+Dataset & [0.75, 1.25] (frozen) & [0.67, 1.50] & [0.80, 1.25] & [0.90, 1.10] \\
+\midrule
+\endfirsthead
+\multicolumn{5}{@{}l}{\textit{Table \thetable, continued}} \\
+\toprule
+Dataset & [0.75, 1.25] (frozen) & [0.67, 1.50] & [0.80, 1.25] & [0.90, 1.10] \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+Worked example (28) & 0/15/5/8 & 0/14/8/6 & 0/16/1/11 & 0/16/0/12 \\
+Bisbee et al. (77) & 3/16/7/51 & 10/13/16/38 & 3/16/4/54 & 1/23/1/52 \\
+Argyle et al. (61) & 2/12/1/46 & 3/12/2/44 & 2/13/1/45 & 0/15/2/44 \\
+OpinionQA (154) & 1/33/115/5 & 7/21/126/0 & 0/43/81/30 & 0/54/0/100 \\
+\end{longtable}
+\vspace{-6pt}
+\noindent\textit{Note.} Counts are kept / not kept / unresolved / not read, for the contrasts of Figure 3. Intervals, Bonferroni levels and stop 1 are held fixed; stop 2 uses each region's own threshold, $k_{\max} = (W-1)/(W+1)$ with $W$ the ratio of the region's bounds. Every row is in \texttt{analysis/brm/94\_l2\_band\_sensitivity\_rows.csv}.
+\par
+\endgroup

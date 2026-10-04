@@ -43,16 +43,17 @@
 \maketitle
 \input{tables/supp_macros}
 
-\noindent This supplement has seven parts.
+\noindent This supplement has eight parts.
 S1 prints the prompts.
-S2 maps every number in the article to its receipt.
+S2 describes the receipts that tie every number in the article to the file that prints it.
 S3 gives the provenance of the corpus and the sensitivity analyses.
 S4 gives the full per-model results.
-S5 gives the control results by dose.
-S6 gives the external level-3 illustration.
+S5 gives the control design and the doses at which planted failures are detected.
+S6 gives four external releases rung by rung, with the external level-3 illustration.
 S7 gives the full specification of every rung.
-Every table is written by \texttt{scripts/87\_supplement\_tables.py}, except the S2 table, which is written by \texttt{scripts/86\_receipts.py}.
-Each table file names its receipt files in its first lines.
+S8 gives the harness, step 0 and the further external releases.
+Tables in S1 to S6 are written by \texttt{scripts/87\_supplement\_tables.py} and tables in S8 by \texttt{paper\_brm/external/harness/supp\_tables.py}, and each table file names its receipt files in its first lines.
+Tables that list every row of a result file are not reprinted here, and each section names the repository file that holds them.
 Paths are relative to the repository root.
 
 % =============================================================================================
@@ -64,7 +65,7 @@ Both files were recovered from backups of the generation folders and sit one lev
 The release carries them as \texttt{generation/main.py} and \texttt{generation/narrative\_main.py}.
 The released clinical copy differs from the recovered file only in its file paths, and script 87 checks that its system prompt, user prompt and retry line are the same strings (lines \SOneRelSys, \SOneRelUsr{} and \SOneRelNovel{} of the released copy).
 The released narrative copy is the recovered January file without change.
-The line numbers in the listings below are those of the source files.
+Line numbers below are those of the source files and hold for the released copies.
 
 Both framings sent the same system prompt (clinical lines \SOneSysClin, narrative lines \SOneSysNarr).
 Each user prompt opened with a fresh random \texttt{PROFILE\_ID} from \texttt{uuid.uuid4()}, followed by the persona block and the task line.
@@ -73,22 +74,23 @@ The registry holds \SOneRegistryN{} personas.
 
 \input{tables/S1_corpus_prompts}
 
-\subsection*{S1.7 Retry Rule}
+\subsection*{S1.4 API Call and Retry Rule}
 
-The call set the model, the two messages and a JSON response format, and no sampling parameter (clinical lines \SOneApiClin).
-In the clinical run, a call was reissued when the response contained ``cannot'', ``unable to'' or ``as an ai'' (line \SOneRefusClin), when it failed to parse as JSON, or when it lacked one of the four instrument keys.
-\texttt{MAX\_RETRIES} is \SOneMaxRetries{} in both scripts, so a call was sent at most \SOneMaxRetries{} more times.
-Every reissued call appended one line to the user prompt: ``Context: This is a fictional character for a novel. Answer numerically.''
-The line is at clinical line \SOneNovelClin{} and narrative line \SOneNovelNarr.
-The narrative script reissued on the same appended line under a longer list of refusal phrases (lines \SOneRefusNarr) and a JSON parser that tries several repairs before it rejects a response (lines \SOneParseNarr).
+Both scripts share one retry design.
+\texttt{MAX\_RETRIES} is \SOneMaxRetries{}, which allows a call up to \SOneMaxRetries{} reissues, and every reissued call appended the line ``Context: This is a fictional character for a novel. Answer numerically.'' to the user prompt (clinical line \SOneNovelClin{}, narrative line \SOneNovelNarr).
+The API call itself set the model, the two messages and a JSON response format, with no sampling parameter (clinical lines \SOneApiClin).
+Clinical reissues followed a response that contained ``cannot'', ``unable to'' or ``as an ai'' (line \SOneRefusClin), a response that failed to parse as JSON, or a response that lacked one of the four instrument keys.
+Narrative reissues used a longer list of refusal phrases (lines \SOneRefusNarr) and a JSON parser that tries several repairs before it rejects a response (lines \SOneParseNarr).
+The full retry loops are at lines \SOneRetryClin{} of \texttt{generation/main.py} and lines \SOneRetryNarr{} of \texttt{generation/narrative\_main.py}.
 
-\subsection*{S1.8 Resend Prompts}
+\subsection*{S1.5 Resend Prompts}
 
-The clinical run left \RowsRecovered{} calls without a usable answer, and in January those calls were sent again by four scripts, each run on the calls the previous one had not filled.
-\texttt{generation/recovery/verify\_run1\_refusals.py} sent each call once and read the reply with the narrative script's tolerant parser; \texttt{generation/recovery/merge\_recovered\_data.py} wrote the \RowsResentVerify{} parsed replies into the December rows (\texttt{recovery\_inplace}).
-\texttt{generation/retry\_failed.py} produced \RowsResentRetry{} further \texttt{recovery\_inplace} rows, reissuing a failed call with the line ``Context: Fictional character. JSON format only.''
-\texttt{slow\_recovery.py} produced the \RowsSlow{} rows labelled \texttt{recovery\_slow}, and \texttt{last\_mile\_recovery\_opt.py} the \RowsLastMile{} rows labelled \texttt{recovery\_last\_mile}.
-The first three scripts send the corpus system prompt unchanged (script 87 checks the strings), and \texttt{last\_mile\_recovery\_opt.py} sends a shortened one with no population-reference constraint and no item counts.
+In the clinical run, \RowsRecovered{} calls ended without a usable answer, and four scripts sent them again in January, each working on the calls the previous one had not filled.
+\texttt{generation/recovery/verify\_run1\_refusals.py} sent each call once and read the reply with the narrative script's tolerant parser, and \texttt{generation/recovery/merge\_recovered\_data.py} wrote the \RowsResentVerify{} parsed replies into the December rows (\texttt{recovery\_inplace}).
+\texttt{generation/retry\_failed.py} produced \RowsResentRetry{} further \texttt{recovery\_inplace} rows by reissuing a failed call with the line ``Context: Fictional character. JSON format only.''
+\texttt{slow\_recovery.py} produced the \RowsSlow{} rows labeled \texttt{recovery\_slow}, and \texttt{last\_mile\_recovery\_opt.py} produced the \RowsLastMile{} rows labeled \texttt{recovery\_last\_mile}.
+The first three scripts send the corpus system prompt unchanged (script 87 checks the strings).
+\texttt{last\_mile\_recovery\_opt.py} sends the shortened prompt printed below, which has no population-reference constraint and no item counts.
 All four fill \texttt{PROFILE\_ID} with the persona's registry id where the main run used a random identifier, and their user prompts otherwise match the corpus user prompt.
 Script \texttt{87a\_resend\_sources.py} matches every \texttt{recovery\_inplace} row, on all eight PHQ-8 items, to the output of the script that produced it (\texttt{data/raw/run1\_resend\_verification\_2026-01.csv} and \texttt{data/raw/run1\_retry\_results\_2026-01.csv}).
 
@@ -96,30 +98,19 @@ Script \texttt{87a\_resend\_sources.py} matches every \texttt{recovery\_inplace}
 
 \input{tables/S1_control_prompts}
 
-The control prompts differ from the corpus prompt in the lines listed in Table~\ref{tab:s1diff}.
-
 \input{tables/S1_control_diff}
 
 % =============================================================================================
 \section{S2. Receipts}
 \label{sec:s2}
 
-Script \texttt{scripts/86\_receipts.py} checks every number in the article against its receipt file at the precision the article prints.
-Numbers that are derived by hand from receipt values are listed, with their derivation, in the script's \texttt{DERIVED} register.
-
-% S2_receipts.tex is written by script 86 at body text size with 12pt column gaps. The group below
-% sets it smaller, lets file names break after an underscore or a slash, and prints a literal caret,
-% which the claim text carries as plain text (R^2).
-\begingroup
-\singlespacing
-\footnotesize
-\setlength{\tabcolsep}{2pt}
-\renewcommand{\_}{\textunderscore\allowbreak}
-\catcode`\^=12
-\catcode`\/=\active
-\def/{\slash}
-\input{S2_receipts}
-\endgroup
+Every number in the body of the article has a receipt.
+A body line that holds a number ends with a comment of the form \texttt{\% R: file.csv}, which names the file in \texttt{analysis/brm/} (or the report in \texttt{paper\_brm/analysis\_brm/}) that prints it.
+Script \texttt{scripts/86\_receipts.py} reads these tags and checks every number against the named files at the precision the article prints.
+It writes \texttt{paper\_brm/manuscript/supplement/S2\_receipts.csv}, one row per tagged line with the claim, its receipt files and the scripts that write them, and \texttt{analysis/brm/86\_receipts\_check.csv}, one row per number with the value it matched.
+Numbers derived by hand from receipt values are listed with their derivation in the script's \texttt{DERIVED} register.
+Integers from 0 to 12, which read as words and match almost any file, are listed without a check.
+The counts of matched, derived and unmatched numbers are in \texttt{analysis/brm/86\_receipts\_summary.txt}, and the release carries no unmatched number.
 
 % =============================================================================================
 \section{S3. Corpus Provenance and Sensitivity Analyses}
@@ -127,61 +118,41 @@ Numbers that are derived by hand from receipt values are listed, with their deri
 
 \subsection*{S3.1 Row Sources}
 
-Table~\ref{tab:s3rows} counts the corpus rows by framing, model and source.
-Of the clinical rows, \RowsRecovered{} come from the January resend (Supplement S1.8): \RowsInplace{} in place (\RowsInplaceDS{} DeepSeek-V3 and \RowsInplaceGLM{} GLM-4.7), \RowsSlow{} from \texttt{slow\_recovery.py} and \RowsLastMile{} from \texttt{last\_mile\_recovery\_opt.py}.
-A later processing step had overwritten \RowsRestored{} December GPT-4o-mini rows, and corpus v3 restores them from a backup of the December run.
-Of the narrative rows, \RowsNarrRerunGLM{} GLM-4.7 rows and \RowsNarrRerunDS{} DeepSeek-V3 row were produced on 10 January by the same script and prompt that produced the first pass on 9 January.
-The corpus has \RowsTotal{} rows, of which \RowsValid{} hold a valid PHQ-8.
+The corpus has \RowsTotal{} rows, of which \RowsValid{} hold a valid PHQ-8, and Table~\ref{tab:s3rows} counts them by framing, model and source.
+January added \RowsRecovered{} clinical rows by resending calls that had no usable answer (Supplement S1.5).
+Of these, \RowsInplace{} were written in place (\RowsInplaceDS{} DeepSeek-V3 and \RowsInplaceGLM{} GLM-4.7), \RowsSlow{} came from \texttt{slow\_recovery.py} and \RowsLastMile{} from \texttt{last\_mile\_recovery\_opt.py}.
+Corpus v3 also restores \RowsRestored{} December GPT-4o-mini rows that a later processing step had overwritten, taking them from a backup of the December run.
+In the narrative framing, \RowsNarrRerunGLM{} GLM-4.7 rows and \RowsNarrRerunDS{} DeepSeek-V3 row were generated on 10 January by the script and prompt of the 9 January first pass.
 
 \input{tables/S3_row_sources}
 
 \subsection*{S3.2 December-Only Corpus}
 
-The December-only corpus keeps the clinical rows labelled \texttt{dec28\_main} and \texttt{dec28\_restored} and every narrative row.
-Each rung was rerun on it.
-Script 87 counts the per-model verdicts that differ from the full corpus: \DecLOneChanges{} at level 1, \DecLTwoChanges{} at level 2, \DecLThreeChanges{} at level 3 and \DecLFourChanges{} at level 4.
-At level 2, \DecLTwoChangesPooled{} pooled verdict differs (Table~\ref{tab:s3decl2}).
-At the gate, \DecGateKChanges{} values of the minimum or recommended $k$ change, all for \DecGateModels, and \DecGateCrossThirty{} of them cross 30, the number of draws per persona in the corpus (Table~\ref{tab:s3decgate}).
-At level 3, the largest change in a group residual across framings is \DecLThreeMaxDiff{} points, and \DecLThreeMaxDiffNoMissing{} points among rows that lose no design cell; \DecLThreeRowsMissing{} rows lose at least one cell (\texttt{80d\_december\_summary.csv}).
+A December-only corpus tests whether the resent rows matter.
+It keeps every narrative row and the clinical rows labeled \texttt{dec28\_main} and \texttt{dec28\_restored}, and all rungs were rerun on it.
+Counted by script 87, the per-model verdicts that differ from the full corpus number \DecLOneChanges{} at level 1, \DecLTwoChanges{} at level 2, \DecLThreeChanges{} at level 3 and \DecLFourChanges{} at level 4, with \DecLTwoChangesPooled{} pooled verdict differing at level 2.
+At the gate \DecGateKChanges{} values of the minimum or recommended $k$ change, all for \DecGateModels, and \DecGateCrossThirty{} of them cross 30, the number of draws per persona in the corpus.
+At level 3 the largest change in a group residual across framings is \DecLThreeMaxDiff{} points, falling to \DecLThreeMaxDiffNoMissing{} points among rows that lose no design cell, and \DecLThreeRowsMissing{} rows lose at least one cell.
+The rung-by-rung comparisons are in \texttt{analysis/brm/gate\_december\_compare.csv}, \texttt{l1\_personfit\_main.csv}, \texttt{l2\_verdicts.csv}, \texttt{80d\_december\_summary.csv} and \texttt{l4\_summary\_dec.csv}.
 
-\input{tables/S3_dec_gate}
-\input{tables/S3_dec_l1}
-\input{tables/S3_dec_l2}
-\input{tables/S3_dec_l3}
-\input{tables/S3_dec_l4}
+\subsection*{S3.3 Reference Specifications}
 
-\subsection*{S3.3 NHANES 2021--2023 Reference}
-
-The gate reads no population reference, so it has no 2021--2023 version.
-Level 1 was refitted with a graded response model on NHANES 2021--2023 (Table~\ref{tab:s3l12021}).
-Under that reference the level-1 verdicts that change, on both framings pooled, are: \LOneEraMoved.
-Level 3 was rerun against NHANES 2021--2023 and the 2017--2020 pre-pandemic file, each with its own design (Tables~\ref{tab:s3l3era} and~\ref{tab:s3l3eragroups}).
+Level 3 was rerun under \SpecRangeN{} reference specifications, and Table~\ref{tab:s3spec} gives the overall residual of each model under each.
+They vary the survey period (NHANES 2021--2023 and the 2017--2020 pre-pandemic file, each with its own design), the coding of marital status and the mapping of the persona's income label.
 Against 2021--2023 the per-model overall residuals move by \EraShiftMin{} to \EraShiftMax{} points (mean \EraShiftMean), and the per-model group residuals range from \EraResidMin{} to \EraResidMax{} points.
-Level 2 and level 4 were not run against NHANES 2021--2023.
-% Section 3 of the article now names the rungs that use NHANES 2021--2023 (levels 1 and 3); corrected 1 Oct.
+Level 1 was also refitted on NHANES 2021--2023, and on both framings pooled the level-1 verdicts that change are \LOneEraMoved{}.
+The gate has no population reference, and levels 2 and 4 were not run on NHANES 2021--2023.
 
-\input{tables/S3_l1_2021}
-\input{tables/S3_l3_era}
-\input{tables/S3_l3_era_groups}
+\input{tables/S3_l3_spec_range}
 
-\subsection*{S3.4 Marital-Status Codings}
+For marital status, the primary reference counts married adults as married, counts widowed, divorced, separated and never-married adults as single, counts 18- and 19-year-olds as single, and leaves cohabiting adults out.
+Level 3 counts cohabiting adults as married in specification S2 and as single in S2b.
+Level 2 was rerun with four other references (every marital status kept, single read as never married, 18- and 19-year-olds dropped, and marital status left out of the standardisation), and \MarLTwoChanges{} per-model standardized verdict codes differ from the primary across them (\texttt{analysis/brm/l2\_verdicts.csv}).
 
-The primary reference counts married adults as married and widowed, divorced, separated and never-married adults as single, leaves cohabiting adults out, and counts 18- and 19-year-olds as single.
-Level 3 was rerun with cohabiting adults counted as married (S2) and as single (S2b) (Table~\ref{tab:s3marl3}).
-Level 2 was rerun with four other references: every marital status kept (all marital), single read as never married, 18- and 19-year-olds dropped, and marital status left out of the standardisation (Table~\ref{tab:s3marl2}).
-Across those four references, \MarLTwoChanges{} per-model standardised verdict codes differ from the primary.
+Persona labels state dollar incomes and insurance, whereas the primary reference bands the NHANES ratio of family income to the poverty line.
+A sensitivity mapping instead uses household income and insurance type on the 2007--2018 cycles, where NHANES top-codes household income, and it gives specifications S4 and S5 at level 3.
+Table~\ref{tab:s3incl2} gives the level-2 income contrasts under both mappings.
 
-\input{tables/S3_marital_l3}
-\input{tables/S3_marital_l2}
-
-\subsection*{S3.5 Income-Anchor Sensitivity}
-
-The persona labels state dollar incomes and insurance, and the primary reference bands the NHANES ratio of family income to the poverty line.
-The sensitivity mapping uses household income and insurance type on the 2007--2018 cycles, where NHANES top-codes household income.
-Table~\ref{tab:s3incl3} gives the level-3 income-group residuals under each mapping, Table~\ref{tab:s3incmg} the marginal residuals, and Table~\ref{tab:s3incl2} the level-2 income contrasts.
-
-\input{tables/S3_income_l3}
-\input{tables/S3_income_mg}
 \input{tables/S3_income_l2}
 
 % =============================================================================================
@@ -190,114 +161,143 @@ Table~\ref{tab:s3incl3} gives the level-3 income-group residuals under each mapp
 
 \subsection*{S4.1 Gate}
 
-Tables~\ref{tab:s4gatecomp} and~\ref{tab:s4gatek} give every gate quantity with its persona-bootstrap interval, for the PHQ-8 total and for the indicator of a total of 10 or more.
+Tables~\ref{tab:s4gatecomp} and~\ref{tab:s4gatek} give every gate quantity for the PHQ-8 total with its persona-bootstrap interval, and \texttt{analysis/brm/gate\_dstudy.csv} gives the same quantities for the indicator of a total of 10 or more.
 
 \input{tables/S4_gate_components}
 \input{tables/S4_gate_k}
 \input{../tables/tab_gate}
 
-\subsection*{S4.1a Level 1}
+\subsection*{S4.2 Level 1}
 
 Table~\ref{tab:l1} gives the person-fit tails for each model and framing.
+At matched totals the models put 0.0\% to 4.3\% of draws in the regular tail, against 5\% of NHANES adults, and GLM-4.7 is short of unusual patterns alone (\texttt{analysis/brm/l1\_summary.csv}).
+The models weight depressed mood more heavily than people do and fatigue less, scoring 0.16 to 0.51 points higher on depressed mood and 0.22 to 1.11 points lower on fatigue at matched totals (\texttt{l1\_personfit\_item\_profile.csv}).
+They also give two different personas the identical answer vector 4.6 to 39 times as often as two NHANES adults with the same total (\texttt{l1\_pattern\_reuse.csv}).
 
 \input{../tables/tab_l1}
 
-\subsection*{S4.2 Level 2}
+\subsection*{S4.3 Level 2}
 
-Table~\ref{tab:s4l2std} gives the standardised estimand, which is primary, and Table~\ref{tab:s4l2marg} the marginal estimand.
-Each table carries the verdict under both stops and, as a sensitivity column, the verdict under the population-only stop.
-
-Figure~\ref{fig:s1intervals} draws every per-model and pooled ratio of the article's Figure 2 with its 98.6\% Fieller interval.
+Figure~\ref{fig:s1intervals} draws every per-model and pooled ratio with its 98.6\% Fieller interval and verdict, for the standardized estimand, which is primary.
+Both estimands, with the simulated and population gaps, the verdict under both stops and the verdict under the population-only stop, are in \texttt{analysis/brm/l2\_verdicts.csv}, and the population gaps are in \texttt{l2\_reference.csv}.
 
 \begin{figure}[tp]
-\caption{Level 2: Simulated Gaps as Ratios of the Standardised NHANES Gaps, With Intervals}
+\caption{Level 2: Simulated Gaps as Ratios of the Standardized NHANES Gaps, With Intervals}
 \label{fig:s1intervals}
 {\centering\includegraphics[width=\linewidth,height=0.8\textheight,keepaspectratio]{figS_level2_intervals.pdf}\par}
 \end{figure}
 
-\input{tables/S4_l2_std}
-\input{tables/S4_l2_marg}
+\subsection*{S4.4 Level 3}
 
-\subsection*{S4.3 Level 3}
-
-Table~\ref{tab:s4l3mean} gives every group row for the mean, and Table~\ref{tab:s4l3prev} every group row for the share scoring 10 or more.
+Table~\ref{tab:s4l3mean} gives every group row for the mean, and \texttt{analysis/brm/80c\_l3\_results.csv} gives every group row for the share scoring 10 or more.
 
 \input{tables/S4_l3_mean}
-\input{tables/S4_l3_prev}
 \input{../tables/tab_l3}
 
-\subsection*{S4.4 Level 4}
+\subsection*{S4.5 Level 4}
 
 \input{../tables/tab_l4}
 
 \input{tables/S4_l4_invariance}
 
-\subsection*{S4.5 Multiplicity}
+\subsection*{S4.6 Multiplicity}
 
-Table~\ref{tab:s4mult} gives the family and the procedure at each rung.
-Each rung's pass is an intersection-union test over its members, except level 2, where each contrast receives its own verdict and the family is controlled by Bonferroni.
+Table~\ref{tab:s4mult} lists the family and the procedure at each rung.
+Each rung passes by an intersection-union test over its members.
+Level 2 differs, since each contrast receives its own verdict there and Bonferroni correction controls the family.
 
 \input{tables/S4_multiplicity}
+
+\subsection*{S4.7 Sensitivity Analyses}
+
+\paragraph{Kept region.}
+Table~\ref{tab:s4band} recounts the level-2 verdicts of Figure~3 in the main text with the kept region set to [0.67, 1.50], [0.80, 1.25] and [0.90, 1.10], holding every interval, every Bonferroni level and the first stop fixed.
+No gap in the worked example is kept under any of these regions.
+Widening the region to [0.67, 1.50] raises the kept count to \BandBisWide{} for Bisbee et al.\ and to \BandOqaWide{} for OpinionQA, and narrowing it to [0.90, 1.10] leaves \BandOqaTightRead{} of the 154 OpinionQA contrasts unread, since the reference then has to measure each gap to within a tenth of its size.
+
+\input{tables/S4_l2_band}
+
+\paragraph{Gaps a model invents.}
+The frozen ladder does not read a contrast whose population gap cannot be told from zero, so a gap that a model invents there goes unchecked.
+As an exploratory analysis outside the frozen rules, Table~\ref{tab:s4null} tests the simulated gap for equivalence to zero at tolerances of 0.10, 0.20 and 0.25 reference standard deviations, using the 90\% interval of the gap and the standard errors of the level-2 analysis.
+At 0.10 standard deviations the worked example shows no invented gap, while ChatGPT invents a gap in \NullBisFail{} of the \NullBisN{} such contrasts of Bisbee et al.\ and GPT-3 in \NullArgFail{} of the \NullArgN{} of Argyle et al.
+
+\input{tables/S4_null_gap}
+
+\paragraph{Level 1 at temperature 0.}
+The decoding control of Supplement S1.7 gives \DecLDraws{} draws of \DecLPersonas{} personas per model at the provider default and at temperature 0.
+Run unchanged on those draws, level 1 fails every model in both arms.
+GPT-4o-mini, DeepSeek-V3 and Gemini-3-Flash stay compressed in both tails and GLM-4.7 keeps too few atypical patterns, as in the corpus, and temperature 0 moves the tail ratios toward zero wherever it moves them at all (\texttt{analysis/brm/96\_decoding\_l1.csv}).
+
+\subsection*{S4.8 Claims a Study Might Make}
+
+Table~\ref{tab:s4claims} sets claims a study might make from the corpus beside the verdict of the rung that tests each.
+The persona of the article's introduction, a single Black woman on Medicaid with an income under \$35,000, receives 30 clinical draws from GPT-4o-mini ranging from 7 to 16.
+Her first draw of 8 lands in the mild band and her mean of 10.3 in the moderate band, so her readable score is the average.
+Her 60 draws over both framings are each plausible as human answers and together less varied than real people at her severity, and her mean over both framings, 10.0, exceeds the 4.7 of matched NHANES adults by 5.3 points (\texttt{analysis/brm/85\_worked\_case.csv}).
+
+\input{tables/S4_claims}
+
+\subsection*{S4.9 Simpler Checks}
+
+Two checks of the kind used to report algorithmic fidelity were run on the same 48 matched persona cells for comparison with the ladder (\texttt{scripts/99\_naive\_baseline.py}, output \texttt{analysis/brm/99\_naive\_baseline.csv}).
+Persona means average both framings.
+The Pearson correlation between each model's persona means and the NHANES means of matching adults is .78 for DeepSeek-V3, .74 for Gemini-3-Flash, .72 for GPT-4o-mini and .82 for GLM-4.7, with 95\% cell-bootstrap intervals whose lower ends lie between .55 and .67. % R: 99_naive_baseline.csv
+Of the seven level-2 gaps, Gemini-3-Flash and GLM-4.7 give all seven the population's sign and DeepSeek-V3 and GPT-4o-mini give five, while no model has a kept gap. % R: 99_naive_baseline.csv
+A correlation across cells rewards a sample that orders its personas as people are ordered, and it is blind to a shift of every persona and to a gradient that is too steep.
+The ladder's levels 2 and 3 read those two properties directly.
 
 % =============================================================================================
 \section{S5. Controls}
 \label{sec:s5}
 
-Table~\ref{tab:s5dose} gives, for each rung, the dose at which a planted failure is detected in at least 95\% of replicates, beside the distortion the real models show.
+Controls are built on a split of the NHANES 2005--2018 adults.
+Within each of the 200 replicates the adults are divided at random into two halves, stratified by the 48 persona cells, and one half serves as the reference while the other serves as the donor.
+Following the corpus design of 120 personas, two framings and 30 draws, a pseudo-model draws every response from the donor half, sampling a respondent within the persona's cell with probability proportional to the examination weight and keeping that respondent's eight item scores.
+Transgender and multiracial personas draw from the closest available group and enter levels 1 and 4 only.
+A panel pools four independent pseudo-models.
+Run on the real corpus with the full reference, the control code reproduces all 303 rung numbers reported in the article (\texttt{83a\_receipt.csv}).
+
+Each rung receives its own planted failure across a grid of doses.
+Level 1 shuffles the item values of a share of draws, or replaces a share with the most typical vector at the same total.
+Level 2 scales a group gap by a factor $g$, and level 3 shifts every persona mean by $d$ points.
+At level 4, a share of draws is rebuilt item by item from other draws of the same persona.
+For each rung, Table~\ref{tab:s5dose} lists the dose at which a planted failure is detected in at least 95\% of replicates, beside the distortion the real models show.
+Results by dose for every rung, a coverage check of the level-2 intervals and a parametric power simulation at the corpus's own precision are in \texttt{paper\_brm/analysis\_brm/CONTROLS.md} and in the \texttt{83c} and \texttt{83f} files of \texttt{analysis/brm/}.
 
 \input{tables/S5_dose_detection}
 
-Each replicate splits the NHANES 2005--2018 adults at random into two halves, stratified by the 48 persona cells.
-One half supplies respondents and the other half is the reference.
-A pseudo-model has the corpus design of 120 personas, two framings and 30 draws.
-Each draw is a respondent from the donor half, drawn within the persona's cell with probability proportional to the examination weight, and it keeps that respondent's eight item scores.
-Transgender and multiracial personas draw from the closest available group and enter levels 1 and 4 only.
-Four independent pseudo-models form a panel, and there are 200 replicates.
-Planted failures are applied to the same panels at a grid of doses.
-At level 1 a share of draws has its item values shuffled, or is replaced by the most typical vector at the same total.
-At level 2 a group gap is scaled by a factor $g$.
-At level 3 every persona mean is shifted by $d$ points.
-At level 4 a share of draws is rebuilt item by item from other draws of the same persona.
-Table~\ref{tab:s5l2power} adds a parametric simulation at the corpus's own precision, with the simulated-gap standard error set to the smallest and the largest of the four real models.
-The design and scripts are described in \texttt{paper\_brm/analysis\_brm/CONTROLS.md}.
-
-\input{tables/S5_l1}
-\input{tables/S5_l2}
-\input{tables/S5_l2_coverage}
-\input{tables/S5_l2_power}
-\input{tables/S5_l3}
-\input{tables/S5_l4}
-
 % =============================================================================================
-\section{S6. External Level 3: An Illustration}
+\section{S6. Four External Releases Rung by Rung}
 \label{sec:s6}
 
-This section is an illustration of level 3 on two external releases, and it is not a verdict on either.
-Level 3 needs a use tolerance that the deployer states, and neither group of original authors stated one.
-The use tolerances below are placeholders set by the present analyst.
-On OpinionQA a group passes when the model's plurality answer matches the Pew plurality answer on at least 90\% of questions.
-On Argyle et al.\ Study 3 the use tolerance is 5 percentage points for proportions and one response category for ordinal scales.
-The strict tolerance is the human group mean's own 95\% sampling half-width.
+\input{S6_first_four}
+
+\subsection*{S6.5 External Level 3 Illustration}
+
+Level 3 is shown here on two external releases as an illustration, and no verdict on either follows from it.
+A use tolerance has to come from the deployer, and neither group of original authors stated one, which leaves the use tolerances below as placeholders set by the present analyst.
+OpinionQA groups pass when the model's plurality answer matches the Pew plurality answer on at least 90\% of questions.
+For Argyle et al.\ Study 3 the tolerance is 5 percentage points for proportions and one response category for ordinal scales, with a strict tolerance equal to the human group mean's own 95\% sampling half-width.
 
 \paragraph{OpinionQA\@.}
-The steered model distributions and the Pew American Trends Panel targets come from the Meister et al.\ release.
-The Pew targets in that release are unweighted counts, so the comparison is to the unweighted Pew sample.
-Of \ExtOqaRows{} method, model, steering and group cells, \ExtOqaPass{} pass the placeholder use tolerance (Table~\ref{tab:s6oqa}).
-The models match the Pew plurality answer on \ExtOqaMatchMin\% to \ExtOqaMatchMax\% of questions (median \ExtOqaMatchMed\%), and a fresh Pew sample of the same size would match it on a median of \ExtOqaHumanMed\%.
+Meister et al.\ released the steered model distributions and the Pew American Trends Panel targets for OpinionQA.
+Because the Pew targets are unweighted counts, the comparison is to the unweighted Pew sample.
+\ExtOqaPass{} of \ExtOqaRows{} method, model, steering and group cells pass the placeholder use tolerance.
+Models match the Pew plurality answer on \ExtOqaMatchMin\% to \ExtOqaMatchMax\% of questions (median \ExtOqaMatchMed\%), against a median of \ExtOqaHumanMed\% for a fresh Pew sample of the same size.
 
 \paragraph{Argyle et al.\ Study 3.}
-GPT-3 answered for the same American National Election Studies respondents whose answers form the reference, and the ANES file carries no weights.
-The released listing for Study 3 sets \texttt{temperature=0.001} inside the generation loop, while the release's README calls the main file the 0.7 run.
+Argyle et al.\ had GPT-3 answer for the same American National Election Studies respondents whose answers form the reference, and the ANES file carries no weights.
+Their released listing for Study 3 sets \texttt{temperature=0.001} inside the generation loop, whereas the README calls the main file the 0.7 run.
 This analysis follows the README and labels that run \texttt{t0.7\_main}.
-In the main run, \ExtArgStrict{} of \ExtArgCells{} outcome and group cells pass the strict tolerance and \ExtArgUse{} pass the placeholder use tolerance (Tables~\ref{tab:s6argruns} and~\ref{tab:s6argmain}).
-The receipts are \texttt{paper\_brm/external/results/opinionqa/level3\_groups.csv} and \texttt{paper\_brm/external/results/argyle/level3\_groups.csv}, and the method is described in \texttt{paper\_brm/external/RESULTS.md}.
-
-\input{tables/S6_opinionqa}
-\input{tables/S6_argyle_runs}
-\input{tables/S6_argyle_main}
+In the main run, \ExtArgStrict{} of \ExtArgCells{} outcome and group cells pass the strict tolerance and \ExtArgUse{} pass the placeholder use tolerance.
+Every cell is in \texttt{paper\_brm/external/results/opinionqa/level3\_groups.csv} and \texttt{paper\_brm/external/results/argyle/level3\_groups.csv}, and the method is described in \texttt{paper\_brm/external/RESULTS.md}.
 
 % =============================================================================================
 \input{S7_ladder_spec}
+
+% =============================================================================================
+\input{S8_further_releases}
 
 % S7 carries its own citations, so the supplement needs a reference list of its own.
 \bibliographystyle{apacite}

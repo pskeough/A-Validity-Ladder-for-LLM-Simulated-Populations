@@ -34,7 +34,7 @@ assert set(t for t, _ in LABELS) <= set(d.index)
 n = d.loc["REAL"]
 lines = [
     "% Written by scripts/88c_panel_table.py from analysis_brm/intermediate_panel/88_confusion.csv. Do not edit by hand.",
-    r"\begin{table}[tp]",
+    r"\begin{table}[!ht]",
     r"\centering",
     r"\caption{Verdicts for Seven Simulator Types Built From Survey Respondents}",
     r"\label{tab:panel}",
@@ -58,7 +58,8 @@ lines += [
     r"\bottomrule",
     r"\end{tabular}",
     r"\begin{tabnote}",
-    r"\textit{Note.} Percentage of readings that pass, except the columns marked fail or unresolved. "
+    r"\textit{Note.} L1 to L4 are levels 1 to 4, and R1, R2 and R4 are the level-4 rules. "
+    r"Percentage of readings that pass, except the columns marked fail or unresolved. "
     f"Gate, L2 and L3 are read per pseudo-model ({int(n['gate_n'])} readings per type); "
     f"L1, R1 and R2 on one pseudo-model per replicate ({int(n['L1_n'])} replicates). "
     "R4 is read at margin .08 on the number of replicates in parentheses; it gives no verdict without a general factor. "

@@ -1,0 +1,15 @@
+check,got,want,ok
+"NHANES Low minus High, sum of item gaps vs l2_reference standardised",1.2974397204881836,1.29744,True
+"NHANES Women minus Men, sum of item gaps vs l2_reference standardised",0.8411336459223924,0.841134,True
+"DeepSeek-V3 Low minus High SES, sum of item gaps vs 78b persona-pair gap",2.479166666666667,2.479166666666667,True
+"DeepSeek-V3 Women minus Men, sum of item gaps vs 78b persona-pair gap",0.3451388888888888,0.3451388888888891,True
+"DeepSeek-V3 overall PS residual, sum of item residuals vs 80c",4.581711045607456,4.581711,True
+"Gemini-3-Flash Low minus High SES, sum of item gaps vs 78b persona-pair gap",6.582291666666666,6.582291666666666,True
+"Gemini-3-Flash Women minus Men, sum of item gaps vs 78b persona-pair gap",0.9854166666666666,0.9854166666666667,True
+"Gemini-3-Flash overall PS residual, sum of item residuals vs 80c",2.589151656800994,2.589152,True
+"GLM-4.7 Low minus High SES, sum of item gaps vs 78b persona-pair gap",6.530208333333333,6.5302083333333325,True
+"GLM-4.7 Women minus Men, sum of item gaps vs 78b persona-pair gap",1.729861111111111,1.729861111111111,True
+"GLM-4.7 overall PS residual, sum of item residuals vs 80c",2.1208233854058087,2.120823,True
+"GPT-4o-mini Low minus High SES, sum of item gaps vs 78b persona-pair gap",2.8020833333333335,2.802083333333333,True
+"GPT-4o-mini Women minus Men, sum of item gaps vs 78b persona-pair gap",0.1909722222222222,0.1909722222222223,True
+"GPT-4o-mini overall PS residual, sum of item residuals vs 80c",4.679768833145362,4.679769,True

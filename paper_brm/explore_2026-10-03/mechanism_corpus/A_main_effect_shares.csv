@@ -1,0 +1,43 @@
+source,term,share_of_cell_mean_variance
+NHANES,race,0.15144545122234543
+NHANES,sex,0.20653146750299567
+NHANES,income,0.3280518711924051
+NHANES,marital,0.1513776696789341
+NHANES,all four main effects,0.8374064595966801
+NHANES,interaction + residual,0.16259354040331986
+NHANES,total SS of 48 cell means,41.107874873881954
+DeepSeek-V3,race,0.10425121379377353
+DeepSeek-V3,sex,0.02250167822697622
+DeepSeek-V3,income,0.7909598292266837
+DeepSeek-V3,marital,0.032685548500326574
+DeepSeek-V3,all four main effects,0.95039826974776
+DeepSeek-V3,interaction + residual,0.04960173025224002
+DeepSeek-V3,total SS of 48 cell means,63.52638310185188
+Gemini-3-Flash,race,0.03428259926919144
+Gemini-3-Flash,sex,0.02385103023201506
+Gemini-3-Flash,income,0.8457501043769304
+Gemini-3-Flash,marital,0.015966392138786985
+Gemini-3-Flash,all four main effects,0.9198501260169238
+Gemini-3-Flash,interaction + residual,0.08014987398307616
+Gemini-3-Flash,total SS of 48 cell means,488.5555034722222
+GLM-4.7,race,0.04200395264507625
+GLM-4.7,sex,0.07624070669555814
+GLM-4.7,income,0.8081907522741274
+GLM-4.7,marital,0.03505086638599236
+GLM-4.7,all four main effects,0.9614862780007541
+GLM-4.7,interaction + residual,0.038513721999245853
+GLM-4.7,total SS of 48 cell means,470.99554976851846
+GPT-4o-mini,race,0.039252638009842515
+GPT-4o-mini,sex,0.00626977362241352
+GPT-4o-mini,income,0.900055787512999
+GPT-4o-mini,marital,0.012034732017232121
+GPT-4o-mini,all four main effects,0.9576129311624872
+GPT-4o-mini,interaction + residual,0.042387068837512754
+GPT-4o-mini,total SS of 48 cell means,69.80230902777778
+pooled,race,0.044850745797776176
+pooled,sex,0.03762727072110794
+pooled,income,0.8570283749795623
+pooled,marital,0.025178940253285344
+pooled,all four main effects,0.9646853317517318
+pooled,interaction + residual,0.03531466824826823
+pooled,total SS of 48 cell means,210.71544994212962

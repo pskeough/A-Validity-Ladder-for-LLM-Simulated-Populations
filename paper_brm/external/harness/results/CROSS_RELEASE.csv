@@ -1,0 +1,22 @@
+dataset,folder,arm,families,families_pass,families_fail,families_unresolved,families_reference_cannot_certify,contrasts,kept,share_kept,not kept,share_not_kept,unresolved,share_unresolved,not read,share_not_read
+argyle,argyle_ideal,ideal control,200,7,0,193,0,12200,1165,0.095,0,0.0,235,0.019,10800,0.885
+argyle,val_argyle,models,3,0,3,0,0,183,5,0.027,38,0.208,6,0.033,134,0.732
+bisbee,val_bisbee,models,3,0,3,0,0,231,7,0.03,71,0.307,14,0.061,139,0.602
+cummins2025,cummins2025,models,252,0,0,0,252,2016,0,0.0,0,0.0,0,0.0,2016,1.0
+cummins2025,cummins2025_splithalf,split-half control,200,0,10,0,190,1600,0,0.0,10,0.006,0,0.0,1590,0.994
+huang2025,huang2025_ideal,ideal control,100,100,0,0,0,900,900,1.0,0,0.0,0,0.0,0,0.0
+huang2025,huang2025_ideal_k,ideal control (matched size),100,0,0,100,0,900,414,0.46,0,0.0,486,0.54,0,0.0
+huang2025,huang2025,models,8,0,7,1,0,72,2,0.028,30,0.417,40,0.556,0,0.0
+huang2025,huang2025_random,random,1,0,1,0,0,9,0,0.0,9,1.0,0,0.0,0,0.0
+malmberg2026,malmberg2026,models,3,0,2,0,1,96,0,0.0,10,0.104,0,0.0,86,0.896
+malmberg2026,malmberg2026,split-half control,3,0,0,0,3,96,0,0.0,0,0.0,0,0.0,96,1.0
+opinionqa,opinionqa_ideal,ideal control,200,92,0,108,0,1000,882,0.882,0,0.0,118,0.118,0,0.0
+opinionqa,val_opinionqa,models,26,0,13,12,1,154,1,0.006,33,0.214,115,0.747,5,0.032
+subpop2025,subpop2025,models,2,0,2,0,0,16,0,0.0,13,0.812,1,0.062,2,0.125
+subpop2025,subpop2025,survey-trained simulator,2,0,2,0,0,16,0,0.0,14,0.875,1,0.062,1,0.062
+twin2k,val_twin2k,human retest control,1,1,0,0,0,511,8,0.016,0,0.0,0,0.0,503,0.984
+twin2k,val_twin2k,models,13,0,13,0,0,13270,3,0.0,961,0.072,53,0.004,12253,0.923
+twin2k_mega,twin2k_mega,models,23,0,23,0,0,55344,0,0.0,816,0.015,0,0.0,54528,0.985
+twin2k_mega,twin2k_mega,split-half control,1,0,0,0,1,1598,0,0.0,0,0.0,0,0.0,1598,1.0
+twin2k_mega_bystudy,twin2k_mega_bystudy,models,413,0,285,0,128,55344,1,0.0,1426,0.026,41,0.001,53876,0.973
+twin2k_mega_bystudy,twin2k_mega_bystudy,split-half control,18,0,0,0,18,1598,0,0.0,0,0.0,0,0.0,1598,1.0

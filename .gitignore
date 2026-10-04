@@ -3,3 +3,4 @@ paper_brm/external/raw/
 __pycache__/
 *.pyc
 .env
+paper_brm/external/harness/_work_*/

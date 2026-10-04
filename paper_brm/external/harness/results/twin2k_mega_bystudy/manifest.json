@@ -1,0 +1,18 @@
+{
+  "adapter": "twin2k_mega_bystudy",
+  "name": "twin2k_mega_bystudy",
+  "kind": "digital twins (LLM, 23 specifications) and a split-half control, families per study",
+  "source": "Twin-2K-500 Mega Study (arXiv 2509.19088); gaps from harness/results/twin2k_mega/l2_contrasts.csv",
+  "mode": "gaps",
+  "package_version": "0.1.1",
+  "inputs": [
+    {
+      "path": "C:\\Research\\PsychBench\\UpdatedRun\\paper_brm\\external\\harness\\results\\twin2k_mega\\l2_contrasts.csv",
+      "sha256": "c2781522e6c4267e3b0ea95f5e327a9a6f8ee48019b565ea3d35511955a221f5",
+      "bytes": 28444830
+    }
+  ],
+  "run_at": "2026-10-03 22:16:46",
+  "seconds": 15.2,
+  "notes": "families = specification x study"
+}

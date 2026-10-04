@@ -1,0 +1,432 @@
+family,contrasts,verdict,reading,certifiable,kept,not kept,unresolved,not read,stopped_no_population_gap,stopped_reference_imprecise
+GPT5 : accuracy_nudges,198,fail,fail,0,1,16,0,181,169,12
+centaur_empty_persona : accuracy_nudges,198,fail,fail,0,0,13,0,185,169,16
+centaur_persona_summary : accuracy_nudges,198,fail,fail,0,0,10,0,188,169,19
+deepseek : accuracy_nudges,198,fail,fail,0,0,15,0,183,169,14
+demographics_only : accuracy_nudges,198,fail,fail,0,0,14,0,184,169,15
+demographics_only_temperature_zero : accuracy_nudges,198,fail,fail,0,0,15,0,183,169,14
+empty_persona : accuracy_nudges,198,fail,fail,0,0,24,0,174,169,5
+empty_persona_temperature_zero : accuracy_nudges,198,fail,fail,0,0,25,0,173,169,4
+full_persona_fine_tuned_temperature_0 : accuracy_nudges,198,fail,fail,0,0,8,1,189,169,20
+full_persona_fine_tuned_temperature_7 : accuracy_nudges,198,fail,fail,0,0,4,1,193,169,24
+full_persona_fine_tuned_temperature_7_jsonforced : accuracy_nudges,198,fail,fail,0,0,4,1,193,169,24
+full_persona_without_reasoning : accuracy_nudges,198,fail,fail,0,0,14,0,184,169,15
+gemini : accuracy_nudges,198,fail,fail,0,0,15,0,183,169,14
+gemini_3_pro : accuracy_nudges,198,fail,fail,0,0,10,1,187,169,18
+include_reasoning_temperature_zero : accuracy_nudges,198,fail,fail,0,0,14,0,184,169,15
+llama_empty_persona : accuracy_nudges,198,fail,fail,0,0,8,0,190,169,21
+llama_persona_summary : accuracy_nudges,198,fail,fail,0,0,8,0,190,169,21
+persona_summary : accuracy_nudges,198,fail,fail,0,0,13,0,185,169,16
+persona_summary_include_reasoning : accuracy_nudges,198,fail,fail,0,0,15,0,183,169,14
+persona_summary_include_reasoning_temperature_zero : accuracy_nudges,198,fail,fail,0,0,16,0,182,169,13
+persona_summary_temperature_zero : accuracy_nudges,198,fail,fail,0,0,15,0,183,169,14
+temperature_zero : accuracy_nudges,198,fail,fail,0,0,14,0,184,169,15
+with_reasoning : accuracy_nudges,198,fail,fail,0,0,14,0,184,169,15
+human_split_half : accuracy_nudges,196,unresolved,reference cannot certify,0,0,0,0,196,180,16
+GPT5 : affective_priming,217,fail,fail,0,0,1,0,216,203,13
+centaur_empty_persona : affective_priming,217,fail,fail,0,0,5,0,212,203,9
+centaur_persona_summary : affective_priming,217,fail,fail,0,0,4,0,213,204,9
+deepseek : affective_priming,217,fail,fail,0,0,1,0,216,203,13
+demographics_only : affective_priming,217,fail,fail,0,0,4,0,213,203,10
+demographics_only_temperature_zero : affective_priming,217,fail,fail,0,0,4,0,213,203,10
+empty_persona : affective_priming,217,fail,fail,0,0,6,0,211,203,8
+empty_persona_temperature_zero : affective_priming,217,fail,fail,0,0,7,0,210,203,7
+full_persona_fine_tuned_temperature_0 : affective_priming,217,unresolved,reference cannot certify,0,0,0,0,217,203,14
+full_persona_fine_tuned_temperature_7 : affective_priming,217,unresolved,reference cannot certify,0,0,0,0,217,203,14
+full_persona_fine_tuned_temperature_7_jsonforced : affective_priming,217,unresolved,reference cannot certify,0,0,0,0,217,203,14
+full_persona_without_reasoning : affective_priming,217,fail,fail,0,0,1,0,216,203,13
+gemini : affective_priming,217,fail,fail,0,0,2,0,215,203,12
+gemini_3_pro : affective_priming,217,unresolved,reference cannot certify,0,0,0,0,217,203,14
+include_reasoning_temperature_zero : affective_priming,217,fail,fail,0,0,1,0,216,203,13
+llama_empty_persona : affective_priming,217,fail,fail,0,0,8,0,209,203,6
+llama_persona_summary : affective_priming,217,fail,fail,0,0,4,0,213,203,10
+persona_summary : affective_priming,217,fail,fail,0,0,1,0,216,203,13
+persona_summary_include_reasoning : affective_priming,217,fail,fail,0,0,1,0,216,203,13
+persona_summary_include_reasoning_temperature_zero : affective_priming,217,fail,fail,0,0,1,0,216,203,13
+persona_summary_temperature_zero : affective_priming,217,fail,fail,0,0,1,0,216,203,13
+temperature_zero : affective_priming,217,fail,fail,0,0,1,0,216,203,13
+with_reasoning : affective_priming,217,fail,fail,0,0,1,0,216,203,13
+human_split_half : affective_priming,135,unresolved,reference cannot certify,0,0,0,0,135,128,7
+GPT5 : consumer_minimalism,48,unresolved,reference cannot certify,0,0,0,0,48,46,2
+centaur_empty_persona : consumer_minimalism,48,unresolved,reference cannot certify,0,0,0,0,48,46,2
+centaur_persona_summary : consumer_minimalism,48,unresolved,reference cannot certify,0,0,0,0,48,46,2
+deepseek : consumer_minimalism,48,unresolved,reference cannot certify,0,0,0,0,48,46,2
+demographics_only : consumer_minimalism,48,unresolved,reference cannot certify,0,0,0,0,48,46,2
+demographics_only_temperature_zero : consumer_minimalism,48,unresolved,reference cannot certify,0,0,0,0,48,46,2
+empty_persona : consumer_minimalism,48,fail,fail,0,0,1,0,47,46,1
+empty_persona_temperature_zero : consumer_minimalism,48,fail,fail,0,0,1,0,47,46,1
+full_persona_fine_tuned_temperature_0 : consumer_minimalism,48,unresolved,reference cannot certify,0,0,0,0,48,46,2
+full_persona_fine_tuned_temperature_7 : consumer_minimalism,48,fail,fail,0,0,1,0,47,46,1
+full_persona_fine_tuned_temperature_7_jsonforced : consumer_minimalism,48,unresolved,reference cannot certify,0,0,0,0,48,46,2
+full_persona_without_reasoning : consumer_minimalism,48,unresolved,reference cannot certify,0,0,0,0,48,46,2
+gemini : consumer_minimalism,48,unresolved,reference cannot certify,0,0,0,0,48,46,2
+gemini_3_pro : consumer_minimalism,48,unresolved,reference cannot certify,0,0,0,0,48,46,2
+include_reasoning_temperature_zero : consumer_minimalism,48,unresolved,reference cannot certify,0,0,0,0,48,46,2
+llama_empty_persona : consumer_minimalism,48,fail,fail,0,0,1,0,47,46,1
+llama_persona_summary : consumer_minimalism,48,fail,fail,0,0,1,0,47,46,1
+persona_summary : consumer_minimalism,48,unresolved,reference cannot certify,0,0,0,0,48,46,2
+persona_summary_include_reasoning : consumer_minimalism,48,unresolved,reference cannot certify,0,0,0,0,48,46,2
+persona_summary_include_reasoning_temperature_zero : consumer_minimalism,48,unresolved,reference cannot certify,0,0,0,0,48,46,2
+persona_summary_temperature_zero : consumer_minimalism,48,unresolved,reference cannot certify,0,0,0,0,48,46,2
+temperature_zero : consumer_minimalism,48,unresolved,reference cannot certify,0,0,0,0,48,46,2
+with_reasoning : consumer_minimalism,48,unresolved,reference cannot certify,0,0,0,0,48,46,2
+human_split_half : consumer_minimalism,16,unresolved,reference cannot certify,0,0,0,0,16,14,2
+GPT5 : context_effects,9,unresolved,reference cannot certify,0,0,0,0,9,9,0
+centaur_empty_persona : context_effects,9,unresolved,reference cannot certify,0,0,0,0,9,9,0
+centaur_persona_summary : context_effects,9,unresolved,reference cannot certify,0,0,0,0,9,9,0
+deepseek : context_effects,9,unresolved,reference cannot certify,0,0,0,0,9,9,0
+demographics_only : context_effects,9,unresolved,reference cannot certify,0,0,0,0,9,9,0
+demographics_only_temperature_zero : context_effects,9,unresolved,reference cannot certify,0,0,0,0,9,9,0
+empty_persona : context_effects,9,unresolved,reference cannot certify,0,0,0,0,9,9,0
+empty_persona_temperature_zero : context_effects,9,unresolved,reference cannot certify,0,0,0,0,9,9,0
+full_persona_fine_tuned_temperature_0 : context_effects,9,unresolved,reference cannot certify,0,0,0,0,9,9,0
+full_persona_fine_tuned_temperature_7 : context_effects,9,unresolved,reference cannot certify,0,0,0,0,9,9,0
+full_persona_fine_tuned_temperature_7_jsonforced : context_effects,9,unresolved,reference cannot certify,0,0,0,0,9,9,0
+full_persona_without_reasoning : context_effects,9,unresolved,reference cannot certify,0,0,0,0,9,9,0
+gemini : context_effects,9,unresolved,reference cannot certify,0,0,0,0,9,9,0
+gemini_3_pro : context_effects,9,unresolved,reference cannot certify,0,0,0,0,9,9,0
+include_reasoning_temperature_zero : context_effects,9,unresolved,reference cannot certify,0,0,0,0,9,9,0
+llama_empty_persona : context_effects,9,unresolved,reference cannot certify,0,0,0,0,9,9,0
+llama_persona_summary : context_effects,9,unresolved,reference cannot certify,0,0,0,0,9,9,0
+persona_summary : context_effects,9,unresolved,reference cannot certify,0,0,0,0,9,9,0
+persona_summary_include_reasoning : context_effects,9,unresolved,reference cannot certify,0,0,0,0,9,9,0
+persona_summary_include_reasoning_temperature_zero : context_effects,9,unresolved,reference cannot certify,0,0,0,0,9,9,0
+persona_summary_temperature_zero : context_effects,9,unresolved,reference cannot certify,0,0,0,0,9,9,0
+temperature_zero : context_effects,9,unresolved,reference cannot certify,0,0,0,0,9,9,0
+with_reasoning : context_effects,9,unresolved,reference cannot certify,0,0,0,0,9,9,0
+human_split_half : context_effects,3,unresolved,reference cannot certify,0,0,0,0,3,3,0
+GPT5 : default_eric,20,fail,fail,0,0,1,0,19,14,5
+centaur_empty_persona : default_eric,20,fail,fail,0,0,3,0,17,14,3
+centaur_persona_summary : default_eric,20,fail,fail,0,0,2,0,18,14,4
+deepseek : default_eric,20,fail,fail,0,0,2,0,18,14,4
+demographics_only : default_eric,20,fail,fail,0,0,2,0,18,14,4
+demographics_only_temperature_zero : default_eric,20,fail,fail,0,0,3,0,17,14,3
+empty_persona : default_eric,20,fail,fail,0,0,4,0,16,14,2
+empty_persona_temperature_zero : default_eric,20,fail,fail,0,0,2,0,18,14,4
+full_persona_fine_tuned_temperature_0 : default_eric,20,unresolved,reference cannot certify,0,0,0,0,20,14,6
+full_persona_fine_tuned_temperature_7 : default_eric,20,unresolved,reference cannot certify,0,0,0,0,20,14,6
+full_persona_fine_tuned_temperature_7_jsonforced : default_eric,20,unresolved,reference cannot certify,0,0,0,0,20,14,6
+full_persona_without_reasoning : default_eric,20,fail,fail,0,0,2,0,18,14,4
+gemini : default_eric,20,fail,fail,0,0,2,0,18,14,4
+gemini_3_pro : default_eric,20,unresolved,reference cannot certify,0,0,0,0,20,14,6
+include_reasoning_temperature_zero : default_eric,20,unresolved,reference cannot certify,0,0,0,0,20,14,6
+llama_empty_persona : default_eric,20,fail,fail,0,0,3,0,17,14,3
+llama_persona_summary : default_eric,20,fail,fail,0,0,3,0,17,14,3
+persona_summary : default_eric,20,fail,fail,0,0,2,0,18,14,4
+persona_summary_include_reasoning : default_eric,20,fail,fail,0,0,2,0,18,14,4
+persona_summary_include_reasoning_temperature_zero : default_eric,20,fail,fail,0,0,2,0,18,14,4
+persona_summary_temperature_zero : default_eric,20,fail,fail,0,0,2,0,18,14,4
+temperature_zero : default_eric,20,fail,fail,0,0,2,0,18,14,4
+with_reasoning : default_eric,20,unresolved,reference cannot certify,0,0,0,0,20,14,6
+human_split_half : default_eric,8,unresolved,reference cannot certify,0,0,0,0,8,5,3
+GPT5 : digital_certification,56,unresolved,reference cannot certify,0,0,0,0,56,53,3
+centaur_empty_persona : digital_certification,56,fail,fail,0,0,3,0,53,53,0
+centaur_persona_summary : digital_certification,56,unresolved,reference cannot certify,0,0,0,0,56,52,4
+deepseek : digital_certification,56,fail,fail,0,0,1,0,55,53,2
+demographics_only : digital_certification,56,fail,fail,0,0,2,0,54,53,1
+demographics_only_temperature_zero : digital_certification,56,fail,fail,0,0,2,0,54,53,1
+empty_persona : digital_certification,56,fail,fail,0,0,3,0,53,53,0
+empty_persona_temperature_zero : digital_certification,56,fail,fail,0,0,3,0,53,53,0
+full_persona_fine_tuned_temperature_0 : digital_certification,56,unresolved,reference cannot certify,0,0,0,0,56,53,3
+full_persona_fine_tuned_temperature_7 : digital_certification,56,unresolved,reference cannot certify,0,0,0,0,56,53,3
+full_persona_fine_tuned_temperature_7_jsonforced : digital_certification,56,unresolved,reference cannot certify,0,0,0,0,56,53,3
+full_persona_without_reasoning : digital_certification,56,fail,fail,0,0,2,0,54,53,1
+gemini : digital_certification,56,fail,fail,0,0,1,0,55,53,2
+gemini_3_pro : digital_certification,56,unresolved,reference cannot certify,0,0,0,0,56,53,3
+include_reasoning_temperature_zero : digital_certification,56,unresolved,reference cannot certify,0,0,0,0,56,53,3
+llama_empty_persona : digital_certification,56,fail,fail,0,0,3,0,53,53,0
+llama_persona_summary : digital_certification,53,fail,fail,0,0,1,0,52,50,2
+persona_summary : digital_certification,56,fail,fail,0,0,1,0,55,53,2
+persona_summary_include_reasoning : digital_certification,56,fail,fail,0,0,1,0,55,53,2
+persona_summary_include_reasoning_temperature_zero : digital_certification,56,fail,fail,0,0,1,0,55,53,2
+persona_summary_temperature_zero : digital_certification,56,fail,fail,0,0,2,0,54,53,1
+temperature_zero : digital_certification,56,fail,fail,0,0,2,0,54,53,1
+with_reasoning : digital_certification,56,unresolved,reference cannot certify,0,0,0,0,56,53,3
+human_split_half : digital_certification,40,unresolved,reference cannot certify,0,0,0,0,40,37,3
+GPT5 : hiring_algorithms,525,fail,fail,0,0,9,1,515,499,16
+centaur_empty_persona : hiring_algorithms,525,fail,fail,0,0,26,0,499,499,0
+centaur_persona_summary : hiring_algorithms,525,fail,fail,0,0,8,1,516,499,17
+deepseek : hiring_algorithms,525,fail,fail,0,0,5,0,520,499,21
+demographics_only : hiring_algorithms,525,fail,fail,0,0,9,0,516,499,17
+demographics_only_temperature_zero : hiring_algorithms,525,fail,fail,0,0,10,0,515,499,16
+empty_persona : hiring_algorithms,525,fail,fail,0,0,18,0,507,499,8
+empty_persona_temperature_zero : hiring_algorithms,525,fail,fail,0,0,21,0,504,499,5
+full_persona_fine_tuned_temperature_0 : hiring_algorithms,525,fail,fail,0,0,5,0,520,499,21
+full_persona_fine_tuned_temperature_7 : hiring_algorithms,525,fail,fail,0,0,2,1,522,499,23
+full_persona_fine_tuned_temperature_7_jsonforced : hiring_algorithms,525,fail,fail,0,0,3,1,521,499,22
+full_persona_without_reasoning : hiring_algorithms,525,fail,fail,0,0,2,1,522,499,23
+gemini : hiring_algorithms,525,fail,fail,0,0,5,1,519,499,20
+gemini_3_pro : hiring_algorithms,525,fail,fail,0,0,6,0,519,499,20
+include_reasoning_temperature_zero : hiring_algorithms,525,fail,fail,0,0,4,0,521,499,22
+llama_empty_persona : hiring_algorithms,525,fail,fail,0,0,21,0,504,499,5
+llama_persona_summary : hiring_algorithms,525,fail,fail,0,0,4,1,520,499,21
+persona_summary : hiring_algorithms,525,fail,fail,0,0,5,0,520,499,21
+persona_summary_include_reasoning : hiring_algorithms,525,fail,fail,0,0,6,0,519,499,20
+persona_summary_include_reasoning_temperature_zero : hiring_algorithms,525,fail,fail,0,0,4,0,521,499,22
+persona_summary_temperature_zero : hiring_algorithms,525,fail,fail,0,0,4,0,521,499,22
+temperature_zero : hiring_algorithms,525,fail,fail,0,0,4,0,521,499,22
+with_reasoning : hiring_algorithms,525,fail,fail,0,0,3,1,521,499,22
+human_split_half : hiring_algorithms,365,unresolved,reference cannot certify,0,0,0,0,365,354,11
+GPT5 : idea_evaluation,22,fail,fail,0,0,1,0,21,20,1
+centaur_empty_persona : idea_evaluation,19,fail,fail,0,0,1,0,18,17,1
+centaur_persona_summary : idea_evaluation,22,fail,fail,0,0,2,0,20,20,0
+deepseek : idea_evaluation,22,fail,fail,0,0,1,0,21,20,1
+demographics_only : idea_evaluation,22,fail,fail,0,0,2,0,20,20,0
+demographics_only_temperature_zero : idea_evaluation,22,fail,fail,0,0,2,0,20,20,0
+empty_persona : idea_evaluation,22,fail,fail,0,0,2,0,20,20,0
+empty_persona_temperature_zero : idea_evaluation,22,fail,fail,0,0,1,0,21,20,1
+full_persona_fine_tuned_temperature_0 : idea_evaluation,22,fail,fail,0,0,1,0,21,20,1
+full_persona_fine_tuned_temperature_7 : idea_evaluation,22,fail,fail,0,0,1,0,21,20,1
+full_persona_fine_tuned_temperature_7_jsonforced : idea_evaluation,22,fail,fail,0,0,1,0,21,20,1
+full_persona_without_reasoning : idea_evaluation,22,fail,fail,0,0,2,0,20,20,0
+gemini : idea_evaluation,22,fail,fail,0,0,2,0,20,20,0
+gemini_3_pro : idea_evaluation,22,unresolved,reference cannot certify,0,0,0,0,22,20,2
+include_reasoning_temperature_zero : idea_evaluation,22,fail,fail,0,0,2,0,20,20,0
+llama_empty_persona : idea_evaluation,22,fail,fail,0,0,2,0,20,20,0
+llama_persona_summary : idea_evaluation,22,fail,fail,0,0,1,0,21,20,1
+persona_summary : idea_evaluation,22,fail,fail,0,0,2,0,20,20,0
+persona_summary_include_reasoning : idea_evaluation,22,fail,fail,0,0,1,0,21,20,1
+persona_summary_include_reasoning_temperature_zero : idea_evaluation,22,fail,fail,0,0,1,0,21,20,1
+persona_summary_temperature_zero : idea_evaluation,22,fail,fail,0,0,1,0,21,20,1
+temperature_zero : idea_evaluation,22,fail,fail,0,0,2,0,20,20,0
+with_reasoning : idea_evaluation,22,fail,fail,0,0,2,0,20,20,0
+human_split_half : idea_evaluation,6,unresolved,reference cannot certify,0,0,0,0,6,6,0
+GPT5 : infotainment,175,fail,fail,0,0,1,0,174,170,4
+centaur_empty_persona : infotainment,175,fail,fail,0,0,3,0,172,170,2
+centaur_persona_summary : infotainment,175,unresolved,reference cannot certify,0,0,0,0,175,170,5
+deepseek : infotainment,175,unresolved,reference cannot certify,0,0,0,0,175,170,5
+demographics_only : infotainment,175,unresolved,reference cannot certify,0,0,0,0,175,170,5
+demographics_only_temperature_zero : infotainment,175,fail,fail,0,0,1,0,174,170,4
+empty_persona : infotainment,175,fail,fail,0,0,2,0,173,170,3
+empty_persona_temperature_zero : infotainment,175,fail,fail,0,0,3,0,172,170,2
+full_persona_fine_tuned_temperature_0 : infotainment,175,fail,fail,0,0,1,0,174,170,4
+full_persona_fine_tuned_temperature_7 : infotainment,175,unresolved,reference cannot certify,0,0,0,0,175,170,5
+full_persona_fine_tuned_temperature_7_jsonforced : infotainment,175,unresolved,reference cannot certify,0,0,0,0,175,170,5
+full_persona_without_reasoning : infotainment,175,fail,fail,0,0,1,0,174,170,4
+gemini : infotainment,175,fail,fail,0,0,1,0,174,170,4
+gemini_3_pro : infotainment,175,unresolved,reference cannot certify,0,0,0,0,175,170,5
+include_reasoning_temperature_zero : infotainment,175,unresolved,reference cannot certify,0,0,0,0,175,170,5
+llama_empty_persona : infotainment,175,fail,fail,0,0,1,0,174,170,4
+llama_persona_summary : infotainment,175,fail,fail,0,0,3,0,172,170,2
+persona_summary : infotainment,175,fail,fail,0,0,1,0,174,170,4
+persona_summary_include_reasoning : infotainment,175,fail,fail,0,0,2,0,173,170,3
+persona_summary_include_reasoning_temperature_zero : infotainment,175,fail,fail,0,0,1,0,174,170,4
+persona_summary_temperature_zero : infotainment,175,fail,fail,0,0,1,0,174,170,4
+temperature_zero : infotainment,175,unresolved,reference cannot certify,0,0,0,0,175,170,5
+with_reasoning : infotainment,175,unresolved,reference cannot certify,0,0,0,0,175,170,5
+human_split_half : infotainment,70,unresolved,reference cannot certify,0,0,0,0,70,67,3
+GPT5 : junk_fees,258,fail,fail,0,0,1,0,257,248,9
+centaur_empty_persona : junk_fees,256,fail,fail,0,0,5,0,251,246,5
+centaur_persona_summary : junk_fees,258,fail,fail,0,0,2,0,256,248,8
+deepseek : junk_fees,258,fail,fail,0,0,4,0,254,248,6
+demographics_only : junk_fees,258,fail,fail,0,0,3,0,255,248,7
+demographics_only_temperature_zero : junk_fees,258,fail,fail,0,0,3,0,255,248,7
+empty_persona : junk_fees,258,fail,fail,0,0,8,0,250,248,2
+empty_persona_temperature_zero : junk_fees,258,fail,fail,0,0,8,0,250,248,2
+full_persona_fine_tuned_temperature_0 : junk_fees,258,fail,fail,0,0,2,0,256,248,8
+full_persona_fine_tuned_temperature_7 : junk_fees,258,unresolved,reference cannot certify,0,0,0,0,258,248,10
+full_persona_fine_tuned_temperature_7_jsonforced : junk_fees,258,fail,fail,0,0,1,0,257,248,9
+full_persona_without_reasoning : junk_fees,258,fail,fail,0,0,3,0,255,248,7
+gemini : junk_fees,258,fail,fail,0,0,3,0,255,248,7
+gemini_3_pro : junk_fees,258,fail,fail,0,0,4,0,254,248,6
+include_reasoning_temperature_zero : junk_fees,258,fail,fail,0,0,2,0,256,248,8
+llama_empty_persona : junk_fees,258,fail,fail,0,0,5,0,253,248,5
+llama_persona_summary : junk_fees,258,fail,fail,0,0,1,0,257,248,9
+persona_summary : junk_fees,258,fail,fail,0,0,3,0,255,248,7
+persona_summary_include_reasoning : junk_fees,258,fail,fail,0,0,2,0,256,248,8
+persona_summary_include_reasoning_temperature_zero : junk_fees,258,fail,fail,0,0,4,0,254,248,6
+persona_summary_temperature_zero : junk_fees,258,fail,fail,0,0,3,0,255,248,7
+temperature_zero : junk_fees,258,fail,fail,0,0,3,0,255,248,7
+with_reasoning : junk_fees,258,fail,fail,0,0,2,0,256,248,8
+human_split_half : junk_fees,111,unresolved,reference cannot certify,0,0,0,0,111,107,4
+GPT5 : obedient_twins,77,fail,fail,0,0,1,2,74,58,16
+centaur_empty_persona : obedient_twins,77,fail,fail,0,0,15,0,62,58,4
+centaur_persona_summary : obedient_twins,77,fail,fail,0,0,13,0,64,58,6
+deepseek : obedient_twins,77,fail,fail,0,0,3,2,72,58,14
+demographics_only : obedient_twins,77,fail,fail,0,0,4,2,71,58,13
+demographics_only_temperature_zero : obedient_twins,77,fail,fail,0,0,3,2,72,58,14
+empty_persona : obedient_twins,77,fail,fail,0,0,17,0,60,58,2
+empty_persona_temperature_zero : obedient_twins,77,fail,fail,0,0,17,0,60,58,2
+full_persona_fine_tuned_temperature_0 : obedient_twins,77,fail,fail,0,0,1,2,74,58,16
+full_persona_fine_tuned_temperature_7 : obedient_twins,77,unresolved,reference cannot certify,0,0,0,2,75,58,17
+full_persona_fine_tuned_temperature_7_jsonforced : obedient_twins,77,unresolved,reference cannot certify,0,0,0,2,75,58,17
+full_persona_without_reasoning : obedient_twins,77,fail,fail,0,0,2,2,73,58,15
+gemini : obedient_twins,77,fail,fail,0,0,2,2,73,58,15
+gemini_3_pro : obedient_twins,77,fail,fail,0,0,3,0,74,58,16
+include_reasoning_temperature_zero : obedient_twins,77,fail,fail,0,0,2,2,73,58,15
+llama_empty_persona : obedient_twins,77,fail,fail,0,0,14,0,63,58,5
+llama_persona_summary : obedient_twins,77,fail,fail,0,0,10,0,67,58,9
+persona_summary : obedient_twins,77,fail,fail,0,0,3,1,73,58,15
+persona_summary_include_reasoning : obedient_twins,77,fail,fail,0,0,3,1,73,58,15
+persona_summary_include_reasoning_temperature_zero : obedient_twins,77,fail,fail,0,0,3,1,73,58,15
+persona_summary_temperature_zero : obedient_twins,77,fail,fail,0,0,2,2,73,58,15
+temperature_zero : obedient_twins,77,fail,fail,0,0,2,2,73,58,15
+with_reasoning : obedient_twins,77,fail,fail,0,0,2,2,73,58,15
+human_split_half : obedient_twins,77,unresolved,reference cannot certify,0,0,0,0,77,66,11
+GPT5 : preference_redistribution,14,fail,fail,0,0,1,0,13,7,6
+centaur_empty_persona : preference_redistribution,14,fail,fail,0,0,7,0,7,7,0
+centaur_persona_summary : preference_redistribution,14,fail,fail,0,0,1,0,13,7,6
+deepseek : preference_redistribution,14,fail,fail,0,0,1,0,13,7,6
+demographics_only : preference_redistribution,14,fail,fail,0,0,1,0,13,7,6
+demographics_only_temperature_zero : preference_redistribution,14,fail,fail,0,0,1,0,13,7,6
+empty_persona : preference_redistribution,14,fail,fail,0,0,7,0,7,7,0
+empty_persona_temperature_zero : preference_redistribution,14,fail,fail,0,0,7,0,7,7,0
+full_persona_fine_tuned_temperature_0 : preference_redistribution,14,unresolved,reference cannot certify,0,0,0,0,14,7,7
+full_persona_fine_tuned_temperature_7 : preference_redistribution,14,unresolved,reference cannot certify,0,0,0,0,14,7,7
+full_persona_fine_tuned_temperature_7_jsonforced : preference_redistribution,14,unresolved,reference cannot certify,0,0,0,0,14,7,7
+full_persona_without_reasoning : preference_redistribution,14,fail,fail,0,0,1,0,13,7,6
+gemini : preference_redistribution,14,fail,fail,0,0,1,0,13,7,6
+gemini_3_pro : preference_redistribution,14,fail,fail,0,0,2,0,12,7,5
+include_reasoning_temperature_zero : preference_redistribution,14,fail,fail,0,0,1,0,13,7,6
+llama_empty_persona : preference_redistribution,14,fail,fail,0,0,7,0,7,7,0
+llama_persona_summary : preference_redistribution,14,fail,fail,0,0,2,0,12,7,5
+persona_summary : preference_redistribution,14,fail,fail,0,0,1,0,13,7,6
+persona_summary_include_reasoning : preference_redistribution,14,fail,fail,0,0,1,0,13,7,6
+persona_summary_include_reasoning_temperature_zero : preference_redistribution,14,fail,fail,0,0,1,0,13,7,6
+persona_summary_temperature_zero : preference_redistribution,14,fail,fail,0,0,1,0,13,7,6
+temperature_zero : preference_redistribution,14,fail,fail,0,0,1,0,13,7,6
+with_reasoning : preference_redistribution,14,fail,fail,0,0,2,0,12,7,5
+human_split_half : preference_redistribution,14,unresolved,reference cannot certify,0,0,0,0,14,11,3
+GPT5 : privacy,43,fail,fail,0,0,4,0,39,37,2
+centaur_empty_persona : privacy,43,fail,fail,0,0,2,0,41,37,4
+centaur_persona_summary : privacy,13,unresolved,reference cannot certify,0,0,0,0,13,12,1
+deepseek : privacy,43,fail,fail,0,0,5,0,38,37,1
+demographics_only : privacy,43,fail,fail,0,0,3,0,40,37,3
+demographics_only_temperature_zero : privacy,43,fail,fail,0,0,3,0,40,37,3
+empty_persona : privacy,43,fail,fail,0,0,6,0,37,37,0
+empty_persona_temperature_zero : privacy,43,fail,fail,0,0,6,0,37,37,0
+full_persona_fine_tuned_temperature_0 : privacy,43,fail,fail,0,0,1,0,42,37,5
+full_persona_fine_tuned_temperature_7 : privacy,43,fail,fail,0,0,1,0,42,37,5
+full_persona_fine_tuned_temperature_7_jsonforced : privacy,43,fail,fail,0,0,1,0,42,37,5
+full_persona_without_reasoning : privacy,43,fail,fail,0,0,3,0,40,37,3
+gemini : privacy,43,fail,fail,0,0,4,0,39,37,2
+gemini_3_pro : privacy,43,fail,fail,0,0,4,0,39,37,2
+include_reasoning_temperature_zero : privacy,43,fail,fail,0,0,3,0,40,37,3
+llama_empty_persona : privacy,43,fail,fail,0,0,4,0,39,37,2
+llama_persona_summary : privacy,43,fail,fail,0,0,3,0,40,37,3
+persona_summary : privacy,43,fail,fail,0,0,3,0,40,37,3
+persona_summary_include_reasoning : privacy,43,fail,fail,0,0,3,0,40,37,3
+persona_summary_include_reasoning_temperature_zero : privacy,43,fail,fail,0,0,3,0,40,37,3
+persona_summary_temperature_zero : privacy,43,fail,fail,0,0,3,0,40,37,3
+temperature_zero : privacy,43,fail,fail,0,0,3,0,40,37,3
+with_reasoning : privacy,43,fail,fail,0,0,3,0,40,37,3
+human_split_half : privacy,33,unresolved,reference cannot certify,0,0,0,0,33,28,5
+GPT5 : promiscuous_donors,70,fail,fail,0,0,1,0,69,68,1
+centaur_empty_persona : promiscuous_donors,70,unresolved,reference cannot certify,0,0,0,0,70,68,2
+centaur_persona_summary : promiscuous_donors,70,unresolved,reference cannot certify,0,0,0,0,70,68,2
+deepseek : promiscuous_donors,70,fail,fail,0,0,2,0,68,68,0
+demographics_only : promiscuous_donors,70,fail,fail,0,0,2,0,68,68,0
+demographics_only_temperature_zero : promiscuous_donors,70,fail,fail,0,0,2,0,68,68,0
+empty_persona : promiscuous_donors,70,fail,fail,0,0,2,0,68,68,0
+empty_persona_temperature_zero : promiscuous_donors,70,fail,fail,0,0,2,0,68,68,0
+full_persona_fine_tuned_temperature_0 : promiscuous_donors,70,unresolved,reference cannot certify,0,0,0,0,70,68,2
+full_persona_fine_tuned_temperature_7_jsonforced : promiscuous_donors,70,unresolved,reference cannot certify,0,0,0,0,70,68,2
+full_persona_without_reasoning : promiscuous_donors,70,unresolved,reference cannot certify,0,0,0,0,70,68,2
+gemini : promiscuous_donors,70,fail,fail,0,0,1,0,69,68,1
+gemini_3_pro : promiscuous_donors,70,unresolved,reference cannot certify,0,0,0,0,70,68,2
+include_reasoning_temperature_zero : promiscuous_donors,70,fail,fail,0,0,2,0,68,68,0
+llama_empty_persona : promiscuous_donors,70,unresolved,reference cannot certify,0,0,0,0,70,68,2
+llama_persona_summary : promiscuous_donors,70,unresolved,reference cannot certify,0,0,0,0,70,68,2
+persona_summary : promiscuous_donors,70,unresolved,reference cannot certify,0,0,0,0,70,68,2
+persona_summary_include_reasoning : promiscuous_donors,70,fail,fail,0,0,1,0,69,68,1
+persona_summary_include_reasoning_temperature_zero : promiscuous_donors,70,fail,fail,0,0,2,0,68,68,0
+persona_summary_temperature_zero : promiscuous_donors,70,fail,fail,0,0,1,0,69,68,1
+temperature_zero : promiscuous_donors,70,fail,fail,0,0,2,0,68,68,0
+with_reasoning : promiscuous_donors,70,fail,fail,0,0,2,0,68,68,0
+human_split_half : promiscuous_donors,70,unresolved,reference cannot certify,0,0,0,0,70,69,1
+GPT5 : quantitative_intuition,406,fail,fail,0,0,6,0,400,360,40
+centaur_empty_persona : quantitative_intuition,406,fail,fail,0,0,46,0,360,360,0
+centaur_persona_summary : quantitative_intuition,406,fail,fail,0,0,15,0,391,359,32
+deepseek : quantitative_intuition,406,fail,fail,0,0,12,0,394,360,34
+demographics_only : quantitative_intuition,406,fail,fail,0,0,21,0,385,360,25
+demographics_only_temperature_zero : quantitative_intuition,406,fail,fail,0,0,21,0,385,360,25
+empty_persona : quantitative_intuition,406,fail,fail,0,0,41,0,365,360,5
+empty_persona_temperature_zero : quantitative_intuition,406,fail,fail,0,0,43,0,363,360,3
+full_persona_fine_tuned_temperature_0 : quantitative_intuition,406,fail,fail,0,0,11,0,395,360,35
+full_persona_fine_tuned_temperature_7 : quantitative_intuition,406,fail,fail,0,0,4,0,402,360,42
+full_persona_fine_tuned_temperature_7_jsonforced : quantitative_intuition,406,fail,fail,0,0,6,0,400,360,40
+full_persona_without_reasoning : quantitative_intuition,406,fail,fail,0,0,8,0,398,360,38
+gemini : quantitative_intuition,406,fail,fail,0,0,9,0,397,360,37
+gemini_3_pro : quantitative_intuition,406,fail,fail,0,0,7,0,399,360,39
+include_reasoning_temperature_zero : quantitative_intuition,406,fail,fail,0,0,7,0,399,360,39
+llama_empty_persona : quantitative_intuition,406,fail,fail,0,0,46,0,360,360,0
+llama_persona_summary : quantitative_intuition,406,fail,fail,0,0,9,0,397,360,37
+persona_summary : quantitative_intuition,406,fail,fail,0,0,12,0,394,360,34
+persona_summary_include_reasoning : quantitative_intuition,406,fail,fail,0,0,12,0,394,360,34
+persona_summary_include_reasoning_temperature_zero : quantitative_intuition,406,fail,fail,0,0,13,0,393,360,33
+persona_summary_temperature_zero : quantitative_intuition,406,fail,fail,0,0,13,0,393,360,33
+temperature_zero : quantitative_intuition,406,fail,fail,0,0,11,0,395,360,35
+with_reasoning : quantitative_intuition,406,fail,fail,0,0,7,0,399,360,39
+human_split_half : quantitative_intuition,406,unresolved,reference cannot certify,0,0,0,0,406,385,21
+GPT5 : recommendation_algorithms,14,unresolved,reference cannot certify,0,0,0,0,14,11,3
+centaur_empty_persona : recommendation_algorithms,14,fail,fail,0,0,3,0,11,11,0
+centaur_persona_summary : recommendation_algorithms,14,fail,fail,0,0,2,0,12,11,1
+deepseek : recommendation_algorithms,14,fail,fail,0,0,2,0,12,11,1
+demographics_only : recommendation_algorithms,14,fail,fail,0,0,1,0,13,11,2
+demographics_only_temperature_zero : recommendation_algorithms,14,fail,fail,0,0,1,0,13,11,2
+empty_persona : recommendation_algorithms,14,fail,fail,0,0,3,0,11,11,0
+empty_persona_temperature_zero : recommendation_algorithms,14,fail,fail,0,0,3,0,11,11,0
+full_persona_fine_tuned_temperature_0 : recommendation_algorithms,14,fail,fail,0,0,1,0,13,11,2
+full_persona_fine_tuned_temperature_7 : recommendation_algorithms,14,unresolved,reference cannot certify,0,0,0,0,14,11,3
+full_persona_fine_tuned_temperature_7_jsonforced : recommendation_algorithms,14,fail,fail,0,0,1,0,13,11,2
+full_persona_without_reasoning : recommendation_algorithms,14,unresolved,reference cannot certify,0,0,0,0,14,11,3
+gemini : recommendation_algorithms,14,fail,fail,0,0,1,0,13,11,2
+gemini_3_pro : recommendation_algorithms,14,fail,fail,0,0,2,0,12,11,1
+include_reasoning_temperature_zero : recommendation_algorithms,14,unresolved,reference cannot certify,0,0,0,0,14,11,3
+llama_empty_persona : recommendation_algorithms,14,fail,fail,0,0,3,0,11,11,0
+llama_persona_summary : recommendation_algorithms,14,fail,fail,0,0,3,0,11,11,0
+persona_summary : recommendation_algorithms,14,unresolved,reference cannot certify,0,0,0,0,14,11,3
+persona_summary_include_reasoning : recommendation_algorithms,14,fail,fail,0,0,1,0,13,11,2
+persona_summary_include_reasoning_temperature_zero : recommendation_algorithms,14,unresolved,reference cannot certify,0,0,0,0,14,11,3
+persona_summary_temperature_zero : recommendation_algorithms,14,unresolved,reference cannot certify,0,0,0,0,14,11,3
+temperature_zero : recommendation_algorithms,14,unresolved,reference cannot certify,0,0,0,0,14,11,3
+with_reasoning : recommendation_algorithms,14,unresolved,reference cannot certify,0,0,0,0,14,11,3
+human_split_half : recommendation_algorithms,10,unresolved,reference cannot certify,0,0,0,0,10,9,1
+GPT5 : story_beliefs,252,unresolved,reference cannot certify,0,0,0,0,252,248,4
+centaur_empty_persona : story_beliefs,252,fail,fail,0,0,1,0,251,248,3
+centaur_persona_summary : story_beliefs,252,fail,fail,0,0,1,0,251,248,3
+deepseek : story_beliefs,252,unresolved,reference cannot certify,0,0,0,0,252,248,4
+demographics_only : story_beliefs,252,fail,fail,0,0,1,0,251,248,3
+demographics_only_temperature_zero : story_beliefs,252,fail,fail,0,0,1,0,251,248,3
+empty_persona : story_beliefs,252,fail,fail,0,0,2,0,250,248,2
+empty_persona_temperature_zero : story_beliefs,252,fail,fail,0,0,3,0,249,248,1
+full_persona_fine_tuned_temperature_0 : story_beliefs,252,fail,fail,0,0,2,0,250,248,2
+full_persona_fine_tuned_temperature_7 : story_beliefs,252,unresolved,reference cannot certify,0,0,0,0,252,248,4
+full_persona_fine_tuned_temperature_7_jsonforced : story_beliefs,252,unresolved,reference cannot certify,0,0,0,0,252,248,4
+full_persona_without_reasoning : story_beliefs,252,fail,fail,0,0,1,0,251,248,3
+gemini : story_beliefs,252,unresolved,reference cannot certify,0,0,0,0,252,248,4
+gemini_3_pro : story_beliefs,252,unresolved,reference cannot certify,0,0,0,0,252,248,4
+include_reasoning_temperature_zero : story_beliefs,252,unresolved,reference cannot certify,0,0,0,0,252,248,4
+llama_empty_persona : story_beliefs,252,unresolved,reference cannot certify,0,0,0,0,252,248,4
+llama_persona_summary : story_beliefs,252,unresolved,reference cannot certify,0,0,0,0,252,248,4
+persona_summary : story_beliefs,252,fail,fail,0,0,1,0,251,248,3
+persona_summary_include_reasoning : story_beliefs,252,unresolved,reference cannot certify,0,0,0,0,252,248,4
+persona_summary_include_reasoning_temperature_zero : story_beliefs,252,unresolved,reference cannot certify,0,0,0,0,252,248,4
+persona_summary_temperature_zero : story_beliefs,252,fail,fail,0,0,1,0,251,248,3
+temperature_zero : story_beliefs,252,fail,fail,0,0,1,0,251,248,3
+with_reasoning : story_beliefs,252,fail,fail,0,0,1,0,251,248,3
+human_split_half : story_beliefs,36,unresolved,reference cannot certify,0,0,0,0,36,34,2
+GPT5 : targeting_fairness,7,unresolved,reference cannot certify,0,0,0,0,7,7,0
+centaur_empty_persona : targeting_fairness,7,unresolved,reference cannot certify,0,0,0,0,7,7,0
+centaur_persona_summary : targeting_fairness,6,unresolved,reference cannot certify,0,0,0,0,6,6,0
+deepseek : targeting_fairness,7,unresolved,reference cannot certify,0,0,0,0,7,7,0
+demographics_only : targeting_fairness,7,unresolved,reference cannot certify,0,0,0,0,7,7,0
+demographics_only_temperature_zero : targeting_fairness,7,unresolved,reference cannot certify,0,0,0,0,7,7,0
+empty_persona : targeting_fairness,7,unresolved,reference cannot certify,0,0,0,0,7,7,0
+empty_persona_temperature_zero : targeting_fairness,7,unresolved,reference cannot certify,0,0,0,0,7,7,0
+full_persona_fine_tuned_temperature_0 : targeting_fairness,7,unresolved,reference cannot certify,0,0,0,0,7,7,0
+full_persona_fine_tuned_temperature_7 : targeting_fairness,7,unresolved,reference cannot certify,0,0,0,0,7,7,0
+full_persona_fine_tuned_temperature_7_jsonforced : targeting_fairness,7,unresolved,reference cannot certify,0,0,0,0,7,7,0
+full_persona_without_reasoning : targeting_fairness,7,unresolved,reference cannot certify,0,0,0,0,7,7,0
+gemini : targeting_fairness,7,unresolved,reference cannot certify,0,0,0,0,7,7,0
+gemini_3_pro : targeting_fairness,7,unresolved,reference cannot certify,0,0,0,0,7,7,0
+include_reasoning_temperature_zero : targeting_fairness,7,unresolved,reference cannot certify,0,0,0,0,7,7,0
+llama_empty_persona : targeting_fairness,7,unresolved,reference cannot certify,0,0,0,0,7,7,0
+llama_persona_summary : targeting_fairness,7,unresolved,reference cannot certify,0,0,0,0,7,7,0
+persona_summary : targeting_fairness,7,unresolved,reference cannot certify,0,0,0,0,7,7,0
+persona_summary_include_reasoning : targeting_fairness,7,unresolved,reference cannot certify,0,0,0,0,7,7,0
+persona_summary_include_reasoning_temperature_zero : targeting_fairness,7,unresolved,reference cannot certify,0,0,0,0,7,7,0
+persona_summary_temperature_zero : targeting_fairness,7,unresolved,reference cannot certify,0,0,0,0,7,7,0
+temperature_zero : targeting_fairness,7,unresolved,reference cannot certify,0,0,0,0,7,7,0
+with_reasoning : targeting_fairness,7,unresolved,reference cannot certify,0,0,0,0,7,7,0
+human_split_half : targeting_fairness,2,unresolved,reference cannot certify,0,0,0,0,2,1,1

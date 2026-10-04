@@ -1,0 +1,80 @@
+model                       DeepSeek-V3  GLM-4.7  GPT-4o-mini  Gemini-3-Flash  pooled
+term                                                                                 
+income main effect                0.011    0.423        0.015           0.354   0.117
+interaction and remainder         0.006    0.021        0.005           0.036   0.006
+marital main effect               0.001    0.004        0.002           0.000   0.000
+race main effect                  0.001    0.006        0.002           0.004   0.001
+sex main effect                   0.003    0.016        0.004           0.000   0.000
+uniform shift (grand mean)        0.978    0.531        0.972           0.606   0.876
+                mean_cell_residual  sd_cell_residual  nweighted_share_uniform
+model                                                                        
+DeepSeek-V3                  4.834             0.734                    0.981
+GLM-4.7                      2.592             2.463                    0.458
+GPT-4o-mini                  4.967             0.853                    0.982
+Gemini-3-Flash               3.202             2.609                    0.528
+pooled                       3.899             1.485                    0.873
+         model  alpha_wls  beta_wls_all48  beta_ols_all48  offset_all48  beta_wls_halfsplit_mean  beta_wls_halfsplit_sd
+   DeepSeek-V3     -2.103           0.668           0.624        -4.582                    0.661                  0.046
+Gemini-3-Flash      1.536           0.248           0.215        -2.589                    0.244                  0.025
+       GLM-4.7      1.495           0.279           0.241        -2.121                    0.276                  0.020
+   GPT-4o-mini     -2.300           0.686           0.550        -4.680                    0.677                  0.061
+        pooled      0.295           0.407           0.352        -3.493                    0.402                  0.030
+         model calibration  n_splits  mean_max_abs_group_resid  share_splits_all10_pass_0.2SD  share_splits_all10_pass_1pt  share_splits_all10_pass_2pt
+   DeepSeek-V3        none       200                     5.189                          0.000                        0.000                          0.0
+   DeepSeek-V3      offset       200                     0.677                          0.095                        0.890                          1.0
+   DeepSeek-V3      linear       200                     0.489                          0.890                        1.000                          1.0
+Gemini-3-Flash        none       200                     7.335                          0.000                        0.000                          0.0
+Gemini-3-Flash      offset       200                     4.743                          0.000                        0.000                          0.0
+Gemini-3-Flash      linear       200                     0.638                          0.520                        0.935                          1.0
+       GLM-4.7        none       200                     6.353                          0.000                        0.000                          0.0
+       GLM-4.7      offset       200                     4.230                          0.000                        0.000                          0.0
+       GLM-4.7      linear       200                     0.470                          0.965                        1.000                          1.0
+   GPT-4o-mini        none       200                     5.358                          0.000                        0.000                          0.0
+   GPT-4o-mini      offset       200                     0.710                          0.040                        0.590                          1.0
+   GPT-4o-mini      linear       200                     0.527                          0.705                        0.985                          1.0
+        pooled        none       200                     6.038                          0.000                        0.000                          0.0
+        pooled      offset       200                     2.546                          0.000                        0.000                          0.0
+        pooled      linear       200                     0.486                          0.955                        1.000                          1.0
+L2 model verdicts at all-cell slopes:
+('DeepSeek-V3', 'raw (beta = 1)') fail
+('DeepSeek-V3', 'slope, all 48 cells, WLS') fail
+('DeepSeek-V3', 'slope, all 48 cells, OLS') fail
+('DeepSeek-V3', 'slope that sets Low minus High to 1') fail
+('Gemini-3-Flash', 'raw (beta = 1)') fail
+('Gemini-3-Flash', 'slope, all 48 cells, WLS') fail
+('Gemini-3-Flash', 'slope, all 48 cells, OLS') fail
+('Gemini-3-Flash', 'slope that sets Low minus High to 1') fail
+('GLM-4.7', 'raw (beta = 1)') fail
+('GLM-4.7', 'slope, all 48 cells, WLS') fail
+('GLM-4.7', 'slope, all 48 cells, OLS') fail
+('GLM-4.7', 'slope that sets Low minus High to 1') fail
+('GPT-4o-mini', 'raw (beta = 1)') fail
+('GPT-4o-mini', 'slope, all 48 cells, WLS') fail
+('GPT-4o-mini', 'slope, all 48 cells, OLS') fail
+('GPT-4o-mini', 'slope that sets Low minus High to 1') fail
+         model                         calibration  beta  ratio  ci_lo  ci_hi           verdict
+   DeepSeek-V3                      raw (beta = 1) 1.000  1.911  1.551  2.392         steepened
+   DeepSeek-V3            slope, all 48 cells, WLS 0.668  1.277  1.037  1.599 kept or steepened
+   DeepSeek-V3            slope, all 48 cells, OLS 0.624  1.193  0.968  1.493 kept or steepened
+   DeepSeek-V3 slope that sets Low minus High to 1 0.523  1.000  0.812  1.252 kept or steepened
+Gemini-3-Flash                      raw (beta = 1) 1.000  5.073  3.848  6.604         steepened
+Gemini-3-Flash            slope, all 48 cells, WLS 0.248  1.257  0.954  1.636 kept or steepened
+Gemini-3-Flash            slope, all 48 cells, OLS 0.215  1.089  0.826  1.417 kept or steepened
+Gemini-3-Flash slope that sets Low minus High to 1 0.197  1.000  0.759  1.302 kept or steepened
+       GLM-4.7                      raw (beta = 1) 1.000  5.033  4.054  6.332         steepened
+       GLM-4.7            slope, all 48 cells, WLS 0.279  1.405  1.131  1.767 kept or steepened
+       GLM-4.7            slope, all 48 cells, OLS 0.241  1.212  0.977  1.526 kept or steepened
+       GLM-4.7 slope that sets Low minus High to 1 0.199  1.000  0.805  1.258 kept or steepened
+   GPT-4o-mini                      raw (beta = 1) 1.000  2.160  1.784  2.675         steepened
+   GPT-4o-mini            slope, all 48 cells, WLS 0.686  1.481  1.224  1.835 kept or steepened
+   GPT-4o-mini            slope, all 48 cells, OLS 0.550  1.187  0.981  1.470 kept or steepened
+   GPT-4o-mini slope that sets Low minus High to 1 0.463  1.000  0.826  1.239              kept
+         model                         contrast  mean_beta  mean_ratio  ratio_p05  ratio_p95                                                        verdict_shares  share_kept_in_name  share_excludes_kept
+   DeepSeek-V3               Low minus High SES      0.661       1.263      1.114      1.370                                   kept or steepened: 0.99; kept: 0.01               1.000                0.000
+Gemini-3-Flash               Low minus High SES      0.244       1.238      0.988      1.416 kept or steepened: 0.94; attenuated or kept: 0.04; undetermined: 0.01               0.985                0.000
+       GLM-4.7               Low minus High SES      0.276       1.388      1.187      1.521                              kept or steepened: 0.99; steepened: 0.01               0.995                0.005
+   GPT-4o-mini               Low minus High SES      0.677       1.462      1.224      1.635                              kept or steepened: 0.58; steepened: 0.42               0.580                0.420
+   DeepSeek-V3 MODEL VERDICT (std, 7 contrasts)      0.661         NaN        NaN        NaN                                                            fail: 1.00                 NaN                  NaN
+Gemini-3-Flash MODEL VERDICT (std, 7 contrasts)      0.244         NaN        NaN        NaN                                                            fail: 1.00                 NaN                  NaN
+       GLM-4.7 MODEL VERDICT (std, 7 contrasts)      0.276         NaN        NaN        NaN                                                            fail: 1.00                 NaN                  NaN
+   GPT-4o-mini MODEL VERDICT (std, 7 contrasts)      0.677         NaN        NaN        NaN                                                            fail: 1.00                 NaN                  NaN

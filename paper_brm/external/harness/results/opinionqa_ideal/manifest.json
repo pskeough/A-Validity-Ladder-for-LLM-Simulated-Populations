@@ -1,0 +1,38 @@
+{
+  "adapter": "opinionqa_ideal",
+  "name": "opinionqa_ideal",
+  "kind": "ideal simulator (fresh multinomial sample of the released Pew counts)",
+  "source": "Santurkar et al. (2023) OpinionQA; Meister, Guestrin & Hashimoto (2024) release, github.com/nicolemeister/benchmarking-distributional-alignment commit 36869b5",
+  "mode": "gaps",
+  "package_version": "0.1.1",
+  "inputs": [
+    {
+      "path": "C:\\Research\\PsychBench\\UpdatedRun\\paper_brm\\external\\raw\\meister2024\\results\\opinionqa\\express_distribution\\gpt-4\\task0\\Pew_American_Trends_Panel_disagreement_100\\NONE\\Democrat.json",
+      "sha256": "7d69ea70836f531303b882b0e1827e35ff3c7e5bd5ba26ecd192ea8cb59f5827",
+      "bytes": 269393
+    },
+    {
+      "path": "C:\\Research\\PsychBench\\UpdatedRun\\paper_brm\\external\\results\\opinionqa\\level2_contrasts.csv",
+      "sha256": "ce340b7b02f5bc91ed760411d73c718570649cff529b0fda9738deaf89688680",
+      "bytes": 59435
+    },
+    {
+      "path": "C:\\Research\\PsychBench\\UpdatedRun\\paper_brm\\external\\raw\\meister2024\\opinions_qa\\data\\human_resp\\Pew_American_Trends_Panel_disagreement_100\\POLPARTY_data.json",
+      "sha256": "26cf88d706a40034774ad6e6ed6b9f202a11e62d986045c81356ce0d5b2d9ce8",
+      "bytes": 96291
+    },
+    {
+      "path": "C:\\Research\\PsychBench\\UpdatedRun\\paper_brm\\external\\raw\\meister2024\\opinions_qa\\data\\human_resp\\Pew_American_Trends_Panel_disagreement_100\\SEX_data.json",
+      "sha256": "65185ce8e9451badd08543544008f704dc3b5455ffb75ce7d55c91de62a285ae",
+      "bytes": 55757
+    },
+    {
+      "path": "C:\\Research\\PsychBench\\UpdatedRun\\paper_brm\\external\\raw\\meister2024\\opinions_qa\\data\\human_resp\\Pew_American_Trends_Panel_disagreement_100\\RACE_data.json",
+      "sha256": "793f25ec87e95f19f8cab2510f1b43a1e87eaa932889a79ed981e229e838a996",
+      "bytes": 116260
+    }
+  ],
+  "run_at": "2026-10-03 21:42:49",
+  "seconds": 9.4,
+  "notes": "ideal simulator; 200 replicate families; family_size 8 as in the frozen OpinionQA families"
+}

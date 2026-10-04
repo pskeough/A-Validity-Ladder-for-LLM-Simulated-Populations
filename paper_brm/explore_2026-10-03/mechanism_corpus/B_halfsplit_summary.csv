@@ -1,0 +1,16 @@
+model,calibration,n_splits,mean_max_abs_group_resid,share_splits_all10_pass_0.2SD,share_splits_all10_pass_1pt,share_splits_all10_pass_2pt
+DeepSeek-V3,none,200,5.189094232117907,0.0,0.0,0.0
+DeepSeek-V3,offset,200,0.6772812884064011,0.095,0.89,1.0
+DeepSeek-V3,linear,200,0.4886756920856348,0.89,1.0,1.0
+Gemini-3-Flash,none,200,7.335350227106473,0.0,0.0,0.0
+Gemini-3-Flash,offset,200,4.742791029102198,0.0,0.0,0.0
+Gemini-3-Flash,linear,200,0.6380348213845047,0.52,0.935,1.0
+GLM-4.7,none,200,6.352943220951625,0.0,0.0,0.0
+GLM-4.7,offset,200,4.229947735459913,0.0,0.0,0.0
+GLM-4.7,linear,200,0.4695765519842152,0.965,1.0,1.0
+GPT-4o-mini,none,200,5.3580403626164,0.0,0.0,0.0
+GPT-4o-mini,offset,200,0.7100770669205242,0.04,0.59,1.0
+GPT-4o-mini,linear,200,0.5266841182127852,0.705,0.985,1.0
+pooled,none,200,6.038223331360853,0.0,0.0,0.0
+pooled,offset,200,2.5458578034925945,0.0,0.0,0.0
+pooled,linear,200,0.48552880681216765,0.955,1.0,1.0

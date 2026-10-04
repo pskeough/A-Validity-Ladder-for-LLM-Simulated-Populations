@@ -78,6 +78,8 @@ def region_reading(lo, hi):
         return LABELS[i_lo]
     if i_hi == i_lo + 1:
         return f"{LABELS[i_lo]} or {LABELS[i_hi]}"
+    if i_hi < 3:
+        return "reversed to attenuated"
     return "undetermined"
 
 
@@ -131,7 +133,8 @@ def cross_check(h):
     hd = pd.read_csv(HEAD)
     hd = hd[hd.estimand == "standardised"].set_index("contrast")
     code = {"r": "reversed", "m": "missing", "a": "attenuated", "k": "kept", "s": "steepened",
-            "u": "undetermined", "X": "reference too imprecise", "N": "no population gap"}
+            "u": "undetermined", "r-a": "reversed to attenuated", "X": "reference too imprecise",
+            "N": "no population gap"}
     n = 0
     for r in h.itertuples():
         if r.scope == "pooled":

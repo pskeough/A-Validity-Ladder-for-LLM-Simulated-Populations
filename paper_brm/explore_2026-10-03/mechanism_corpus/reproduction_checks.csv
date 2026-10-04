@@ -1,0 +1,304 @@
+check,item,got,want,tol,ok
+L3 resid,deepseek-chat-v3 | Overall,4.581711,4.581711,0.0002,True
+L3 ci90_lo,deepseek-chat-v3 | Overall,4.494265,4.494265,0.0002,True
+L3 ci90_hi,deepseek-chat-v3 | Overall,4.669157,4.669157,0.0002,True
+L3 resid,deepseek-chat-v3 | White,4.424085,4.424085,0.0002,True
+L3 ci90_lo,deepseek-chat-v3 | White,4.306787,4.306787,0.0002,True
+L3 ci90_hi,deepseek-chat-v3 | White,4.541383,4.541383,0.0002,True
+L3 resid,deepseek-chat-v3 | Black,5.053466,5.053466,0.0002,True
+L3 ci90_lo,deepseek-chat-v3 | Black,4.906371,4.906371,0.0002,True
+L3 ci90_hi,deepseek-chat-v3 | Black,5.200561,5.200561,0.0002,True
+L3 resid,deepseek-chat-v3 | Asian,4.468813,4.468813,0.0002,True
+L3 ci90_lo,deepseek-chat-v3 | Asian,4.323752,4.323752,0.0002,True
+L3 ci90_hi,deepseek-chat-v3 | Asian,4.613873,4.613873,0.0002,True
+L3 resid,deepseek-chat-v3 | Hispanic,5.094669,5.094669,0.0002,True
+L3 ci90_lo,deepseek-chat-v3 | Hispanic,4.96438,4.96438,0.0002,True
+L3 ci90_hi,deepseek-chat-v3 | Hispanic,5.224957,5.224957,0.0002,True
+L3 resid,deepseek-chat-v3 | Men,4.801432,4.801432,0.0002,True
+L3 ci90_lo,deepseek-chat-v3 | Men,4.685528,4.685528,0.0002,True
+L3 ci90_hi,deepseek-chat-v3 | Men,4.917336,4.917336,0.0002,True
+L3 resid,deepseek-chat-v3 | Women,4.375317,4.375317,0.0002,True
+L3 ci90_lo,deepseek-chat-v3 | Women,4.259375,4.259375,0.0002,True
+L3 ci90_hi,deepseek-chat-v3 | Women,4.491259,4.491259,0.0002,True
+L3 resid,deepseek-chat-v3 | Low,5.129138,5.129138,0.0002,True
+L3 ci90_lo,deepseek-chat-v3 | Low,4.95739,4.95739,0.0002,True
+L3 ci90_hi,deepseek-chat-v3 | Low,5.300886,5.300886,0.0002,True
+L3 resid,deepseek-chat-v3 | Middle,4.92074,4.92074,0.0002,True
+L3 ci90_lo,deepseek-chat-v3 | Middle,4.819775,4.819775,0.0002,True
+L3 ci90_hi,deepseek-chat-v3 | Middle,5.021704,5.021704,0.0002,True
+L3 resid,deepseek-chat-v3 | High,4.058644,4.058644,0.0002,True
+L3 ci90_lo,deepseek-chat-v3 | High,3.912924,3.912924,0.0002,True
+L3 ci90_hi,deepseek-chat-v3 | High,4.204364,4.204364,0.0002,True
+L3 resid,gemini-3-flash-preview | Overall,2.589152,2.589152,0.0002,True
+L3 ci90_lo,gemini-3-flash-preview | Overall,2.491863,2.491863,0.0002,True
+L3 ci90_hi,gemini-3-flash-preview | Overall,2.68644,2.68644,0.0002,True
+L3 resid,gemini-3-flash-preview | White,2.234881,2.234881,0.0002,True
+L3 ci90_lo,gemini-3-flash-preview | White,2.11632,2.11632,0.0002,True
+L3 ci90_hi,gemini-3-flash-preview | White,2.353441,2.353441,0.0002,True
+L3 resid,gemini-3-flash-preview | Black,3.344321,3.344321,0.0002,True
+L3 ci90_lo,gemini-3-flash-preview | Black,3.15674,3.15674,0.0002,True
+L3 ci90_hi,gemini-3-flash-preview | Black,3.531903,3.531903,0.0002,True
+L3 resid,gemini-3-flash-preview | Asian,2.417278,2.417278,0.0002,True
+L3 ci90_lo,gemini-3-flash-preview | Asian,2.258261,2.258261,0.0002,True
+L3 ci90_hi,gemini-3-flash-preview | Asian,2.576295,2.576295,0.0002,True
+L3 resid,gemini-3-flash-preview | Hispanic,3.965064,3.965064,0.0002,True
+L3 ci90_lo,gemini-3-flash-preview | Hispanic,3.774964,3.774964,0.0002,True
+L3 ci90_hi,gemini-3-flash-preview | Hispanic,4.155164,4.155164,0.0002,True
+L3 resid,gemini-3-flash-preview | Men,2.480868,2.480868,0.0002,True
+L3 ci90_lo,gemini-3-flash-preview | Men,2.371347,2.371347,0.0002,True
+L3 ci90_hi,gemini-3-flash-preview | Men,2.590389,2.590389,0.0002,True
+L3 resid,gemini-3-flash-preview | Women,2.690867,2.690867,0.0002,True
+L3 ci90_lo,gemini-3-flash-preview | Women,2.56485,2.56485,0.0002,True
+L3 ci90_hi,gemini-3-flash-preview | Women,2.816885,2.816885,0.0002,True
+L3 resid,gemini-3-flash-preview | Low,7.36564,7.36564,0.0002,True
+L3 ci90_lo,gemini-3-flash-preview | Low,7.199148,7.199148,0.0002,True
+L3 ci90_hi,gemini-3-flash-preview | Low,7.532131,7.532131,0.0002,True
+L3 resid,gemini-3-flash-preview | Middle,1.326269,1.326269,0.0002,True
+L3 ci90_lo,gemini-3-flash-preview | Middle,1.215888,1.215888,0.0002,True
+L3 ci90_hi,gemini-3-flash-preview | Middle,1.436651,1.436651,0.0002,True
+L3 resid,gemini-3-flash-preview | High,1.419468,1.419468,0.0002,True
+L3 ci90_lo,gemini-3-flash-preview | High,1.320767,1.320767,0.0002,True
+L3 ci90_hi,gemini-3-flash-preview | High,1.518168,1.518168,0.0002,True
+L3 resid,glm-4.7 | Overall,2.120823,2.120823,0.0002,True
+L3 ci90_lo,glm-4.7 | Overall,2.004393,2.004393,0.0002,True
+L3 ci90_hi,glm-4.7 | Overall,2.237254,2.237254,0.0002,True
+L3 resid,glm-4.7 | White,1.863725,1.863725,0.0002,True
+L3 ci90_lo,glm-4.7 | White,1.714453,1.714453,0.0002,True
+L3 ci90_hi,glm-4.7 | White,2.012997,2.012997,0.0002,True
+L3 resid,glm-4.7 | Black,2.960256,2.960256,0.0002,True
+L3 ci90_lo,glm-4.7 | Black,2.751829,2.751829,0.0002,True
+L3 ci90_hi,glm-4.7 | Black,3.168682,3.168682,0.0002,True
+L3 resid,glm-4.7 | Asian,1.496528,1.496528,0.0002,True
+L3 ci90_lo,glm-4.7 | Asian,1.298609,1.298609,0.0002,True
+L3 ci90_hi,glm-4.7 | Asian,1.694446,1.694446,0.0002,True
+L3 resid,glm-4.7 | Hispanic,3.078471,3.078471,0.0002,True
+L3 ci90_lo,glm-4.7 | Hispanic,2.88789,2.88789,0.0002,True
+L3 ci90_hi,glm-4.7 | Hispanic,3.269053,3.269053,0.0002,True
+L3 resid,glm-4.7 | Men,1.513392,1.513392,0.0002,True
+L3 ci90_lo,glm-4.7 | Men,1.391979,1.391979,0.0002,True
+L3 ci90_hi,glm-4.7 | Men,1.634806,1.634806,0.0002,True
+L3 resid,glm-4.7 | Women,2.69141,2.69141,0.0002,True
+L3 ci90_lo,glm-4.7 | Women,2.519698,2.519698,0.0002,True
+L3 ci90_hi,glm-4.7 | Women,2.863122,2.863122,0.0002,True
+L3 resid,glm-4.7 | Low,6.399235,6.399235,0.0002,True
+L3 ci90_lo,glm-4.7 | Low,6.20611,6.20611,0.0002,True
+L3 ci90_hi,glm-4.7 | Low,6.59236,6.59236,0.0002,True
+L3 resid,glm-4.7 | Middle,1.50148,1.50148,0.0002,True
+L3 ci90_lo,glm-4.7 | Middle,1.34492,1.34492,0.0002,True
+L3 ci90_hi,glm-4.7 | Middle,1.65804,1.65804,0.0002,True
+L3 resid,glm-4.7 | High,0.661517,0.661517,0.0002,True
+L3 ci90_lo,glm-4.7 | High,0.51197,0.51197,0.0002,True
+L3 ci90_hi,glm-4.7 | High,0.811063,0.811063,0.0002,True
+L3 resid,gpt-4o-mini | Overall,4.679769,4.679769,0.0002,True
+L3 ci90_lo,gpt-4o-mini | Overall,4.568736,4.568736,0.0002,True
+L3 ci90_hi,gpt-4o-mini | Overall,4.790802,4.790802,0.0002,True
+L3 resid,gpt-4o-mini | White,4.507026,4.507026,0.0002,True
+L3 ci90_lo,gpt-4o-mini | White,4.357395,4.357395,0.0002,True
+L3 ci90_hi,gpt-4o-mini | White,4.656657,4.656657,0.0002,True
+L3 resid,gpt-4o-mini | Black,5.070823,5.070823,0.0002,True
+L3 ci90_lo,gpt-4o-mini | Black,4.901349,4.901349,0.0002,True
+L3 ci90_hi,gpt-4o-mini | Black,5.240298,5.240298,0.0002,True
+L3 resid,gpt-4o-mini | Asian,4.982056,4.982056,0.0002,True
+L3 ci90_lo,gpt-4o-mini | Asian,4.813379,4.813379,0.0002,True
+L3 ci90_hi,gpt-4o-mini | Asian,5.150734,5.150734,0.0002,True
+L3 resid,gpt-4o-mini | Hispanic,5.173761,5.173761,0.0002,True
+L3 ci90_lo,gpt-4o-mini | Hispanic,5.022335,5.022335,0.0002,True
+L3 ci90_hi,gpt-4o-mini | Hispanic,5.325188,5.325188,0.0002,True
+L3 resid,gpt-4o-mini | Men,4.913743,4.913743,0.0002,True
+L3 ci90_lo,gpt-4o-mini | Men,4.773031,4.773031,0.0002,True
+L3 ci90_hi,gpt-4o-mini | Men,5.054455,5.054455,0.0002,True
+L3 resid,gpt-4o-mini | Women,4.459986,4.459986,0.0002,True
+L3 ci90_lo,gpt-4o-mini | Women,4.300025,4.300025,0.0002,True
+L3 ci90_hi,gpt-4o-mini | Women,4.619948,4.619948,0.0002,True
+L3 resid,gpt-4o-mini | Low,5.316997,5.316997,0.0002,True
+L3 ci90_lo,gpt-4o-mini | Low,5.125531,5.125531,0.0002,True
+L3 ci90_hi,gpt-4o-mini | Low,5.508464,5.508464,0.0002,True
+L3 resid,gpt-4o-mini | Middle,4.876609,4.876609,0.0002,True
+L3 ci90_lo,gpt-4o-mini | Middle,4.729235,4.729235,0.0002,True
+L3 ci90_hi,gpt-4o-mini | Middle,5.023983,5.023983,0.0002,True
+L3 resid,gpt-4o-mini | High,4.229957,4.229957,0.0002,True
+L3 ci90_lo,gpt-4o-mini | High,4.038816,4.038816,0.0002,True
+L3 ci90_hi,gpt-4o-mini | High,4.421098,4.421098,0.0002,True
+L3 resid,pooled | Overall,3.492864,3.492864,0.0002,True
+L3 ci90_lo,pooled | Overall,3.415656,3.415656,0.0002,True
+L3 ci90_hi,pooled | Overall,3.570072,3.570072,0.0002,True
+L3 resid,pooled | White,3.257429,3.257429,0.0002,True
+L3 ci90_lo,pooled | White,3.159682,3.159682,0.0002,True
+L3 ci90_hi,pooled | White,3.355176,3.355176,0.0002,True
+L3 resid,pooled | Black,4.107217,4.107217,0.0002,True
+L3 ci90_lo,pooled | Black,3.96409,3.96409,0.0002,True
+L3 ci90_hi,pooled | Black,4.250343,4.250343,0.0002,True
+L3 resid,pooled | Asian,3.341169,3.341169,0.0002,True
+L3 ci90_lo,pooled | Asian,3.19807,3.19807,0.0002,True
+L3 ci90_hi,pooled | Asian,3.484267,3.484267,0.0002,True
+L3 resid,pooled | Hispanic,4.327991,4.327991,0.0002,True
+L3 ci90_lo,pooled | Hispanic,4.190924,4.190924,0.0002,True
+L3 ci90_hi,pooled | Hispanic,4.465058,4.465058,0.0002,True
+L3 resid,pooled | Men,3.427359,3.427359,0.0002,True
+L3 ci90_lo,pooled | Men,3.339264,3.339264,0.0002,True
+L3 ci90_hi,pooled | Men,3.515454,3.515454,0.0002,True
+L3 resid,pooled | Women,3.554395,3.554395,0.0002,True
+L3 ci90_lo,pooled | Women,3.451738,3.451738,0.0002,True
+L3 ci90_hi,pooled | Women,3.657053,3.657053,0.0002,True
+L3 resid,pooled | Low,6.052752,6.052752,0.0002,True
+L3 ci90_lo,pooled | Low,5.910621,5.910621,0.0002,True
+L3 ci90_hi,pooled | Low,6.194884,6.194884,0.0002,True
+L3 resid,pooled | Middle,3.156275,3.156275,0.0002,True
+L3 ci90_lo,pooled | Middle,3.058574,3.058574,0.0002,True
+L3 ci90_hi,pooled | Middle,3.253975,3.253975,0.0002,True
+L3 resid,pooled | High,2.592396,2.592396,0.0002,True
+L3 ci90_lo,pooled | High,2.498155,2.498155,0.0002,True
+L3 ci90_hi,pooled | High,2.686638,2.686638,0.0002,True
+L2 ratio,standardised | Black minus White | deepseek-chat-v3,-0.752034,-0.752,6e-05,True
+L2 verdict,standardised | Black minus White | deepseek-chat-v3,reversed to attenuated,reversed to attenuated,0.0,True
+L2 ratio,standardised | Black minus White | gemini-3-flash-preview,1.386867,1.3869,6e-05,True
+L2 verdict,standardised | Black minus White | gemini-3-flash-preview,reference too imprecise,reference too imprecise,0.0,True
+L2 ratio,standardised | Black minus White | glm-4.7,1.963101,1.9631,6e-05,True
+L2 verdict,standardised | Black minus White | glm-4.7,reference too imprecise,reference too imprecise,0.0,True
+L2 ratio,standardised | Black minus White | gpt-4o-mini,-0.7618,-0.7618,6e-05,True
+L2 verdict,standardised | Black minus White | gpt-4o-mini,reversed or missing,reversed or missing,0.0,True
+L2 ratio,standardised | Hispanic minus White | deepseek-chat-v3,-0.947085,-0.9471,6e-05,True
+L2 verdict,standardised | Hispanic minus White | deepseek-chat-v3,no population gap,no population gap,0.0,True
+L2 ratio,standardised | Hispanic minus White | gemini-3-flash-preview,0.037883,0.0379,6e-05,True
+L2 verdict,standardised | Hispanic minus White | gemini-3-flash-preview,no population gap,no population gap,0.0,True
+L2 ratio,standardised | Hispanic minus White | glm-4.7,2.416961,2.417,6e-05,True
+L2 verdict,standardised | Hispanic minus White | glm-4.7,no population gap,no population gap,0.0,True
+L2 ratio,standardised | Hispanic minus White | gpt-4o-mini,-0.765245,-0.7652,6e-05,True
+L2 verdict,standardised | Hispanic minus White | gpt-4o-mini,no population gap,no population gap,0.0,True
+L2 ratio,standardised | Asian minus White | deepseek-chat-v3,0.742803,0.7428,6e-05,True
+L2 verdict,standardised | Asian minus White | deepseek-chat-v3,attenuated or kept,attenuated or kept,0.0,True
+L2 ratio,standardised | Asian minus White | gemini-3-flash-preview,1.517649,1.5176,6e-05,True
+L2 verdict,standardised | Asian minus White | gemini-3-flash-preview,undetermined,undetermined,0.0,True
+L2 ratio,standardised | Asian minus White | glm-4.7,1.820596,1.8206,6e-05,True
+L2 verdict,standardised | Asian minus White | glm-4.7,undetermined,undetermined,0.0,True
+L2 ratio,standardised | Asian minus White | gpt-4o-mini,0.422378,0.4224,6e-05,True
+L2 verdict,standardised | Asian minus White | gpt-4o-mini,undetermined,undetermined,0.0,True
+L2 ratio,standardised | Women minus Men | deepseek-chat-v3,0.410326,0.4103,6e-05,True
+L2 verdict,standardised | Women minus Men | deepseek-chat-v3,missing or attenuated,missing or attenuated,0.0,True
+L2 ratio,standardised | Women minus Men | gemini-3-flash-preview,1.171534,1.1715,6e-05,True
+L2 verdict,standardised | Women minus Men | gemini-3-flash-preview,undetermined,undetermined,0.0,True
+L2 ratio,standardised | Women minus Men | glm-4.7,2.056582,2.0566,6e-05,True
+L2 verdict,standardised | Women minus Men | glm-4.7,steepened,steepened,0.0,True
+L2 ratio,standardised | Women minus Men | gpt-4o-mini,0.227041,0.227,6e-05,True
+L2 verdict,standardised | Women minus Men | gpt-4o-mini,missing or attenuated,missing or attenuated,0.0,True
+L2 ratio,standardised | Low minus High SES | deepseek-chat-v3,1.910814,1.9108,6e-05,True
+L2 verdict,standardised | Low minus High SES | deepseek-chat-v3,steepened,steepened,0.0,True
+L2 ratio,standardised | Low minus High SES | gemini-3-flash-preview,5.073292,5.0733,6e-05,True
+L2 verdict,standardised | Low minus High SES | gemini-3-flash-preview,steepened,steepened,0.0,True
+L2 ratio,standardised | Low minus High SES | glm-4.7,5.033149,5.0331,6e-05,True
+L2 verdict,standardised | Low minus High SES | glm-4.7,steepened,steepened,0.0,True
+L2 ratio,standardised | Low minus High SES | gpt-4o-mini,2.159702,2.1597,6e-05,True
+L2 verdict,standardised | Low minus High SES | gpt-4o-mini,steepened,steepened,0.0,True
+L2 ratio,standardised | Middle minus High SES | deepseek-chat-v3,2.566269,2.5663,6e-05,True
+L2 verdict,standardised | Middle minus High SES | deepseek-chat-v3,steepened,steepened,0.0,True
+L2 ratio,standardised | Middle minus High SES | gemini-3-flash-preview,1.306308,1.3063,6e-05,True
+L2 verdict,standardised | Middle minus High SES | gemini-3-flash-preview,reference too imprecise,reference too imprecise,0.0,True
+L2 ratio,standardised | Middle minus High SES | glm-4.7,2.209223,2.2092,6e-05,True
+L2 verdict,standardised | Middle minus High SES | glm-4.7,steepened,steepened,0.0,True
+L2 ratio,standardised | Middle minus High SES | gpt-4o-mini,2.252137,2.2521,6e-05,True
+L2 verdict,standardised | Middle minus High SES | gpt-4o-mini,steepened,steepened,0.0,True
+L2 ratio,standardised | Low minus Middle SES | deepseek-chat-v3,1.334873,1.3349,6e-05,True
+L2 verdict,standardised | Low minus Middle SES | deepseek-chat-v3,reference too imprecise,reference too imprecise,0.0,True
+L2 ratio,standardised | Low minus Middle SES | gemini-3-flash-preview,8.383301,8.3833,6e-05,True
+L2 verdict,standardised | Low minus Middle SES | gemini-3-flash-preview,steepened,steepened,0.0,True
+L2 ratio,standardised | Low minus Middle SES | glm-4.7,7.514503,7.5145,6e-05,True
+L2 verdict,standardised | Low minus Middle SES | glm-4.7,steepened,steepened,0.0,True
+L2 ratio,standardised | Low minus Middle SES | gpt-4o-mini,2.07848,2.0785,6e-05,True
+L2 verdict,standardised | Low minus Middle SES | gpt-4o-mini,steepened,steepened,0.0,True
+L2 ratio,marginal | Black minus White | deepseek-chat-v3,0.648268,0.6483,6e-05,True
+L2 verdict,marginal | Black minus White | deepseek-chat-v3,reference too imprecise,reference too imprecise,0.0,True
+L2 ratio,marginal | Black minus White | gemini-3-flash-preview,-1.195507,-1.1955,6e-05,True
+L2 verdict,marginal | Black minus White | gemini-3-flash-preview,reversed to attenuated,reversed to attenuated,0.0,True
+L2 ratio,marginal | Black minus White | glm-4.7,-1.692232,-1.6922,6e-05,True
+L2 verdict,marginal | Black minus White | glm-4.7,reversed,reversed,0.0,True
+L2 ratio,marginal | Black minus White | gpt-4o-mini,0.656687,0.6567,6e-05,True
+L2 verdict,marginal | Black minus White | gpt-4o-mini,reference too imprecise,reference too imprecise,0.0,True
+L2 ratio,marginal | Hispanic minus White | deepseek-chat-v3,0.715916,0.7159,6e-05,True
+L2 verdict,marginal | Hispanic minus White | deepseek-chat-v3,reference too imprecise,reference too imprecise,0.0,True
+L2 ratio,marginal | Hispanic minus White | gemini-3-flash-preview,-0.028637,-0.0286,6e-05,True
+L2 verdict,marginal | Hispanic minus White | gemini-3-flash-preview,reference too imprecise,reference too imprecise,0.0,True
+L2 ratio,marginal | Hispanic minus White | glm-4.7,-1.827018,-1.827,6e-05,True
+L2 verdict,marginal | Hispanic minus White | glm-4.7,reversed or missing,reversed or missing,0.0,True
+L2 ratio,marginal | Hispanic minus White | gpt-4o-mini,0.57846,0.5785,6e-05,True
+L2 verdict,marginal | Hispanic minus White | gpt-4o-mini,reference too imprecise,reference too imprecise,0.0,True
+L2 ratio,marginal | Asian minus White | deepseek-chat-v3,0.938035,0.938,6e-05,True
+L2 verdict,marginal | Asian minus White | deepseek-chat-v3,reference too imprecise,reference too imprecise,0.0,True
+L2 ratio,marginal | Asian minus White | gemini-3-flash-preview,1.916533,1.9165,6e-05,True
+L2 verdict,marginal | Asian minus White | gemini-3-flash-preview,reference too imprecise,reference too imprecise,0.0,True
+L2 ratio,marginal | Asian minus White | glm-4.7,2.299104,2.2991,6e-05,True
+L2 verdict,marginal | Asian minus White | glm-4.7,reference too imprecise,reference too imprecise,0.0,True
+L2 ratio,marginal | Asian minus White | gpt-4o-mini,0.533392,0.5334,6e-05,True
+L2 verdict,marginal | Asian minus White | gpt-4o-mini,reference too imprecise,reference too imprecise,0.0,True
+L2 ratio,marginal | Women minus Men | deepseek-chat-v3,0.367937,0.3679,6e-05,True
+L2 verdict,marginal | Women minus Men | deepseek-chat-v3,missing or attenuated,missing or attenuated,0.0,True
+L2 ratio,marginal | Women minus Men | gemini-3-flash-preview,1.050509,1.0505,6e-05,True
+L2 verdict,marginal | Women minus Men | gemini-3-flash-preview,undetermined,undetermined,0.0,True
+L2 ratio,marginal | Women minus Men | glm-4.7,1.844129,1.8441,6e-05,True
+L2 verdict,marginal | Women minus Men | glm-4.7,steepened,steepened,0.0,True
+L2 ratio,marginal | Women minus Men | gpt-4o-mini,0.203587,0.2036,6e-05,True
+L2 verdict,marginal | Women minus Men | gpt-4o-mini,missing or attenuated,missing or attenuated,0.0,True
+L2 ratio,marginal | Low minus High SES | deepseek-chat-v3,1.22746,1.2275,6e-05,True
+L2 verdict,marginal | Low minus High SES | deepseek-chat-v3,kept or steepened,kept or steepened,0.0,True
+L2 ratio,marginal | Low minus High SES | gemini-3-flash-preview,3.258959,3.259,6e-05,True
+L2 verdict,marginal | Low minus High SES | gemini-3-flash-preview,steepened,steepened,0.0,True
+L2 ratio,marginal | Low minus High SES | glm-4.7,3.233172,3.2332,6e-05,True
+L2 verdict,marginal | Low minus High SES | glm-4.7,steepened,steepened,0.0,True
+L2 ratio,marginal | Low minus High SES | gpt-4o-mini,1.38734,1.3873,6e-05,True
+L2 verdict,marginal | Low minus High SES | gpt-4o-mini,kept or steepened,kept or steepened,0.0,True
+L2 ratio,marginal | Middle minus High SES | deepseek-chat-v3,1.747749,1.7477,6e-05,True
+L2 verdict,marginal | Middle minus High SES | deepseek-chat-v3,steepened,steepened,0.0,True
+L2 ratio,marginal | Middle minus High SES | gemini-3-flash-preview,0.889657,0.8897,6e-05,True
+L2 verdict,marginal | Middle minus High SES | gemini-3-flash-preview,attenuated or kept,attenuated or kept,0.0,True
+L2 ratio,marginal | Middle minus High SES | glm-4.7,1.504584,1.5046,6e-05,True
+L2 verdict,marginal | Middle minus High SES | glm-4.7,kept or steepened,kept or steepened,0.0,True
+L2 ratio,marginal | Middle minus High SES | gpt-4o-mini,1.533811,1.5338,6e-05,True
+L2 verdict,marginal | Middle minus High SES | gpt-4o-mini,kept or steepened,kept or steepened,0.0,True
+L2 ratio,marginal | Low minus Middle SES | deepseek-chat-v3,0.816739,0.8167,6e-05,True
+L2 verdict,marginal | Low minus Middle SES | deepseek-chat-v3,attenuated or kept,attenuated or kept,0.0,True
+L2 ratio,marginal | Low minus Middle SES | gemini-3-flash-preview,5.129308,5.1293,6e-05,True
+L2 verdict,marginal | Low minus Middle SES | gemini-3-flash-preview,steepened,steepened,0.0,True
+L2 ratio,marginal | Low minus Middle SES | glm-4.7,4.597735,4.5977,6e-05,True
+L2 verdict,marginal | Low minus Middle SES | glm-4.7,steepened,steepened,0.0,True
+L2 ratio,marginal | Low minus Middle SES | gpt-4o-mini,1.271714,1.2717,6e-05,True
+L2 verdict,marginal | Low minus Middle SES | gpt-4o-mini,kept or steepened,kept or steepened,0.0,True
+L2 headline,DeepSeek-V3 standardised Low minus High ratio (published 1.91),1.91,1.91,0.0,True
+L1 reuse ratio,deepseek-chat-v3 | clinical,34.825626,34.825626,0.0005,True
+L1 reuse ratio,deepseek-chat-v3 | narrative,30.484317,30.484317,0.0005,True
+L1 reuse ratio,gemini-3-flash-preview | clinical,39.135529,39.135529,0.0005,True
+L1 reuse ratio,gemini-3-flash-preview | narrative,21.619847,21.619847,0.0005,True
+L1 reuse ratio,glm-4.7 | clinical,4.937714,4.937714,0.0005,True
+L1 reuse ratio,glm-4.7 | narrative,4.620084,4.620084,0.0005,True
+L1 reuse ratio,gpt-4o-mini | clinical,5.298394,5.298394,0.0005,True
+L1 reuse ratio,gpt-4o-mini | narrative,6.03245,6.03245,0.0005,True
+L1 item profile,deepseek-chat-v3 | item 1,0.175357,0.175357,5e-05,True
+L1 item profile,deepseek-chat-v3 | item 2,0.512235,0.512235,5e-05,True
+L1 item profile,deepseek-chat-v3 | item 3,-0.442008,-0.442008,5e-05,True
+L1 item profile,deepseek-chat-v3 | item 4,-1.10819,-1.10819,5e-05,True
+L1 item profile,deepseek-chat-v3 | item 5,-0.158727,-0.158727,5e-05,True
+L1 item profile,deepseek-chat-v3 | item 6,0.373338,0.373338,5e-05,True
+L1 item profile,deepseek-chat-v3 | item 7,0.31335,0.31335,5e-05,True
+L1 item profile,deepseek-chat-v3 | item 8,0.334645,0.334645,5e-05,True
+L1 item profile,gemini-3-flash-preview | item 1,0.280909,0.280909,5e-05,True
+L1 item profile,gemini-3-flash-preview | item 2,0.161715,0.161715,5e-05,True
+L1 item profile,gemini-3-flash-preview | item 3,-0.345283,-0.345283,5e-05,True
+L1 item profile,gemini-3-flash-preview | item 4,-0.32247,-0.32247,5e-05,True
+L1 item profile,gemini-3-flash-preview | item 5,-0.464613,-0.464613,5e-05,True
+L1 item profile,gemini-3-flash-preview | item 6,0.579741,0.579741,5e-05,True
+L1 item profile,gemini-3-flash-preview | item 7,0.248098,0.248098,5e-05,True
+L1 item profile,gemini-3-flash-preview | item 8,-0.138098,-0.138098,5e-05,True
+L1 item profile,glm-4.7 | item 1,0.013384,0.013384,5e-05,True
+L1 item profile,glm-4.7 | item 2,0.26432,0.26432,5e-05,True
+L1 item profile,glm-4.7 | item 3,0.097299,0.097299,5e-05,True
+L1 item profile,glm-4.7 | item 4,-0.22082,-0.22082,5e-05,True
+L1 item profile,glm-4.7 | item 5,-0.421647,-0.421647,5e-05,True
+L1 item profile,glm-4.7 | item 6,0.14665,0.14665,5e-05,True
+L1 item profile,glm-4.7 | item 7,0.230697,0.230697,5e-05,True
+L1 item profile,glm-4.7 | item 8,-0.109883,-0.109883,5e-05,True
+L1 item profile,gpt-4o-mini | item 1,0.286007,0.286007,5e-05,True
+L1 item profile,gpt-4o-mini | item 2,0.32939,0.32939,5e-05,True
+L1 item profile,gpt-4o-mini | item 3,-0.427582,-0.427582,5e-05,True
+L1 item profile,gpt-4o-mini | item 4,-0.914385,-0.914385,5e-05,True
+L1 item profile,gpt-4o-mini | item 5,-0.01785,-0.01785,5e-05,True
+L1 item profile,gpt-4o-mini | item 6,0.256067,0.256067,5e-05,True
+L1 item profile,gpt-4o-mini | item 7,0.180587,0.180587,5e-05,True
+L1 item profile,gpt-4o-mini | item 8,0.307765,0.307765,5e-05,True

@@ -1,0 +1,23 @@
+% Moved from sections/04_results.tex in the condense pass of 4 Oct 2026.
+\begin{table}[!ht]
+\centering
+\caption{Claims a Study Might Make From the Corpus, With the Verdict of the Rung That Tests Each}
+\label{tab:s4claims}
+\small
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\begin{tabular}{@{}P{1.4cm}P{5.5cm}P{7.4cm}@{}}
+\toprule
+Rung & Claim & On this corpus \\
+\midrule
+Gate & A persona's score can be read from one response. & \textbf{No.} Two draws of one persona fall in different severity bands 35.2\% of the time. \\ % R: gate_bandflip_summary.csv
+Gate & The average of 30 responses is the model's score for that persona. & \textbf{Yes,} for all four models, which need 3 to 6 draws under the minimum rule. \\ % R: gate_dstudy.csv
+Level 1 & A single response can stand in for a real patient. & \textbf{No.} Unusual answer patterns are 0.0\% to 1.0\% of draws, against 5\% of people. \\ % R: l1_summary.csv
+Level 2 & Low-income adults score higher than high-income adults, by this much. & \textbf{Direction only.} The gap is 1.91 to 5.07 times its size in the population. \\ % R: l2_headline.csv
+Level 2 & Women score higher than men, by this much. & \textbf{No.} Two models shrink the gap, one doubles it and one is unresolved. \\ % R: l2_headline.csv
+Level 2 & Black and White adults differ by this much. & \textbf{No.} Two models' gaps are not kept, and the survey measures the gap too imprecisely to read the other two. \\ % R: l2_stop.csv; l2_headline.csv
+Level 3 & This share of low-income adults is depressed. & \textbf{No.} 55.5\% of low-income simulated respondents score 10 or more, against 13.6\% of real adults. \\ % R: 80d_headline.csv
+Level 3 & Depression in the population is this high overall. & \textbf{No.} Every model is 2.1 to 4.7 points too high overall. \\ % R: 80d_headline.csv
+Level 4 & The PHQ-8 total is one score that means the same in every group. & \textbf{No.} Two models have no general factor, and in the other two the factor differs across income. \\ % R: l4_structure.csv; l4_invariance.csv
+\bottomrule
+\end{tabular}
+\end{table}

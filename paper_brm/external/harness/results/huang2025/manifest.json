@@ -1,0 +1,58 @@
+{
+  "adapter": "huang2025",
+  "name": "huang2025",
+  "kind": "language model (profile-prompted survey simulation)",
+  "source": "Huang, Wu & Wang (2025), How many human survey respondents is a LLM worth? ICML 2025, arXiv:2502.17773; github.com/yw3453/uq-llm-survey-simulation (data.zip, MIT licence)",
+  "mode": "gaps",
+  "package_version": "0.1.1",
+  "inputs": [
+    {
+      "path": "C:\\Research\\PsychBench\\UpdatedRun\\paper_brm\\external\\raw\\huang2025\\data\\OpinionQA\\opinionqa_data.json",
+      "sha256": "1af09f184f9c05b801b9ab7d89efc3f93765a9fbb497ed57b37cf05c2c442577",
+      "bytes": 617621697
+    },
+    {
+      "path": "C:\\Research\\PsychBench\\UpdatedRun\\paper_brm\\external\\raw\\huang2025\\data\\OpinionQA\\synthetic_answers\\clean\\claude-3.5-haiku.json",
+      "sha256": "ee20b7fc61c31b453aeafc9aa9e866a11b3db779deb93b3ba6f682a6575a9cda",
+      "bytes": 919184
+    },
+    {
+      "path": "C:\\Research\\PsychBench\\UpdatedRun\\paper_brm\\external\\raw\\huang2025\\data\\OpinionQA\\synthetic_answers\\clean\\deepseek-v3.json",
+      "sha256": "8209cb9a19e11845cf9096c8db409a2fc1477672ad4eb4e4d46ca22b19a916d3",
+      "bytes": 868124
+    },
+    {
+      "path": "C:\\Research\\PsychBench\\UpdatedRun\\paper_brm\\external\\raw\\huang2025\\data\\OpinionQA\\synthetic_answers\\clean\\gpt-3.5-turbo.json",
+      "sha256": "8cc0418925c833fd06b9ea868e8a10c50df2d81aeb1b43ecd1fe24b4e7af1ab8",
+      "bytes": 947726
+    },
+    {
+      "path": "C:\\Research\\PsychBench\\UpdatedRun\\paper_brm\\external\\raw\\huang2025\\data\\OpinionQA\\synthetic_answers\\clean\\gpt-4o.json",
+      "sha256": "2e38aff777524e6a80d49fb30e8d994c63566a8c08a315a957aa14db25de6793",
+      "bytes": 1210242
+    },
+    {
+      "path": "C:\\Research\\PsychBench\\UpdatedRun\\paper_brm\\external\\raw\\huang2025\\data\\OpinionQA\\synthetic_answers\\clean\\gpt-4o-mini.json",
+      "sha256": "92b4ca3af864763b700cd9e4a0ac404b6983c668e4f7d454d1081b08c99800be",
+      "bytes": 561661
+    },
+    {
+      "path": "C:\\Research\\PsychBench\\UpdatedRun\\paper_brm\\external\\raw\\huang2025\\data\\OpinionQA\\synthetic_answers\\clean\\gpt-5-mini.json",
+      "sha256": "90715ded4e34ddac8ed60ad92fac5cf8839d504c41afe4fa72ee37945a1e1afe",
+      "bytes": 812648
+    },
+    {
+      "path": "C:\\Research\\PsychBench\\UpdatedRun\\paper_brm\\external\\raw\\huang2025\\data\\OpinionQA\\synthetic_answers\\clean\\llama-3.3-70B-instruct-turbo.json",
+      "sha256": "dec3a2e107834ec24d497d78976eecac27d15ad6ba98385b7fa313c2fa9cee04",
+      "bytes": 912531
+    },
+    {
+      "path": "C:\\Research\\PsychBench\\UpdatedRun\\paper_brm\\external\\raw\\huang2025\\data\\OpinionQA\\synthetic_answers\\clean\\mistral-7B-instruct-v0.3.json",
+      "sha256": "3e7a707df85ae6a132b554eea022b771a7cdd4f426e3874e988665b60ffd8130",
+      "bytes": 687557
+    }
+  ],
+  "run_at": "2026-10-03 22:08:10",
+  "seconds": 13.9,
+  "notes": "9 fixed contrasts; Refused dropped on both sides; unweighted (no weights in the released records); family_size = contrasts with >= 20 questions per LLM; first len(answers) profiles per question matched to answers by position"
+}

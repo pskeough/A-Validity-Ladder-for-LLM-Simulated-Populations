@@ -1,0 +1,18 @@
+{
+  "adapter": "val_opinionqa",
+  "name": "val_opinionqa",
+  "kind": "language model (validation of the harness against scripts/78e)",
+  "source": "Santurkar et al. (2023), OpinionQA; rows from analysis/brm/l2_external_r3.csv, config headline",
+  "mode": "gaps",
+  "package_version": "0.1.1",
+  "inputs": [
+    {
+      "path": "C:\\Research\\PsychBench\\UpdatedRun\\analysis\\brm\\l2_external_r3.csv",
+      "sha256": "c65518b19b8dd9c7157cd18ca7749e33dd2d86cfeeae148ef7338737fdfedc82",
+      "bytes": 534689
+    }
+  ],
+  "run_at": "2026-10-04 00:52:53",
+  "seconds": 0.1,
+  "notes": ""
+}

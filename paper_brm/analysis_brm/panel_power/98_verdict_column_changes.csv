@@ -1,0 +1,6 @@
+model_row,stored,rerun,n
+False,undetermined,reference too imprecise,928
+False,kept or steepened,reference too imprecise,310
+False,reference too imprecise,reversed to attenuated,109
+True,unresolved,fail,44
+False,attenuated or kept,reference too imprecise,42

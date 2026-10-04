@@ -1,0 +1,9 @@
+scale,model,n,verdict_tau1p5,misfit_ratio,misfit_ratio_ci90_lo,misfit_ratio_ci90_hi,overfit_ratio,overfit_ratio_ci90_lo,overfit_ratio_ci90_hi,misfit_verdict,overfit_verdict,verdict,passed,tau
+Openness,claude-haiku-4.5,10000,fail: excess overfit and misfit deficit,0.0,0.0,0.0,18.535999999999998,18.438,19.398329880952385,misfit deficit,excess overfit,fail: excess overfit and misfit deficit,False,1.5
+Openness,claude-sonnet-4.6,10000,fail: excess overfit and misfit deficit,0.0,0.0,0.0,19.47014,19.412,19.81692357142857,misfit deficit,excess overfit,fail: excess overfit and misfit deficit,False,1.5
+Openness,deepseek-v3.2,10000,fail: excess overfit and misfit deficit,0.01853132530120482,0.01570413043478261,0.022253839662447258,5.616187607121453,5.015855902189476,5.916184160491447,misfit deficit,excess overfit,fail: excess overfit and misfit deficit,False,1.5
+Openness,gemini-3-flash-preview,10000,fail: excess overfit and misfit deficit,0.0,0.0,0.0,2.887622181670724,2.568190105762597,3.2608890933219357,misfit deficit,excess overfit,fail: excess overfit and misfit deficit,False,1.5
+Openness,gemini-3.1-flash-lite-preview,10000,fail: excess overfit and misfit deficit,0.0,0.0,0.0,11.665001663921263,10.010733511427889,14.5913213688805,misfit deficit,excess overfit,fail: excess overfit and misfit deficit,False,1.5
+Openness,gpt-5.4,10000,fail: excess overfit and misfit deficit,0.0,0.0,0.0,4.317012874119077,4.199864136645964,7.20073027265044,misfit deficit,excess overfit,fail: excess overfit and misfit deficit,False,1.5
+Openness,gpt-5.4-mini,10000,fail: excess overfit and misfit deficit,0.004,0.0,0.008,16.5208,15.543225271214288,17.36787930640914,misfit deficit,excess overfit,fail: excess overfit and misfit deficit,False,1.5
+Openness,gpt-5.4-nano,10000,fail: excess overfit and misfit deficit,0.0,0.0,0.0,10.58317142857143,9.74609341025641,11.091999999999999,misfit deficit,excess overfit,fail: excess overfit and misfit deficit,False,1.5

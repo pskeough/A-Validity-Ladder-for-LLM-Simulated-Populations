@@ -1,0 +1,34 @@
+% Written by paper_brm/external/harness/paper_table.py from results/CROSS_RELEASE.csv. Do not edit by hand.
+\begin{table}[!ht]
+\centering
+\caption{Level-2 Readings of Released Simulators and of Faithful Controls}
+\label{tab:external-all}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{@{}llrrrrrlrrrrr@{}}
+\toprule
+ & & \multicolumn{5}{c}{Simulators} & & \multicolumn{5}{c}{Faithful control} \\
+\cmidrule(lr){3-7}\cmidrule(l){9-13}
+Release & Simulator & $n$ & Pass & Fail & Unres. & Cannot & Control & $n$ & Pass & Fail & Unres. & Cannot \\
+\midrule
+\citet{bisbee2024synthetic} & ChatGPT & 3 & 0 & 3 & 0 & 0 &  & -- & -- & -- & -- & -- \\ % R: ../../paper_brm/external/harness/results/PAPER_TABLE.csv
+\citet{argyle2023outofone} & GPT-3 & 3 & 0 & 3 & 0 & 0 & Ideal & 200 & 7 & 0 & 193 & 0 \\ % R: ../../paper_brm/external/harness/results/PAPER_TABLE.csv
+\citet{meister2025distributional} & 5 LLMs & 26 & 0 & 13 & 12 & 1 & Ideal & 200 & 92 & 0 & 108 & 0 \\ % R: ../../paper_brm/external/harness/results/PAPER_TABLE.csv
+\citet{huang2025uncertainty} & 8 LLMs & 8 & 0 & 7 & 1 & 0 & Ideal & 100 & 100 & 0 & 0 & 0 \\ % R: ../../paper_brm/external/harness/results/PAPER_TABLE.csv
+ &  & -- & -- & -- & -- & -- & Ideal, small & 100 & 0 & 0 & 100 & 0 \\ % R: ../../paper_brm/external/harness/results/PAPER_TABLE.csv
+\citet{suh2025subpop} & Base & 2 & 0 & 2 & 0 & 0 &  & -- & -- & -- & -- & -- \\ % R: ../../paper_brm/external/harness/results/PAPER_TABLE.csv
+ & SubPOP & 2 & 0 & 2 & 0 & 0 &  & -- & -- & -- & -- & -- \\ % R: ../../paper_brm/external/harness/results/PAPER_TABLE.csv
+\citet{toubia2025twin2k} & 13 twins & 13 & 0 & 13 & 0 & 0 & Retest & 1 & 1 & 0 & 0 & 0 \\ % R: ../../paper_brm/external/harness/results/PAPER_TABLE.csv
+\citet{peng2025funhouse} & 23 twins & 413 & 0 & 285 & 0 & 128 & Split half & 18 & 0 & 0 & 0 & 18 \\ % R: ../../paper_brm/external/harness/results/PAPER_TABLE.csv
+\citet{malmberg2026conjoint} & 3 LLMs & 3 & 0 & 2 & 0 & 1 & Split half & 3 & 0 & 0 & 0 & 3 \\ % R: ../../paper_brm/external/harness/results/PAPER_TABLE.csv
+\citet{cummins2026flexibility} & 9 LLMs & 252 & 0 & 0 & 0 & 252 & Split half & 200 & 0 & 10 & 0 & 190 \\ % R: ../../paper_brm/external/harness/results/PAPER_TABLE.csv
+\midrule
+All simulators & & 725 & 0 & 330 & 13 & 382 & & & & & & \\ % R: ../../paper_brm/external/harness/results/PAPER_TABLE.csv
+\bottomrule
+\end{tabular}}
+\vspace{4pt}
+\begin{tabnote}
+\textit{Note.} Each reading is one family of contrasts read together, such as one model under one prompt (one model and study for \citet{peng2025funhouse}). Pass: every contrast read is kept. Fail: at least one is not kept. Unres.: neither, with at least one contrast the reference could certify. Cannot: the reference could not certify a kept verdict on any contrast in the family (step 0). Simulators: ChatGPT under 3 prompts; GPT-3 in 3 runs; 5 LLMs under 3 elicitation and 2 steering methods; Mistral-7B before (Base) and after (SubPOP) survey training; twin specifications, over 18 studies for \citet{peng2025funhouse}; 252 configurations of 9 LLMs. Ideal: a fresh sample of the released human answers at the human group sizes; Ideal, small: the same at the size of the LLM samples. Retest: the respondents' own answers in earlier waves. Split half: one half of the respondents read against the other. \citet{suh2025subpop} is read against SubPOP's processed copy of the human answers to the questions of \citet{meister2025distributional}, whose ideal simulator is the nearest control (Supplement S8).
+\end{tabnote}
+\end{table}

@@ -1,0 +1,28 @@
+{
+  "adapter": "cummins2025",
+  "name": "cummins2025",
+  "kind": "language model (252 analytic-flexibility configurations)",
+  "source": "Cummins, J. (2025), The threat of analytic flexibility in using LLMs to simulate human data, arXiv 2509.13397; OSF https://osf.io/skbqm/ (study 1/data/processed/)",
+  "mode": "gaps",
+  "package_version": "0.1.1",
+  "inputs": [
+    {
+      "path": "C:\\Research\\PsychBench\\UpdatedRun\\paper_brm\\external\\raw\\cummins2025\\full_data.csv",
+      "sha256": "438f9f6661a415852f7a533879cecc7421ba468522d477dede49485a08526284",
+      "bytes": 2968077
+    },
+    {
+      "path": "C:\\Research\\PsychBench\\UpdatedRun\\paper_brm\\external\\raw\\cummins2025\\ground_truth_data.csv",
+      "sha256": "5432b007fb7dd294f03f70a567ec022e58000e46cb7baac663c35c362c8b2d75",
+      "bytes": 9023
+    },
+    {
+      "path": "C:\\Research\\PsychBench\\UpdatedRun\\paper_brm\\external\\raw\\cummins2025\\configuration_completion_summary.csv",
+      "sha256": "7b6912c7d2ddf0ee00b69707d23558b03aca70efb23f63fa5153455f132cb114",
+      "bytes": 17894
+    }
+  ],
+  "run_at": "2026-10-03 21:51:00",
+  "seconds": 3.5,
+  "notes": "B=2000, seed=20261003, age median cut 27.0; contrasts fixed before results; gamma on all 85 humans; marginal gaps; df inf"
+}

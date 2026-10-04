@@ -47,6 +47,7 @@ def verdicts(g, p, se_g, df_g, se_p, df_p):
     lab = np.where(lo == hi, np.array(R2M.LABELS + ["?"])[np.minimum(lo, 5)], "undetermined").astype(object)
     two = hi == lo + 1
     lab[two] = [f"{R2M.LABELS[a]} or {R2M.LABELS[b]}" for a, b in zip(lo[two], hi[two])]
+    lab[(hi >= lo + 2) & (hi < 3)] = "reversed to attenuated"
     with np.errstate(divide="ignore", invalid="ignore"):
         e1, e2 = g / p_hi, g / p_lo
         k = tp * se_p / p

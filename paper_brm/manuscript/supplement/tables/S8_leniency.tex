@@ -1,0 +1,23 @@
+% Written by paper_brm/external/harness/supp_tables.py from harness/results/LENIENCY_totals.csv.
+\begin{table}[!ht]
+\centering
+\caption{Family Verdicts Under Easier Level-2 Rules}
+\label{tab:s8leniency}
+\footnotesize
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+ & \multicolumn{3}{c}{Simulators} & \multicolumn{3}{c}{Faithful controls} \\
+\cmidrule(lr){2-4}\cmidrule(l){5-7}
+Rule & Pass & Fail & Other & Pass & Fail & Other \\
+\midrule
+Frozen rule & 0 & 330 & 395 & 200 & 10 & 612 \\
+Kept region 0.5 to 1.5 & 15 & 273 & 437 & 307 & 6 & 509 \\
+No multiplicity correction & 0 & 584 & 141 & 227 & 82 & 513 \\
+Both & 0 & 516 & 209 & 373 & 59 & 390 \\
+\bottomrule
+\end{tabular}
+\vspace{4pt}
+\begin{tabnote}
+\textit{Note.} 725 simulator families and 822 faithful-control families (ideal simulators, split halves and the Twin-2K-500 retest) from the nine releases, every stored contrast re-read under each rule. Other: unresolved, including families the reference cannot certify.
+\end{tabnote}
+\end{table}

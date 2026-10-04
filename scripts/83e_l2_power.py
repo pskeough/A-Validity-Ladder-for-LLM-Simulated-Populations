@@ -121,6 +121,8 @@ def l2_class(v, true):
         return "stopped"
     if v == "undetermined":
         return "undetermined"
+    if v == "reversed to attenuated":
+        return "compatible" if true in ("reversed", "missing", "attenuated") else "wrong"
     names = v.split(" or ")
     return "correct" if names == [true] else ("compatible" if true in names else "wrong")
 

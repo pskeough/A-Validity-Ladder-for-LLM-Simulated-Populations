@@ -1,0 +1,28 @@
+{
+  "adapter": "malmberg2026",
+  "name": "malmberg2026",
+  "kind": "language model silicon samples (conjoint) and a human split-half control",
+  "source": "Malmberg (2026), 'Investigating the Utility of LLM-Based Silicon Samples in Political Science Conjoint Experiments', Public Opinion Quarterly; Harvard Dataverse doi:10.7910/DVN/2LVYOO (CC0), https://doi.org/10.7910/DVN/2LVYOO",
+  "mode": "gaps",
+  "package_version": "0.1.1",
+  "inputs": [
+    {
+      "path": "C:\\Research\\PsychBench\\UpdatedRun\\paper_brm\\external\\raw\\malmberg2026\\fullGPTzeroshotAMCEs.csv",
+      "sha256": "1b54fe1c7662f9fd3c034dfda65192d5dacede2a7892e124d1dce9e4be4f7f8d",
+      "bytes": 47134023
+    },
+    {
+      "path": "C:\\Research\\PsychBench\\UpdatedRun\\paper_brm\\external\\raw\\malmberg2026\\fulllamazeroshotAMCEs.csv",
+      "sha256": "606221fee15d26af878b69148d05ea4d5e9c1a59aad45d51f07392a4580ba33b",
+      "bytes": 52472548
+    },
+    {
+      "path": "C:\\Research\\PsychBench\\UpdatedRun\\paper_brm\\external\\raw\\malmberg2026\\fullMistralsmall.csv",
+      "sha256": "65a3543fb1942f3ae22584edad9821a00a9690ad03d7c261497439fc67dc494d",
+      "bytes": 7389756
+    }
+  ],
+  "run_at": "2026-10-03 21:48:25",
+  "seconds": 18.0,
+  "notes": "B=1000 respondent bootstrap, seed 20261003; split-half seed 20261003; n_resp_* in the split-half rows read 'half A/half B'."
+}

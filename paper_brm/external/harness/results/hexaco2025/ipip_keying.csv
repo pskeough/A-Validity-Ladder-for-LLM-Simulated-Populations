@@ -1,0 +1,241 @@
+item,facet,sign,key_text,codebook_text,ratio
+AFlex1,AFlex,1,Adjust easily.,I adjust easily.,0.929
+AFlex10,AFlex,-1,Am hard to reason with.,I am hard to reason with.,0.957
+AFlex2,AFlex,1,Am good at taking advice.,I am good at taking advice.,0.96
+AFlex3,AFlex,-1,"When interacting with a group of people, am often bothered by at least one of them.","I when interacting with a group of people, am often bothered by at least one of them.",0.988
+AFlex4,AFlex,-1,React strongly to criticism.,I react strongly to criticism.,0.964
+AFlex5,AFlex,-1,Get upset if others change the way that I have arranged things.,I get upset if others change the way that I have arranged things.,0.984
+AFlex6,AFlex,-1,Am hard to convince.,I am hard to convince.,0.95
+AFlex7,AFlex,-1,Am annoyed by others' mistakes.,I am annoyed by others' mistakes.,0.968
+AFlex8,AFlex,-1,Can't stand being contradicted.,I can't stand being contradicted.,0.968
+AFlex9,AFlex,-1,Am hard to satisfy.,I am hard to satisfy.,0.947
+AForg1,AForg,1,Love my enemies.,I love my enemies.,0.938
+AForg10,AForg,-1,Feel that most people can't be trusted.,I feel that most people can't be trusted.,0.974
+AForg2,AForg,1,Try to forgive and forget.,I try to forgive and forget.,0.962
+AForg3,AForg,1,Am inclined to forgive others.,I am inclined to forgive others.,0.967
+AForg4,AForg,1,Am nice to people I should be angry at.,I am nice to people I should be angry at.,0.974
+AForg5,AForg,-1,Find it hard to forgive others.,I find it hard to forgive others.,0.968
+AForg6,AForg,-1,Hold a grudge.,I hold a grudge.,0.929
+AForg7,AForg,-1,Get back at people who insult me.,I get back at people who insult me.,0.97
+AForg8,AForg,-1,Get even with others.,I get even with others.,0.952
+AForg9,AForg,-1,Distrust people.,I distrust people.,0.938
+AGent1,AGent,1,Rarely complain.,I rarely complain.,0.938
+AGent10,AGent,-1,Criticize others' shortcomings.,I criticize others' shortcomings.,0.968
+AGent2,AGent,1,Take things as they come.,I take things as they come.,0.96
+AGent3,AGent,1,Accept people as they are.,I accept people as they are.,0.962
+AGent4,AGent,1,Have a good word for everyone.,I have a good word for everyone.,0.967
+AGent5,AGent,-1,Become frustrated and angry with people when they don't live up to my expectations.,I become frustrated and angry with people when they don't live up to my expectations.,0.988
+AGent6,AGent,-1,Am quick to judge others.,I am quick to judge others.,0.96
+AGent7,AGent,-1,Find fault with everything.,I find fault with everything.,0.963
+AGent8,AGent,-1,Speak ill of others.,I speak ill of others.,0.95
+AGent9,AGent,-1,Have a sharp tongue.,I have a sharp tongue.,0.95
+APati1,APati,1,Find that it takes a lot to make me feel angry at someone.,I find that it takes a lot to make me feel angry at someone.,0.983
+APati10,APati,-1,Get upset easily.,I get upset easily.,0.941
+APati2,APati,1,Rarely feel angry with people.,I rarely feel angry with people.,0.967
+APati3,APati,1,Am usually a patient person.,I am usually a patient person.,0.964
+APati4,APati,1,Rarely get irritated.,I rarely get irritated.,0.952
+APati5,APati,1,Seldom get mad.,I seldom get mad.,0.933
+APati6,APati,-1,Am easily annoyed.,I am easily annoyed.,0.944
+APati7,APati,-1,Get angry easily.,I get angry easily.,0.941
+APati8,APati,-1,Get irritated easily.,I get irritated easily.,0.952
+APati9,APati,-1,Lose my temper.,I lose my temper.,0.933
+CDili1,CDili,1,Push myself very hard to succeed.,I push myself very hard to succeed.,0.97
+CDili10,CDili,-1,Quickly lose interest in the tasks I start.,I quickly lose interest in the tasks I start.,0.977
+CDili2,CDili,1,Get started quickly on doing a job.,I get started quickly on doing a job.,0.971
+CDili3,CDili,1,Am exacting in my work.,I am exacting in my work.,0.957
+CDili4,CDili,1,Work hard.,I work hard.,0.9
+CDili5,CDili,1,Complete tasks successfully.,I complete tasks successfully.,0.964
+CDili6,CDili,-1,Do just enough work to get by.,I do just enough work to get by.,0.967
+CDili7,CDili,-1,Stop when work becomes too difficult.,I stop when work becomes too difficult.,0.973
+CDili8,CDili,-1,Do too little work.,I do too little work.,0.947
+CDili9,CDili,-1,Hang around doing nothing.,I hang around doing nothing.,0.962
+COrga1,COrga,1,Keep things tidy.,I keep things tidy.,0.941
+COrga10,COrga,-1,Am not bothered by disorder.,I am not bothered by disorder.,0.964
+COrga2,COrga,1,Get chores done right away.,I get chores done right away.,0.963
+COrga3,COrga,1,Like order.,I like order.,0.909
+COrga4,COrga,1,Like to tidy up.,I like to tidy up.,0.938
+COrga5,COrga,1,"Want everything to be ""just right.""",I want everything to be just right.,0.97
+COrga6,COrga,-1,Leave a mess in my room.,I leave a mess in my room.,0.958
+COrga7,COrga,-1,Leave my belongings around.,I leave my belongings around.,0.963
+COrga8,COrga,-1,Don't finish the things that I start.,I don't finish the things that I start.,0.973
+COrga9,COrga,-1,Often forget to put things back in their proper place.,I often forget to put things back in their proper place.,0.981
+CPerf1,CPerf,1,Pay attention to details.,I pay attention to details.,0.96
+CPerf10,CPerf,-1,Prefer to just let things happen.,I prefer to just let things happen.,0.97
+CPerf2,CPerf,1,Continue until everything is perfect.,I continue until everything is perfect.,0.973
+CPerf3,CPerf,1,Have an eye for detail.,I have an eye for detail.,0.957
+CPerf4,CPerf,1,Want every detail taken care of.,I want every detail taken care of.,0.969
+CPerf5,CPerf,1,Dislike imperfect work.,I dislike imperfect work.,0.957
+CPerf6,CPerf,1,Want everything to add up perfectly.,I want everything to add up perfectly.,0.972
+CPerf7,CPerf,1,Detect mistakes.,I detect mistakes.,0.938
+CPerf8,CPerf,1,Demand quality.,I demand quality.,0.933
+CPerf9,CPerf,-1,Pay too little attention to details.,I pay too little attention to details.,0.972
+CPrud1,CPrud,1,Avoid mistakes.,I avoid mistakes.,0.933
+CPrud10,CPrud,-1,Make a fool of myself.,I make a fool of myself.,0.955
+CPrud2,CPrud,1,Make plans and stick to them.,I make plans and stick to them.,0.966
+CPrud3,CPrud,1,Do things according to a plan.,I do things according to a plan.,0.967
+CPrud4,CPrud,-1,Jump into things without thinking.,I jump into things without thinking.,0.971
+CPrud5,CPrud,-1,Do things without thinking of the consequences.,I do things without thinking of the consequences.,0.979
+CPrud6,CPrud,-1,Make rash decisions.,I make rash decisions.,0.95
+CPrud7,CPrud,-1,Act impulsively when something is bothering me.,I act impulsively when something is bothering me.,0.979
+CPrud8,CPrud,-1,Make careless mistakes.,I make careless mistakes.,0.957
+CPrud9,CPrud,-1,Don't know why I do some of the things I do.,I don't know why I do some of the things I do.,0.977
+EAnxi1,EAnxi,1,Often worry about things that turn out to be unimportant.,I often worry about things that turn out to be unimportant.,0.982
+EAnxi10,EAnxi,-1,Don't worry about things that have already happened.,I don't worry about things that have already happened.,0.981
+EAnxi2,EAnxi,1,Worry about things.,I worry about things.,0.947
+EAnxi3,EAnxi,1,Get stressed out easily.,I get stressed out easily.,0.958
+EAnxi4,EAnxi,1,Get upset by unpleasant thoughts that come into my mind.,I get upset by unpleasant thoughts that come into my mind.,0.982
+EAnxi5,EAnxi,1,Panic easily.,I panic easily.,0.923
+EAnxi6,EAnxi,-1,Rarely worry.,I rarely worry.,0.923
+EAnxi7,EAnxi,-1,Rarely feel depressed.,I rarely feel depressed.,0.955
+EAnxi8,EAnxi,-1,Am not easily disturbed by events.,I am not easily disturbed by events.,0.971
+EAnxi9,EAnxi,-1,Remain calm under pressure.,I remain calm under pressure.,0.963
+EDepe1,EDepe,1,Need reassurance.,I need reassurance.,0.941
+EDepe10,EDepe,1,Want to be liked.,I want to be liked.,0.941
+EDepe2,EDepe,1,Let myself be influenced by others.,I let myself be influenced by others.,0.971
+EDepe3,EDepe,1,Need the approval of others.,I need the approval of others.,0.964
+EDepe4,EDepe,1,Need protection.,I need protection.,0.938
+EDepe5,EDepe,1,Often need help.,I often need help.,0.938
+EDepe6,EDepe,1,Show my sadness.,I show my sadness.,0.938
+EDepe7,EDepe,1,Suspect that my facial expressions give me away when I feel sad.,I suspect that my facial expressions give me away when I feel sad.,0.984
+EDepe8,EDepe,1,Seek support.,I seek support.,0.923
+EDepe9,EDepe,1,Can't do without the company of others.,I can't do without the company of others.,0.974
+EFear1,EFear,1,Am a physical coward.,I am a physical coward.,0.952
+EFear10,EFear,-1,Am willing to take risks.,I am willing to take risks.,0.96
+EFear2,EFear,1,Begin to panic when there is danger.,I begin to panic when there is danger.,0.972
+EFear3,EFear,1,Would fear walking in a high-crime part of a city.,I would fear walking in a high-crime part of a city.,0.98
+EFear4,EFear,1,Tremble in dangerous situations.,I tremble in dangerous situations.,0.969
+EFear5,EFear,1,Would never go riding down a stretch of rapids in a canoe.,I would never go riding down a stretch of rapids in a canoe.,0.983
+EFear6,EFear,-1,Like to do frightening things.,I like to do frightening things.,0.967
+EFear7,EFear,-1,Face danger confidently.,I face danger confidently.,0.958
+EFear8,EFear,-1,Love dangerous situations.,I love dangerous situations.,0.962
+EFear9,EFear,-1,Would be good at rescuing people from a burning building.,I would be good at rescuing people from a burning building.,0.982
+ESent1,ESent,1,Feel others' emotions.,I feel others' emotions.,0.955
+ESent10,ESent,-1,Seldom get emotional.,I seldom get emotional.,0.952
+ESent2,ESent,1,Immediately feel sad when hearing of an unhappy event.,I immediately feel sad when hearing of an unhappy event.,0.981
+ESent3,ESent,1,Cry during movies.,I cry during movies.,0.944
+ESent4,ESent,1,Am sensitive to the needs of others.,I am sensitive to the needs of others.,0.972
+ESent5,ESent,1,Am deeply moved by others' misfortunes.,I am deeply moved by others' misfortunes.,0.974
+ESent6,ESent,-1,Rarely cry during sad movies.,I rarely cry during sad movies.,0.966
+ESent7,ESent,-1,Seldom feel weepy while reading the sad part of a story.,I seldom feel weepy while reading the sad part of a story.,0.982
+ESent8,ESent,-1,Am seldom bothered by the apparent suffering of strangers.,I am seldom bothered by the apparent suffering of strangers.,0.983
+ESent9,ESent,-1,Don't understand people who get emotional.,I don't understand people who get emotional.,0.976
+HFair1,HFair,1,Would never take things that aren't mine.,I would never take things that aren't mine.,0.976
+HFair10,HFair,-1,Would not regret my behavior if I were to take advantage of someone impulsively.,I would not regret my behavior if I were to take advantage of someone impulsively.,0.988
+HFair2,HFair,1,Would never cheat on my taxes.,I would never cheat on my taxes.,0.967
+HFair3,HFair,1,Return extra change when a cashier makes a mistake.,I return extra change when a cashier makes a mistake.,0.98
+HFair4,HFair,1,Would feel very badly for a long time if I were to steal from someone.,I would feel very badly for a long time if I were to steal from someone.,0.986
+HFair5,HFair,1,Try to follow the rules.,I try to follow the rules.,0.958
+HFair6,HFair,-1,Admire a really clever scam.,I admire a really clever scam.,0.964
+HFair7,HFair,-1,Cheat to get ahead.,I cheat to get ahead.,0.947
+HFair8,HFair,-1,Steal things.,I steal things.,0.923
+HFair9,HFair,-1,Cheat on people who have trusted me.,I cheat on people who have trusted me.,0.972
+HGree1,HGree,1,Would not enjoy being a famous celebrity.,I would not enjoy being a famous celebrity.,0.976
+HGree10,HGree,-1,Am out for my own personal gain.,I am out for my own personal gain.,0.969
+HGree2,HGree,1,Don't strive for elegance in my appearance.,I don't strive for elegance in my appearance.,0.977
+HGree3,HGree,-1,Love luxury.,I love luxury.,0.917
+HGree4,HGree,-1,Have a strong need for power.,I have a strong need for power.,0.966
+HGree5,HGree,-1,Seek status.,I seek status.,0.917
+HGree6,HGree,-1,Am mainly interested in money.,I am mainly interested in money.,0.967
+HGree7,HGree,-1,Wish to stay young forever.,I wish to stay young forever.,0.963
+HGree8,HGree,-1,Try to impress others.,I try to impress others.,0.955
+HGree9,HGree,-1,Prefer to eat at expensive restaurants.,I prefer to eat at expensive restaurants.,0.974
+HMode1,HMode,1,Don't think that I'm better than other people.,I don't think that i'm better than other people.,0.978
+HMode10,HMode,-1,Boast about my virtues.,I boast about my virtues.,0.957
+HMode2,HMode,1,See myself as an average person.,I see myself as an average person.,0.969
+HMode3,HMode,1,Am just an ordinary person.,I am just an ordinary person.,0.963
+HMode4,HMode,1,Consider myself an average person.,I consider myself an average person.,0.971
+HMode5,HMode,-1,Would like to have more power than other people.,I would like to have more power than other people.,0.979
+HMode6,HMode,-1,Believe that I am better than others.,I believe that I am better than others.,0.973
+HMode7,HMode,-1,Like to attract attention.,I like to attract attention.,0.962
+HMode8,HMode,-1,Am more capable than most others.,I am more capable than most others.,0.97
+HMode9,HMode,-1,Am likely to show off if I get the chance.,I am likely to show off if I get the chance.,0.976
+HSinc1,HSinc,1,Don't pretend to be more than I am.,I don't pretend to be more than I am.,0.971
+HSinc10,HSinc,-1,Let people push me around to help them feel important.,I let people push me around to help them feel important.,0.981
+HSinc2,HSinc,-1,Use flattery to get ahead.,I use flattery to get ahead.,0.962
+HSinc3,HSinc,-1,Tell other people what they want to hear so that they will do what I want them to do.,I tell other people what they want to hear so that they will do what I want them to do.,0.988
+HSinc4,HSinc,-1,Put on a show to impress people.,I put on a show to impress people.,0.969
+HSinc5,HSinc,-1,Switch my loyalties when I feel like it.,I switch my loyalties when I feel like it.,0.975
+HSinc6,HSinc,-1,Play a role in order to impress people.,I play a role in order to impress people.,0.974
+HSinc7,HSinc,-1,Pretend to be concerned for others.,I pretend to be concerned for others.,0.971
+HSinc8,HSinc,-1,Act like different people in different situations.,I act like different people in different situations.,0.98
+HSinc9,HSinc,-1,Find it necessary to please the people who have power.,I find it necessary to please the people who have power.,0.981
+OAesA1,OAesA,1,Believe in the importance of art.,I believe in the importance of art.,0.97
+OAesA10,OAesA,-1,Do not enjoy watching dance performances.,I do not enjoy watching dance performances.,0.976
+OAesA2,OAesA,1,Get deeply immersed in music.,I get deeply immersed in music.,0.966
+OAesA3,OAesA,1,See beauty in things that others might not notice.,I see beauty in things that others might not notice.,0.98
+OAesA4,OAesA,1,"Enjoy feeling ""close to the earth.""",I enjoy feeling close to the earth.,0.97
+OAesA5,OAesA,1,Have read the great literary classics.,I have read the great literary classics.,0.974
+OAesA6,OAesA,-1,Do not like art.,I do not like art.,0.938
+OAesA7,OAesA,-1,Seldom notice the emotional aspects of paintings and pictures.,I seldom notice the emotional aspects of paintings and pictures.,0.984
+OAesA8,OAesA,-1,Do not like poetry.,I do not like poetry.,0.947
+OAesA9,OAesA,-1,Do not like concerts.,I do not like concerts.,0.952
+OCrea1,OCrea,1,Have a vivid imagination.,I have a vivid imagination.,0.96
+OCrea10,OCrea,-1,Seldom experience sudden intuitive insights.,I seldom experience sudden intuitive insights.,0.977
+OCrea2,OCrea,1,Come up with something new.,I come up with something new.,0.963
+OCrea3,OCrea,1,Carry the conversation to a higher level.,I carry the conversation to a higher level.,0.976
+OCrea4,OCrea,1,Am full of ideas.,I am full of ideas.,0.941
+OCrea5,OCrea,1,Love to think up new ways of doing things.,I love to think up new ways of doing things.,0.976
+OCrea6,OCrea,1,Have excellent ideas.,I have excellent ideas.,0.952
+OCrea7,OCrea,-1,Do not have a good imagination.,I do not have a good imagination.,0.968
+OCrea8,OCrea,-1,Have difficulty imagining things.,I have difficulty imagining things.,0.97
+OCrea9,OCrea,-1,Have trouble guessing how others will react.,I have trouble guessing how others will react.,0.977
+OInqu1,OInqu,1,Am interested in science.,I am interested in science.,0.96
+OInqu10,OInqu,-1,Will not probe deeply into a subject.,I will not probe deeply into a subject.,0.973
+OInqu2,OInqu,1,Would love to explore strange places.,I would love to explore strange places.,0.973
+OInqu3,OInqu,1,Enjoy intellectual games.,I enjoy intellectual games.,0.96
+OInqu4,OInqu,1,Love to read challenging material.,I love to read challenging material.,0.971
+OInqu5,OInqu,1,Find political discussions interesting.,I find political discussions interesting.,0.974
+OInqu6,OInqu,1,Have a rich vocabulary.,I have a rich vocabulary.,0.957
+OInqu7,OInqu,-1,Don't know much about history.,I don't know much about history.,0.967
+OInqu8,OInqu,-1,Avoid difficult reading material.,I avoid difficult reading material.,0.97
+OInqu9,OInqu,-1,Don't bother worrying about political and social problems.,I don't bother worrying about political and social problems.,0.983
+OUnco1,OUnco,1,Am considered to be kind of eccentric.,I am considered to be kind of eccentric.,0.974
+OUnco10,OUnco,-1,Try to avoid complex people.,I try to avoid complex people.,0.964
+OUnco2,OUnco,1,Know that my ideas sometimes surprise people.,I know that my ideas sometimes surprise people.,0.978
+OUnco3,OUnco,1,Do things that others find strange.,I do things that others find strange.,0.971
+OUnco4,OUnco,1,Rebel against authority.,I rebel against authority.,0.958
+OUnco5,OUnco,1,Swim against the current.,I swim against the current.,0.96
+OUnco6,OUnco,-1,Would hate to be considered odd or strange.,I would hate to be considered odd or strange.,0.977
+OUnco7,OUnco,-1,"Enjoy being thought of as a normal ""mainstream"" person.",I enjoy being thought of as a normal mainstream person.,0.981
+OUnco8,OUnco,-1,Like to be viewed as proper and conventional.,I like to be viewed as proper and conventional.,0.978
+OUnco9,OUnco,-1,Like to be thought of as a normal kind of person.,I like to be thought of as a normal kind of person.,0.98
+XExpr1,XExpr,1,Talk a lot.,I talk a lot.,0.909
+XExpr10,XExpr,-1,Speak softly.,I speak softly.,0.923
+XExpr2,XExpr,1,Am never at a loss for words.,I am never at a loss for words.,0.966
+XExpr3,XExpr,1,Am the life of the party.,I am the life of the party.,0.96
+XExpr4,XExpr,1,Tell people about it when I'm irritated.,I tell people about it when i'm irritated.,0.975
+XExpr5,XExpr,1,"Have an intense, boisterous laugh.","I have an intense, boisterous laugh.",0.97
+XExpr6,XExpr,-1,Don't talk a lot.,I don't talk a lot.,0.941
+XExpr7,XExpr,-1,Don't like to draw attention to myself.,I don't like to draw attention to myself.,0.974
+XExpr8,XExpr,-1,Say little.,I say little.,0.909
+XExpr9,XExpr,-1,Bottle up my feelings.,I bottle up my feelings.,0.955
+XLive1,XLive,1,Maintain high energy throughout the day.,I maintain high energy throughout the day.,0.975
+XLive10,XLive,-1,Often feel blue.,I often feel blue.,0.938
+XLive2,XLive,1,Have great stamina.,I have great stamina.,0.947
+XLive3,XLive,1,Am usually active and full of energy.,I am usually active and full of energy.,0.973
+XLive4,XLive,1,Smile a lot.,I smile a lot.,0.917
+XLive5,XLive,1,Feel healthy and vibrant most of the time.,I feel healthy and vibrant most of the time.,0.976
+XLive6,XLive,1,Laugh a lot.,I laugh a lot.,0.917
+XLive7,XLive,1,Feel that I have a lot of inner strength.,I feel that I have a lot of inner strength.,0.976
+XLive8,XLive,1,Have a lot of fun.,I have a lot of fun.,0.944
+XLive9,XLive,-1,Tire out quickly.,I tire out quickly.,0.941
+XSocB1,XSocB,1,Am good at making impromptu speeches.,I am good at making impromptu speeches.,0.973
+XSocB10,XSocB,-1,Have little to say.,I have little to say.,0.947
+XSocB2,XSocB,1,Don't mind being the center of attention.,I don't mind being the center of attention.,0.976
+XSocB3,XSocB,1,Feel comfortable around people.,I feel comfortable around people.,0.968
+XSocB4,XSocB,1,Have leadership abilities.,I have leadership abilities.,0.962
+XSocB5,XSocB,1,Have a strong personality.,I have a strong personality.,0.962
+XSocB6,XSocB,-1,Would be afraid to give a speech in public.,I would be afraid to give a speech in public.,0.977
+XSocB7,XSocB,-1,Keep in the background.,I keep in the background.,0.957
+XSocB8,XSocB,-1,Find it difficult to approach others.,I find it difficult to approach others.,0.973
+XSocB9,XSocB,-1,Hate being the center of attention.,I hate being the center of attention.,0.971
+XSoci1,XSoci,1,Usually like to spend my free time with people.,I usually like to spend my free time with people.,0.979
+XSoci10,XSoci,-1,Keep others at a distance.,I keep others at a distance.,0.962
+XSoci2,XSoci,1,Talk to a lot of different people at parties.,I talk to a lot of different people at parties.,0.978
+XSoci3,XSoci,1,Love to chat.,I love to chat.,0.923
+XSoci4,XSoci,1,Make friends easily.,I make friends easily.,0.95
+XSoci5,XSoci,1,Enjoy being part of a group.,I enjoy being part of a group.,0.964
+XSoci6,XSoci,-1,Seem to derive less enjoyment from interacting with people than others do.,I seem to derive less enjoyment from interacting with people than others do.,0.986
+XSoci7,XSoci,-1,Rarely enjoy being with people.,I rarely enjoy being with people.,0.968
+XSoci8,XSoci,-1,Would not enjoy a job that involves a lot of social interaction.,I would not enjoy a job that involves a lot of social interaction.,0.984
+XSoci9,XSoci,-1,Am hard to get to know.,I am hard to get to know.,0.957

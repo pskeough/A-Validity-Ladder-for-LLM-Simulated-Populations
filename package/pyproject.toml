@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "validity-ladder"
+version = "0.1.1"
+description = "The Validity Ladder for LLM-simulated populations: gate, levels 1-4 and run_ladder"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Patrick S. Keough" }]
+dependencies = ["numpy", "scipy", "pandas"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering",
+    "Intended Audience :: Science/Research",
+]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.urls]
+Homepage = "https://github.com/pskeough/A-Validity-Ladder-for-LLM-Simulated-Populations"
+Repository = "https://github.com/pskeough/A-Validity-Ladder-for-LLM-Simulated-Populations"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

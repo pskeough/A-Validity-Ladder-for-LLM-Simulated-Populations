@@ -57,7 +57,7 @@ def r3cov(g, se_g, p, se_p, cov, df, a, bounds):
         below += z < -t
     lo, hi = above, len(bounds) - below
     lab = LABELS[lo] if lo == hi else (f"{LABELS[lo]} or {LABELS[hi]}" if hi == lo + 1
-                                       else "undetermined")
+                                       else "reversed to attenuated" if hi < 3 else "undetermined")
     A = p ** 2 - t ** 2 * se_p ** 2
     B = g * p - t ** 2 * cov
     C = g ** 2 - t ** 2 * se_g ** 2
@@ -109,7 +109,7 @@ def load():
 
 def short(v):
     m = {"reversed": "r", "missing": "m", "attenuated": "a", "kept": "k", "steepened": "s",
-         "undetermined": "u", "no population gap": "N", "reference too imprecise": "X"}
+         "undetermined": "u", "reversed to attenuated": "r-a", "no population gap": "N", "reference too imprecise": "X"}
     return "/".join(m[x] for x in v.split(" or "))
 
 
@@ -125,7 +125,7 @@ def main():
     for r in d.itertuples():
         o = r3cov(r.g, r.se_g, r.p, r.se_p, r.cov, r.df, ALPHA, BANDS["asym"])
         want = ap.loc[r.row].replace("flattened", "attenuated")
-        ok = o["r3_nopop_only"] == want
+        ok = o["r3_nopop_only"].replace("reversed to attenuated", "undetermined") == want
         fails += not ok
         if not ok:
             rc.append(dict(check="gate mismatch", item=r.row, got=o["r3_nopop_only"], want=want))

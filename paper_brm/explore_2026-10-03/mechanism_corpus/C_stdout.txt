@@ -1,0 +1,76 @@
+                 weighting quantity          model  within  between  between_share  within_ratio_to_nhanes  between_ratio_to_nhanes  total_ratio_to_nhanes  nhanes_within  nhanes_between  nhanes_between_share
+equal weight over 48 cells    total    DeepSeek-V3   1.302    1.337          0.508                   0.091                    1.653                  0.174         14.369           0.809                 0.053
+equal weight over 48 cells    total Gemini-3-Flash   1.524   10.343          0.870                   0.106                   12.790                  0.782         14.369           0.809                 0.053
+equal weight over 48 cells    total        GLM-4.7   2.994    9.859          0.763                   0.208                   12.192                  0.847         14.369           0.809                 0.053
+equal weight over 48 cells    total    GPT-4o-mini   2.938    1.504          0.325                   0.204                    1.860                  0.293         14.369           0.809                 0.053
+  NHANES population shares    total    DeepSeek-V3   1.424    1.595          0.531                   0.103                    1.736                  0.205         13.837           0.919                 0.062
+  NHANES population shares    total Gemini-3-Flash   1.158   10.053          0.896                   0.084                   10.942                  0.760         13.837           0.919                 0.062
+  NHANES population shares    total        GLM-4.7   2.939    9.943          0.767                   0.212                   10.823                  0.873         13.837           0.919                 0.062
+  NHANES population shares    total    GPT-4o-mini   3.090    1.544          0.322                   0.223                    1.681                  0.314         13.837           0.919                 0.062
+model     DeepSeek-V3  GLM-4.7  GPT-4o-mini  Gemini-3-Flash
+quantity                                                   
+item1           0.227    0.611        0.070           0.645
+item2           0.190    0.538        0.095           0.613
+item3           0.088    0.428        0.044           0.564
+item4           0.048    0.356        0.010           0.590
+item5           0.116    0.376        0.044           0.537
+item6           0.110    0.363        0.065           0.320
+item7           0.055    0.352        0.052           0.595
+item8           0.029    0.270        0.084           0.421
+source framing                  weighting quantity  within  between  between_observed  total  between_share
+NHANES         equal weight over 48 cells    total  14.369    0.809             0.856 15.177          0.053
+NHANES         equal weight over 48 cells    item1   0.504    0.011             0.013  0.514          0.021
+NHANES         equal weight over 48 cells    item2   0.446    0.016             0.017  0.461          0.034
+NHANES         equal weight over 48 cells    item3   0.790    0.023             0.026  0.813          0.028
+NHANES         equal weight over 48 cells    item4   0.744    0.030             0.032  0.774          0.038
+NHANES         equal weight over 48 cells    item5   0.524    0.019             0.021  0.543          0.035
+NHANES         equal weight over 48 cells    item6   0.360    0.008             0.010  0.369          0.023
+NHANES         equal weight over 48 cells    item7   0.401    0.007             0.008  0.408          0.017
+NHANES         equal weight over 48 cells    item8   0.243    0.005             0.006  0.248          0.020
+NHANES           NHANES population shares    total  13.837    0.919             0.942 14.756          0.062
+NHANES           NHANES population shares    item1   0.454    0.015             0.015  0.469          0.031
+NHANES           NHANES population shares    item2   0.411    0.020             0.020  0.430          0.045
+NHANES           NHANES population shares    item3   0.809    0.023             0.024  0.832          0.027
+NHANES           NHANES population shares    item4   0.762    0.030             0.032  0.792          0.038
+NHANES           NHANES population shares    item5   0.501    0.020             0.021  0.521          0.038
+NHANES           NHANES population shares    item6   0.339    0.010             0.010  0.349          0.029
+NHANES           NHANES population shares    item7   0.375    0.009             0.010  0.384          0.023
+NHANES           NHANES population shares    item8   0.222    0.005             0.006  0.227          0.024
+        source   framing                  weighting  total_within_var  sum_item_var  sum_2cov  share_total_var_from_covariance  mean_interitem_r  lambda1_over_lambda2  var_ratio_if_items_independent
+        NHANES           equal weight over 48 cells            14.369         4.012    10.356                            0.721             0.379                 4.354                           3.581
+   DeepSeek-V3  clinical equal weight over 48 cells             1.454         3.258    -1.804                           -1.240            -0.071                 1.240                           0.446
+   DeepSeek-V3 narrative equal weight over 48 cells             1.150         2.901    -1.751                           -1.523            -0.079                 1.206                           0.396
+Gemini-3-Flash  clinical equal weight over 48 cells             1.534         1.355     0.180                            0.117             0.024                 1.231                           1.132
+Gemini-3-Flash narrative equal weight over 48 cells             1.514         1.327     0.187                            0.123             0.032                 1.601                           1.141
+       GLM-4.7  clinical equal weight over 48 cells             3.428         2.065     1.363                            0.398             0.096                 1.219                           1.660
+       GLM-4.7 narrative equal weight over 48 cells             2.561         1.589     0.972                            0.380             0.090                 1.256                           1.612
+   GPT-4o-mini  clinical equal weight over 48 cells             2.928         3.860    -0.932                           -0.318            -0.025                 1.232                           0.759
+   GPT-4o-mini narrative equal weight over 48 cells             2.949         3.876    -0.927                           -0.314            -0.024                 1.153                           0.761
+        NHANES             NHANES population shares            13.837         3.872     9.965                            0.720             0.381                 4.228                           3.573
+   DeepSeek-V3  clinical   NHANES population shares             1.644         3.226    -1.582                           -0.962            -0.058                 1.188                           0.510
+   DeepSeek-V3 narrative   NHANES population shares             1.204         2.875    -1.671                           -1.388            -0.075                 1.236                           0.419
+Gemini-3-Flash  clinical   NHANES population shares             1.118         1.136    -0.019                           -0.017             0.008                 1.276                           0.984
+Gemini-3-Flash narrative   NHANES population shares             1.199         1.228    -0.029                           -0.025             0.007                 1.841                           0.976
+       GLM-4.7  clinical   NHANES population shares             3.499         2.075     1.424                            0.407             0.096                 1.472                           1.686
+       GLM-4.7 narrative   NHANES population shares             2.378         1.487     0.892                            0.375             0.084                 1.325                           1.600
+   GPT-4o-mini  clinical   NHANES population shares             3.049         3.809    -0.760                           -0.249            -0.017                 1.275                           0.800
+   GPT-4o-mini narrative   NHANES population shares             3.131         3.834    -0.703                           -0.225            -0.015                 1.114                           0.817
+        source   framing     n  distinct  top1_share  top10_share  top50_share  collision_unweighted  collision_weighted  effective_n_vectors  total_simpson_effective_n
+        NHANES           36274      5304       0.330        0.536        0.668                 0.118               0.117                8.525                      6.090
+   DeepSeek-V3  clinical  3599       398       0.144        0.446        0.726                 0.034                 NaN               29.113                      4.000
+   DeepSeek-V3 narrative  3600       370       0.130        0.462        0.751                 0.034                 NaN               29.821                      4.100
+Gemini-3-Flash  clinical  3600       373       0.134        0.471        0.754                 0.036                 NaN               28.138                     10.676
+Gemini-3-Flash narrative  3600       363       0.126        0.475        0.755                 0.037                 NaN               27.073                     11.042
+       GLM-4.7  clinical  3600       751       0.042        0.259        0.544                 0.010                 NaN               99.920                     14.791
+       GLM-4.7 narrative  3600       667       0.067        0.283        0.594                 0.014                 NaN               71.329                     14.791
+   GPT-4o-mini  clinical  3600      1061       0.030        0.159        0.349                 0.005                 NaN              216.583                      6.554
+   GPT-4o-mini narrative  3600      1025       0.036        0.179        0.364                 0.006                 NaN              180.185                      5.691
+         model   framing  reuse_ratio_script_weights  pattern_part_ratio  total_mix_part_ratio  overall_ratio  n_totals  model_total_sd  nhanes_total_sd
+   DeepSeek-V3  clinical                      34.826              33.576                 0.333         11.186        14           2.036            4.134
+   DeepSeek-V3 narrative                      30.484              31.522                 0.347         10.925        14           1.780            4.134
+Gemini-3-Flash  clinical                      39.136              35.593                 0.112          3.982        18           4.556            4.134
+Gemini-3-Flash narrative                      21.620              30.989                 0.057          1.771        19           4.773            4.134
+       GLM-4.7  clinical                       4.938               5.380                 0.016          0.084        21           4.466            4.134
+       GLM-4.7 narrative                       4.620               4.393                 0.027          0.118        21           4.852            4.134
+   GPT-4o-mini  clinical                       5.298               7.015                 0.071          0.496        15           2.220            4.134
+   GPT-4o-mini narrative                       6.032               7.718                 0.235          1.810        14           1.971            4.134

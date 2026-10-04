@@ -1,0 +1,15 @@
+release,quantity,value
+huang2025,llms,8.0
+huang2025,max_questions_per_contrast,385.0
+huang2025,profiles_per_question,200.0
+twin2k_mega,specifications,23.0
+twin2k_mega,studies,18.0
+cummins2025,configurations,252.0
+cummins2025,max_people_per_contrast,85.0
+malmberg2026,llms,3.0
+subpop2025,questions_all,97.0
+subpop2025,questions_conservative,70.0
+subpop2025,ratio_min_subpop_all,0.2965154104726228
+subpop2025,ratio_max_subpop_all_nonparty,0.5559949700606425
+subpop2025,ratio_party_subpop_all,0.8366917182928699
+subpop2025,base_all_negative_or_below_0.3,8.0

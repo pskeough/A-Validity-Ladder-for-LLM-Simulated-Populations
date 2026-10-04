@@ -1,0 +1,9 @@
+scale,model,n,verdict_tau1p5,misfit_ratio,misfit_ratio_ci90_lo,misfit_ratio_ci90_hi,overfit_ratio,overfit_ratio_ci90_lo,overfit_ratio_ci90_hi,misfit_verdict,overfit_verdict,verdict,passed,tau
+Conscientiousness,claude-haiku-4.5,10000,fail: excess overfit and misfit deficit,0.0,0.0,0.0,16.506,16.066252708333334,16.608027113636364,misfit deficit,excess overfit,fail: excess overfit and misfit deficit,False,3.0
+Conscientiousness,claude-sonnet-4.6,10000,fail: compressed (both tails in deficit),0.0,0.0,0.0,0.005999999999999999,0.0,0.011999999999999999,misfit deficit,overfit deficit,fail: compressed (both tails in deficit),False,3.0
+Conscientiousness,deepseek-v3.2,10000,fail: misfit deficit,0.017981818181818182,0.015300000000000001,0.15674999999999994,1.2683965151515153,1.1852781873796974,1.7470099615384618,misfit deficit,equivalent,fail: misfit deficit,False,3.0
+Conscientiousness,gemini-3-flash-preview,10000,fail: misfit deficit,0.0,0.0,0.0,0.3,0.26599999999999996,8.790026086956521,misfit deficit,undetermined,fail: misfit deficit,False,3.0
+Conscientiousness,gemini-3.1-flash-lite-preview,10000,fail: excess overfit and misfit deficit,0.0,0.0,0.0,16.201999999999998,16.04265054347826,17.18010436281859,misfit deficit,excess overfit,fail: excess overfit and misfit deficit,False,3.0
+Conscientiousness,gpt-5.4,10000,fail: excess overfit and misfit deficit,0.0001,0.0,0.00030000000000000003,3.0101,1.79117125,3.1220999999999997,misfit deficit,equivalent or excess overfit,fail: misfit deficit,False,3.0
+Conscientiousness,gpt-5.4-mini,10000,fail: excess overfit and misfit deficit,0.004,0.0,0.01,18.855999999999998,14.338745807881779,18.915999999999997,misfit deficit,excess overfit,fail: excess overfit and misfit deficit,False,3.0
+Conscientiousness,gpt-5.4-nano,10000,fail: excess overfit and misfit deficit,0.0,0.0,0.0,8.37288,7.2407196057347685,8.549636666666668,misfit deficit,excess overfit,fail: excess overfit and misfit deficit,False,3.0

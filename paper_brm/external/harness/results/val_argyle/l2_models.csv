@@ -1,0 +1,4 @@
+family,contrasts,verdict,reading,certifiable,kept,not kept,unresolved,not read,stopped_no_population_gap,stopped_reference_imprecise
+t0.7_main,61,fail,fail,7,2,12,1,46,23,23
+t0.001,61,fail,fail,7,3,13,2,43,24,19
+t1.0,61,fail,fail,7,0,13,3,45,23,22

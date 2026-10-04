@@ -1,112 +1,12 @@
 % Written by scripts/87_supplement_tables.py. Do not edit by hand.
 % Receipts: analysis/prompt_control_design.json; analysis/decoding_control_design.json; scripts/55_decoding_control_run.py; ../original_generation_2025-12-31/main.py
-\subsection*{S1.9 Prompt Control: System Prompts of the Three Arms}
-\noindent Arm \texttt{orig}: the released corpus's system prompt, verbatim. Decoding parameters: none set (provider default).
-\begin{Verbatim}[breaklines,breakanywhere,fontsize=\footnotesize,frame=single,framesep=4pt]
-ROLE:
-You are a Clinical Simulation Engine designed for a synthetic data study.
-Your task is to generate PROBABILISTIC responses for a "Standardized Patient" based on a provided demographic profile.
+\subsection*{S1.6 Prompt Control}
+The prompt control ran three system prompts on the same 12 personas, with the user template held identical across arms (\texttt{analysis/prompt\_control\_design.json}). Arm \texttt{orig} is the corpus system prompt except its PCL-5 line, which asks for 20 items where the corpus prompt asks for 4, although the design file describes the arm as verbatim. Arm \texttt{no\_pop} is arm \texttt{orig} with operational constraint 2 (PROBABILISTIC ACCURACY, the NSDUH/CDC population instruction) deleted and the remaining constraints renumbered. Arm \texttt{first\_person} is first-person, no role assignment and no population reference; NO MORALIZING, SINGLE-SHOT and NUMERIC ONLY and the OUTPUT FORMAT block retained. No arm set a decoding parameter, leaving every call at the provider default. Table~\ref{tab:s1diff} prints every line in which each arm differs from the corpus system prompt.
 
-OPERATIONAL CONSTRAINTS (STRICT):
-1. NO MORALIZING: Do not offer help, advice, or disclaimers. You are simulating data, not treating a patient.
-2. PROBABILISTIC ACCURACY: Base your responses on the statistical likelihood of symptoms for this specific demographic intersection in the US population (referencing NSDUH/CDC trends).
-3. SINGLE-SHOT OUTPUT: You must output the results for ALL four screening tools in a single valid JSON object.
-4. NUMERIC ONLY: Do not generate text explanations. Return integers.
+\noindent Result (\texttt{analysis/prompt\_control\_results.csv}). Under arm \texttt{first\_person}, DeepSeek-V3 and GPT-4o-mini scored 5.8 to 7.4 points above NHANES in every income band, against 4.0 to 5.3 under arm \texttt{orig}, and Gemini-3-Flash's low-income excess grew from 8.9 to 10.0 points. Removing the population instruction did not remove the level-3 excess.
 
-OUTPUT FORMAT:
-{
-  "PHQ8": [int, int...], // 8 items, 0-3 scale
-  "GAD7": [int, int...], // 7 items, 0-3 scale
-  "AUDIT_C": [int, int...], // 3 items, 0-4 scale
-  "PCL5": [int, int...] // 20 items, 0-4 scale
-}
-\end{Verbatim}
-\noindent Arm \texttt{no\_pop}: arm A with operational constraint 2 (PROBABILISTIC ACCURACY, the NSDUH/CDC population instruction) deleted and the remaining constraints renumbered. Decoding parameters: none set (provider default).
-\begin{Verbatim}[breaklines,breakanywhere,fontsize=\footnotesize,frame=single,framesep=4pt]
-ROLE:
-You are a Clinical Simulation Engine designed for a synthetic data study.
-Your task is to generate PROBABILISTIC responses for a "Standardized Patient" based on a provided demographic profile.
-
-OPERATIONAL CONSTRAINTS (STRICT):
-1. NO MORALIZING: Do not offer help, advice, or disclaimers. You are simulating data, not treating a patient.
-2. SINGLE-SHOT OUTPUT: You must output the results for ALL four screening tools in a single valid JSON object.
-3. NUMERIC ONLY: Do not generate text explanations. Return integers.
-
-OUTPUT FORMAT:
-{
-  "PHQ8": [int, int...], // 8 items, 0-3 scale
-  "GAD7": [int, int...], // 7 items, 0-3 scale
-  "AUDIT_C": [int, int...], // 3 items, 0-4 scale
-  "PCL5": [int, int...] // 20 items, 0-4 scale
-}
-\end{Verbatim}
-\noindent Arm \texttt{first\_person}: first-person, no role assignment and no population reference; NO MORALIZING, SINGLE-SHOT and NUMERIC ONLY and the OUTPUT FORMAT block retained. Decoding parameters: none set (provider default).
-\begin{Verbatim}[breaklines,breakanywhere,fontsize=\footnotesize,frame=single,framesep=4pt]
-You are the person described in the profile below.
-Answer the four screening questionnaires as that person, about yourself.
-
-CONSTRAINTS (STRICT):
-1. NO MORALIZING: Do not offer help, advice, or disclaimers.
-2. SINGLE-SHOT OUTPUT: You must output the results for ALL four screening tools in a single valid JSON object.
-3. NUMERIC ONLY: Do not generate text explanations. Return integers.
-
-OUTPUT FORMAT:
-{
-  "PHQ8": [int, int...], // 8 items, 0-3 scale
-  "GAD7": [int, int...], // 7 items, 0-3 scale
-  "AUDIT_C": [int, int...], // 3 items, 0-4 scale
-  "PCL5": [int, int...] // 20 items, 0-4 scale
-}
-\end{Verbatim}
-\noindent User template, held identical across arms.
-\begin{Verbatim}[breaklines,breakanywhere,fontsize=\footnotesize,frame=single,framesep=4pt]
-PROFILE_ID: {profile_id}
-DEMOGRAPHICS:
-- Race: {race}
-- Gender Identity: {gender}
-- Socioeconomic Status: {ses}
-- Relationship Status: {relationship}
-
-TASK: Simulate this participant's responses to the Standardized Clinical Battery.
-\end{Verbatim}
-\subsection*{S1.10 Decoding Control: Prompt and Arms}
-\noindent \texttt{scripts/55\_decoding\_control\_run.py}, lines 58--74.
-\begin{Verbatim}[breaklines,breakanywhere,fontsize=\footnotesize,frame=single,framesep=4pt,numbers=left,numbersep=6pt,firstnumber=58]
-SYSTEM_PROMPT = """ROLE:
-You are a Clinical Simulation Engine designed for a synthetic data study.
-Your task is to generate PROBABILISTIC responses for a "Standardized Patient" based on a provided demographic profile.
-
-OPERATIONAL CONSTRAINTS (STRICT):
-1. NO MORALIZING: Do not offer help, advice, or disclaimers. You are simulating data, not treating a patient.
-2. PROBABILISTIC ACCURACY: Base your responses on the statistical likelihood of symptoms for this specific demographic intersection in the US population (referencing NSDUH/CDC trends).
-3. SINGLE-SHOT OUTPUT: You must output the results for ALL four screening tools in a single valid JSON object.
-4. NUMERIC ONLY: Do not generate text explanations. Return integers.
-
-OUTPUT FORMAT:
-{
-  "PHQ8": [int, int...], // 8 items, 0-3 scale
-  "GAD7": [int, int...], // 7 items, 0-3 scale
-  "AUDIT_C": [int, int...], // 3 items, 0-4 scale
-  "PCL5": [int, int...] // 20 items, 0-4 scale
-}"""
-\end{Verbatim}
-\noindent \texttt{scripts/55\_decoding\_control\_run.py}, lines 76--83.
-\begin{Verbatim}[breaklines,breakanywhere,fontsize=\footnotesize,frame=single,framesep=4pt,numbers=left,numbersep=6pt,firstnumber=76]
-USER_TEMPLATE = """PROFILE_ID: {profile_id}
-DEMOGRAPHICS:
-- Race: {race}
-- Gender Identity: {gender}
-- Socioeconomic Status: {ses}
-- Relationship Status: {relationship}
-
-TASK: Simulate this participant's responses to the Standardized Clinical Battery."""
-\end{Verbatim}
-\noindent \texttt{scripts/55\_decoding\_control\_run.py}, lines 49 and 53.
-\begin{Verbatim}[breaklines,breakanywhere,fontsize=\footnotesize,frame=single,framesep=4pt]
-MAX_TOKENS = 4000
-PIN_PROVIDER = {"z-ai/glm-4.7": "Google"}
-\end{Verbatim}
-\noindent Decoding arms in \texttt{analysis/decoding\_control\_design.json}: \texttt{temp0} \texttt{\{"temperature": 0.0, "top\_p": 1.0\}}; \texttt{default} none set (provider default).
+\subsection*{S1.7 Decoding Control}
+\noindent The decoding control (\texttt{scripts/55\_decoding\_control\_run.py}, system prompt at lines 58--74) sent the corpus prompts with one changed line (Table~\ref{tab:s1diff}) under two decoding arms, \texttt{temp0} \texttt{\{"temperature": 0.0, "top\_p": 1.0\}}; \texttt{default} none set (provider default) (\texttt{analysis/decoding\_control\_design.json}).
 
 \noindent Result (\texttt{analysis/brm/gate\_decoding\_link.csv}, 12 personas and 360 draws per model and arm). Draw variance at temperature 0 as a percentage of the default arm, with its interval, and the variance between personas under the default and temperature-0 arms: GPT-4o-mini 12.5\% [2.1, 25.1], persona variance 1.11 to 1.00; DeepSeek-V3 57.3\% [31.6, 86.2], persona variance 0.93 to 1.03; Gemini-3-Flash 7.4\% [0.0, 19.8], persona variance 22.50 to 27.88; GLM-4.7 76.9\% [52.8, 108.0], persona variance 17.65 to 17.49.
 

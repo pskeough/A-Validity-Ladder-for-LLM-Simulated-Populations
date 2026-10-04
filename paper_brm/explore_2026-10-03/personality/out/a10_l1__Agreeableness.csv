@@ -1,0 +1,9 @@
+scale,model,n,verdict_tau1p5,misfit_ratio,misfit_ratio_ci90_lo,misfit_ratio_ci90_hi,overfit_ratio,overfit_ratio_ci90_lo,overfit_ratio_ci90_hi,misfit_verdict,overfit_verdict,verdict,passed,tau
+Agreeableness,claude-haiku-4.5,10000,fail: excess overfit and misfit deficit,0.0,0.0,0.0,18.95135806451613,18.89242592532467,19.115386024955434,misfit deficit,excess overfit,fail: excess overfit and misfit deficit,False,2.0
+Agreeableness,claude-sonnet-4.6,10000,fail: excess overfit and misfit deficit,0.0,0.0,0.0,19.70926,18.58248487500001,19.99,misfit deficit,excess overfit,fail: excess overfit and misfit deficit,False,2.0
+Agreeableness,deepseek-v3.2,10000,fail: excess overfit and misfit deficit,0.1251,0.10749499999999998,0.142505,5.576025384484612,4.924777909007739,6.354348177235917,misfit deficit,excess overfit,fail: excess overfit and misfit deficit,False,2.0
+Agreeableness,gemini-3-flash-preview,10000,fail: compressed (both tails in deficit),0.0,0.0,0.0,0.28607999999999995,0.24799999999999997,0.5834640842490842,misfit deficit,overfit deficit or equivalent,fail: misfit deficit,False,2.0
+Agreeableness,gemini-3.1-flash-lite-preview,10000,fail: excess overfit and misfit deficit,0.0,0.0,0.0,16.303871593291404,16.00444009835315,16.497463331325864,misfit deficit,excess overfit,fail: excess overfit and misfit deficit,False,2.0
+Agreeableness,gpt-5.4,10000,fail: misfit deficit,0.0032,0.0022999999999999995,0.0042,1.1712888352044537,0.9669821462452727,1.5140673818957355,misfit deficit,equivalent,fail: misfit deficit,False,2.0
+Agreeableness,gpt-5.4-mini,10000,fail: excess overfit and misfit deficit,0.004,0.0,0.01,13.043999999999999,12.886,13.203999999999999,misfit deficit,excess overfit,fail: excess overfit and misfit deficit,False,2.0
+Agreeableness,gpt-5.4-nano,10000,fail: excess overfit and misfit deficit,0.0,0.0,0.0,13.587460000000005,12.739093726723533,14.718979288443053,misfit deficit,excess overfit,fail: excess overfit and misfit deficit,False,2.0

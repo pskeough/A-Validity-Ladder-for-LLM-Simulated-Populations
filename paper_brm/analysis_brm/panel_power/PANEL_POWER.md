@@ -24,10 +24,10 @@ Level 2, model verdict, audit-precision reference.
 
 | Grid | Faithful fails, pairs SE | Faithful fails, draw-only SE | Doubled gap fails, pairs SE | Faithful passes |
 |---|---|---|---|---|
-| G48 | 0.0% | 3.8% | 97.9% | 0% |
-| G144_age | 0.4% | 4.2% | 100% | 0% |
-| G144_edu | 1.7% | 8.8% | 97.5% | 0% |
-| G432 | 3.3% | 15.4% | 100% | 0% |
+| G48 | 0.4% | 5.0% | 97.9% | 0% |
+| G144_age | 0.4% | 5.4% | 100% | 0% |
+| G144_edu | 2.1% | 11.7% | 97.5% | 0% |
+| G432 | 4.6% | 20.0% | 100% | 0% |
 
 The draw-only SE leaves out between-person variation within a cell, so its false-fail rate grows
 with grid fineness; the pairs SE is the primary SE.

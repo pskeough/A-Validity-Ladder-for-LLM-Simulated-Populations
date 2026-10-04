@@ -1,0 +1,69 @@
+folder,arm,rule,fail,pass,unresolved
+argyle_ideal,faithful control,frozen,0,7,193
+argyle_ideal,faithful control,no multiplicity,18,0,182
+argyle_ideal,faithful control,wide band 0.5-1.5,0,0,200
+argyle_ideal,faithful control,"wide band, no multiplicity",3,0,197
+cummins2025,models,frozen,0,0,252
+cummins2025,models,no multiplicity,137,0,115
+cummins2025,models,wide band 0.5-1.5,0,0,252
+cummins2025,models,"wide band, no multiplicity",104,0,148
+cummins2025_splithalf,faithful control,frozen,10,0,190
+cummins2025_splithalf,faithful control,no multiplicity,51,0,149
+cummins2025_splithalf,faithful control,wide band 0.5-1.5,6,0,194
+cummins2025_splithalf,faithful control,"wide band, no multiplicity",45,0,155
+huang2025,models,frozen,7,0,1
+huang2025,models,no multiplicity,8,0,0
+huang2025,models,wide band 0.5-1.5,2,0,6
+huang2025,models,"wide band, no multiplicity",3,0,5
+huang2025_ideal,faithful control,frozen,0,100,0
+huang2025_ideal,faithful control,no multiplicity,0,100,0
+huang2025_ideal,faithful control,wide band 0.5-1.5,0,100,0
+huang2025_ideal,faithful control,"wide band, no multiplicity",0,100,0
+huang2025_ideal_k,faithful control,frozen,0,0,100
+huang2025_ideal_k,faithful control,no multiplicity,0,0,100
+huang2025_ideal_k,faithful control,wide band 0.5-1.5,0,6,94
+huang2025_ideal_k,faithful control,"wide band, no multiplicity",0,73,27
+malmberg2026,faithful control,frozen,0,0,3
+malmberg2026,faithful control,no multiplicity,2,0,1
+malmberg2026,faithful control,wide band 0.5-1.5,0,0,3
+malmberg2026,faithful control,"wide band, no multiplicity",2,0,1
+malmberg2026,models,frozen,2,0,1
+malmberg2026,models,no multiplicity,3,0,0
+malmberg2026,models,wide band 0.5-1.5,1,0,2
+malmberg2026,models,"wide band, no multiplicity",3,0,0
+opinionqa_ideal,faithful control,frozen,0,92,108
+opinionqa_ideal,faithful control,no multiplicity,0,127,73
+opinionqa_ideal,faithful control,wide band 0.5-1.5,0,200,0
+opinionqa_ideal,faithful control,"wide band, no multiplicity",0,200,0
+subpop2025,models,frozen,4,0,0
+subpop2025,models,no multiplicity,4,0,0
+subpop2025,models,wide band 0.5-1.5,4,0,0
+subpop2025,models,"wide band, no multiplicity",4,0,0
+twin2k_mega_bystudy,faithful control,frozen,0,0,18
+twin2k_mega_bystudy,faithful control,no multiplicity,10,0,8
+twin2k_mega_bystudy,faithful control,wide band 0.5-1.5,0,1,17
+twin2k_mega_bystudy,faithful control,"wide band, no multiplicity",8,0,10
+twin2k_mega_bystudy,models,frozen,285,0,128
+twin2k_mega_bystudy,models,no multiplicity,393,0,20
+twin2k_mega_bystudy,models,wide band 0.5-1.5,242,15,156
+twin2k_mega_bystudy,models,"wide band, no multiplicity",375,0,38
+val_argyle,models,frozen,3,0,0
+val_argyle,models,no multiplicity,3,0,0
+val_argyle,models,wide band 0.5-1.5,3,0,0
+val_argyle,models,"wide band, no multiplicity",3,0,0
+val_bisbee,models,frozen,3,0,0
+val_bisbee,models,no multiplicity,3,0,0
+val_bisbee,models,wide band 0.5-1.5,3,0,0
+val_bisbee,models,"wide band, no multiplicity",3,0,0
+val_opinionqa,models,frozen,13,0,13
+val_opinionqa,models,no multiplicity,20,0,6
+val_opinionqa,models,wide band 0.5-1.5,5,0,21
+val_opinionqa,models,"wide band, no multiplicity",8,0,18
+val_twin2k,faithful control,frozen,0,1,0
+val_twin2k,faithful control,no multiplicity,1,0,0
+val_twin2k,faithful control,wide band 0.5-1.5,0,0,1
+val_twin2k,faithful control,"wide band, no multiplicity",1,0,0
+val_twin2k,models,frozen,13,0,0
+val_twin2k,models,no multiplicity,13,0,0
+val_twin2k,models,wide band 0.5-1.5,13,0,0
+val_twin2k,models,"wide band, no multiplicity",13,0,0

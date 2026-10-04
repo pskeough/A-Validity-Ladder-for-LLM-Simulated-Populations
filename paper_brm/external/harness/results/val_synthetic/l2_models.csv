@@ -1,0 +1,5 @@
+family,contrasts,verdict,reading,certifiable,kept,not kept,unresolved,not read,stopped_no_population_gap,stopped_reference_imprecise
+faithful | plain,2,unresolved,unresolved,2,0,0,2,0,0,0
+faithful | story,2,fail,fail,2,0,1,1,0,0,0
+flat | plain,2,fail,fail,2,0,2,0,0,0,0
+flat | story,2,fail,fail,2,0,2,0,0,0,0

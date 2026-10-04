@@ -1,0 +1,80 @@
+% Supplement S6, first part. Moved verbatim from the body (sections/06_external.tex) in the
+% condense pass of 4 Oct 2026. Receipt tags are kept as comments for provenance.
+
+Table~\ref{tab:s6coverage} gives the rungs each of these four releases supports, and the subsections below give each release rung by rung.
+
+\begin{table}[!ht]
+\centering
+\caption{Rungs Run and Verdicts for Four External Releases}
+\label{tab:s6coverage}
+\small
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}llllll@{}}
+\toprule
+Dataset & Gate & Level 1 & Level 2 & Level 3 & Level 4 \\
+\midrule
+Worked example & Pass & Fail & Fail, 0 of 28 kept & Fail & Fail \\ % R: ../../paper_brm/manuscript/figures/fig3_l2_dots_data.csv
+Bisbee et al. & Pass, 11 of 11 & Not run (a) & Fail, 3 of 77 kept & 7 of 11 pass & Not run (a) \\ % R: ../../paper_brm/external/results/bisbee/summary_rr1.csv; ../../paper_brm/external/results/l2_threeway_summary.csv
+Argyle et al. & Not run (b) & Not run (b) & Fail, 2 of 61 kept & Illustration (d) & Not run (a) \\ % R: ../../paper_brm/external/results/l2_threeway_summary.csv
+OpinionQA & Not run (c) & Not run (c) & Fail, 1 of 154 kept & Illustration (d) & Not run (c) \\ % R: ../../paper_brm/external/results/l2_threeway_summary.csv
+Twin-2K-500 & Not run (b) & Not run (a) & Fail, 0 of 511 kept & 12 of 73 pass & Not run (a) \\ % R: ../../paper_brm/external/results/twin2k/summary.csv; ../../paper_brm/external/results/l2_threeway_summary.csv
+Twin-2K-500 retest & Not run (b) & Not run (a) & Pass, 8 of 511 kept & 71 of 73 pass & Not run (a) \\ % R: ../../paper_brm/external/results/twin2k/summary.csv; ../../paper_brm/external/results/l2_threeway_summary.csv
+\bottomrule
+\end{tabular}
+\vspace{4pt}
+\begin{tabnote}
+\textit{Note.} Bisbee et al.\ under the full prompt, with gate and level-3 counts over the 11 thermometers; Argyle et al.\ Study 3, main run; Twin-2K-500 for the authors' default twins (GPT-4.1-mini, text persona) and for the same respondents' answers in waves 1 to 3, with level-3 counts over 73 outcomes at half a reference standard deviation. A rung is not run when the release lacks what it needs: (a) single-item outcomes, with no multi-item scale; (b) one answer per respondent, with no repeated draws or answer vectors; (c) group answer distributions only, with no individual answers. (d) Level 3 needs a use tolerance the original authors did not state, so it appears only as an illustration in S6.5.
+\end{tabnote}
+\end{table}
+
+\subsection*{S6.1 Bisbee et al.}
+
+\citet{bisbee2024synthetic} gave ChatGPT (gpt-3.5-turbo, June 2023) the profiles of 7,530 respondents to the 2016 and 2020 American National Election Studies and asked, about 30 times under each of three prompts, for a feeling thermometer toward each of 11 groups. % R: ../../paper_brm/external/results/bisbee/summary_rr1.csv; ../../paper_brm/external/results/bisbee/gate_rr1.csv
+Because every persona has a human twin, the same respondents' own thermometers serve as the reference, and the release supports the gate, level 2 and level 3.
+Our cleaning of the released file reproduces the authors' analysis data and their published regression to six decimals. % R: ../../paper_brm/external/results/bisbee/receipts_rr1.csv
+The gate passes for every thermometer, with at most 11 draws needed under the recommended rule, and level 2 fails under every prompt. % R: ../../paper_brm/external/results/bisbee/summary_rr1.csv
+Under the full prompt, 3 of the 77 contrasts are kept, among them the partisan gaps in feeling toward the Democratic and Republican parties (ratios 1.12 and 1.05), both large and precisely measured in the survey. % R: ../../paper_brm/external/results/l2_threeway_summary.csv; ../../paper_brm/external/results/bisbee/level2_contrasts_rr1.csv
+The Republican--Democrat gap is steepened toward five other groups, and several gaps by sex and age are reversed, missing or attenuated. % R: ../../paper_brm/external/results/bisbee/summary_rr1.csv; ../../paper_brm/external/results/bisbee/level2_contrasts_rr1.csv
+Level 3 passes at half a standard deviation for 7 of the 11 thermometers under the full prompt. % R: ../../paper_brm/external/results/bisbee/summary_rr1.csv
+For a researcher, these verdicts support using the sample for the partisan gaps toward the two parties, the Black--White gap in feeling toward Black Americans and the average level of most thermometers, and they rule out using it for partisan feeling toward other groups or for differences by sex and age.
+\citet{bisbee2024synthetic} already read these data with caution, and the ladder places that caution on the specific uses that fail.
+
+\subsection*{S6.2 Argyle et al., Study 3}
+
+In their Study 3, \citet{argyle2023outofone} gave GPT-3 each of 4,270 American National Election Studies respondents' answers to 11 of 12 interview questions and asked it to answer the twelfth. % R: ../../paper_brm/external/RESULTS.md
+The study tested pattern correspondence, the criterion of their algorithmic fidelity under which simulated answers reproduce the relationships among attitudes, demographics and behavior that people show.
+Holding one answer per respondent and outcome, the release cannot support the gate or level 1, and level 2 compares groups of the same respondents.
+Of 61 contrasts in the main run, 2 are kept, the Republican--Democrat gaps in ideology and in Trump's two-party vote share (both 0.92). % R: ../../paper_brm/external/results/l2_threeway_summary.csv; l2_external_r3.csv
+Twelve are not kept, among them the Black--White gap in Trump's vote share, which GPT-3 reproduces at about half its size (0.53). % R: ../../paper_brm/external/results/l2_threeway_summary.csv; l2_external_r3.csv
+Most of the remaining contrasts are not read, because the survey's subgroups are too small to measure their gaps. % R: ../../paper_brm/external/results/l2_threeway_summary.csv
+The verdicts support the partisan gaps, where the original claim is strongest, and leave the racial and other demographic gaps unsupported, narrowing the claim of algorithmic fidelity to the partisan comparisons.
+Lacking a use tolerance from the original authors, level 3 for this release appears only as an illustration in S6.5.
+
+\subsection*{S6.3 OpinionQA}
+
+\citet{meister2025distributional} steered five models toward demographic groups on 100 contested questions from the Pew American Trends Panel and released the models' answer distributions beside the Pew distributions for the same groups \citep{santurkar2023whose}.
+The human side is each group's distribution of answers to a question, built from unweighted counts, with no individual respondents.
+Without repeated draws of a persona or individual answer vectors, the gate, level 1 and level 4 cannot run.
+With the model steered on one attribute, such as being a Democrat, while the Pew groups also differ in age, income and every other attribute, the reference gives a crude gap in place of the conditional gap the steering asks about.
+Averaging each contrast over questions with differing gaps also leaves its interval wide.
+
+Of the 154 contrasts across models, elicitation methods and steering methods, 1 is kept, 33 are not kept, 115 are unresolved and 5 are not read. % R: ../../paper_brm/external/results/l2_threeway_summary.csv
+A comparison of point estimates would credit far more fidelity than the data establish, with the point ratio inside the kept region for 37 of the 149 contrasts read. % R: ../../paper_brm/external/results/l2_threeway_summary.csv; ../../paper_brm/external/results/l2_threeway_rows.csv
+The ladder keeps 1 of those 37 and reports the other 36 as unresolved, and a researcher using these releases can claim little about group gaps in either direction. % R: ../../paper_brm/external/results/l2_threeway_rows.csv
+
+\subsection*{S6.4 Twin-2K-500}
+
+The Twin-2K-500 release of \citet{toubia2025twin2k} allows the ladder to be run on a simulator known to be faithful beside the LLMs built to imitate it.
+In that study 2,058 US respondents answered four survey waves, and digital twins built from each person's waves 1 to 3 predicted the person's wave-4 answers under 13 specifications, including GPT-4.1-mini with a text persona as the default, GPT-4.1, Gemini-2.5-Flash, a fine-tuned GPT-4.1-mini and a demographics-only prompt. % R: ../../paper_brm/external/results/twin2k/summary.csv
+The same respondents' own answers to the same questions in waves 1 to 3 give the faithful simulator, scored against wave 4 as the twins are.
+With one answer per twin and outcome and no multi-item scale in wave 4, the gate, level 1 and level 4 do not run. % R: ../../paper_brm/external/results/twin2k/rungs.csv
+Level 2 reads 511 contrasts per specification, the 7 contrasts used for \citet{bisbee2024synthetic} on each of 73 outcomes, with a Bonferroni correction over 511. % R: ../../paper_brm/external/results/twin2k/summary.csv
+Of the 511 human gaps, 87 can be told from zero and 8 are measured closely enough for a simulated gap to be read kept, all of them the Republican--Democrat gap on 8 of the 10 items asking for the respondent's own policy opinion. % R: ../../paper_brm/external/results/twin2k/level2_certifiable.csv; ../../paper_brm/external/results/twin2k/summary.csv
+The respondents' earlier answers keep all 8 (ratios 0.93 to 1.04) with no gap not kept, and they pass level 2. % R: ../../paper_brm/external/results/twin2k/summary.csv; ../../paper_brm/external/results/l2_threeway_summary.csv
+Every one of the 13 twin specifications fails level 2, and the default twins, which match 71.7\% of individual answers, steepen all 8 partisan gaps to 1.45 to 2.30 times the human gap. % R: ../../paper_brm/external/results/twin2k/summary.csv
+The fine-tuned twins shrink or reverse the same gaps. % R: ../../paper_brm/external/results/twin2k/level2_contrasts.csv
+At level 3 the earlier answers pass 71 of 73 outcomes at half a reference standard deviation, against 12 for the default twins. % R: ../../paper_brm/external/results/twin2k/summary.csv
+We read the comparison as evidence that a twin's accuracy on individual answers does not carry over to the gaps between groups.
+Since the reference certifies only the partisan gaps, gaps by sex, race, age, education and income go untested.
+The respondents' personality answers from this dataset were used to test the code before the pass rules were fixed, and the wave-4 outcomes and the twins' answers were analyzed only after the rules were fixed.

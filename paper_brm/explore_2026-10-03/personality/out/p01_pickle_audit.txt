@@ -1,0 +1,9 @@
+== bbc_silicon_samples_df.pickle: 150216 bytes
+  GLOBAL/INST: none
+  STACK_GLOBAL (module.name): _new_Index.Index, ndarray.dtype, numpy.core.multiarray._reconstruct, numpy.ndarray, pandas._libs.internals._unpickle_block, pandas.core.frame.DataFrame, pandas.core.indexes.base._new_Index, pandas.core.indexes.range.RangeIndex, pandas.core.internals.managers.BlockManager
+== bbc_summary_scores_df.pickle: 151565 bytes
+  GLOBAL/INST: none
+  STACK_GLOBAL (module.name): _new_Index.Index, builtins.slice, ndarray.dtype, numpy.core.multiarray._reconstruct, numpy.ndarray, pandas._libs.internals._unpickle_block, pandas.core.frame.DataFrame, pandas.core.indexes.base._new_Index, pandas.core.internals.managers.BlockManager
+== bbc_meta.pickle: 53562 bytes
+  GLOBAL/INST: none
+  STACK_GLOBAL (module.name): datetime.datetime, pyreadstat._readstat_parser.metadata_container

@@ -30,7 +30,8 @@ def collapse(label, lo=None, hi=None):
     """Map a printed or three-way label to kept / not kept / unresolved / not read."""
     if label.startswith("kept"):
         return "kept"
-    if label.startswith("not kept") or label in ("missing or attenuated", "reversed or missing"):
+    if label.startswith("not kept") or label in ("missing or attenuated", "reversed or missing",
+                                                  "reversed to attenuated"):
         return "not kept"
     if label.startswith("not read") or label in ("no population gap", "reference too imprecise"):
         return "not read"
@@ -39,13 +40,17 @@ def collapse(label, lo=None, hi=None):
     return "unresolved"
 
 
-def external(dataset, run=None, framing=None):
+def external(dataset, run=None, framing=None, population_gap_only=False):
     rows = pd.read_csv(os.path.join(EXT, "l2_threeway_rows.csv"))
     d = rows[rows.dataset == dataset]
     if run:
         d = d[d.run == run]
     if framing:
         d = d[d.framing == framing]
+    if population_gap_only:
+        # Twin-2K: 424 of its 511 human gaps cannot be told from zero; drawing them would swamp the
+        # figure, so its rows keep the 87 contrasts with a population gap (the note says so)
+        d = d[d.verdict != "no population gap"]
     return [collapse(l, lo, hi) for l, lo, hi in zip(d.label, d.ci_lo, d.ci_hi)]
 
 
@@ -59,9 +64,13 @@ def main():
     rows = [("Worked example", "4 models, PHQ-8", worked()),
             ("Bisbee et al.", "ChatGPT, thermometers", external("Bisbee", framing="full")),
             ("Argyle et al.", "GPT-3, Study 3", external("Argyle", run="t0.7_main")),
-            ("OpinionQA", "5 models, Pew questions", external("OpinionQA"))]
+            ("OpinionQA", "5 models, Pew questions", external("OpinionQA")),
+            ("Twin-2K-500", "GPT-4.1-mini digital twins", external("Twin-2K", run="text_gpt41mini",
+                                                                   population_gap_only=True)),
+            ("Twin-2K-500 retest", "same people, earlier waves",
+             external("Twin-2K", run="human_retest_wave1_3", population_gap_only=True))]
     ncol = 40
-    fig = plt.figure(figsize=(6.6, 3.6))
+    fig = plt.figure(figsize=(6.6, 5.0))
     ax = fig.add_axes([0.2, 0.08, 0.66, 0.8]); ax.axis("off")
     y0 = 0.0
     counts = []

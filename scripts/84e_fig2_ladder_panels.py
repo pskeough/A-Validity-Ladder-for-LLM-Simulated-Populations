@@ -124,8 +124,8 @@ def level4(ax):
     ax.set_xticks(xi)
     ax.set_xticklabels(items, fontsize=6.5, rotation=40, ha="right")
     ax.set_xlim(-0.3, 10.3); ax.set_ylim(-0.8, 1.1)
-    ax.set_ylabel("Loading on one factor", fontsize=7)
-    title(ax, "Level 4: items do not load\nas they do in people")
+    ax.set_ylabel("Factor loading", fontsize=7)
+    title(ax, "Level 4: items do not hang\ntogether as they do in people")
 
 
 def main():

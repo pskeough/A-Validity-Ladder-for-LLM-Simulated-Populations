@@ -140,3 +140,35 @@ level 1 are not applicable.
   and the intermediate panel recomputed under the frozen rule, each replicate checked against the
   stored ratios and intervals.
 - `scripts/83f_l2_parametric_power.py`: the vectorised rule matches `78c.r3` on 200 draws.
+
+## Bug fixes after the freeze
+
+1. 2026-10-03, level-2 stop 2 (restores the Stop 2 and Model verdict rows above). The code read every
+   interval that crosses more than one region boundary as "undetermined" and let stop 2 fire on it,
+   including an interval that lies wholly below the kept region and so already excludes kept;
+   `l2_model_verdict` likewise counted such a reading as unresolved. The engines now label that
+   reading "reversed to attenuated" (the only span of three or more regions that stays below kept),
+   which excludes kept, so it stands and fails the model. Changed: `78c_l2_r3_verdicts.r3`,
+   `78e_l2_external_r3.r3cov`, `83f_l2_parametric_power.verdicts`; classifiers and figures that name
+   the labels follow (`83c`, `83e`, `84`, `84f`, `94`). Effect on the article's counts: one worked-
+   example reading (DeepSeek-V3, Black-White), one Bisbee reading under each of the full and political
+   prompts and three Argyle readings in the main run move from not read to not kept; no kept count and
+   no model verdict on the worked example changes. The controls and the panel-power replicates were
+   recomputed (`83i`, `88e`; `90` with R4 skipped and its level-2 rows spliced by
+   `98_panel_power_l2_splice.py`, which checks every other row is unchanged). In the panel-power
+   replicates 131 contrast readings were relabelled, and the largest rate at which level 2 fails a
+   faithful simulator (persona-pair SE, audit-precision reference) rose from 3.3% to 4.6% (G432); the
+   doubled-gap fail rates did not change.
+
+## Amendments after the freeze
+
+1. 2026-10-03, level 2 step 0 (certifiability). A contrast is certifiable when a noise-free faithful
+   simulator (g = gamma, se_g = 0) would be read kept by the frozen rule at the family's size; no
+   simulator can earn kept on a contrast that is not certifiable. A model family that the frozen rule
+   reads unresolved and that holds no certifiable contrast is reported as "reference cannot certify";
+   every other verdict is unchanged, and no pass or fail moves. The amendment adds a reading, not a
+   threshold: it uses the frozen interval rule, bounds and multiplicity. Motivation: across the external
+   releases most unresolved families sit on references that could not certify any simulator, which the
+   frozen three-way verdict did not distinguish from a simulator too imprecise to read. Code:
+   `validity_ladder.certifiable`, `level2_model_reading`, `faithful_simulation` (planning), package 0.1.1;
+   harness `model_table`.

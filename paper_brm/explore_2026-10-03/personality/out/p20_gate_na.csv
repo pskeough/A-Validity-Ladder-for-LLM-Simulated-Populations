@@ -1,0 +1,21 @@
+scale,population,model,n_personas,n_complete,gate
+Extraversion,generic,GPT-3.5,150,149,not applicable: one draw per persona
+Extraversion,generic,GPT-4,150,142,not applicable: one draw per persona
+Extraversion,silicon,GPT-3.5,1000,993,not applicable: one draw per persona
+Extraversion,silicon,GPT-4,1000,996,not applicable: one draw per persona
+Agreeableness,generic,GPT-3.5,150,149,not applicable: one draw per persona
+Agreeableness,generic,GPT-4,150,121,not applicable: one draw per persona
+Agreeableness,silicon,GPT-3.5,1000,997,not applicable: one draw per persona
+Agreeableness,silicon,GPT-4,1000,996,not applicable: one draw per persona
+Conscientiousness,generic,GPT-3.5,150,147,not applicable: one draw per persona
+Conscientiousness,generic,GPT-4,150,142,not applicable: one draw per persona
+Conscientiousness,silicon,GPT-3.5,1000,991,not applicable: one draw per persona
+Conscientiousness,silicon,GPT-4,1000,997,not applicable: one draw per persona
+Neuroticism,generic,GPT-3.5,150,148,not applicable: one draw per persona
+Neuroticism,generic,GPT-4,150,129,not applicable: one draw per persona
+Neuroticism,silicon,GPT-3.5,1000,942,not applicable: one draw per persona
+Neuroticism,silicon,GPT-4,1000,790,not applicable: one draw per persona
+Openness,generic,GPT-3.5,150,149,not applicable: one draw per persona
+Openness,generic,GPT-4,150,142,not applicable: one draw per persona
+Openness,silicon,GPT-3.5,1000,993,not applicable: one draw per persona
+Openness,silicon,GPT-4,1000,996,not applicable: one draw per persona

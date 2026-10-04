@@ -1,0 +1,4 @@
+family,contrasts,verdict,reading,certifiable,kept,not kept,unresolved,not read,stopped_no_population_gap,stopped_reference_imprecise
+demogs,77,fail,fail,11,1,33,3,40,23,17
+full,77,fail,fail,11,3,16,7,51,23,28
+pol,77,fail,fail,11,3,22,4,48,23,25

@@ -3,7 +3,7 @@
 Copies the manuscript into arxiv/src, switches apa7 to single-spaced doc mode, strips
 full-line comments and receipt tags, compiles once with tectonic to produce main.bbl
 (arXiv does not run BibTeX), copies the supplement PDF to anc/, and zips the result.
-Fails if any \\PATRICK{ or \\CHECK{ marker is still used in the text.
+Fails if any \\PATRICK{ or \\CHECK{ marker, or the \\texttt{COMMIT} placeholder, is still in the text.
 
 Usage: python build_arxiv.py
 """
@@ -17,7 +17,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 MS = HERE.parent / "manuscript"
 SRC = HERE / "src"
-OUT_ZIP = HERE / "validity_ladder_arxiv_2026-10-02.zip"
+OUT_ZIP = HERE / "validity_ladder_arxiv_2026-10-04.zip"
 TECTONIC = Path.home() / ".local" / "bin" / "tectonic.exe"
 
 FIG_FILES = ["fig1_ladder.pdf", "fig2_ladder_panels.pdf", "fig3_l2_dots.pdf",
@@ -47,10 +47,10 @@ def main():
     # Only files the body actually reads: 08_limitations is folded into the Discussion, and the
     # level tables moved to the supplement (tab_panel is the one table left in the body).
     for f in (MS / "sections").glob("*.tex"):
-        if f.name == "08_limitations.tex":
+        if f.name in ("08_limitations.tex", "06b_failures.tex"):
             continue
         (SRC / "sections" / f.name).write_text(clean_tex(f.read_text(encoding="utf-8")), encoding="utf-8")
-    for f in [MS / "tables" / "tab_panel.tex"]:
+    for f in [MS / "tables" / "tab_panel.tex", MS / "tables" / "tab_external_all.tex"]:
         (SRC / "tables" / f.name).write_text(clean_tex(f.read_text(encoding="utf-8")), encoding="utf-8")
     for name in FIG_FILES:
         f = MS / "figures" / name
@@ -70,7 +70,9 @@ def main():
     leftovers = []
     for f in SRC.rglob("*.tex"):
         for i, line in enumerate(f.read_text(encoding="utf-8").splitlines(), 1):
-            if re.search(r"\\(PATRICK|CHECK)\{", line) and not line.lstrip().startswith(r"\newcommand"):
+            # \texttt{COMMIT} is the release-hash placeholder in Open Practices, filled in after the commit.
+            if (re.search(r"\\(PATRICK|CHECK)\{", line) and not line.lstrip().startswith(r"\newcommand")) \
+                    or r"\texttt{COMMIT}" in line:
                 leftovers.append(f"{f.relative_to(SRC)}:{i}: {line[:120]}")
     if leftovers:
         print("MARKERS LEFT:\n  " + "\n  ".join(leftovers))

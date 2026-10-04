@@ -1,0 +1,225 @@
+model,calibration,estimand,contrast,beta,sim_gap,ratio,ci_lo,ci_hi,ci_unbounded,verdict,r3_unstopped
+DeepSeek-V3,raw (beta = 1),standardised,Black minus White,1.0,0.21388888888888877,-0.7520336160979726,-3.736192115765274,0.36267668054094754,False,reversed to attenuated,reversed to attenuated
+DeepSeek-V3,raw (beta = 1),standardised,Hispanic minus White,1.0,0.17361111111111124,-0.9470850691508488,-20.0,20.0,True,no population gap,undetermined
+DeepSeek-V3,raw (beta = 1),standardised,Asian minus White,1.0,-0.7083333333333334,0.742803111733318,0.358161170589327,1.1973315017718915,False,attenuated or kept,attenuated or kept
+DeepSeek-V3,raw (beta = 1),standardised,Women minus Men,1.0,0.3451388888888891,0.4103256899481998,0.22578556842747058,0.6228535643880702,False,missing or attenuated,missing or attenuated
+DeepSeek-V3,raw (beta = 1),standardised,Low minus High SES,1.0,2.479166666666667,1.9108141160027956,1.551363805373817,2.392488010298338,False,steepened,steepened
+DeepSeek-V3,raw (beta = 1),standardised,Middle minus High SES,1.0,1.5572916666666665,2.566269136986519,1.8249348211332521,3.9433924452066864,False,steepened,steepened
+DeepSeek-V3,raw (beta = 1),standardised,Low minus Middle SES,1.0,0.9218750000000001,1.3348725545134803,0.8345498859088876,2.093541684978611,False,reference too imprecise,kept or steepened
+DeepSeek-V3,raw (beta = 1),marginal,Black minus White,1.0,0.21388888888888877,0.6482679795019345,-0.30776965145050444,2.3207016081742244,False,reference too imprecise,undetermined
+DeepSeek-V3,raw (beta = 1),marginal,Hispanic minus White,1.0,0.17361111111111124,0.7159162032111539,-0.7887183576298125,3.8462286370971426,False,reference too imprecise,undetermined
+DeepSeek-V3,raw (beta = 1),marginal,Asian minus White,1.0,-0.7083333333333334,0.9380345417425371,0.4514251983453879,1.5296082691739987,False,reference too imprecise,undetermined
+DeepSeek-V3,raw (beta = 1),marginal,Women minus Men,1.0,0.3451388888888891,0.3679373936090891,0.20456000517037748,0.5413260185073715,False,missing or attenuated,missing or attenuated
+DeepSeek-V3,raw (beta = 1),marginal,Low minus High SES,1.0,2.479166666666667,1.2274603214683513,1.041985814069499,1.4357186980610428,False,kept or steepened,kept or steepened
+DeepSeek-V3,raw (beta = 1),marginal,Middle minus High SES,1.0,1.5572916666666665,1.7477491329293797,1.3738785638770705,2.209080604855743,False,steepened,steepened
+DeepSeek-V3,raw (beta = 1),marginal,Low minus Middle SES,1.0,0.9218750000000001,0.8167394035399204,0.529168917373285,1.158709947068668,False,attenuated or kept,attenuated or kept
+DeepSeek-V3,"slope, all 48 cells, WLS",standardised,Black minus White,0.6684936081979725,0.1429833550867885,-0.5027296655115026,-2.497620548388746,0.24244704278408147,False,reversed or missing,reversed or missing
+DeepSeek-V3,"slope, all 48 cells, WLS",standardised,Hispanic minus White,0.6684936081979725,0.11605791808992588,-0.6331203151470772,-20.0,20.0,True,no population gap,undetermined
+DeepSeek-V3,"slope, all 48 cells, WLS",standardised,Asian minus White,0.6684936081979725,-0.47351630580689724,0.4965591323432875,0.23942845324402082,0.800408455828589,False,undetermined,undetermined
+DeepSeek-V3,"slope, all 48 cells, WLS",standardised,Women minus Men,0.6684936081979725,0.23072314116277262,0.27430010100979463,0.15093620931711008,0.41637362663674915,False,missing or attenuated,missing or attenuated
+DeepSeek-V3,"slope, all 48 cells, WLS",standardised,Low minus High SES,0.6684936081979725,1.6573070703241404,1.277367023002328,1.0370767878820801,1.5993629425747242,False,kept or steepened,kept or steepened
+DeepSeek-V3,"slope, all 48 cells, WLS",standardised,Middle minus High SES,0.6684936081979725,1.0410395252666342,1.7155345149912153,1.2199572633054852,2.636132644237117,False,reference too imprecise,kept or steepened
+DeepSeek-V3,"slope, all 48 cells, WLS",standardised,Low minus Middle SES,0.6684936081979725,0.616267545057506,0.8923537704511613,0.5578912644525991,1.3995192349042687,False,reference too imprecise,undetermined
+DeepSeek-V3,"slope, all 48 cells, WLS",marginal,Black minus White,0.6684936081979725,0.1429833550867885,0.43336300069645756,-0.20574204479198,1.551374191599225,False,reference too imprecise,undetermined
+DeepSeek-V3,"slope, all 48 cells, WLS",marginal,Hispanic minus White,0.6684936081979725,0.11605791808992588,0.47858540585201725,-0.5272531807439317,2.5711792595674363,False,reference too imprecise,undetermined
+DeepSeek-V3,"slope, all 48 cells, WLS",marginal,Asian minus White,0.6684936081979725,-0.47351630580689724,0.6270700954238003,0.30177485967339385,1.0225333509897383,False,reference too imprecise,attenuated or kept
+DeepSeek-V3,"slope, all 48 cells, WLS",marginal,Women minus Men,0.6684936081979725,0.23072314116277262,0.24596379584469763,0.13674705594943226,0.3618729833234353,False,missing or attenuated,missing or attenuated
+DeepSeek-V3,"slope, all 48 cells, WLS",marginal,Low minus High SES,0.6684936081979725,1.6573070703241404,0.8205493792182214,0.6965608565384211,0.9597687728238308,False,attenuated or kept,attenuated or kept
+DeepSeek-V3,"slope, all 48 cells, WLS",marginal,Middle minus High SES,0.6684936081979725,1.0410395252666342,1.168359124096839,0.9184290383917503,1.4767562643404795,False,kept or steepened,kept or steepened
+DeepSeek-V3,"slope, all 48 cells, WLS",marginal,Low minus Middle SES,0.6684936081979725,0.616267545057506,0.5459850708298614,0.35374603892088,0.7745901933708157,False,attenuated or kept,attenuated or kept
+DeepSeek-V3,"slope, all 48 cells, OLS",standardised,Black minus White,0.6241830575217121,0.13350582063658833,-0.4694066418551419,-2.332067818306883,0.22637663935187374,False,reversed or missing,reversed or missing
+DeepSeek-V3,"slope, all 48 cells, OLS",standardised,Hispanic minus White,0.6241830575217121,0.1083651141530751,-0.591154454195739,-20.0,20.0,True,no population gap,undetermined
+DeepSeek-V3,"slope, all 48 cells, OLS",standardised,Asian minus White,0.6241830575217121,-0.4421296657445461,0.46364511741834435,0.22355813454400159,0.7473540376430424,False,missing or attenuated,missing or attenuated
+DeepSeek-V3,"slope, all 48 cells, OLS",standardised,Women minus Men,0.6241830575217121,0.21542984693631329,0.25611834373157344,0.14093152644533632,0.38877464220804236,False,missing or attenuated,missing or attenuated
+DeepSeek-V3,"slope, all 48 cells, OLS",standardised,Low minus High SES,0.6241830575217121,1.5474538301059115,1.1926977972822725,0.9683350033667475,1.4933504813520542,False,kept or steepened,kept or steepened
+DeepSeek-V3,"slope, all 48 cells, OLS",standardised,Middle minus High SES,0.6241830575217121,0.9720350739530829,1.6018217163478512,1.1390933964327958,2.461398753457386,False,reference too imprecise,kept or steepened
+DeepSeek-V3,"slope, all 48 cells, OLS",standardised,Low minus Middle SES,0.6241830575217121,0.5754187561528284,0.8332048324780424,0.5209118994411555,1.3067532499791064,False,reference too imprecise,undetermined
+DeepSeek-V3,"slope, all 48 cells, OLS",marginal,Black minus White,0.6241830575217121,0.13350582063658833,0.40463788953894003,-0.19210460205476754,1.448542625385742,False,reference too imprecise,undetermined
+DeepSeek-V3,"slope, all 48 cells, OLS",marginal,Hispanic minus White,0.6241830575217121,0.1083651141530751,0.44686276464967345,-0.4923046359888789,2.40075075063086,False,reference too imprecise,undetermined
+DeepSeek-V3,"slope, all 48 cells, OLS",marginal,Asian minus White,0.6241830575217121,-0.4421296657445461,0.5855052683258349,0.2817719605455695,0.9547555662632686,False,reference too imprecise,attenuated or kept
+DeepSeek-V3,"slope, all 48 cells, OLS",marginal,Women minus Men,0.6241830575217121,0.21542984693631329,0.2296602873194909,0.12768288947398815,0.33788652934798613,False,missing or attenuated,missing or attenuated
+DeepSeek-V3,"slope, all 48 cells, OLS",marginal,Low minus High SES,0.6241830575217121,1.5474538301059115,0.7661599364406991,0.6503898913201503,0.8961512866968334,False,attenuated or kept,attenuated or kept
+DeepSeek-V3,"slope, all 48 cells, OLS",marginal,Middle minus High SES,0.6241830575217121,0.9720350739530829,1.0909153975727817,0.857551722664066,1.3788706862510551,False,kept or steepened,kept or steepened
+DeepSeek-V3,"slope, all 48 cells, OLS",marginal,Low minus Middle SES,0.6241830575217121,0.5754187561528284,0.509794898100007,0.33029827279132273,0.7232471175421425,False,attenuated,attenuated
+DeepSeek-V3,slope that sets Low minus High to 1,standardised,Black minus White,0.5233371428571427,0.11193599999999991,-0.3935671239812383,-1.9552881070299828,0.189802177775212,False,reversed or missing,reversed or missing
+DeepSeek-V3,slope that sets Low minus High to 1,standardised,Hispanic minus White,0.5233371428571427,0.0908571428571429,-0.49564479413206464,-20.0,20.0,True,no population gap,undetermined
+DeepSeek-V3,slope that sets Low minus High to 1,standardised,Asian minus White,0.5233371428571427,-0.3706971428571428,0.3887364581999096,0.18743904369858802,0.6266080471901536,False,missing or attenuated,missing or attenuated
+DeepSeek-V3,slope that sets Low minus High to 1,standardised,Women minus Men,0.5233371428571427,0.18062400000000006,0.21473867421837667,0.1181619742792084,0.3259624048052399,False,missing or attenuated,missing or attenuated
+DeepSeek-V3,slope that sets Low minus High to 1,standardised,Low minus High SES,0.5233371428571427,1.29744,1.0,0.8118863014363178,1.2520778396295027,False,kept or steepened,kept or steepened
+DeepSeek-V3,slope that sets Low minus High to 1,standardised,Middle minus High SES,0.5233371428571427,0.8149885714285712,1.3430239579529906,0.9550561751923901,2.0637237354391234,False,reference too imprecise,kept or steepened
+DeepSeek-V3,slope that sets Low minus High to 1,standardised,Low minus Middle SES,0.5233371428571427,0.48245142857142853,0.6985883887575003,0.43675095286343746,1.0956281238690346,False,reference too imprecise,attenuated or kept
+DeepSeek-V3,slope that sets Low minus High to 1,marginal,Black minus White,0.5233371428571427,0.11193599999999991,0.3392627121983152,-0.16106729004824571,1.2145093490458752,False,reference too imprecise,undetermined
+DeepSeek-V3,slope that sets Low minus High to 1,marginal,Hispanic minus White,0.5233371428571427,0.0908571428571429,0.37466554031365884,-0.412765611800964,2.0128743057137397,False,reference too imprecise,undetermined
+DeepSeek-V3,slope that sets Low minus High to 1,marginal,Asian minus White,0.5233371428571427,-0.3706971428571428,0.49090831697684856,0.23624757351579426,0.8005008212803022,False,reference too imprecise,undetermined
+DeepSeek-V3,slope that sets Low minus High to 1,marginal,Women minus Men,0.5233371428571427,0.18062400000000006,0.1925553043216846,0.10705384864877875,0.2832960118798807,False,missing or attenuated,missing or attenuated
+DeepSeek-V3,slope that sets Low minus High to 1,marginal,Low minus High SES,0.5233371428571427,1.29744,0.6423755776077569,0.5453098788328057,0.7513649213898428,False,attenuated or kept,attenuated or kept
+DeepSeek-V3,slope that sets Low minus High to 1,marginal,Middle minus High SES,0.5233371428571427,0.8149885714285712,0.9146620376583102,0.7190016822518803,1.1560939320865715,False,attenuated or kept,attenuated or kept
+DeepSeek-V3,slope that sets Low minus High to 1,marginal,Low minus Middle SES,0.5233371428571427,0.48245142857142853,0.4274300659074289,0.27693374930678427,0.6063959530990677,False,attenuated,attenuated
+Gemini-3-Flash,raw (beta = 1),standardised,Black minus White,1.0,-0.39444444444444443,1.3868671881287293,-0.612947941230705,6.840709666056144,False,reference too imprecise,undetermined
+Gemini-3-Flash,raw (beta = 1),standardised,Hispanic minus White,1.0,-0.006944444444444475,0.037883402766034094,-20.0,20.0,True,no population gap,undetermined
+Gemini-3-Flash,raw (beta = 1),standardised,Asian minus White,1.0,-1.4472222222222222,1.5176487106394456,-0.3939451343392956,3.5357432288220054,False,undetermined,undetermined
+Gemini-3-Flash,raw (beta = 1),standardised,Women minus Men,1.0,0.9854166666666667,1.1715335091277568,0.7271142480965166,1.6979681749549909,False,undetermined,undetermined
+Gemini-3-Flash,raw (beta = 1),standardised,Low minus High SES,1.0,6.582291666666666,5.073291764294817,3.8484620435729275,6.604344288200212,False,steepened,steepened
+Gemini-3-Flash,raw (beta = 1),standardised,Middle minus High SES,1.0,0.7927083333333333,1.3063082362854457,0.8643086885583469,2.064807170037457,False,reference too imprecise,kept or steepened
+Gemini-3-Flash,raw (beta = 1),standardised,Low minus Middle SES,1.0,5.789583333333333,8.383301308458668,5.87566550395895,12.585297210508518,False,steepened,steepened
+Gemini-3-Flash,raw (beta = 1),marginal,Black minus White,1.0,-0.39444444444444443,-1.1955071829775943,-4.236665344670241,0.5208639488438654,False,reversed to attenuated,reversed to attenuated
+Gemini-3-Flash,raw (beta = 1),marginal,Hispanic minus White,1.0,-0.006944444444444475,-0.02863664812844626,-1.5436280791298753,1.4235492736381599,False,reference too imprecise,undetermined
+Gemini-3-Flash,raw (beta = 1),marginal,Asian minus White,1.0,-1.4472222222222222,1.9165333186190658,-0.4976508311226479,4.49087027626221,False,reference too imprecise,undetermined
+Gemini-3-Flash,raw (beta = 1),marginal,Women minus Men,1.0,0.9854166666666667,1.050509379338626,0.6612555985383493,1.4689232138694657,False,undetermined,undetermined
+Gemini-3-Flash,raw (beta = 1),marginal,Low minus High SES,1.0,6.582291666666666,3.258958727461559,2.541510968009798,4.030046971398486,False,steepened,steepened
+Gemini-3-Flash,raw (beta = 1),marginal,Middle minus High SES,1.0,0.7927083333333333,0.8896569164944871,0.631546292030444,1.188511818830806,False,attenuated or kept,attenuated or kept
+Gemini-3-Flash,raw (beta = 1),marginal,Low minus Middle SES,1.0,5.789583333333333,5.129308028107205,3.8057387070167663,6.825879893751819,False,steepened,steepened
+Gemini-3-Flash,"slope, all 48 cells, WLS",standardised,Black minus White,0.24778061911086086,-0.097735688649284,0.3436388104990753,-0.1518766203608713,1.6949952762130414,False,reference too imprecise,undetermined
+Gemini-3-Flash,"slope, all 48 cells, WLS",standardised,Hispanic minus White,0.24778061911086086,-0.0017206987438254302,0.009386772991394026,-20.0,20.0,True,no population gap,undetermined
+Gemini-3-Flash,"slope, all 48 cells, WLS",standardised,Asian minus White,0.24778061911086086,-0.35859361821321806,0.3760439371150416,-0.09761196928184976,0.8760886462545511,False,undetermined,undetermined
+Gemini-3-Flash,"slope, all 48 cells, WLS",standardised,Women minus Men,0.24778061911086086,0.24416715174882747,0.29028329820079496,0.180164818557683,0.4207236056208861,False,missing or attenuated,missing or attenuated
+Gemini-3-Flash,"slope, all 48 cells, WLS",standardised,Low minus High SES,0.24778061911086086,1.6309643043349267,1.2570633742870012,0.953574307781156,1.6364285165515287,False,kept or steepened,kept or steepened
+Gemini-3-Flash,"slope, all 48 cells, WLS",standardised,Middle minus High SES,0.24778061911086086,0.196417761607672,0.32367786353642447,0.2141589419538848,0.5116191989364417,False,missing or attenuated,missing or attenuated
+Gemini-3-Flash,"slope, all 48 cells, WLS",standardised,Low minus Middle SES,0.24778061911086086,1.4345465427272548,2.077219588402779,1.4558760362592766,3.1183927345142806,False,steepened,steepened
+Gemini-3-Flash,"slope, all 48 cells, WLS",marginal,Black minus White,0.24778061911086086,-0.097735688649284,-0.2962235099496695,-1.0497635620679215,0.12905999171706084,False,reversed or missing,reversed or missing
+Gemini-3-Flash,"slope, all 48 cells, WLS",marginal,Hispanic minus White,0.24778061911086086,-0.0017206987438254302,-0.007095606402526289,-0.3824811211236795,0.35272792035691714,False,reversed to attenuated,reversed to attenuated
+Gemini-3-Flash,"slope, all 48 cells, WLS",marginal,Asian minus White,0.24778061911086086,-0.35859361821321806,0.47487981223402487,-0.12330823103636673,1.1127506173988129,False,reference too imprecise,undetermined
+Gemini-3-Flash,"slope, all 48 cells, WLS",marginal,Women minus Men,0.24778061911086086,0.24416715174882747,0.2602958643942909,0.16384632159635507,0.36397070335894066,False,missing or attenuated,missing or attenuated
+Gemini-3-Flash,"slope, all 48 cells, WLS",marginal,Low minus High SES,0.24778061911086086,1.6309643043349267,0.8075068111471683,0.6297371611304473,0.9985675336189486,False,attenuated or kept,attenuated or kept
+Gemini-3-Flash,"slope, all 48 cells, WLS",marginal,Middle minus High SES,0.24778061911086086,0.196417761607672,0.22043974156526344,0.15648493123647172,0.2944901942904725,False,missing or attenuated,missing or attenuated
+Gemini-3-Flash,"slope, all 48 cells, WLS",marginal,Low minus Middle SES,0.24778061911086086,1.4345465427272548,1.2709431188147122,0.9429882929987817,1.6913207460502029,False,kept or steepened,kept or steepened
+Gemini-3-Flash,"slope, all 48 cells, OLS",standardised,Black minus White,0.21457217245375598,-0.0846368013567593,0.2975831054616134,-0.13152157135092907,1.4678259341710738,False,reference too imprecise,undetermined
+Gemini-3-Flash,"slope, all 48 cells, OLS",standardised,Hispanic minus White,0.21457217245375598,-0.0014900845309288675,0.008128724031448563,-20.0,20.0,True,no population gap,undetermined
+Gemini-3-Flash,"slope, all 48 cells, OLS",standardised,Asian minus White,0.21457217245375598,-0.31053361624557463,0.32564518086354755,-0.08452966330268986,0.7586721058469956,False,undetermined,undetermined
+Gemini-3-Flash,"slope, all 48 cells, OLS",standardised,Women minus Men,0.21457217245375598,0.2114429949388054,0.25137849015591496,0.15601848383614883,0.36433672005743173,False,missing or attenuated,missing or attenuated
+Gemini-3-Flash,"slope, all 48 cells, OLS",standardised,Low minus High SES,0.21457217245375598,1.412376622640921,1.0885872353564874,0.8257728612952707,1.4171085015516764,False,kept or steepened,kept or steepened
+Gemini-3-Flash,"slope, all 48 cells, OLS",standardised,Middle minus High SES,0.21457217245375598,0.17009314920552948,0.28029739615400245,0.18545659297462122,0.4430501601730506,False,missing or attenuated,missing or attenuated
+Gemini-3-Flash,"slope, all 48 cells, OLS",standardised,Low minus Middle SES,0.21457217245375598,1.2422834734353914,1.7988231740903917,1.2607543117960647,2.7004545634350086,False,steepened,steepened
+Gemini-3-Flash,"slope, all 48 cells, OLS",marginal,Black minus White,0.21457217245375598,-0.0846368013567593,-0.25652257343557233,-0.9090704869654352,0.11176290905627018,False,reversed or missing,reversed or missing
+Gemini-3-Flash,"slope, all 48 cells, OLS",marginal,Hispanic minus White,0.21457217245375598,-0.0014900845309288675,-0.0061446278007145,-0.3312196303995075,0.30545406023950594,False,reversed to attenuated,reversed to attenuated
+Gemini-3-Flash,"slope, all 48 cells, OLS",marginal,Asian minus White,0.21457217245375598,-0.31053361624557463,0.4112347177560995,-0.10678201995740459,0.9636157913855813,False,reference too imprecise,undetermined
+Gemini-3-Flash,"slope, all 48 cells, OLS",marginal,Women minus Men,0.21457217245375598,0.2114429949388054,0.22541007970773583,0.14188705032558238,0.31519004516776683,False,missing or attenuated,missing or attenuated
+Gemini-3-Flash,"slope, all 48 cells, OLS",marginal,Low minus High SES,0.21457217245375598,1.412376622640921,0.6992818540885548,0.5453375297209107,0.864735933743466,False,attenuated or kept,attenuated or kept
+Gemini-3-Flash,"slope, all 48 cells, OLS",marginal,Middle minus High SES,0.21457217245375598,0.17009314920552948,0.19089561731073187,0.13551225988608653,0.2550215629534909,False,missing or attenuated,missing or attenuated
+Gemini-3-Flash,"slope, all 48 cells, OLS",marginal,Low minus Middle SES,0.21457217245375598,1.2422834734353914,1.1006067667754544,0.816605622155936,1.464643877710416,False,kept or steepened,kept or steepened
+Gemini-3-Flash,slope that sets Low minus High to 1,standardised,Black minus White,0.19711068206994775,-0.07774921348314605,0.2733663373924844,-0.12081858676935449,1.3483769481188117,False,reference too imprecise,undetermined
+Gemini-3-Flash,slope that sets Low minus High to 1,standardised,Hispanic minus White,0.19711068206994775,-0.0013688241810413098,0.007467223358343524,-20.0,20.0,True,no population gap,undetermined
+Gemini-3-Flash,slope that sets Low minus High to 1,standardised,Asian minus White,0.19711068206994775,-0.2852629593290077,0.2991447724967179,-0.07765079412785988,0.696932759457305,False,missing or attenuated,missing or attenuated
+Gemini-3-Flash,slope that sets Low minus High to 1,standardised,Women minus Men,0.19711068206994775,0.19423615128976102,0.2309217690519715,0.14332198538508165,0.33468766509844267,False,missing or attenuated,missing or attenuated
+Gemini-3-Flash,slope that sets Low minus High to 1,standardised,Low minus High SES,0.19711068206994775,1.2974399999999997,0.9999999999999998,0.7585729783289705,1.3017868072719094,False,kept or steepened,kept or steepened
+Gemini-3-Flash,slope that sets Low minus High to 1,standardised,Middle minus High SES,0.19711068206994775,0.15625128026586482,0.2574873074478147,0.17036447512071776,0.4069955496290086,False,missing or attenuated,missing or attenuated
+Gemini-3-Flash,slope that sets Low minus High to 1,standardised,Low minus Middle SES,0.19711068206994775,1.1411887197341348,1.6524382389081735,1.1581564351002118,2.4806965172163453,False,reference too imprecise,kept or steepened
+Gemini-3-Flash,slope that sets Low minus High to 1,marginal,Black minus White,0.19711068206994775,-0.07774921348314605,-0.2356472362562354,-0.8350919957900614,0.10266784822226149,False,reversed or missing,reversed or missing
+Gemini-3-Flash,slope that sets Low minus High to 1,marginal,Hispanic minus White,0.19711068206994775,-0.0013688241810413098,-0.005644589244795135,-0.30426558353962485,0.28059676828699515,False,reversed to attenuated,reversed to attenuated
+Gemini-3-Flash,slope that sets Low minus High to 1,marginal,Asian minus White,0.19711068206994775,-0.2852629593290077,0.37776918964278455,-0.09809229475573564,0.8851985032416987,False,reference too imprecise,undetermined
+Gemini-3-Flash,slope that sets Low minus High to 1,marginal,Women minus Men,0.19711068206994775,0.19423615128976102,0.20706662028231404,0.1303405420504656,0.2895404565942291,False,missing or attenuated,missing or attenuated
+Gemini-3-Flash,slope that sets Low minus High to 1,marginal,Low minus High SES,0.19711068206994775,1.2974399999999997,0.6423755776077568,0.5009589603926644,0.7943653073062684,False,attenuated or kept,attenuated or kept
+Gemini-3-Flash,slope that sets Low minus High to 1,marginal,Middle minus High SES,0.19711068206994775,0.15625128026586482,0.17536088161847488,0.12448452038086733,0.23426837525793595,False,missing,missing
+Gemini-3-Flash,slope that sets Low minus High to 1,marginal,Low minus Middle SES,0.19711068206994775,1.1411887197341348,1.0110414039670699,0.7501517523200758,1.3454538415849633,False,kept or steepened,kept or steepened
+GLM-4.7,raw (beta = 1),standardised,Black minus White,1.0,-0.5583333333333332,1.9631007381258772,0.2899200445091937,8.749794544821704,False,reference too imprecise,undetermined
+GLM-4.7,raw (beta = 1),standardised,Hispanic minus White,1.0,-0.44305555555555554,2.416961096472964,-20.0,20.0,True,no population gap,undetermined
+GLM-4.7,raw (beta = 1),standardised,Asian minus White,1.0,-1.736111111111111,1.8205958620914655,0.54668155948916,3.245652260193749,False,undetermined,undetermined
+GLM-4.7,raw (beta = 1),standardised,Women minus Men,1.0,1.729861111111111,2.0565820798007346,1.5015601444024467,2.7642479306682097,False,steepened,steepened
+GLM-4.7,raw (beta = 1),standardised,Low minus High SES,1.0,6.5302083333333325,5.033148610597278,4.053666206501734,6.332459343484174,False,steepened,steepened
+GLM-4.7,raw (beta = 1),standardised,Middle minus High SES,1.0,1.340625,2.209222996188395,1.3176653809740437,3.6182109120755346,False,steepened,steepened
+GLM-4.7,raw (beta = 1),standardised,Low minus Middle SES,1.0,5.189583333333333,7.514502900097353,5.619018482855719,10.959956907884129,False,steepened,steepened
+GLM-4.7,raw (beta = 1),marginal,Black minus White,1.0,-0.5583333333333332,-1.6922319984401155,-5.148367002985077,-0.2514763048906815,False,reversed,reversed
+GLM-4.7,raw (beta = 1),marginal,Hispanic minus White,1.0,-0.44305555555555554,-1.8270181505948633,-8.145812537333025,0.14674461276029874,False,reversed or missing,reversed or missing
+GLM-4.7,raw (beta = 1),marginal,Asian minus White,1.0,-1.736111111111111,2.2991042689768064,0.6898672682712229,4.135965578656783,False,reference too imprecise,undetermined
+GLM-4.7,raw (beta = 1),marginal,Women minus Men,1.0,1.729861111111111,1.8441288681694976,1.3807306911923465,2.361809402185825,False,steepened,steepened
+GLM-4.7,raw (beta = 1),marginal,Low minus High SES,1.0,6.5302083333333325,3.233171745918106,2.7149808896294116,3.810294238074428,False,steepened,steepened
+GLM-4.7,raw (beta = 1),marginal,Middle minus High SES,1.0,1.340625,1.504584036173988,0.9408704310498631,2.13214311480787,False,kept or steepened,kept or steepened
+GLM-4.7,raw (beta = 1),marginal,Low minus Middle SES,1.0,5.189583333333333,4.597735263769359,3.7203661836597566,5.831734611534552,False,steepened,steepened
+GLM-4.7,"slope, all 48 cells, WLS",standardised,Black minus White,0.2790664845684594,-0.15581212055072313,0.5478356218425363,0.08090696762719851,2.441774404319676,False,reference too imprecise,undetermined
+GLM-4.7,"slope, all 48 cells, WLS",standardised,Hispanic minus White,0.2790664845684594,-0.12364195635741464,0.6744928365314391,-20.0,20.0,True,no population gap,undetermined
+GLM-4.7,"slope, all 48 cells, WLS",standardised,Asian minus White,0.2790664845684594,-0.4844904245980197,0.5080672870537489,0.15256050098537935,0.9057527663839442,False,undetermined,undetermined
+GLM-4.7,"slope, all 48 cells, WLS",standardised,Women minus Men,0.2790664845684594,0.4827462590694669,0.5739231312364818,0.419035110866499,0.7714089524872594,False,attenuated or kept,attenuated or kept
+GLM-4.7,"slope, all 48 cells, WLS",standardised,Low minus High SES,0.2790664845684594,1.8223622830829913,1.4045830890700082,1.1312423778624223,1.7671771676588226,False,kept or steepened,kept or steepened
+GLM-4.7,"slope, all 48 cells, WLS",standardised,Middle minus High SES,0.2790664845684594,0.37412350587459087,0.6165200951740943,0.3677162457061151,1.0097213996602836,False,reference too imprecise,attenuated or kept
+GLM-4.7,"slope, all 48 cells, WLS",standardised,Low minus Middle SES,0.2790664845684594,1.4482387772084007,2.0970459076096613,1.5680797347357573,3.058556645305197,False,steepened,steepened
+GLM-4.7,"slope, all 48 cells, WLS",marginal,Black minus White,0.2790664845684594,-0.15581212055072313,-0.4722452348789417,-1.4367366807913617,-0.07017860835811546,False,reversed or missing,reversed or missing
+GLM-4.7,"slope, all 48 cells, WLS",marginal,Hispanic minus White,0.2790664845684594,-0.12364195635741464,-0.5098595325292766,-2.2732232687472083,0.040951503212376485,False,reversed or missing,reversed or missing
+GLM-4.7,"slope, all 48 cells, WLS",marginal,Asian minus White,0.2790664845684594,-0.4844904245980197,0.641602945999695,0.19251883337488068,1.1542093743319022,False,reference too imprecise,undetermined
+GLM-4.7,"slope, all 48 cells, WLS",marginal,Women minus Men,0.2790664845684594,0.4827462590694669,0.5146345603312736,0.3853156601268272,0.6591018470887329,False,attenuated,attenuated
+GLM-4.7,"slope, all 48 cells, WLS",marginal,Low minus High SES,0.2790664845684594,1.8223622830829913,0.902269873139434,0.7576601725394283,1.063325418190887,False,kept,kept
+GLM-4.7,"slope, all 48 cells, WLS",marginal,Middle minus High SES,0.2790664845684594,0.37412350587459087,0.41987897771289856,0.2625654036274964,0.5950096836464581,False,attenuated,attenuated
+GLM-4.7,"slope, all 48 cells, WLS",marginal,Low minus Middle SES,0.2790664845684594,1.4482387772084007,1.2830738170365534,1.0382295121813037,1.6274416769771576,False,kept or steepened,kept or steepened
+GLM-4.7,"slope, all 48 cells, OLS",standardised,Black minus White,0.2409017123670174,-0.1345034560715847,0.47291432936347966,0.06984223517176447,2.1078404887071365,False,reference too imprecise,undetermined
+GLM-4.7,"slope, all 48 cells, OLS",standardised,Hispanic minus White,0.2409017123670174,-0.10673284200705355,0.5822500668648011,-20.0,20.0,True,no population gap,undetermined
+GLM-4.7,"slope, all 48 cells, OLS",standardised,Asian minus White,0.2409017123670174,-0.41823213952607186,0.43858466070614033,0.13169652380041005,0.7818831872285545,False,undetermined,undetermined
+GLM-4.7,"slope, all 48 cells, OLS",standardised,Women minus Men,0.2409017123670174,0.416726503823778,0.49543414464731894,0.3617284100086152,0.6659120599049938,False,attenuated,attenuated
+GLM-4.7,"slope, all 48 cells, OLS",standardised,Low minus High SES,0.2409017123670174,1.5731383696133665,1.2124941188905587,0.9765351305105973,1.5255002993398563,False,kept or steepened,kept or steepened
+GLM-4.7,"slope, all 48 cells, OLS",standardised,Middle minus High SES,0.2409017123670174,0.3229588581420327,0.532205602782377,0.31742784660349666,0.8716332044241228,False,reference too imprecise,attenuated or kept
+GLM-4.7,"slope, all 48 cells, OLS",standardised,Low minus Middle SES,0.2409017123670174,1.250179511471334,1.8102566162203708,1.353631174341875,2.6402723865780082,False,steepened,steepened
+GLM-4.7,"slope, all 48 cells, OLS",marginal,Black minus White,0.2409017123670174,-0.1345034560715847,-0.4076615861464838,-1.240250426913007,-0.060581072468176324,False,reversed or missing,reversed or missing
+GLM-4.7,"slope, all 48 cells, OLS",marginal,Hispanic minus White,0.2409017123670174,-0.10673284200705355,-0.4401318010039239,-1.9623401888642447,0.03535102849459082,False,reversed or missing,reversed or missing
+GLM-4.7,"slope, all 48 cells, OLS",marginal,Asian minus White,0.2409017123670174,-0.41823213952607186,0.5538581553068325,0.16619020623249411,0.9963611901894609,False,reference too imprecise,undetermined
+GLM-4.7,"slope, all 48 cells, OLS",marginal,Women minus Men,0.2409017123670174,0.416726503823778,0.44425380216748167,0.33262038782593173,0.5689639292710871,False,attenuated,attenuated
+GLM-4.7,"slope, all 48 cells, OLS",marginal,Low minus High SES,0.2409017123670174,1.5731383696133665,0.778876609968331,0.6540435453554535,0.9179064065743096,False,attenuated or kept,attenuated or kept
+GLM-4.7,"slope, all 48 cells, OLS",marginal,Middle minus High SES,0.2409017123670174,0.3229588581420327,0.36245687071439214,0.22665729795540587,0.5136369273687621,False,missing or attenuated,missing or attenuated
+GLM-4.7,"slope, all 48 cells, OLS",marginal,Low minus Middle SES,0.2409017123670174,1.250179511471334,1.107602298052259,0.8962425842759809,1.4048748539885834,False,kept or steepened,kept or steepened
+GLM-4.7,slope that sets Low minus High to 1,standardised,Black minus White,0.1986827883234966,-0.11093122348061892,0.3900343284107636,0.05760212283395891,1.7384335774228943,False,reference too imprecise,undetermined
+GLM-4.7,slope that sets Low minus High to 1,standardised,Hispanic minus White,0.1986827883234966,-0.08802751315999362,0.4802085699166641,-20.0,20.0,True,no population gap,undetermined
+GLM-4.7,slope that sets Low minus High to 1,standardised,Asian minus White,0.1986827883234966,-0.34493539639495935,0.36172106229055245,0.10861621656434386,0.6448552409835208,False,missing or attenuated,missing or attenuated
+GLM-4.7,slope that sets Low minus High to 1,standardised,Women minus Men,0.1986827883234966,0.3436936289679375,0.40860746203094567,0.29833415632531046,0.5492084864826465,False,attenuated,attenuated
+GLM-4.7,slope that sets Low minus High to 1,standardised,Low minus High SES,0.1986827883234966,1.29744,1.0,0.8053937048405103,1.2581506793086144,False,kept or steepened,kept or steepened
+GLM-4.7,slope that sets Low minus High to 1,standardised,Middle minus High SES,0.1986827883234966,0.2663591130961876,0.43893458491109977,0.26179743196935706,0.7188762327537506,False,attenuated,attenuated
+GLM-4.7,slope that sets Low minus High to 1,standardised,Low minus Middle SES,0.1986827883234966,1.0310808869038124,1.4930023890563435,1.1164022598150474,2.1775547983637864,False,reference too imprecise,kept or steepened
+GLM-4.7,slope that sets Low minus High to 1,marginal,Black minus White,0.1986827883234966,-0.11093122348061892,-0.3362173719403251,-1.0228919114658017,-0.04996401345295755,False,reversed or missing,reversed or missing
+GLM-4.7,slope that sets Low minus High to 1,marginal,Hispanic minus White,0.1986827883234966,-0.08802751315999362,-0.36299706047782543,-1.6184327480778224,0.029155628834667942,False,reversed or missing,reversed or missing
+GLM-4.7,slope that sets Low minus High to 1,marginal,Asian minus White,0.1986827883234966,-0.34493539639495935,0.45679244680676623,0.13706475243324032,0.8217451735775337,False,reference too imprecise,undetermined
+GLM-4.7,slope that sets Low minus High to 1,marginal,Women minus Men,0.1986827883234966,0.3436936289679375,0.3663966655557696,0.2743274236499241,0.46925087751493033,False,attenuated,attenuated
+GLM-4.7,slope that sets Low minus High to 1,marginal,Low minus High SES,0.1986827883234966,1.29744,0.6423755776077569,0.5394199733965788,0.7570398835535803,False,attenuated or kept,attenuated or kept
+GLM-4.7,slope that sets Low minus High to 1,marginal,Middle minus High SES,0.1986827883234966,0.2663591130961876,0.2989349515740686,0.18693476069211692,0.4236201391547728,False,missing or attenuated,missing or attenuated
+GLM-4.7,slope that sets Low minus High to 1,marginal,Low minus Middle SES,0.1986827883234966,1.0310808869038124,0.9134908621789632,0.7391727269539662,1.1586652933823278,False,attenuated or kept,attenuated or kept
+GPT-4o-mini,raw (beta = 1),standardised,Black minus White,1.0,0.21666666666666676,-0.761800286436908,-3.6270431892073884,0.18522351742378543,False,reversed or missing,reversed or missing
+GPT-4o-mini,raw (beta = 1),standardised,Hispanic minus White,1.0,0.14027777777777783,-0.7652447358738855,-20.0,20.0,True,no population gap,reversed or missing
+GPT-4o-mini,raw (beta = 1),standardised,Asian minus White,1.0,-0.40277777777777773,0.42237824000522,0.09297238048338682,0.7854842469382106,False,undetermined,undetermined
+GPT-4o-mini,raw (beta = 1),standardised,Women minus Men,1.0,0.1909722222222223,0.22704137773793745,-0.001681388992130117,0.470157334349138,False,missing or attenuated,missing or attenuated
+GPT-4o-mini,raw (beta = 1),standardised,Low minus High SES,1.0,2.802083333333333,2.159701668927529,1.7842789528417886,2.675089046813733,False,steepened,steepened
+GPT-4o-mini,raw (beta = 1),standardised,Middle minus High SES,1.0,1.3666666666666667,2.2521371958035545,1.566727858814064,3.4920201252081484,False,steepened,steepened
+GPT-4o-mini,raw (beta = 1),standardised,Low minus Middle SES,1.0,1.4354166666666663,2.078479525558842,1.5476134756706843,3.0376555478479954,False,steepened,steepened
+GPT-4o-mini,raw (beta = 1),marginal,Black minus White,1.0,0.21666666666666676,0.6566870441707915,-0.15844312459790308,2.211703500486553,False,reference too imprecise,undetermined
+GPT-4o-mini,raw (beta = 1),marginal,Hispanic minus White,1.0,0.14027777777777783,0.5784602921946121,-0.13190525197669742,2.649063139040227,False,reference too imprecise,undetermined
+GPT-4o-mini,raw (beta = 1),marginal,Asian minus White,1.0,-0.40277777777777773,0.5333921904026191,0.11735483973539526,1.000188050186915,False,reference too imprecise,undetermined
+GPT-4o-mini,raw (beta = 1),marginal,Women minus Men,1.0,0.1909722222222223,0.20358708901911363,-0.0015076031514502292,0.41397844069048323,False,missing or attenuated,missing or attenuated
+GPT-4o-mini,raw (beta = 1),marginal,Low minus High SES,1.0,2.802083333333333,1.387339607037758,1.207336829641031,1.5942411714635278,False,kept or steepened,kept or steepened
+GPT-4o-mini,raw (beta = 1),marginal,Middle minus High SES,1.0,1.3666666666666667,1.5338106103032418,1.1665285699539303,1.975481912570585,False,kept or steepened,kept or steepened
+GPT-4o-mini,raw (beta = 1),marginal,Low minus Middle SES,1.0,1.4354166666666663,1.2717140091276948,1.0228699213208967,1.6188115495695825,False,kept or steepened,kept or steepened
+GPT-4o-mini,"slope, all 48 cells, WLS",standardised,Black minus White,0.6858715049161757,0.14860549273183812,-0.5224971089040558,-2.4876855705776353,0.12703953264131934,False,reversed or missing,reversed or missing
+GPT-4o-mini,"slope, all 48 cells, WLS",standardised,Hispanic minus White,0.6858715049161757,0.09621253055074135,-0.5248595586230033,-20.0,20.0,True,no population gap,reversed or missing
+GPT-4o-mini,"slope, all 48 cells, WLS",standardised,Asian minus White,0.6858715049161757,-0.2762538005912374,0.2896971991162259,0.06376710651832869,0.5387412625354595,False,missing or attenuated,missing or attenuated
+GPT-4o-mini,"slope, all 48 cells, WLS",standardised,Women minus Men,0.6858715049161757,0.13098240545274192,0.15572121142736106,-0.0011532167983817814,0.32246751845742083,False,missing or attenuated,missing or attenuated
+GPT-4o-mini,"slope, all 48 cells, WLS",standardised,Low minus High SES,0.6858715049161757,1.921869112733867,1.4812778338373005,1.2237860905756386,1.834767350322772,False,kept or steepened,kept or steepened
+GPT-4o-mini,"slope, all 48 cells, WLS",standardised,Middle minus High SES,0.6858715049161757,0.9373577233854401,1.5446767277634796,1.074573994319225,2.395077098474085,False,reference too imprecise,kept or steepened
+GPT-4o-mini,"slope, all 48 cells, WLS",standardised,Low minus Middle SES,0.6858715049161757,0.984511389348427,1.4255698801325019,1.0614639835868054,2.083441382019475,False,reference too imprecise,kept or steepened
+GPT-4o-mini,"slope, all 48 cells, WLS",marginal,Black minus White,0.6858715049161757,0.14860549273183812,0.45040293124437586,-0.10867162431158488,1.516944408307085,False,reference too imprecise,undetermined
+GPT-4o-mini,"slope, all 48 cells, WLS",marginal,Hispanic minus White,0.6858715049161757,0.09621253055074135,0.39674943114176936,-0.09047005367960473,1.816916921791416,False,reference too imprecise,undetermined
+GPT-4o-mini,"slope, all 48 cells, WLS",marginal,Asian minus White,0.6858715049161757,-0.2762538005912374,0.3658385043419796,0.08049034053851216,0.6860004831808748,False,missing or attenuated,missing or attenuated
+GPT-4o-mini,"slope, all 48 cells, WLS",marginal,Women minus Men,0.6858715049161757,0.13098240545274192,0.13963458312704288,-0.0010340220423015742,0.2839360161190961,False,missing or attenuated,missing or attenuated
+GPT-4o-mini,"slope, all 48 cells, WLS",marginal,Low minus High SES,0.6858715049161757,1.921869112733867,0.9515367041088029,0.8280779282866184,1.0934445914709112,False,kept,kept
+GPT-4o-mini,"slope, all 48 cells, WLS",marginal,Middle minus High SES,0.6858715049161757,0.9373577233854401,1.0519969915450824,0.8000887058020165,1.3549267523094581,False,kept or steepened,kept or steepened
+GPT-4o-mini,"slope, all 48 cells, WLS",marginal,Low minus Middle SES,0.6858715049161757,0.984511389348427,0.8722324012633953,0.7015573322698536,1.1102967136789759,False,attenuated or kept,attenuated or kept
+GPT-4o-mini,"slope, all 48 cells, OLS",standardised,Black minus White,0.5496627384948064,0.11909359334054144,-0.4187332316290388,-1.993650492018669,0.1018104658207983,False,reversed or missing,reversed or missing
+GPT-4o-mini,"slope, all 48 cells, OLS",standardised,Hispanic minus White,0.5496627384948064,0.07710546748329926,-0.4206265171391747,-20.0,20.0,True,no population gap,reversed or missing
+GPT-4o-mini,"slope, all 48 cells, OLS",standardised,Asian minus White,0.5496627384948064,-0.22139193633818588,0.2321655800818858,0.05110345326110453,0.4317514222165874,False,missing or attenuated,missing or attenuated
+GPT-4o-mini,"slope, all 48 cells, OLS",standardised,Women minus Men,0.5496627384948064,0.10497031464310543,0.12479618543906847,-0.000924196877889229,0.2584279679217656,False,missing or attenuated,missing or attenuated
+GPT-4o-mini,"slope, all 48 cells, OLS",standardised,Low minus High SES,0.5496627384948064,1.5402007984906554,1.1871075336745094,0.9807516554574893,1.470396771189098,False,kept or steepened,kept or steepened
+GPT-4o-mini,"slope, all 48 cells, OLS",standardised,Middle minus High SES,0.5496627384948064,0.7512057426095687,1.2379158985113956,0.8611719253518428,1.9194333449011762,False,reference too imprecise,kept or steepened
+GPT-4o-mini,"slope, all 48 cells, OLS",standardised,Low minus Middle SES,0.5496627384948064,0.7889950558810865,1.142462747924059,0.8506654611686137,1.6696860670336582,False,reference too imprecise,kept or steepened
+GPT-4o-mini,"slope, all 48 cells, OLS",marginal,Black minus White,0.5496627384948064,0.11909359334054144,0.36095639903297716,-0.08709028176215716,1.2156910028159884,False,reference too imprecise,undetermined
+GPT-4o-mini,"slope, all 48 cells, OLS",marginal,Hispanic minus White,0.5496627384948064,0.07710546748329926,0.3179580683181964,-0.07250340202335935,1.4560912994504414,False,reference too imprecise,undetermined
+GPT-4o-mini,"slope, all 48 cells, OLS",marginal,Asian minus White,0.5496627384948064,-0.22139193633818588,0.2931858120684468,0.06450558258437489,0.5497661026755265,False,missing or attenuated,missing or attenuated
+GPT-4o-mini,"slope, all 48 cells, OLS",marginal,Women minus Men,0.5496627384948064,0.10497031464310543,0.11190423687243192,-0.0008286732767895765,0.2275485233876306,False,missing,missing
+GPT-4o-mini,"slope, all 48 cells, OLS",marginal,Low minus High SES,0.5496627384948064,1.5402007984906554,0.7625688876266827,0.6636280680661267,0.8762949681277264,False,attenuated or kept,attenuated or kept
+GPT-4o-mini,"slope, all 48 cells, OLS",marginal,Middle minus High SES,0.5496627384948064,0.7512057426095687,0.8430785403916702,0.6411972882933075,1.0858487979105054,False,attenuated or kept,attenuated or kept
+GPT-4o-mini,"slope, all 48 cells, OLS",marginal,Low minus Middle SES,0.5496627384948064,0.7889950558810865,0.699013804839338,0.5622334820772109,0.8898003894435783,False,attenuated or kept,attenuated or kept
+GPT-4o-mini,slope that sets Low minus High to 1,standardised,Black minus White,0.46302691449814126,0.10032249814126398,-0.3527340360926817,-1.6794186166501948,0.08576347376522803,False,reversed or missing,reversed or missing
+GPT-4o-mini,slope that sets Low minus High to 1,standardised,Hispanic minus White,0.46302691449814126,0.0649523866171004,-0.3543289088876303,-20.0,20.0,True,no population gap,reversed or missing
+GPT-4o-mini,slope that sets Low minus High to 1,standardised,Asian minus White,0.46302691449814126,-0.18649695167286243,0.1955724932207724,0.0430487144689594,0.36370034724669587,False,missing or attenuated,missing or attenuated
+GPT-4o-mini,slope that sets Low minus High to 1,standardised,Women minus Men,0.46302691449814126,0.08842527881040896,0.10512626859740416,-0.0007785283570971221,0.2176954998523527,False,missing,missing
+GPT-4o-mini,slope that sets Low minus High to 1,standardised,Low minus High SES,0.46302691449814126,1.29744,1.0,0.8261691781381614,1.2386382273539367,False,kept,kept
+GPT-4o-mini,slope that sets Low minus High to 1,standardised,Middle minus High SES,0.46302691449814126,0.6328034498141264,1.042800136799416,0.7254371663249556,1.616899303940542,False,reference too imprecise,undetermined
+GPT-4o-mini,slope that sets Low minus High to 1,standardised,Low minus Middle SES,0.46302691449814126,0.6646365501858734,0.9623919615670711,0.716586692475541,1.4065162756282183,False,reference too imprecise,undetermined
+GPT-4o-mini,slope that sets Low minus High to 1,marginal,Black minus White,0.46302691449814126,0.10032249814126398,0.3040637758533062,-0.07336343110601168,1.024078247615027,False,reference too imprecise,undetermined
+GPT-4o-mini,slope that sets Low minus High to 1,marginal,Hispanic minus White,0.46302691449814126,0.0649523866171004,0.2678426842545645,-0.06107568182886982,1.2265875315805075,False,reference too imprecise,undetermined
+GPT-4o-mini,slope that sets Low minus High to 1,marginal,Asian minus White,0.46302691449814126,-0.18649695167286243,0.24697494013952978,0.054338449344547256,0.46311398679595955,False,missing or attenuated,missing or attenuated
+GPT-4o-mini,slope that sets Low minus High to 1,marginal,Women minus Men,0.46302691449814126,0.08842527881040896,0.0942663016601786,-0.0006980608355036852,0.19168316006157343,False,missing,missing
+GPT-4o-mini,slope that sets Low minus High to 1,marginal,Low minus High SES,0.46302691449814126,1.29744,0.6423755776077569,0.5590294469886546,0.7381765705885883,False,attenuated,attenuated
+GPT-4o-mini,slope that sets Low minus High to 1,marginal,Middle minus High SES,0.46302691449814126,0.6328034498141264,0.710195594313221,0.5401341244196974,0.9147012946247552,False,attenuated or kept,attenuated or kept
+GPT-4o-mini,slope that sets Low minus High to 1,marginal,Low minus Middle SES,0.46302691449814126,0.6646365501858734,0.5888378137704575,0.4736163036021719,0.7495533169511586,False,attenuated,attenuated

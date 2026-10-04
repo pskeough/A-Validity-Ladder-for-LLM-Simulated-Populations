@@ -1,9 +1,11 @@
 % Abstract (BRM limit 250 words). Its numbers carry the receipts of the body sections.
-A simulated sample built by prompting a language model with demographic personas can be used to report a persona's score, to stand in for individual respondents, to compare groups, to estimate a population's level or to score a multi-item scale.
-Each use assumes something different about how well the model replicates people, and validation practice in the field remains uneven.
-We propose the validity ladder, a gate and four levels released as code, in which every rung tests one of these uses against human data with a statistic and a pass rule, and a sample supports only the claims whose rungs it passes.
-In a worked example of 28,800 PHQ-8 depression assessments from four models, compared against a national health survey, a few repeated draws make each persona's mean readable.
-Above the gate every model fails, with answers less varied than people's, an exaggerated income gradient, every group placed too high and a distorted scale structure.
-Real survey respondents put through the same design are rarely failed, while failures planted into them are caught at the level each targets.
-Tested on three published silicon samples, the ladder supports only a few partisan gaps, pointing toward narrower readings of those samples' claims.
-These results show that each claim drawn from a simulated sample needs its own check against the human data it claims to represent.
+A language model prompted with a demographic persona can give answers that each look plausible while the simulated population sits far from the real one.
+Researchers still use such samples to estimate scores, compare groups and score scales for populations they cannot easily survey.
+We propose the validity ladder, a set of checks released as code, in which each use of a simulated sample is tested separately against human data with its own statistic and pass rule.
+A sample earns only the claims whose checks it passes, and researchers can set each pass threshold to the risk of their application.
+Before any answers are generated, a certifiability step uses the human data alone to show which group differences a study could confirm.
+Real survey respondents run through the same checks rarely fail, and errors planted at known sizes are caught by the check built for each.
+Across ten datasets released by other authors, including silicon samples and digital twins, samples drawn from the datasets' own human answers pass where the human data are precise.
+None of 725 readings of published simulators in nine of them reproduces the group differences, and for over half the human data were too thin to confirm any simulator.
+In 28,800 PHQ-8 depression assessments from four models, persona averages stabilize after a few answers, yet every model fails every check above that.
+The ladder gives researchers a checkable list of the claims a simulated sample supports and the human data needed before generating it.

@@ -1,0 +1,12 @@
+{
+  "adapter": "val_synthetic",
+  "name": "val_synthetic",
+  "kind": "synthetic (long-mode check)",
+  "source": "validity_ladder.synthetic.simulate_example(seed=1)",
+  "mode": "long",
+  "package_version": "0.1.0",
+  "inputs": [],
+  "run_at": "2026-10-03 21:10:49",
+  "seconds": 476.4,
+  "notes": ""
+}

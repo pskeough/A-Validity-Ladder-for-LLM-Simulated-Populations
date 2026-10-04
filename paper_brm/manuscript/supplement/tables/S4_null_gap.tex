@@ -1,0 +1,27 @@
+% Written by scripts/87_supplement_tables.py. Do not edit by hand.
+% Receipts: analysis/brm/95_null_gap_equivalence.csv
+\begingroup
+\singlespacing
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{longtable}{>{\raggedright\arraybackslash}p{3.4cm}lll}
+\caption{Level 2, Exploratory: Equivalence of Simulated Gaps Where the Population Shows None}\label{tab:s4null}\\
+\toprule
+Dataset & $\delta = 0.10$ SD & $\delta = 0.20$ SD & $\delta = 0.25$ SD \\
+\midrule
+\endfirsthead
+\multicolumn{4}{@{}l}{\textit{Table \thetable, continued}} \\
+\toprule
+Dataset & $\delta = 0.10$ SD & $\delta = 0.20$ SD & $\delta = 0.25$ SD \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+Worked example (4) & 3/0/1 & 4/0/0 & 4/0/0 \\
+Bisbee et al. (23) & 5/11/7 & 13/4/6 & 18/3/2 \\
+Argyle et al. (23) & 7/3/13 & 13/1/9 & 14/1/8 \\
+\end{longtable}
+\vspace{-6pt}
+\noindent\textit{Note.} Counts are pass / fail / unresolved for the contrasts stopped as no population gap. A contrast passes when the 90\% interval of the simulated gap lies inside $(-\delta, \delta)$ and fails when it lies wholly outside; $\delta$ is in reference standard deviations. Not part of the frozen ladder. Every row is in \texttt{analysis/brm/95\_null\_gap\_equivalence.csv}.
+\par
+\endgroup
