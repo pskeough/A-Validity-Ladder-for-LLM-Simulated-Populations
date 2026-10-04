@@ -18,7 +18,7 @@ HERE = Path(__file__).resolve().parent
 MS = HERE.parent / "manuscript"
 SRC = HERE / "src"
 OUT_ZIP = HERE / "validity_ladder_arxiv_2026-10-04.zip"
-TECTONIC = Path.home() / ".local" / "bin" / "tectonic.exe"
+TECTONIC = Path(shutil.which("tectonic") or Path.home() / ".local" / "bin" / "tectonic.exe")
 
 FIG_FILES = ["fig1_ladder.pdf", "fig2_ladder_panels.pdf", "fig3_l2_dots.pdf",
              "fig1_ladder_caption.tex", "fig1_ladder_note.tex",

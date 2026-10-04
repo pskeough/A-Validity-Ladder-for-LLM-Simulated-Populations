@@ -1,10 +1,18 @@
-Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International
-(CC BY-NC-ND 4.0)
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+(CC BY-NC-SA 4.0)
 
 Copyright (c) 2026 Patrick S. Keough
 
-Applies to: data/, groundtruth/, analysis/, and the reports and result files
-in paper_brm/.
+Applies only to material produced for this work: the corpus of model outputs
+in data/, and the derived outputs, reports and result files in groundtruth/,
+analysis/ and paper_brm/.
+
+It does not cover third-party data. NHANES, the American Trends Panel (Pew
+Research Center), the General Social Survey and the releases of other authors
+keep their own terms, and no licence over them is claimed here. Their raw files
+are not redistributed in this repository. In particular, the SubPOP training
+data (CC BY-NC-SA, gated) and the external harness working caches (_work_*)
+are excluded and must not be added.
 
 Code (scripts/, generation/ and the .py files in paper_brm/) is licensed
 separately under the MIT License; see LICENSE. NHANES source data fetched by
@@ -14,6 +22,8 @@ public domain.
 You are free to:
 
   Share — copy and redistribute the material in any medium or format.
+
+  Adapt — remix, transform, and build upon the material.
 
 The licensor cannot revoke these freedoms as long as you follow the licence
 terms.
@@ -27,8 +37,8 @@ Under the following terms:
 
   NonCommercial — You may not use the material for commercial purposes.
 
-  NoDerivatives — If you remix, transform, or build upon the material, you may
-  not distribute the modified material.
+  ShareAlike — If you remix, transform, or build upon the material, you must
+  distribute your contributions under the same licence as the original.
 
   No additional restrictions — You may not apply legal terms or technological
   measures that legally restrict others from doing anything the licence
@@ -44,7 +54,7 @@ Notices:
   necessary for your intended use. For example, other rights such as publicity,
   privacy, or moral rights may limit how you use the material.
 
-Full licence text: https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode
+Full licence text: https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
 
 --------------------------------------------------------------------------
 
@@ -58,7 +68,7 @@ prevalence estimation, or for inclusion in any downstream clinical dataset.
 Using it for those purposes would propagate exactly the miscalibration the
 paper documents.
 
-The non-commercial and no-derivatives terms above have force. The rest of that
+The non-commercial and share-alike terms above have force. The rest of that
 restriction does not: no licence we are aware of can distinguish auditing from
 training as downstream uses, and we would rather say so than imply an
 enforceability the document does not have.

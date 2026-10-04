@@ -17,13 +17,23 @@ The manuscript and supplement, with LaTeX sources and PDFs, are in `paper_brm/ma
 
 The worked example covers 28,800 PHQ-8 assessments from GPT-4o-mini, Gemini-3-Flash, DeepSeek-V3 and GLM-4.7, with 120 personas, two prompt framings and 30 draws each, compared against NHANES 2005-2018. All four models pass the gate, needing 3 to 6 draws under the minimum rule, and fail every level above it. Single draws vary less than people's answers, and the low-to-high income gap runs 1.91 to 5.07 times the population gap. After post-stratification every model sits 2.1 to 4.7 PHQ-8 points above NHANES, and no model reproduces the structure of the scale.
 
-Pseudo-models built from real NHANES respondents are rarely failed, passing the gate and level 3 in every reading and level 1 in 92.9% of replicates, while failures planted into the same respondents are caught at the rung each one targets. On the frozen rules, level 2 keeps 3 of 77 contrasts in the release of Bisbee et al. (2024), 2 of 61 in Argyle et al. (2023, Study 3) and 1 of 154 in OpinionQA (Meister et al.). Five of those six kept contrasts are partisan gaps.
+Pseudo-models built from real NHANES respondents are rarely failed, passing the gate and level 3 in every reading and level 1 in 92.9% of replicates, while failures planted into the same respondents are caught at the rung each one targets. On the frozen rules, level 2 keeps 3 of 77 contrasts in the release of Bisbee et al. (2024), 2 of 61 in Argyle et al. (2023, Study 3) and 1 of 154 in OpinionQA (Meister et al.). Five of those six kept contrasts are partisan gaps. On Twin-2K-500 (Toubia et al., 2025), the same respondents' answers from earlier survey waves keep all 8 gaps the reference can certify and pass level 2, while all 13 released digital-twin specifications fail it, with the default twins steepening the partisan gaps 1.45 to 2.30 times.
 
 Each result has its receipt in the report named in the table above, and Supplement S2 maps every number in the article to the file that prints it.
 
 ## Running the ladder on another sample
 
-Script `scripts/91_ladder_core.py` restates the gate, level 1 and level 4 for any scale of J items with M ordered categories, taking the reference's sampling scheme as an input. Script 91a checks that it returns the PHQ-8 numbers, and script 92 runs it on PersonaLLM BFI-44 answers against the Twin-2K-500 panel. Levels 2 and 3 for other releases are in `paper_brm/external/scripts`, and every rule and threshold is stated in `paper_brm/LADDER_SPEC.md`, frozen at commit `91a1b10` on 2 October 2026 before any external dataset was analysed.
+Script `scripts/91_ladder_core.py` restates the gate, level 1 and level 4 for any scale of J items with M ordered categories, taking the reference's sampling scheme as an input. Script 91a checks that it returns the PHQ-8 numbers, and script 92 runs it on PersonaLLM BFI-44 answers against the Twin-2K-500 panel. Levels 2 and 3 for other releases are in `paper_brm/external/scripts`, where `subpop_overlap.py` also checks the SubPOP training questions against the questions tested, and every rule and threshold is stated in `paper_brm/LADDER_SPEC.md`, frozen at commit `91a1b10` on 2 October 2026 before any external dataset was analysed.
+
+## Python package
+
+`package/` holds `validity-ladder`, a Python implementation of the gate and levels 1 to 4 with the article's thresholds as defaults. It takes the invariance verdict R4 as an input. Install it with
+
+```
+pip install "git+https://github.com/pskeough/A-Validity-Ladder-for-LLM-Simulated-Populations#subdirectory=package"
+```
+
+The package README describes `run_ladder` and the single-rung functions. Its 72 tests reproduce the article's verdicts from the stored outputs.
 
 ## Reproducing
 
@@ -33,7 +43,7 @@ python scripts/00_download_nhanes.py     # about 50 MB from CDC, checked by SHA-
 python scripts/run_all.py                # scripts 76-83g; --fast skips the two long simulations
 ```
 
-`run_all.py` rebuilds the corpus, every rung and the controls. Every script checks itself against an earlier computation before it writes, and `run_all.py` stops at the first failed check. The later scripts run on their own, in numeric order: 83h-83i, 88-88e and 90-90b (the controls under the frozen rules, the simulator panel and panel power), 84 and 84d-84f (figures), 85 (the worked case), 86 (receipts), 87-87a (supplement tables and resend sources), 89 (level-3 specification range) and 91-92 (the instrument-general ladder and the PersonaLLM shakedown). No analysis script calls an API. The published outputs are already in the repository, so a rerun can be compared file by file.
+`run_all.py` rebuilds the corpus, every rung and the controls. Every script checks itself against an earlier computation before it writes, and `run_all.py` stops at the first failed check. The later scripts run on their own, in numeric order: 83h-83i, 88-88e and 90-90b (the controls under the frozen rules, the simulator panel and panel power), 84 and 84d-84f (figures), 85 (the worked case), 86 (receipts), 87-87a (supplement tables and resend sources), 89 (level-3 specification range), 91-92 (the instrument-general ladder and the PersonaLLM shakedown), 93-93b (Twin-2K-500), 94-96 (kept-region sensitivity, equivalence for gaps with no population gap, and level 1 at temperature 0), 97-98 (the level-2 bug fix) and 99 (the naive baseline). The 3 October bug fix is recorded in `paper_brm/LADDER_SPEC.md` with its effect on every count. No analysis script calls an API. The published outputs are already in the repository, so a rerun can be compared file by file.
 
 ## Layout
 
@@ -74,7 +84,7 @@ The analysis code was written with AI coding assistance (Claude Code) to the aut
 
 ## Licence
 
-Code (`scripts/`, `generation/` and the `.py` files in `paper_brm/`) is under the MIT License (`LICENSE`). Data, derived files, reports and manuscript sources are under CC BY-NC-ND 4.0 (`LICENSE-DATA`). NHANES files are public domain.
+Code (`scripts/`, `generation/` and the `.py` files in `paper_brm/`) is under the MIT License (`LICENSE`). The corpus, derived files, reports and manuscript sources produced for this work are under CC BY-NC-SA 4.0 (`LICENSE-DATA`). NHANES files are public domain. Third-party data (Pew, GSS, NHANES and other authors' releases) keep their own terms, and their raw files are not redistributed here.
 
 ## Citation
 

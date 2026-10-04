@@ -63,7 +63,7 @@ lines += [
     f"Gate, L2 and L3 are read per pseudo-model ({int(n['gate_n'])} readings per type); "
     f"L1, R1 and R2 on one pseudo-model per replicate ({int(n['L1_n'])} replicates). "
     "R4 is read at margin .08 on the number of replicates in parentheses; it gives no verdict without a general factor. "
-    "L2 passes in no reading of any type; its remaining readings are unresolved. "
+    "L2 passes in no reading of any type, because at 30 draws per persona the interval of even a faithful gap is wider than the kept region; its remaining readings are unresolved. "
     "L4 is the level-4 pass (R1, R2 and R4 in both framings). Shifted types raise every persona by the stated points; "
     "the doubled gap raises low-income personas only; non-invariant makes three items independent within the low-income group. "
     "Construction, seeds and per-step results: \\texttt{paper\\_brm/analysis\\_brm/intermediate\\_panel} in the release.",
