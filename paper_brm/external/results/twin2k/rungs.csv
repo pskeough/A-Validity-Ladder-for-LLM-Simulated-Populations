@@ -1,0 +1,6 @@
+rung,status,reason
+gate,not applicable,"one answer per twin per specification (temperature 0, one run at 0.7); no repeated draws under one prompt"
+level 1,not applicable,"wave 4 holds no multi-item scale of one construct: single items, between-subject conditions, 40 pricing decisions at random prices, 10 separate policy opinions"
+level 2,run,persona attributes = waves 1-3 demographics; reference = same respondents' wave-4 answers
+level 3,run,same respondents; tolerance 0.5 reference SD (default) and 0.2 SD
+level 4,not applicable,as level 1

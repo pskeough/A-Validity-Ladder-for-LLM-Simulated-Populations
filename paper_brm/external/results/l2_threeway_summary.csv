@@ -1,8 +1,22 @@
 dataset,run,framing,kept,not kept,not read,unresolved,total,point_ratio_in_kept
-Argyle,t0.001,,3,11,45,2,61,3
-Argyle,t0.7_main,,2,9,49,1,61,3
-Argyle,t1.0,,0,10,48,3,61,2
+Argyle,t0.001,,3,13,43,2,61,3
+Argyle,t0.7_main,,2,12,46,1,61,3
+Argyle,t1.0,,0,13,45,3,61,2
 Bisbee,rr1,demogs,1,33,40,3,77,2
-Bisbee,rr1,full,3,15,52,7,77,8
-Bisbee,rr1,pol,3,21,49,4,77,5
+Bisbee,rr1,full,3,16,51,7,77,8
+Bisbee,rr1,pol,3,22,48,4,77,5
 OpinionQA,all,,1,33,5,115,154,37
+Twin-2K,demog_only_gpt41mini,,0,55,456,0,511,0
+Twin-2K,finetune500_gpt41mini,,0,25,482,4,511,0
+Twin-2K,human_retest_wave1_3,,8,0,503,0,511,8
+Twin-2K,json_gpt41,,0,46,463,2,511,1
+Twin-2K,json_gpt41mini,,0,23,477,3,503,1
+Twin-2K,json_predout_gpt41,,0,41,469,1,511,1
+Twin-2K,json_predout_gpt41mini,,0,40,468,3,511,2
+Twin-2K,summary_gpt41mini,,2,46,460,3,511,4
+Twin-2K,summary_json_gpt41mini,,0,43,465,3,511,3
+Twin-2K,text_gemini25flash,,0,27,484,0,511,0
+Twin-2K,text_gpt41mini,,0,45,466,0,511,0
+Twin-2K,text_reasoning_gpt41mini,,0,38,468,5,511,1
+Twin-2K,text_repeatq_gpt41mini,,0,39,471,1,511,0
+Twin-2K,text_t07_gpt41mini,,0,41,469,1,511,0

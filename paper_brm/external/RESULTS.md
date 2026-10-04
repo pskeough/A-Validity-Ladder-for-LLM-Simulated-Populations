@@ -77,3 +77,10 @@ Verdicts on the main run: missing 29, kept 13, steepened 4, undetermined 4 (`res
 - Orienting each OpinionQA question by the sign of the Pew gap inflates the human gap slightly on questions where it is near zero; the separable-questions sensitivity addresses it.
 - Education, income and region targets in the Meister release come without counts, so those groups have no strict-tolerance test and their option-letter mapping is inferred (and dropped where it cannot be).
 - The Argyle generation listing for Study 3 shows `temperature=0.001` inside the loop while their README calls the main file the 0.7 run. I followed the README.
+
+## Decisions for Patrick
+
+1. Which level-2 fix. **Tested 25 Sep in `../level2_rule/LEVEL2_RULE.md`:** neither the half bound nor the reorder works alone; a ratio-interval rule (R3) does, and it rewords the paper's racial verdicts (Black - White pooled becomes "reversed or missing", Hispanic - White undetermined, at most 0.29 of the gap).
+2. Whether the external runs go in the body (one short section, one table per release) or an appendix. I'd put one paragraph and the two headline numbers in the body and the tables in an appendix.
+3. Use tolerances for the external data, if they stay in: the plurality rule for OpinionQA, and 5 points or one category for Argyle.
+4. Whether to run Argyle level 4 (half a day) and retry CodaLab for the Santurkar runs.
