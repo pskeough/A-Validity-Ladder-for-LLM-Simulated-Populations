@@ -5,9 +5,12 @@ authors:
   - family-names: Keough
     given-names: Patrick S.
 type: software
-date-released: 2026-10-03
+version: 1.0.0
+date-released: 2026-10-05
 repository-code: "https://github.com/pskeough/A-Validity-Ladder-for-LLM-Simulated-Populations"
-license: MIT
+license:
+  - MIT
+  - CC-BY-NC-SA-4.0
 keywords:
   - silicon samples
   - large language models

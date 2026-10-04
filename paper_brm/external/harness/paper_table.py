@@ -74,7 +74,7 @@ def main():
               r"\bottomrule", r"\end{tabular}}", r"\vspace{4pt}", r"\begin{tabnote}",
               r"\textit{Note.} Each reading is one family of contrasts read together, such as one model under one "
               r"prompt (one model and study for \citet{peng2025funhouse}). Pass: every contrast read is kept. Fail: at least one is "
-              r"not kept. Unres.: neither, with at least one contrast the reference could certify. Cannot: the reference "
+              r"not kept. Unres.: neither, with at least one contrast the reference could certify. Cannot: none is not kept, and the reference "
               r"could not certify a kept verdict on any contrast in the family (step 0). Simulators: ChatGPT under 3 "
               r"prompts; GPT-3 in 3 runs; 5 LLMs under 3 elicitation and 2 steering methods; Mistral-7B before (Base) and "
               r"after (SubPOP) survey training; twin specifications, over 18 studies for \citet{peng2025funhouse}; 252 "
