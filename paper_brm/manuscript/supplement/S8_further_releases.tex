@@ -107,7 +107,7 @@ Level 4 therefore needs its own certifiability check, which the package does not
 
 For the Twin-2K-500 twins the partisan gap on the eight opinion items is decomposed by regressing the wave-4 answer on party and on the respondent's own earlier answer to the same item, in twins and in people, with a person bootstrap; \texttt{paper\_brm/explore\_2026-10-03/mechanism\_twins} holds every specification.
 For the PHQ-8 corpus the variance among the 48 persona-cell means is split into the four main effects and their remainder in each model and in NHANES, and the recalibrations are fitted on a random half of the cells and checked on the other half in 200 splits; \texttt{mechanism\_corpus} holds the outputs and the reproduction checks, all of which pass.
-These analyses were run after the rules were frozen and are exploratory.
+These analyses were run after the rules were fixed and are exploratory.
 
 In NHANES, income accounts for .33 of the variance among the 48 persona-cell means of the PHQ-8, and in the four models it accounts for .79 to .90, leaving sex, race and marital status with little weight.
 A linear recalibration fitted on half of the cells brings every group's level within the 2-point tolerance of level 3 in each of 200 held-out splits for every model, and level 2 fails in every split.

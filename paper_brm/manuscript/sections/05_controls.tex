@@ -14,8 +14,9 @@ Table~\ref{tab:panel} reports how often each rung passes for each simulator type
 
 Real respondents pass the gate, level 3, R1 and R2 in every reading and level 1 in most, and level 2 never fails them, while each planted failure trips the rung it targets. % R: analysis_brm/intermediate_panel/88_confusion.csv
 Their persona means reach a dependability of only .70 at 30 draws, since real demographic cells differ little, and the gate therefore requires $\phi \ge .80$ only of studies that compare or rank individual personas. % R: analysis_brm/intermediate_panel/88_panel_verdicts.csv
-Two rungs also react to failures they do not target.
-The gate fails most shifted samples, as more depressed respondents vary more between draws, and R2 fails compressed and non-invariant samples, both of which change the size of the loadings. % R: analysis_brm/intermediate_panel/88_confusion.csv
+Three rungs also react to failures they do not target.
+The gate fails most shifted samples, as more depressed respondents vary more between draws, and R2 fails compressed and non-invariant samples, both of which change the size of the loadings.
+Level 1 fails most samples shifted by 4.7 points and nearly every non-invariant sample. % R: analysis_brm/intermediate_panel/88_confusion.csv
 Each draw of a pseudo-model comes from a different respondent, and the controls therefore vary more between draws than a language model does.
 The gate's reaction to a shifted sample need not carry over to models.
 In a separate set of 200 replicates with graded doses, each rung detects a distortion smaller than the one the language models show at levels 1, 3 and 4, and the rate at which level 1 passes real respondents in those replicates sets the level-1 floor (Supplement S5).
@@ -24,6 +25,7 @@ The controls also show how much data each verdict takes.
 A gap is kept only when the whole interval of its ratio lies inside the kept region, and an interval that narrow needs more draws and a more precise reference than one lying wholly outside the region.
 On persona grids of up to 432 cells, level 2 rarely fails a faithful simulator built from real respondents and almost always fails a doubled income gap. % R: analysis_brm/panel_power/90_cells.csv; analysis_brm/panel_power/90b_summary.csv
 At 30 draws per persona the income gap of a faithful simulator is still never read \vd{kept}, because draws of one persona vary enough to hold its interval wider than the kept region. % R: analysis_brm/panel_power/power_l2_contrast_readings.csv
-With no simulation error the same gap is kept in nearly every replicate, and the Black--White and Hispanic--White gaps are never kept on any grid, because NHANES measures them too loosely. % R: analysis_brm/panel_power/power_l2_contrast_readings.csv
+With no simulation error the same gap is kept in nearly every replicate on the 48-cell and age grids and far less often on the grids that add education.
+The Black--White and Hispanic--White gaps are never kept on any grid, because NHANES measures them too loosely. % R: analysis_brm/panel_power/power_l2_contrast_readings.csv
 A researcher who needs a kept gap therefore plans for more draws per persona and for a population gap the survey estimates with a narrow interval, and a finer persona grid does not supply the second.
 R4 shows the same asymmetry, leaving some invariance steps unresolved for real respondents in almost every replicate while failing every planted invariance failure, and a design that needs an R4 pass needs more personas per group than the corpus has. % R: analysis_brm/intermediate_panel/88_confusion.csv; analysis_brm/intermediate_panel/88_r4_steps.csv

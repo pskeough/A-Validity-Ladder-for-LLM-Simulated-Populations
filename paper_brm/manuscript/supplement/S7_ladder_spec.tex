@@ -99,7 +99,7 @@ The two can differ in sign when the groups differ in composition.
 
 \paragraph{Statistic.}
 The statistic is the ratio $\rho = g / \gamma$.
-Its interval is the Fieller set \citep{fieller1954interval}: the values $c$ at which the one-sided tests of $\rho > c$ and $\rho < c$, using
+Its interval is the Fieller set \citep{fieller1954interval}, the set of values $c$ at which the one-sided tests of $\rho > c$ and $\rho < c$, using
 \begin{equation}
 t_c = \frac{g - c\,\gamma}{\sqrt{\mathrm{SE}_g^2 + c^2\,\mathrm{SE}_\gamma^2}},
 \end{equation}
@@ -130,7 +130,7 @@ The label applies to one reading in the worked example and ten in the external r
 
 \paragraph{Step 0.}
 A contrast is certifiable when a simulated gap equal to $\gamma$ with $\mathrm{SE}_g = 0$ is read \vd{kept} at the family's Bonferroni level, using the contrast's $\mathrm{SE}_\gamma$ and degrees of freedom.
-With the frozen kept region this holds when $k$ is at most 0.21 to 0.24, depending on family size, slightly below the stop at $k > 1/4$.
+With the default kept region this holds when $k$ is at most 0.21 to 0.24, depending on family size, slightly below the stop at $k > 1/4$.
 A contrast with $k$ between these values is read but cannot be certified.
 A model whose level-2 verdict is unresolved and whose family holds no certifiable contrast is reported as \vd{reference cannot certify}.
 Step 0 needs only the reference, changes no pass or fail, and is computed by \texttt{validity\_ladder.certifiable}.
