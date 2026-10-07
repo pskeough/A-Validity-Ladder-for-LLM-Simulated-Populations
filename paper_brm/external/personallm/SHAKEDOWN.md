@@ -2,7 +2,6 @@
 
 Run 2026-10-02 by `scripts/92_personallm_shakedown.py` on the frozen rules (`paper_brm/LADDER_SPEC.md`).
 Outputs in this folder: `92_gate.csv`, `92_l1.csv`, `92_l1_tau.csv`, `92_l4.csv`, `92_unparsed.csv`.
-Earlier runs on the pre-freeze rules: `../personallm_prefinal/` and the logs `../personallm_run_*.log`.
 
 ## Data
 

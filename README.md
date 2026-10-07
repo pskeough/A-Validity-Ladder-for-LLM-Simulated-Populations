@@ -43,7 +43,7 @@ python scripts/00_download_nhanes.py     # about 50 MB from CDC, checked by SHA-
 python scripts/run_all.py                # scripts 76-83g; --fast skips the two long simulations
 ```
 
-`run_all.py` rebuilds the corpus, every rung and the controls. Every script checks itself against an earlier computation before it writes, and `run_all.py` stops at the first failed check. The later scripts run on their own, in numeric order: 83h-83i, 88-88e and 90-90b (the controls under the frozen rules, the simulator panel and panel power), 84 and 84d-84f (figures), 85 (the worked case), 86 (receipts), 87-87a (supplement tables and resend sources), 89 (level-3 specification range), 91-92 (the instrument-general ladder and the PersonaLLM shakedown), 93-93b (Twin-2K-500), 94-96 (kept-region sensitivity, equivalence for gaps with no population gap, and level 1 at temperature 0), 97-98 (the level-2 bug fix) and 99 (the naive baseline). The 3 October bug fix is recorded in `paper_brm/LADDER_SPEC.md` with its effect on every count. No analysis script calls an API. The published outputs are already in the repository, so a rerun can be compared file by file.
+`run_all.py` rebuilds the corpus, every rung and the controls. Every script checks itself against an earlier computation before it writes, and `run_all.py` stops at the first failed check. The later scripts run on their own, in numeric order: 83h-83i, 88-88e and 90-90b (the controls under the frozen rules, the simulator panel and panel power), 84 and 84d-84f (figures), 85 (the worked case), 86 (receipts), 87-87a (supplement tables and resend sources), 89 (level-3 specification range), 91-92 (the instrument-general ladder and the PersonaLLM shakedown), 93-93b (Twin-2K-500), 94-96 (kept-region sensitivity, equivalence for gaps with no population gap, and level 1 at temperature 0), 97-98 (the 3 October level-2 correction, recorded with its effect on every count in `paper_brm/LADDER_SPEC.md`) and 99 (the naive baseline). No analysis script calls an API. Scripts under `paper_brm/explore_2026-10-03/` and `paper_brm/external/harness/adapters/` keep the absolute local paths they ran with; point them at your checkout before a rerun. The published outputs are already in the repository, so a rerun can be compared file by file.
 
 ## Layout
 
@@ -53,14 +53,14 @@ data/model_outputs_v2.csv     the previous release, input to script 76
 data/raw/                     the original run outputs script 76 checks against
 generation/                   the code that produced the corpus (see generation/README.md)
 groundtruth/                  published NHANES PHQ-8 group anchors, used as a check
-analysis/brm/                 every output of scripts 76-87
+analysis/brm/                 every output of scripts 76-99
 analysis/*.csv, *.jsonl       earlier outputs the scripts reproduce as a check, and the logged
                               generations of the prompt and decoding controls
-scripts/                      the analysis, 00-92, and run_all.py
+scripts/                      the analysis, 00-99, and run_all.py
 paper_brm/LADDER_SPEC.md      the frozen rules
 paper_brm/analysis_brm/       one report per rung, the controls, the simulator panel (88) and
                               panel power (90)
-paper_brm/external/           the ladder on three releases by other groups and the PersonaLLM shakedown
+paper_brm/external/           the ladder on ten releases by other groups (harness/) and the PersonaLLM shakedown
 paper_brm/level2_rule/        the comparison of candidate level-2 rules that led to the ratio rule
 paper_brm/manuscript/         the paper and supplement; a line ending in "% R: file" names the
                               receipt for the numbers on it
@@ -88,6 +88,6 @@ Code (`scripts/`, `generation/` and the `.py` files in `paper_brm/`) is under th
 
 ## Citation
 
-Keough, P. S. (2026). *A Validity Ladder for LLM-Simulated Populations* [Code, data and receipts]. https://github.com/pskeough/A-Validity-Ladder-for-LLM-Simulated-Populations
+Keough, P. S. (2026). *A Validity Ladder for LLM-Simulated Populations* [Code, data and receipts] (Version 1.0.1). Zenodo. https://doi.org/10.5281/zenodo.23147356
 
 `CITATION.cff` gives the same entry in machine-readable form.

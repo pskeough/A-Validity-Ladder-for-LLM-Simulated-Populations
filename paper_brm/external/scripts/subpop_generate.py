@@ -12,9 +12,9 @@ is switched off for the base).
 Weights: mistralai/Mistral-7B-v0.1 (Apache-2.0) and jjssuh/mistral-7b-v0.1-subpop (LoRA r=8, Apache-2.0).
 Questions, options, ordinals and group distributions: SubPOP's data/opinionqa/processed/opinionqa.csv.
 
-Run (overlay env; the pyshim folder holds the WMI sitecustomize, without it imports can hang on this machine):
-  $env:PYTHONPATH='C:\\Research\\PsychBench\\UpdatedRun\\paper_ml4h\\plan\\rev2026-09\\pyshim;C:\\LocalAI\\LLM\\hf_validity_ladder\\overlay'
-  & 'C:\\AI Coding Projects\\Local AI\\Podcast_Audio_Gen\\.venv\\Scripts\\python.exe' subpop_generate.py [--limit N]
+Run (needs torch, transformers and peft):
+
+  python subpop_generate.py [--limit N]
 Output: ../raw/subpop_gen/subpop_distributions.csv (+ run log, prompt sample)
 """
 import argparse
